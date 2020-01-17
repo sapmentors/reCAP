@@ -97,7 +97,7 @@
 					<l:BlockLayoutCell title="Call for Papers">
 						<VBox>
 							<Text text="...will start ~end February 2020" />
-							<core:HTML content="&lt;p&gt;&lt;em&gt;Note:&lt;/em&gt; there is no reimbursement or cover of travel cost for speakers. Hey, &lt;em&gt;un&lt;/em&gt;conferene, ja?! 😀&lt;/p&gt;" />
+							<core:HTML content="&lt;p&gt;&lt;em&gt;Note:&lt;/em&gt; there is no reimbursement or cover of travel cost for speakers. Hey, &lt;em&gt;un&lt;/em&gt;conference, ja?! 😀&lt;/p&gt;" />
 						</VBox>
 					</l:BlockLayoutCell>
 				</l:BlockLayoutRow>
