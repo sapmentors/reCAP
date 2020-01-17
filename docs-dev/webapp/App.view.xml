@@ -25,7 +25,7 @@
 				</l:BlockLayoutRow>
 				<l:BlockLayoutRow>
 					<l:BlockLayoutCell titleAlignment="End" 
-						title="(un)conference on the SAP Cloud Appliation Programming Model">
+						title="(un)conference on the SAP Cloud Application Programming Model">
 					</l:BlockLayoutCell>
 					<l:BlockLayoutCell>
 						<VBox>
