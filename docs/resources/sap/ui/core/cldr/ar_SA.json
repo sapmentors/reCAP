@@ -4386,7 +4386,7 @@
 				"unitPattern-count-two": "{0} سم²",
 				"unitPattern-count-few": "{0} سم²",
 				"unitPattern-count-many": "{0} سم²",
-				"unitPattern-count-other": "{0} س��²",
+				"unitPattern-count-other": "{0} سم²",
 				"perUnitPattern": "{0}/سم²"
 			},
 			"area-square-mile": {

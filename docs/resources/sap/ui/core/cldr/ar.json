@@ -4550,7 +4550,7 @@
 			},
 			"digital-petabyte": {
 				"displayName": "بيتابايت",
-				"unitPattern-count-zero": "{0} بيت��بايت",
+				"unitPattern-count-zero": "{0} بيتابايت",
 				"unitPattern-count-one": "{0} بيتابايت",
 				"unitPattern-count-two": "{0} بيتابايت",
 				"unitPattern-count-few": "{0} بيتابايت",
