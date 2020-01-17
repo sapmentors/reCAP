@@ -64,7 +64,7 @@
 					</l:BlockLayoutCell>
 				</l:BlockLayoutRow>
 				<l:BlockLayoutRow>
-					<l:BlockLayoutCell title="here we are!">
+					<l:BlockLayoutCell title="Here We Are!">
 						<VBox alignItems="Center" 
 							width="100%">
 							<core:HTML content="&lt;p&gt;The very first international conference on the &lt;a href=&quot;https://cap.cloud.sap/docs/&quot; target=&quot;_blank&quot;&gt;SAP Cloud Application Programming Model&lt;/a&gt; is happening!&lt;/p&gt;
@@ -77,7 +77,7 @@
 					</l:BlockLayoutCell>
 				</l:BlockLayoutRow>
 				<l:BlockLayoutRow>
-					<l:BlockLayoutCell title="how it'll go">
+					<l:BlockLayoutCell title="How It'll Go">
 						<VBox>
 							<Text text="We'll meet in the j&amp;s-soft office in Heidelberg on May 15th." 
 								class="sapUiTinyMarginBottom" />
@@ -94,7 +94,7 @@
 					</l:BlockLayoutCell>
 				</l:BlockLayoutRow>
 				<l:BlockLayoutRow>
-					<l:BlockLayoutCell title="Call for Papers">
+					<l:BlockLayoutCell title="Call For Papers">
 						<VBox>
 							<Text text="...will start ~end February 2020" />
 							<core:HTML content="&lt;p&gt;&lt;em&gt;Note:&lt;/em&gt; there is no reimbursement or cover of travel cost for speakers. Hey, &lt;em&gt;un&lt;/em&gt;conference, ja?! 😀&lt;/p&gt;" />
