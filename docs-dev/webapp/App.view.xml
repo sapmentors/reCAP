@@ -25,7 +25,7 @@
 				</l:BlockLayoutRow>
 				<l:BlockLayoutRow>
 					<l:BlockLayoutCell titleAlignment="End" 
-						title="(un)conference on the SAP Cloud Appliation Programming Model">
+						title="(un)conference on the SAP Cloud Application Programming Model">
 					</l:BlockLayoutCell>
 					<l:BlockLayoutCell>
 						<VBox>
@@ -64,7 +64,7 @@
 					</l:BlockLayoutCell>
 				</l:BlockLayoutRow>
 				<l:BlockLayoutRow>
-					<l:BlockLayoutCell title="here we are!">
+					<l:BlockLayoutCell title="Here We Are!">
 						<VBox alignItems="Center" 
 							width="100%">
 							<core:HTML content="&lt;p&gt;The very first international conference on the &lt;a href=&quot;https://cap.cloud.sap/docs/&quot; target=&quot;_blank&quot;&gt;SAP Cloud Application Programming Model&lt;/a&gt; is happening!&lt;/p&gt;
@@ -77,14 +77,14 @@
 					</l:BlockLayoutCell>
 				</l:BlockLayoutRow>
 				<l:BlockLayoutRow>
-					<l:BlockLayoutCell title="how it'll go">
+					<l:BlockLayoutCell title="How It'll Go">
 						<VBox>
 							<Text text="We'll meet in the j&amp;s-soft office in Heidelberg on May 15th." 
 								class="sapUiTinyMarginBottom" />
 							<Text text="Check-in opens at 9:00 - yes, there'll be ☕️" 
 								class="sapUiTinyMarginBottom" />
 							<Text text="After the opening keynote in the main conference room" />
-							<Text text="we'll split into groups and work/listen/demo at cuddly ad-hoc meeting spots throughout the office." 
+							<Text text="we'll split into groups and work/listen/demo at cosy ad-hoc meeting spots throughout the office." 
 								class="sapUiTinyMarginBottom" />
 							<Text text="(btw: 🎥 as many of the sessions as possible will be live-streamed!)" 
 								class="sapUiTinyMarginBottom" />
@@ -94,10 +94,10 @@
 					</l:BlockLayoutCell>
 				</l:BlockLayoutRow>
 				<l:BlockLayoutRow>
-					<l:BlockLayoutCell title="Call for Papers">
+					<l:BlockLayoutCell title="Call For Papers">
 						<VBox>
 							<Text text="...will start ~end February 2020" />
-							<core:HTML content="&lt;p&gt;&lt;em&gt;Note:&lt;/em&gt; there is no reimbursement or cover of travel cost for speakers. Hey, &lt;em&gt;un&lt;/em&gt;conferene, ja?! 😀&lt;/p&gt;" />
+							<core:HTML content="&lt;p&gt;&lt;em&gt;Note:&lt;/em&gt; there is no reimbursement or cover of travel cost for speakers. Hey, &lt;em&gt;un&lt;/em&gt;conference, ja?! 😀&lt;/p&gt;" />
 						</VBox>
 					</l:BlockLayoutCell>
 				</l:BlockLayoutRow>
