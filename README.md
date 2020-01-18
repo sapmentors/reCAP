@@ -1,2 +1,2 @@
 # re-CAP
-re>≡CAP Conference Website
+[re>≡CAP Conference Website](https://sapmentors.github.io/reCAP/)
