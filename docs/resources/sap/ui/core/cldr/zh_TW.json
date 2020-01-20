@@ -1039,7 +1039,7 @@
 		"OM": "阿曼",
 		"PA": "巴拿馬",
 		"PE": "秘魯",
-		"PF": "法屬玻里尼西亞",
+		"PF": "法屬玻里尼西���",
 		"PG": "巴布亞紐幾內亞",
 		"PH": "菲律賓",
 		"PK": "巴基斯坦",
@@ -4226,7 +4226,7 @@
 			"length-kilometer": {
 				"displayName": "公里",
 				"unitPattern-count-other": "{0} 公里",
-				"perUnitPattern": "{0}/公里"
+				"perUnitPattern": "{0}/���里"
 			},
 			"length-meter": {
 				"displayName": "公尺",
