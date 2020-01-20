@@ -2419,7 +2419,7 @@
 					"٤"
 				],
 				"wide": [
-					"الربع ال��ول",
+					"الربع الأول",
 					"الربع الثاني",
 					"الربع الثالث",
 					"الربع الرابع"
@@ -4447,7 +4447,7 @@
 			},
 			"concentr-karat": {
 				"displayName": "قيراط",
-				"unitPattern-count-zero": "{0} قي��اط",
+				"unitPattern-count-zero": "{0} قيراط",
 				"unitPattern-count-one": "قيراط",
 				"unitPattern-count-two": "{0} قيراط",
 				"unitPattern-count-few": "{0} قيراط",
