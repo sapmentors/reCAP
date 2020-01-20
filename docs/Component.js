@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/core/UIComponent","sap/ui/core/ComponentSupport"],t=>{"use strict";return t.extend("capcom.recap.Component",{metadata:{manifest:"json"},init(){t.prototype.init.apply(this,arguments)}})});
