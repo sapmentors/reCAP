@@ -8,12 +8,13 @@
 			src="resources/sap-ui-core.js"
 			data-sap-ui-theme="sap_fiori_3"
 			data-sap-ui-resourceroots='{"capcom.recap": "./"}'
-			data-sap-ui-compatVersion="edge"
-			data-sap-ui-oninit="module:capcom/recap/index"
+			data-sap-ui-oninit="module:sap/ui/core/ComponentSupport"
 			data-sap-ui-async="true">
 			</script>
 </head>
 
-<body class="sapUiBody" id="content"></body>
+<body class="sapUiBody" id="content">
+	<div data-sap-ui-component data-name="capcom.recap" data-id="container" data-settings='{"id" : "recap"}'></div>
+</body>
 
 </html>

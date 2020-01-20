@@ -1,11 +1,11 @@
 {
   "name": "recap",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "official website for the reCAP (un)conference",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rm -rf ../docs/*; ui5 build self-contained --all --dest ../docs"
+    "build": "rm -rf ../docs/*; ui5 build self-contained --all --dest ../docs --exclude-task=createDebugFiles"
   },
   "author": "",
   "license": "ISC",
