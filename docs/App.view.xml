@@ -9,23 +9,38 @@
 			<l:BlockLayout background="Light">
 				<l:BlockLayoutRow>
 					<l:BlockLayoutCell>
-						<VBox>
-							<!-- <core:Icon color="#1873B4" src="sap-icon://sap-ui5" size="5rem" class="sapUiSmallMarginBottom" width="100%" /> -->
-							<Title level="H1" 
-								titleStyle="H1" 
-								text="re>≡CAP" 
-								width="100%" 
-								textAlign="Center" />
-							<VBox alignItems="Center">
-								<Text text="1) recap = &quot;summary, overview&quot;" />
-								<Text text="2) &quot;re:&quot; = &quot;about [the subject of]&quot;" />
-							</VBox>
+						<VBox alignItems="Center">
+							<Image src="reCAP-logo.png" 
+								alt="re>≡CAP (un)conference logo" />
+							<Text text="1) recap = &quot;summary, overview&quot;" />
+							<Text text="2) &quot;re:&quot; = &quot;about [the subject of]&quot;" />
 						</VBox>
 					</l:BlockLayoutCell>
 				</l:BlockLayoutRow>
 				<l:BlockLayoutRow>
 					<l:BlockLayoutCell titleAlignment="End" 
 						title="(un)conference on the SAP Cloud Application Programming Model">
+						<HBox class="sapUiTinyMargin" 
+							alignItems="Center" 
+							justifyContent="End">
+							<Image src="Twitter_Logo_Blue.png" 
+								class="sapUiTinyMarginEnd" />
+							<Link text="reCAP_conf" 
+								href="https://twitter.com/reCAP_conf" />
+						</HBox>
+						<HBox class="sapUiTinyMargin" 
+							alignItems="Center" 
+							justifyContent="End">
+							<core:Icon src="sap-icon://blank-tag" 
+								size="1.5rem" 
+								class="sapUiTinyMarginEnd" />
+								<VBox>
+									<Text text="#reCAP" />
+									<Text text="#reCAP_conf" />
+								</VBox>
+							
+						</HBox>
+					
 					</l:BlockLayoutCell>
 					<l:BlockLayoutCell>
 						<VBox>
@@ -67,7 +82,7 @@
 					<l:BlockLayoutCell title="Here We Are!">
 						<VBox alignItems="Center" 
 							width="100%">
-							<core:HTML content="&lt;p&gt;The very first international conference on the &lt;a href=&quot;https://cap.cloud.sap/docs/&quot; target=&quot;_blank&quot;&gt;SAP Cloud Application Programming Model&lt;/a&gt; is happening!&lt;/p&gt;
+							<core:HTML content="&lt;p&gt;The very first community-driven international (un)conference on the &lt;a href=&quot;https://cap.cloud.sap/docs/&quot; target=&quot;_blank&quot;&gt;SAP Cloud Application Programming Model&lt;/a&gt; is happening!&lt;/p&gt;
 						&lt;p&gt;After lots of Slack-, Twitter-, and E-Mail-ing, the #CAP community decided it&apos;s time to do it:&lt;/p&gt;" />
 							<Title level="H2" 
 								text="🤝 meet in person, 💫 exchange knowledge, 🧑‍💻👨‍💻 hack together!" 
@@ -83,7 +98,7 @@
 								class="sapUiTinyMarginBottom" />
 							<Text text="Check-in opens at 9:00 - yes, there'll be ☕️" 
 								class="sapUiTinyMarginBottom" />
-							<Text text="After the opening keynote in the main conference room" />
+							<Text text="After the opening keynote in the main conference room," />
 							<Text text="we'll split into groups and work/listen/demo at cosy ad-hoc meeting spots throughout the office." 
 								class="sapUiTinyMarginBottom" />
 							<Text text="(btw: 🎥 as many of the sessions as possible will be live-streamed!)" 

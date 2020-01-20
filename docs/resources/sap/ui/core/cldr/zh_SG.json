@@ -3986,7 +3986,7 @@
 			},
 			"digital-gigabit": {
 				"displayName": "吉比特",
-				"unitPattern-count-other": "{0}吉比特"
+				"unitPattern-count-other": "{0}��比特"
 			},
 			"digital-megabyte": {
 				"displayName": "兆字节",
