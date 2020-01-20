@@ -20,6 +20,27 @@
 				<l:BlockLayoutRow>
 					<l:BlockLayoutCell titleAlignment="End" 
 						title="(un)conference on the SAP Cloud Application Programming Model">
+						<HBox class="sapUiTinyMargin" 
+							alignItems="Center" 
+							justifyContent="End">
+							<Image src="Twitter_Logo_Blue.png" 
+								class="sapUiTinyMarginEnd" />
+							<Link text="reCAP_conf" 
+								href="https://twitter.com/reCAP_conf" />
+						</HBox>
+						<HBox class="sapUiTinyMargin" 
+							alignItems="Center" 
+							justifyContent="End">
+							<core:Icon src="sap-icon://blank-tag" 
+								size="1.5rem" 
+								class="sapUiTinyMarginEnd" />
+								<VBox>
+									<Text text="#reCAP" />
+									<Text text="#reCAP_conf" />
+								</VBox>
+							
+						</HBox>
+					
 					</l:BlockLayoutCell>
 					<l:BlockLayoutCell>
 						<VBox>
