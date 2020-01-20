@@ -4192,7 +4192,7 @@
 			},
 			"area-square-mile": {
 				"displayName": "миля²",
-				"unitPattern-count-one": "{0} мил��²",
+				"unitPattern-count-one": "{0} миля²",
 				"unitPattern-count-few": "{0} миля²",
 				"unitPattern-count-many": "{0} миля²",
 				"unitPattern-count-other": "{0} миля²",
