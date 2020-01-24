@@ -41,6 +41,12 @@
     "contentDensities": {
       "compact": true,
       "cozy": true
+    },
+    "models": {
+      "Agenda": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "Agenda.json"
+      }
     }
   }
 }
