@@ -104,7 +104,7 @@
 								id="toAgenda" 
 								class="sapUiTinyMarginBottom" />
 							<core:HTML content="&lt;p class='sapMText' style='margin:0'&gt;There are 3 locations offering session-stlye capabilites, &lt;em&gt;OASIS&lt;/em&gt;, &lt;em&gt;Flynn&apos;s&lt;/em&gt;, &lt;em&gt;Mos Eisley&lt;/em&gt; (yeah, I know). Talks/Demos/Hands-On will be scheduled in these up-front.&lt;/p&gt;" />
-							<core:HTML content="&lt;p class='sapMText' style='margin:0'&gt;An additional 4th spot (&lt;em&gt;Rylos&lt;/em&gt;) is an ad-hoc meeting space, ideally suited for &lt;a href=&quot;https://en.wikipedia.org/wiki/Birds_of_a_feather_(computing)&quot;&gt;BoF&lt;/a&gt;-stlye show&apos;n&apos;tell or hacking sessions. Mostly no planning, just gather, hook up and start doing stuff.&lt;/p&gt;" />
+							<core:HTML content="&lt;p class='sapMText sapUiTinyMarginBottom' style='margin:0'&gt;An additional 4th spot (&lt;em&gt;Rylos&lt;/em&gt;) is an ad-hoc meeting space, ideally suited for &lt;a href=&quot;https://en.wikipedia.org/wiki/Birds_of_a_feather_(computing)&quot;&gt;BoF&lt;/a&gt;-stlye show&apos;n&apos;tell or hacking sessions. Mostly no planning, just gather, hook up and start doing stuff.&lt;/p&gt;" />
 							<Text text="(btw: 🎥 as many of the sessions as possible will be live-streamed!)" 
 								class="sapUiTinyMarginBottom" />
 							<Text text="After the event is before the 🎉 - there'll be the opportunity for talk and drink after the event - yes, there'll be 🍺" 
