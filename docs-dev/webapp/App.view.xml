@@ -114,7 +114,7 @@
 				</l:BlockLayoutRow>
 				<l:BlockLayoutRow>
 					<l:BlockLayoutCell title="Agenda">
-						<core:Fragment fragmentName="capcom.recap.Agenda" 
+						<core:Fragment fragmentName="capcom.recap.fragments.Agenda" 
 							id="AgendaFragment" 
 							type="XML" />
 					</l:BlockLayoutCell>
@@ -126,6 +126,13 @@
 							<Text text="...will start ~end February 2020" />
 							<core:HTML content="&lt;p&gt;&lt;em&gt;Note:&lt;/em&gt; there is no reimbursement or cover of travel cost for speakers. Hey, &lt;em&gt;un&lt;/em&gt;conference, ja?! 😀&lt;/p&gt;" />
 						</VBox>
+					</l:BlockLayoutCell>
+				</l:BlockLayoutRow>
+				<l:BlockLayoutRow>
+					<l:BlockLayoutCell title="Sponsoring">
+						<core:Fragment fragmentName="capcom.recap.fragments.Sponsors" 
+							id="SponsorsFragment" 
+							type="XML" />
 					</l:BlockLayoutCell>
 				</l:BlockLayoutRow>
 				<l:BlockLayoutRow>
