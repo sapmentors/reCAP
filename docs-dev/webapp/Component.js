@@ -1,9 +1,10 @@
 sap.ui.define(
     [
         "sap/ui/core/UIComponent",
+        "sap/ui/model/json/JSONModel",
         "sap/ui/core/ComponentSupport" // make sure to include the ComponentSupport in the bundle
     ],
-    UIComponent => {
+    (UIComponent, JSONModel) => {
         "use strict"
 
         return UIComponent.extend("capcom.recap.Component", {
