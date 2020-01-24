@@ -1,12 +1,23 @@
 [
   {
-    "time": "09:30-10:30",
+    "time": "09:30-09:39",
+    "oasis-name": "Welcome!",
+    "oasis-who": "re>≡CAP team",
+    "flynns-name": "Welcome! (screen)",
+    "flynns-who": "",
+    "mos-name": "Welcome! (screen)",
+    "mos-who": "",
+    "rylos-name": "",
+    "rylos-who": ""
+  },
+  {
+    "time": "09:39-10:30",
     "oasis-name": "Keynote",
     "oasis-who": "(tba)",
     "flynns-name": "Keynote (screen)",
-    "flynns-who": "(tba)",
+    "flynns-who": "",
     "mos-name": "Keynote (screen)",
-    "mos-who": "(tba)",
+    "mos-who": "",
     "rylos-name": "",
     "rylos-who": ""
   },
@@ -88,13 +99,24 @@
     "rylos-who": ""
   },
   {
-    "time": "16:45-17:30",
+    "time": "16:45-17:15",
     "oasis-name": "(tba)",
     "oasis-who": "(tba)",
     "flynns-name": "(tba)",
     "flynns-who": "(tba)",
     "mos-name": "(tba)",
     "mos-who": "(tba)",
+    "rylos-name": "",
+    "rylos-who": ""
+  },
+  {
+    "time": "17:15-17:19",
+    "oasis-name": "Farewell!",
+    "oasis-who": "re>≡CAP team",
+    "flynns-name": "Farewell! (screen)",
+    "flynns-who": "",
+    "mos-name": "Farewell! (screen)",
+    "mos-who": "",
     "rylos-name": "",
     "rylos-who": ""
   },
