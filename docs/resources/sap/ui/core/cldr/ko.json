@@ -2152,7 +2152,7 @@
 					"d": "GGGGG y년 M월 d일 E요일 ~ y년 M월 d일 E요일",
 					"G": "GGGGG y년 M월 d일 E요일 ~ GGGGG y년 M월 d일 E요일",
 					"M": "GGGGG y년 M월 d일 E요일 ~ y년 M월 d일 E요일",
-					"y": "GGGGG y년 M월 d일 E요일 ~ y년 M월 d일 E요일"
+					"y": "GGGGG y년 M월 d일 E요일 ~ y년 M월 d�� E요일"
 				},
 				"GyMMM": {
 					"G": "G y년 MMM ~ G y년 MMM",

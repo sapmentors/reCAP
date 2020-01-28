@@ -3588,7 +3588,7 @@
 			"relativeTime-type-future": {
 				"relativeTimePattern-count-one": "через {0} тиждень",
 				"relativeTimePattern-count-few": "через {0} тижні",
-				"relativeTimePattern-count-many": "��ерез {0} тижнів",
+				"relativeTimePattern-count-many": "через {0} тижнів",
 				"relativeTimePattern-count-other": "через {0} тижня"
 			},
 			"relativeTime-type-past": {
