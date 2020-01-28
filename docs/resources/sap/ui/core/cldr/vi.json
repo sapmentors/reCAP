@@ -370,7 +370,7 @@
 		"ne": "Tiếng Nepal",
 		"new": "Tiếng Newari",
 		"ng": "Tiếng Ndonga",
-		"nia": "Tiếng Nias",
+		"nia": "Ti���ng Nias",
 		"niu": "Tiếng Niuean",
 		"njo": "Tiếng Ao Naga",
 		"nl": "Tiếng Hà Lan",
@@ -2715,7 +2715,7 @@
 				},
 				"yMMM": {
 					"M": "'Tháng' M - 'Tháng' M 'năm' y G",
-					"y": "'Th��ng' M 'năm' y - 'Tháng' M 'năm' y G"
+					"y": "'Tháng' M 'năm' y - 'Tháng' M 'năm' y G"
 				},
 				"yMMMd": {
 					"d": "'Ngày' dd 'tháng' M - 'Ngày' dd 'tháng' M 'năm' y G",

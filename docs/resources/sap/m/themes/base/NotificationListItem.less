@@ -44,14 +44,23 @@
 			line-height: 1.4;
 			color: @sapUiGroupTitleTextColor;
 
-			padding-bottom: 0.75rem;
+			padding-bottom: 0.25rem;
 		}
 
 		.sapMNLIDescription {
 			font-size: @sapMFontMediumSize;
 			color: @sapUiBaseText;
 			line-height: 1.4;
+			margin-top: 0.5rem;
+
+			&.sapMNLIDescriptionNoText {
+				margin-top: 0;
+			}
 		}
+	}
+
+	&.sapMNLINoAvatar .sapMNLIContent {
+		padding-left: 0;
 	}
 
 	.sapMNLIFooter {
