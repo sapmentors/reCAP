@@ -123,7 +123,20 @@
 				<l:BlockLayoutRow>
 					<l:BlockLayoutCell title="Call For Papers">
 						<VBox>
-							<Text text="...will start ~end February 2020" />
+							<Text text="...is running from Jan 28 - Feb 28!" 
+								class="sapUiTinyMarginBottom" />
+							<Text text="We're using the SCN Wiki for this to make the process transparent - everybody can edit the page in order to suggest a session." />
+							<Text text="Plus it's always clear, what sessions were suggested so far - hopefully raising the excitement for the event :)" 
+								class="sapUiTinyMarginBottom" />
+							<Link href="https://wiki.scn.sap.com/wiki/x/OT3PHw" 
+								text="Head over to the SCN Wiki for suggestion a session!" 
+								class="sapUiTinyMarginBottom" />
+							<HBox class="sapUiTinyMarginBottom" alignItems="Center">
+								<core:Icon src="sap-icon://hint" 
+									size="1.5rem" 
+									class="sapUiTinyMarginEnd" />
+								<Text text="an SAP S-/P-User is required to edit the wiki page in order to suggest a session!" />
+							</HBox>
 							<core:HTML content="&lt;p&gt;&lt;em&gt;Note:&lt;/em&gt; there is no reimbursement or cover of travel cost for speakers. Hey, &lt;em&gt;un&lt;/em&gt;conference, ja?! 😀&lt;/p&gt;" />
 						</VBox>
 					</l:BlockLayoutCell>
