@@ -1,0 +1,207 @@
+<mvc:View controllerName="capcom.recap.App" 
+	displayBlock="true" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns:l="sap.ui.layout" 
+	xmlns:core="sap.ui.core" 
+	xmlns="sap.m">
+	<App id="app">
+		<Page showHeader="false">
+			<l:BlockLayout background="Light">
+				<l:BlockLayoutRow>
+					<l:BlockLayoutCell>
+						<VBox alignItems="Center">
+							<Image src="reCAP-logo.png" 
+								alt="re>≡CAP (un)conference logo" />
+							<Text text="1) recap = &quot;summary, overview&quot;" />
+							<Text text="2) &quot;re:&quot; = &quot;about [the subject of]&quot;" />
+						</VBox>
+					</l:BlockLayoutCell>
+				</l:BlockLayoutRow>
+				<l:BlockLayoutRow>
+					<l:BlockLayoutCell titleAlignment="End" 
+						title="(un)conference on the SAP Cloud Application Programming Model">
+						<HBox class="sapUiTinyMargin" 
+							alignItems="Center" 
+							justifyContent="End">
+							<Image src="Twitter_Logo_Blue.png" 
+								class="sapUiTinyMarginEnd" />
+							<Link text="reCAP_conf" 
+								href="https://twitter.com/reCAP_conf" />
+						</HBox>
+						<HBox class="sapUiTinyMargin" 
+							alignItems="Center" 
+							justifyContent="End">
+							<core:Icon src="sap-icon://blank-tag" 
+								size="1.5rem" 
+								class="sapUiTinyMarginEnd" />
+							<VBox>
+								<Text text="#reCAP" />
+								<Text text="#reCAP_conf" />
+							</VBox>
+
+						</HBox>
+
+					</l:BlockLayoutCell>
+					<l:BlockLayoutCell>
+						<VBox>
+							<HBox class="sapUiTinyMargin" 
+								alignItems="Center">
+								<core:Icon src="sap-icon://appointment" 
+									size="1.5rem" 
+									class="sapUiTinyMarginEnd" />
+								<Title text="2020 May 15th, 10:00 - 18:00" 
+									level="H4" 
+									titleStyle="H4" />
+							</HBox>
+							<HBox class="sapUiTinyMargin" 
+								alignItems="Center">
+								<core:Icon src="sap-icon://map-2" 
+									size="1.5rem" 
+									class="sapUiTinyMarginEnd" />
+								<Link text="j&amp;s-soft GmbH HQ, Heidelberg" 
+									href="https://bit.ly/2R6Zh0L" />
+							</HBox>
+							<HBox class="sapUiTinyMargin" 
+								alignItems="Center">
+								<core:Icon src="sap-icon://group" 
+									size="1.5rem" 
+									class="sapUiTinyMarginEnd" />
+								<HBox>
+									<Text text="50 seats" 
+										class="sapUiTinyMarginEnd" />
+									<Link href="https://recap2020.eventbrite.com" 
+										text="(Registration open until Feb 28!)" />
+								</HBox>
+
+							</HBox>
+							<HBox class="sapUiTinyMargin" 
+								alignItems="Center">
+								<core:Icon src="sap-icon://payment-approval" 
+									size="1.5rem" 
+									class="sapUiTinyMarginEnd" />
+								<Text text="free (as in 🍺)" />
+							</HBox>
+						</VBox>
+					</l:BlockLayoutCell>
+				</l:BlockLayoutRow>
+				<l:BlockLayoutRow>
+					<l:BlockLayoutCell title="Here We Are!">
+						<VBox alignItems="Center" 
+							width="100%">
+							<core:HTML content="&lt;p&gt;The very first community-driven international (un)conference on the &lt;a href=&quot;https://cap.cloud.sap/docs/&quot; target=&quot;_blank&quot;&gt;SAP Cloud Application Programming Model&lt;/a&gt; is happening!&lt;/p&gt;
+						&lt;p&gt;After lots of Slack-, Twitter-, and E-Mail-ing, the #CAP community decided it&apos;s time to do it:&lt;/p&gt;" />
+							<Title level="H2" 
+								text="🤝 meet in person, 💫 exchange knowledge, 🧑‍💻👨‍💻 hack together!" 
+								wrapping="true" 
+								class="sapUiMediumMarginBegin" />
+						</VBox>
+					</l:BlockLayoutCell>
+				</l:BlockLayoutRow>
+				<l:BlockLayoutRow>
+					<l:BlockLayoutCell title="How It'll Go">
+						<VBox class="sapUiSmallMarginBottom">
+							<Title text="Registration (until Feb 28)" 
+								level="H4" 
+								titleStyle="H4" />
+							<HBox>
+								<Text text="... is done via Eventbrite:" class="sapUiTinyMarginEnd" />
+								<Link href="https://recap2020.eventbrite.com" 
+									text="https://recap2020.eventbrite.com" />
+							</HBox>
+							<core:HTML content="&lt;p class='sapMText sapUiTinyMarginBottom' style='margin:0'&gt;Note that &lt;b&gt;everyone registers to a general admission list (&quot;waiting list&quot;)&lt;/b&gt;.&lt;br /&gt;After Registration ends, participants will be randomly selected from the admission list and issued a ticket for the event.&lt;/p&gt;" />
+							<Text text="We know that this is inconvenient for some of you to take care of travel arrangements 🥴" class="sapUiTinyMarginBottom" />
+							<Text text="But demand was already very high when re>≡CAP was announced, so we deemed this the fairest chance 🤷‍♀️🤷‍♂️" />
+						</VBox>
+						<VBox>
+							<Title text="Event" 
+								level="H4" 
+								titleStyle="H4" />
+							<Text text="We'll meet in the j&amp;s-soft office in Heidelberg on May 15th." 
+								class="sapUiTinyMarginBottom" />
+							<Text text="Check-in opens at 9:00 - yes, there'll be ☕️" 
+								class="sapUiTinyMarginBottom" />
+							<Text text="After the opening keynote in the main conference room," />
+							<Text text="we'll split into groups and work/listen/demo at cosy ad-hoc meeting spots throughout the office -" />
+							<Link text="see the Agenda below" 
+								id="toAgenda" 
+								class="sapUiTinyMarginBottom" />
+							<core:HTML content="&lt;p class='sapMText' style='margin:0'&gt;There are 3 locations offering session-stlye capabilites, &lt;em&gt;OASIS&lt;/em&gt;, &lt;em&gt;Flynn&apos;s&lt;/em&gt;, &lt;em&gt;Mos Eisley&lt;/em&gt; (yeah, I know). Talks/Demos/Hands-On will be scheduled in these up-front.&lt;/p&gt;" />
+							<core:HTML content="&lt;p class='sapMText sapUiTinyMarginBottom' style='margin:0'&gt;An additional 4th spot (&lt;em&gt;Rylos&lt;/em&gt;) is an ad-hoc meeting space, ideally suited for &lt;a href=&quot;https://en.wikipedia.org/wiki/Birds_of_a_feather_(computing)&quot;&gt;BoF&lt;/a&gt;-stlye show&apos;n&apos;tell or hacking sessions. Mostly no planning, just gather, hook up and start doing stuff.&lt;/p&gt;" />
+							<Text text="(btw: 🎥 as many of the sessions as possible will be live-streamed!)" 
+								class="sapUiTinyMarginBottom" />
+							<Text text="After the event is before the 🎉 - there'll be the opportunity for talk and drink after the event - yes, there'll be 🍺" 
+								class="sapUiTinyMarginBottom" />
+						</VBox>
+					</l:BlockLayoutCell>
+				</l:BlockLayoutRow>
+				<l:BlockLayoutRow>
+					<l:BlockLayoutCell title="Agenda">
+						<core:Fragment fragmentName="capcom.recap.fragments.Agenda" 
+							id="AgendaFragment" 
+							type="XML" />
+					</l:BlockLayoutCell>
+				</l:BlockLayoutRow>
+
+				<l:BlockLayoutRow>
+					<l:BlockLayoutCell title="Call For Papers">
+						<VBox>
+							<Text text="...is running from Jan 28 - Feb 28!" 
+								class="sapUiTinyMarginBottom" />
+							<Text text="We're using the SCN Wiki for this to make the process transparent - everybody can edit the page in order to suggest a session." />
+							<Text text="Plus it's always clear, what sessions were suggested so far - hopefully raising the excitement for the event :)" 
+								class="sapUiTinyMarginBottom" />
+							<Link href="https://wiki.scn.sap.com/wiki/x/OT3PHw" 
+								text="Head over to the SCN Wiki for suggestion a session!" 
+								class="sapUiTinyMarginBottom" />
+							<HBox class="sapUiTinyMarginBottom" 
+								alignItems="Center">
+								<core:Icon src="sap-icon://hint" 
+									size="1.5rem" 
+									class="sapUiTinyMarginEnd" />
+								<Text text="an SAP S-/P-User is required to edit the wiki page in order to suggest a session!" />
+							</HBox>
+							<core:HTML content="&lt;p&gt;&lt;em&gt;Note:&lt;/em&gt; there is no reimbursement or cover of travel cost for speakers. Hey, &lt;em&gt;un&lt;/em&gt;conference, ja?! 😀&lt;/p&gt;" />
+						</VBox>
+					</l:BlockLayoutCell>
+				</l:BlockLayoutRow>
+				<l:BlockLayoutRow>
+					<l:BlockLayoutCell title="Sponsoring">
+						<core:Fragment fragmentName="capcom.recap.fragments.Sponsors" 
+							id="SponsorsFragment" 
+							type="XML" />
+					</l:BlockLayoutCell>
+				</l:BlockLayoutRow>
+				<l:BlockLayoutRow>
+					<l:BlockLayoutCell title="Travel + Parking">
+						<VBox>
+							<core:HTML content="&lt;p&gt;The venue (j&amp;amp;s-soft HQ) is &lt;a href=&quot;https://bit.ly/2R6Zh0L&quot; target=&quot;_blank&quot;&gt;centrally located in Heidelberg&lt;/a&gt;.&lt;/p&gt;" 
+								class="sapUiTinyMarginBottom" />
+
+							<List>
+								<StandardListItem title="The main train station is right across the street, ~5 min walk from the conference venue." 
+									wrapping="true" 
+									icon="sap-icon://passenger-train" />
+								<StandardListItem title="Nearest airports are Frankfurt (~1 hr by car/public transport) and Mannheim (~1/2 hr by car/public transport)." 
+									wrapping="true" 
+									icon="sap-icon://flight" />
+								<StandardListItem title="Even though there's plenty of street parking available, spots tend to be scarce on a business day (event is on a Friday) and are rather costly (~1€/half hour)." 
+									wrapping="true" 
+									icon="sap-icon://car-rental" />
+							</List>
+
+
+						</VBox>
+					</l:BlockLayoutCell>
+				</l:BlockLayoutRow>
+				<l:BlockLayoutRow>
+					<l:BlockLayoutCell title="Hotels">
+						<Text text="All of the below hotels are in walking distance (~5-7 min by foot) to the conference venue" 
+							class="sapUiTinyMarginBottom" />
+						<core:HTML content="&lt;p&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;em&gt;Note: &lt;/em&gt; we have no affiliation with any of the hotels listed!&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/p&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;ul&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;li&gt;&lt;a href=&quot;https://starinnhotels.com/star-inn-hotel-suites-premium-heidelberg-by-quality/&quot; target=&quot;_blank&quot;&gt;Star Inn&lt;/a&gt;: larg-ish hotel &gt; 200 rooms, reliably noise-cancelling windows, excellent and rich breakfast. Parking available.&lt;/li&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;li&gt;&lt;a href=&quot;https://www.99-hotels.com/hotels/heidelberg/&quot; target=&quot;_blank&quot;&gt;Ninety Nine&lt;/a&gt;: medium-ish hotel ~ 100 rooms, design-oriented, reliable noise-cancelling windows, wonderful veggie- and seafood-bowls. Parking available&lt;/li&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&#9;&lt;li&gt;&lt;a href=&quot;https://www.hotelbb.de/de/heidelberg&quot; target=&quot;_blank&quot;&gt;B&amp;amp;B&lt;/a&gt;: economy class hotel. Parking available&lt;/li&gt;&#10;&#9;&#9;&#9;&#9;&#9;&#9;&lt;/ul&gt;" />
+					</l:BlockLayoutCell>
+				</l:BlockLayoutRow>
+
+			</l:BlockLayout>
+		</Page>
+	</App>
+</mvc:View>
