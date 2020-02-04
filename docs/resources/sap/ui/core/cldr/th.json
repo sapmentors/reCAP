@@ -558,7 +558,7 @@
 		"tr": "ตุรกี",
 		"tru": "ตูโรโย",
 		"trv": "ทาโรโก",
-		"ts": "���ิตซองกา",
+		"ts": "ซิตซองกา",
 		"tsd": "ซาโคเนีย",
 		"tsi": "ซิมชีแอน",
 		"tt": "ตาตาร์",
@@ -3691,7 +3691,7 @@
 		"week-wide": {
 			"displayName": "สัปดาห์",
 			"relative-type--1": "สัปดาห์ที่แล้ว",
-			"relative-type-0": "สัปดาห์นี้",
+			"relative-type-0": "สัปดา��์นี้",
 			"relative-type-1": "สัปดาห์หน้า",
 			"relativeTime-type-future": {
 				"relativeTimePattern-count-other": "ในอีก {0} สัปดาห์"

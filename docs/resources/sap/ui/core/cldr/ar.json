@@ -5264,7 +5264,7 @@
 				"displayName": "ك واط",
 				"unitPattern-count-zero": "{0} كيلوواط",
 				"unitPattern-count-one": "{0} كيلوواط",
-				"unitPattern-count-two": "{0} كيلوو��ط",
+				"unitPattern-count-two": "{0} كيلوواط",
 				"unitPattern-count-few": "{0} كيلوواط",
 				"unitPattern-count-many": "{0} كيلوواط",
 				"unitPattern-count-other": "{0} كيلوواط"

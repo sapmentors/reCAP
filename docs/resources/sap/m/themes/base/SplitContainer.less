@@ -17,12 +17,12 @@
 
 .sapMSplitContainerMaster {
 	box-sizing: border-box;
-	width: 320px;
+	width: 20rem;
 	float: left;
 	left: 0;
 	z-index: 1;
 	background-color: @sapUiGroupContentBackground;
-	border-right: 1px solid @sapUiGroupContentBorderColor;
+	border-right: 0.0625rem solid @sapUiGroupContentBorderColor;
 }
 
 .sapMSplitContainerMaster > .sapMSplitContainerMasterBlindLayer {
@@ -46,7 +46,7 @@
 	height: 100%;
 
 	/* IE Windows 8 */// TODO remove after 1.62 version
-	/* This element receives events when not panning in vertial direction */
+	/* This element receives events when not panning in vertical direction */
 	touch-action: pan-y;
 	-ms-touch-action: pan-y;
 }

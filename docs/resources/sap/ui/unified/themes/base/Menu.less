@@ -50,6 +50,10 @@
 	position: relative;
 }
 
+.sapUiMnuItm:not(.sapUiMnuItmDsbl) {
+	cursor: pointer;
+}
+
 .sapUiMnuItm:focus {
 	outline: 1px dotted @sapUiContentFocusColor;
 	outline-offset: -3px;
@@ -120,6 +124,10 @@ html[data-sap-ui-browser*='ie'] {
 
 .sapUiMnuItmIco > .sapUiIcon {
 	line-height: @_sap_ui_unified_Menu_ItmHeight;
+}
+
+.sapUiMnuItmIco > .sapUiIcon {
+	cursor: inherit;
 }
 
 .sapUiMnu .sapUiMnuItmIco .sapUiIcon {
@@ -496,5 +504,30 @@ html.sap-phone, html.sap-tablet {
 		margin-top: 0;
 		margin-bottom: 0;
   }
+	.sapUiMnuLst > .sapUiMnuItm > .sapUiMnuItmTxt {
+		padding-left: 2rem;
+	}
 
+	.sapUiMnuLst > .sapUiMnuItm > .sapUiMnuItmIco + .sapUiMnuItmTxt {
+		padding-left: 0rem;
+	}
+
+	.sapUiMnuLst.sapUiMnuNoIco > .sapUiMnuItm > .sapUiMnuItmTxt,
+	.sapUiMnuLst.sapUiMnuNoIco > .sapUiMnuItm > .sapUiMnuItmIco + .sapUiMnuItmTxt{
+		padding-left: 0;
+	}
+
+}
+
+.sapUiSizeCozy{
+	.sapUiMnuLst > .sapUiMnuItm > .sapUiMnuItmTxt {
+		padding-left: 3rem;
+	}
+	.sapUiMnuLst > .sapUiMnuItm > .sapUiMnuItmIco + .sapUiMnuItmTxt {
+		padding-left: 0;
+	}
+	.sapUiMnuLst.sapUiMnuNoIco > .sapUiMnuItm > .sapUiMnuItmTxt,
+	.sapUiMnuLst.sapUiMnuNoIco > .sapUiMnuItm > .sapUiMnuItmIco + .sapUiMnuItmTxt {
+		padding-left: 0;
+	}
 }
