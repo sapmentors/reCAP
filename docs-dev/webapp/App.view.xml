@@ -66,7 +66,13 @@
 								<core:Icon src="sap-icon://group" 
 									size="1.5rem" 
 									class="sapUiTinyMarginEnd" />
-								<Text text="50 seats (registration not yet started!)" />
+								<HBox>
+									<Text text="50 seats" 
+										class="sapUiTinyMarginEnd" />
+									<Link href="https://recap2020.eventbrite.com" 
+										text="(Registration open until Feb 28!)" />
+								</HBox>
+
 							</HBox>
 							<HBox class="sapUiTinyMargin" 
 								alignItems="Center">
@@ -93,7 +99,23 @@
 				</l:BlockLayoutRow>
 				<l:BlockLayoutRow>
 					<l:BlockLayoutCell title="How It'll Go">
+						<VBox class="sapUiSmallMarginBottom">
+							<Title text="Registration (until Feb 28)" 
+								level="H4" 
+								titleStyle="H4" />
+							<HBox>
+								<Text text="... is done via Eventbrite:" class="sapUiTinyMarginEnd" />
+								<Link href="https://recap2020.eventbrite.com" 
+									text="https://recap2020.eventbrite.com" />
+							</HBox>
+							<core:HTML content="&lt;p class='sapMText sapUiTinyMarginBottom' style='margin:0'&gt;Note that &lt;b&gt;everyone registers to a general admission list (&quot;waiting list&quot;)&lt;/b&gt;.&lt;br /&gt;After Registration ends, participants will be randomly selected from the admission list and issued a ticket for the event.&lt;/p&gt;" />
+							<Text text="We know that this is inconvenient for some of you to take care of travel arrangements 🥴" class="sapUiTinyMarginBottom" />
+							<Text text="But demand was already very high when re>≡CAP was announced, so we deemed this the fairest chance 🤷‍♀️🤷‍♂️" />
+						</VBox>
 						<VBox>
+							<Title text="Event" 
+								level="H4" 
+								titleStyle="H4" />
 							<Text text="We'll meet in the j&amp;s-soft office in Heidelberg on May 15th." 
 								class="sapUiTinyMarginBottom" />
 							<Text text="Check-in opens at 9:00 - yes, there'll be ☕️" 
@@ -131,7 +153,8 @@
 							<Link href="https://wiki.scn.sap.com/wiki/x/OT3PHw" 
 								text="Head over to the SCN Wiki for suggestion a session!" 
 								class="sapUiTinyMarginBottom" />
-							<HBox class="sapUiTinyMarginBottom" alignItems="Center">
+							<HBox class="sapUiTinyMarginBottom" 
+								alignItems="Center">
 								<core:Icon src="sap-icon://hint" 
 									size="1.5rem" 
 									class="sapUiTinyMarginEnd" />
