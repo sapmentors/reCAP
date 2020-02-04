@@ -1,1 +1,0 @@
-sap.ui.define(["sap/ui/core/UIComponent","sap/ui/model/json/JSONModel","sap/ui/core/ComponentSupport"],(e,o)=>{"use strict";return e.extend("capcom.recap.Component",{metadata:{manifest:"json"},init(){e.prototype.init.apply(this,arguments)}})});
