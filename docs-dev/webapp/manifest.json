@@ -46,6 +46,10 @@
       "Agenda": {
         "type": "sap.ui.model.json.JSONModel",
         "uri": "Agenda.json"
+      },
+      "OurSponsors": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "OurSponsors.json"
       }
     }
   }
