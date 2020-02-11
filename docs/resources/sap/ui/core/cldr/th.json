@@ -2836,7 +2836,7 @@
 				},
 				"yMMMEEEEd": {
 					"d": "EEEEที่ d – EEEEที่ d MMM G y",
-					"M": "EEEE���ี่ d MMM – EEEEที่ d MMM G y",
+					"M": "EEEEที่ d MMM – EEEEที่ d MMM G y",
 					"y": "EEEEที่ d MMM G y – EEEEที่ d MMM y"
 				},
 				"yMMMM": {

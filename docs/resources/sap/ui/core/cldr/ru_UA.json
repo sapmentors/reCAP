@@ -5205,7 +5205,7 @@
 				"displayName": "англ. жидк. унц.",
 				"unitPattern-count-one": "{0} англ. жидк. унц.",
 				"unitPattern-count-few": "{0} англ. жидк. унц.",
-				"unitPattern-count-many": "{0} англ. жидк. ун��.",
+				"unitPattern-count-many": "{0} англ. жидк. унц.",
 				"unitPattern-count-other": "{0} англ. жидк. унц."
 			},
 			"volume-tablespoon": {

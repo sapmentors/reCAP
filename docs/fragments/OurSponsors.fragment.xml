@@ -1,0 +1,13 @@
+<core:FragmentDefinition xmlns="sap.m" 
+    xmlns:core="sap.ui.core">
+
+    <HBox items="{OurSponsors>/}">
+        <GenericTile header="{OurSponsors>header}" 
+            subheader="{OurSponsors>text}" 
+            class="sapUiSmallMargin">
+            <TileContent>
+                <ImageContent src="{OurSponsors>sponsorType}" />
+            </TileContent>
+        </GenericTile>
+    </HBox>
+</core:FragmentDefinition>
