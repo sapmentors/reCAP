@@ -2,23 +2,23 @@
   {
     "header": "CBasis",
     "sponsorTypeImage": "sap-icon://badge",
-    "sponsorType": "/silver.png",
+    "sponsorType": "silver.png",
     "url": "https://twitter.com/CBasis",
     "text": "Christian Braukmüller"
   },
   {
     "header": "qmacro",
     "sponsorTypeImage": "sap-icon://badge",
-    "sponsorType": "/silver.png",
+    "sponsorType": "silver.png",
     "url": "https://qmacro.org",
     "text": "DJ Adams"
   },
   {
     "header": "Reply",
     "sponsorTypeImage": "sap-icon://badge",
-    "sponsorType": "/silver.png",
+    "sponsorType": "silver.png",
     "url": "https://www.reply.com/de/",
-    "logo": "/reply-corporate-logo.png",
+    "logo": "reply-corporate-logo.png",
     "headerMode": "HeaderMode"
   }
 ]
