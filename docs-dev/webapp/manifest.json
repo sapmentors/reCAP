@@ -24,6 +24,9 @@
     }
   },
   "sap.ui5": {
+    "resources": {
+      "css": [{ "uri": "styles.css" }]
+    },
     "rootView": {
       "viewName": "capcom.recap.App",
       "type": "XML",
