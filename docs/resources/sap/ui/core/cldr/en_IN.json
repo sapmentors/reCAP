@@ -3202,7 +3202,7 @@
 					"M": "d/M – d/M"
 				},
 				"MEd": {
-					"d": "E, dd/MM – E, dd/MM",
+					"d": "E, dd/MM ��� E, dd/MM",
 					"M": "E, dd/MM – E, dd/MM"
 				},
 				"MMM": {

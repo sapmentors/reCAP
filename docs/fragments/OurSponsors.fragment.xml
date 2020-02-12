@@ -3,10 +3,13 @@
 
     <HBox items="{OurSponsors>/}">
         <GenericTile header="{OurSponsors>header}" 
-            subheader="{OurSponsors>text}" 
-            class="sapUiSmallMargin">
-            <TileContent>
-                <ImageContent src="{OurSponsors>sponsorType}" />
+            subheader="{OurSponsors>url}" 
+            headerImage="{OurSponsors>sponsorTypeImage}" 
+            class="sapUiSmallMargin" 
+            backgroundImage="{OurSponsors>sponsorType}" 
+            press="onSponsorPress(${OurSponsors>url})">
+            <TileContent footer="{OurSponsors>text}">
+                <ImageContent src="{OurSponsors>logo}" />
             </TileContent>
         </GenericTile>
     </HBox>
