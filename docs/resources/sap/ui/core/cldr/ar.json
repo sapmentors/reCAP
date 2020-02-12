@@ -2419,7 +2419,7 @@
 					"٤"
 				],
 				"wide": [
-					"الربع الأو��",
+					"الربع الأول",
 					"الربع الثاني",
 					"الربع الثالث",
 					"الربع الرابع"
@@ -3819,7 +3819,7 @@
 				"relativeTimePattern-count-zero": "قبل {0} ساعة",
 				"relativeTimePattern-count-one": "قبل ساعة واحدة",
 				"relativeTimePattern-count-two": "قبل ساعتين",
-				"relativeTimePattern-count-few": "قبل {0} ساعات",
+				"relativeTimePattern-count-few": "قبل {0} ��اعات",
 				"relativeTimePattern-count-many": "قبل {0} ساعة",
 				"relativeTimePattern-count-other": "قبل {0} ساعة"
 			}
@@ -4173,7 +4173,7 @@
 		"10000000000-zero": "‫¤‎‬ 00 مليار",
 		"10000000000-one": "‫¤‎‬ 00 مليار",
 		"10000000000-two": "‫¤‎‬ 00 مليار",
-		"10000000000-few": "��¤‎‬ 00 مليار",
+		"10000000000-few": "‫¤‎‬ 00 مليار",
 		"10000000000-many": "‫¤‎‬ 00 مليار",
 		"10000000000-other": "‫¤‎‬ 00 مليار",
 		"100000000000-zero": "‫¤‎‬ 000 مليار",

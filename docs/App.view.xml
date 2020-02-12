@@ -102,20 +102,24 @@
 						<VBox class="sapUiSmallMarginBottom">
 							<Title text="Registration (until Feb 28)" 
 								level="H4" 
-								titleStyle="H4" />
+								titleStyle="H4" 
+								class="sapUiTinyMarginBottom" />
 							<HBox>
-								<Text text="... is done via Eventbrite:" class="sapUiTinyMarginEnd" />
+								<Text text="... is done via Eventbrite:" 
+									class="sapUiTinyMarginEnd" />
 								<Link href="https://recap2020.eventbrite.com" 
 									text="https://recap2020.eventbrite.com" />
 							</HBox>
 							<core:HTML content="&lt;p class='sapMText sapUiTinyMarginBottom' style='margin:0'&gt;Note that &lt;b&gt;everyone registers to a general admission list (&quot;waiting list&quot;)&lt;/b&gt;.&lt;br /&gt;After Registration ends, participants will be randomly selected from the admission list and issued a ticket for the event.&lt;/p&gt;" />
-							<Text text="We know that this is inconvenient for some of you to take care of travel arrangements 🥴" class="sapUiTinyMarginBottom" />
+							<Text text="We know that this is inconvenient for some of you to take care of travel arrangements 🥴" 
+								class="sapUiTinyMarginBottom" />
 							<Text text="But demand was already very high when re>≡CAP was announced, so we deemed this the fairest chance 🤷‍♀️🤷‍♂️" />
 						</VBox>
 						<VBox>
 							<Title text="Event" 
 								level="H4" 
-								titleStyle="H4" />
+								titleStyle="H4" 
+								class="sapUiTinyMarginBottom" />
 							<Text text="We'll meet in the j&amp;s-soft office in Heidelberg on May 15th." 
 								class="sapUiTinyMarginBottom" />
 							<Text text="Check-in opens at 9:00 - yes, there'll be ☕️" 
@@ -132,6 +136,13 @@
 							<Text text="After the event is before the 🎉 - there'll be the opportunity for talk and drink after the event - yes, there'll be 🍺" 
 								class="sapUiTinyMarginBottom" />
 						</VBox>
+					</l:BlockLayoutCell>
+				</l:BlockLayoutRow>
+				<l:BlockLayoutRow>
+					<l:BlockLayoutCell title="Sponsored by">
+						<core:Fragment fragmentName="capcom.recap.fragments.OurSponsors" 
+							id="OurSponsorsFragment" 
+							type="XML" />
 					</l:BlockLayoutCell>
 				</l:BlockLayoutRow>
 				<l:BlockLayoutRow>

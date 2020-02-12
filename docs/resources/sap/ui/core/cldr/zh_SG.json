@@ -4194,7 +4194,7 @@
 			},
 			"length-light-year": {
 				"displayName": "光年",
-				"unitPattern-count-other": "{0}��年"
+				"unitPattern-count-other": "{0}光年"
 			},
 			"length-astronomical-unit": {
 				"displayName": "天文单位",
