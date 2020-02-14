@@ -431,7 +431,7 @@
 		"pcm": "พิดจิน",
 		"pdc": "เยอรมันเพนซิลเวเนีย",
 		"pdt": "เพลาท์ดิช",
-		"peo": "เปอร์เซีย���บราณ",
+		"peo": "เปอร์เซียโบราณ",
 		"pfl": "เยอรมันพาลาทิเนต",
 		"phn": "ฟินิเชีย",
 		"pi": "บาลี",
@@ -4190,7 +4190,7 @@
 			},
 			"duration-day": {
 				"displayName": "วัน",
-				"unitPattern-count-other": "{0} วัน",
+				"unitPattern-count-other": "{0} วั��",
 				"perUnitPattern": "{0}/วัน"
 			},
 			"duration-hour": {

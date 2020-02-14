@@ -2419,7 +2419,7 @@
 					"٤"
 				],
 				"wide": [
-					"الربع الأول",
+					"الربع الأو��",
 					"الربع الثاني",
 					"الربع الثالث",
 					"الربع الرابع"
@@ -5000,7 +5000,7 @@
 				"unitPattern-count-other": "{0} ميل"
 			},
 			"length-yard": {
-				"displayName": "ياردة",
+				"displayName": "يار��ة",
 				"unitPattern-count-zero": "{0} ياردة",
 				"unitPattern-count-one": "ياردة",
 				"unitPattern-count-two": "{0} ياردة",

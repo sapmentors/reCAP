@@ -2675,7 +2675,7 @@
 				},
 				"yMEd": {
 					"d": "E، dd‏/MM‏/y – E، dd‏/MM‏/y G",
-					"M": "E، d���/M‏/y – E، d‏/M‏/y G",
+					"M": "E، d‏/M‏/y – E، d‏/M‏/y G",
 					"y": "E، d‏/M‏/y – E، d‏/M‏/y G"
 				},
 				"yMMM": {
@@ -4338,7 +4338,7 @@
 				"unitPattern-count-one": "دقيقة قوسية",
 				"unitPattern-count-two": "دقيقتان قوسيتان",
 				"unitPattern-count-few": "{0} دقائق قوسية",
-				"unitPattern-count-many": "{0} دقيقة قوسية",
+				"unitPattern-count-many": "{0} ��قيقة قوسية",
 				"unitPattern-count-other": "{0} دقيقة قوسية"
 			},
 			"angle-arc-second": {
