@@ -6,7 +6,7 @@
             <GenericTile header="Kentivo" 
                 subheader="https://kentivo.com" 
                 headerImage="sap-icon://competitor" 
-                backgroundImage="/gold.png" 
+                backgroundImage="gold.png" 
                 press="onSponsorPress('https://kentivo.com')">
                 <TileContent footer="Kentivo">
                     <ImageContent src="logos/kentivo.png" />
@@ -15,7 +15,7 @@
             <GenericTile header="paricon" 
                 subheader="https://paricon.de" 
                 headerImage="sap-icon://competitor" 
-                backgroundImage="/gold.png" 
+                backgroundImage="gold.png" 
                 press="onSponsorPress('https://paricon.de')">
                 <TileContent footer="paricon">
                     <ImageContent src="logos/paricon.png" />
@@ -24,7 +24,7 @@
             <GenericTile header="Q_PERIOR" 
                 subheader="https://www.q-perior.com" 
                 headerImage="sap-icon://competitor" 
-                backgroundImage="/gold.png" 
+                backgroundImage="gold.png" 
                 press="onSponsorPress('https://www.q-perior.com')">
                 <TileContent footer="Q_PERIOR">
                     <ImageContent src="logos/qperior.gif" />
