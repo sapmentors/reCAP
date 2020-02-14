@@ -304,7 +304,7 @@
 		"mdf": "莫克沙语",
 		"mdr": "曼达尔语",
 		"men": "门德语",
-		"mer": "梅鲁语",
+		"mer": "梅��语",
 		"mfe": "毛里求斯克里奥尔语",
 		"mg": "马拉加斯语",
 		"mga": "中古爱尔兰语",
@@ -645,7 +645,7 @@
 		"Medf": "梅德法伊德林文",
 		"Mend": "门迪文",
 		"Merc": "麦罗埃草书",
-		"Mero": "��若提克文",
+		"Mero": "麦若提克文",
 		"Mlym": "马拉雅拉姆文",
 		"Modi": "Modi",
 		"Mong": "蒙古文",
@@ -3892,7 +3892,7 @@
 			"area-square-centimeter": {
 				"displayName": "平方厘米",
 				"unitPattern-count-other": "{0}平方厘米",
-				"perUnitPattern": "{0}/平方厘��"
+				"perUnitPattern": "{0}/平方厘米"
 			},
 			"area-square-mile": {
 				"displayName": "平方英里",

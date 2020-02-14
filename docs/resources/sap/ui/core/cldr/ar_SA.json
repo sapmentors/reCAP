@@ -4338,7 +4338,7 @@
 				"unitPattern-count-one": "دقيقة قوسية",
 				"unitPattern-count-two": "دقيقتان قوسيتان",
 				"unitPattern-count-few": "{0} دقائق قوسية",
-				"unitPattern-count-many": "{0} ��قيقة قوسية",
+				"unitPattern-count-many": "{0} دقيقة قوسية",
 				"unitPattern-count-other": "{0} دقيقة قوسية"
 			},
 			"angle-arc-second": {
