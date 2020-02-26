@@ -20,5 +20,13 @@
     "url": "https://www.reply.com/de/",
     "logo": "reply-corporate-logo.png",
     "headerMode": "HeaderMode"
+  },
+  {
+    "header": "SAP",
+    "sponsorTypeImage": "sap-icon://badge",
+    "sponsorType": "silver.png",
+    "url": "https://developers.sap.com",
+    "logo": "sap-logo.png",
+    "text": "Developer Relations"
   }
 ]

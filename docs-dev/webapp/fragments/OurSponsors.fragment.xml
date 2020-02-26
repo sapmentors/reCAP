@@ -1,47 +1,59 @@
 <core:FragmentDefinition xmlns="sap.m" 
-    xmlns:core="sap.ui.core">
+    xmlns:core="sap.ui.core" 
+    xmlns:l="sap.ui.layout">
 
-    <HBox alignItems="Center">
-        <SlideTile class="sapUiSmallMarginEnd">
-            <GenericTile header="Kentivo" 
-                subheader="https://kentivo.com" 
-                headerImage="sap-icon://competitor" 
-                backgroundImage="gold.png" 
-                press="onSponsorPress('https://kentivo.com')">
-                <TileContent footer="Kentivo">
-                    <ImageContent src="logos/kentivo.png" />
-                </TileContent>
-            </GenericTile>
-            <GenericTile header="paricon" 
-                subheader="https://paricon.de" 
-                headerImage="sap-icon://competitor" 
-                backgroundImage="gold.png" 
-                press="onSponsorPress('https://paricon.de')">
-                <TileContent footer="paricon">
-                    <ImageContent src="logos/paricon.png" />
-                </TileContent>
-            </GenericTile>
-            <GenericTile header="Q_PERIOR" 
-                subheader="https://www.q-perior.com" 
-                headerImage="sap-icon://competitor" 
-                backgroundImage="gold.png" 
-                press="onSponsorPress('https://www.q-perior.com')">
-                <TileContent footer="Q_PERIOR">
-                    <ImageContent src="logos/qperior.gif" />
-                </TileContent>
-            </GenericTile>
-        </SlideTile>
-        <HBox items="{OurSponsors>/}">
-            <GenericTile header="{OurSponsors>header}" 
-                subheader="{OurSponsors>url}" 
-                headerImage="{OurSponsors>sponsorTypeImage}" 
-                class="sapUiSmallMargin" 
-                backgroundImage="{OurSponsors>sponsorType}" 
-                press="onSponsorPress(${OurSponsors>url})">
-                <TileContent footer="{OurSponsors>text}">
-                    <ImageContent src="{OurSponsors>logo}" />
-                </TileContent>
-            </GenericTile>
-        </HBox>
-    </HBox>
+    <l:VerticalLayout width="100%" 
+        class="gridWrapper">
+        <l:Grid containerQuery="true" 
+            hSpacing="0">
+            <SlideTile class="sapUiSmallMarginEnd">
+                <GenericTile header="Kentivo" 
+                    subheader="https://kentivo.com" 
+                    headerImage="sap-icon://competitor" 
+                    backgroundImage="gold.png" 
+                    press="onSponsorPress('https://kentivo.com')">
+                    <TileContent footer="Kentivo">
+                        <ImageContent src="logos/kentivo.png" />
+                    </TileContent>
+                </GenericTile>
+                <GenericTile header="paricon" 
+                    subheader="https://paricon.de" 
+                    headerImage="sap-icon://competitor" 
+                    backgroundImage="gold.png" 
+                    press="onSponsorPress('https://paricon.de')">
+                    <TileContent footer="paricon">
+                        <ImageContent src="logos/paricon.png" />
+                    </TileContent>
+                </GenericTile>
+                <GenericTile header="Q_PERIOR" 
+                    subheader="https://www.q-perior.com" 
+                    headerImage="sap-icon://competitor" 
+                    backgroundImage="gold.png" 
+                    press="onSponsorPress('https://www.q-perior.com')">
+                    <TileContent footer="Q_PERIOR">
+                        <ImageContent src="logos/qperior.gif" />
+                    </TileContent>
+                </GenericTile>
+            </SlideTile>
+            <l:HorizontalLayout width="100%" 
+                class="gridWrapper">
+                <l:Grid containerQuery="true" 
+                    hSpacing="0" 
+                    content="{OurSponsors>/}">
+                    <!-- <HBox items="{OurSponsors>/}"> -->
+                    <GenericTile header="{OurSponsors>header}" 
+                        subheader="{OurSponsors>url}" 
+                        headerImage="{OurSponsors>sponsorTypeImage}" 
+                        class="sapUiSmallMargin" 
+                        backgroundImage="{OurSponsors>sponsorType}" 
+                        press="onSponsorPress(${OurSponsors>url})">
+                        <TileContent footer="{OurSponsors>text}">
+                            <ImageContent src="{OurSponsors>logo}" />
+                        </TileContent>
+                    </GenericTile>
+                    <!-- </HBox> -->
+                </l:Grid>
+            </l:HorizontalLayout>
+        </l:Grid>
+    </l:VerticalLayout>
 </core:FragmentDefinition>
