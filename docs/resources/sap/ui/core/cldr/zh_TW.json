@@ -3249,7 +3249,7 @@
 				},
 				"yMMMEd": {
 					"d": "G y年M月d日E至d日E",
-					"M": "G y年M月d日E至M月d日E",
+					"M": "G y年M月d���E至M月d日E",
 					"y": "G y年M月d日E至y年M月d日E"
 				},
 				"yMMMM": {
