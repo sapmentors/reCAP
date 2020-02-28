@@ -4120,7 +4120,7 @@
 				"unitPattern-count-other": "{0} ล./100กม."
 			},
 			"consumption-mile-per-gallon": {
-				"displayName": "ไมล์/แ��ลลอน",
+				"displayName": "ไมล์/แกลลอน",
 				"unitPattern-count-other": "{0} ไมล์/แกลลอน"
 			},
 			"consumption-mile-per-gallon-imperial": {

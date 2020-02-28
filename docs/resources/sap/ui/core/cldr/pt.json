@@ -3064,7 +3064,7 @@
 				},
 				"GyMMM": {
 					"G": "G y MMM – G y MMM",
-					"M": "G y MMM��MMM",
+					"M": "G y MMM–MMM",
 					"y": "G y MMM – y MMM"
 				},
 				"GyMMMd": {
@@ -4667,7 +4667,7 @@
 	"lenient-scope-number": {
 		"minusSign": "-‒⁻₋−➖﹣－",
 		"commaSign": ",،٫、︐︑﹐﹑，､",
-		"plusSign": "+⁺₊➕﬩﹢���"
+		"plusSign": "+⁺₊➕﬩﹢＋"
 	},
 	"currencyFormat-sap-short": {
 		"1000-one": "0 mil ¤",

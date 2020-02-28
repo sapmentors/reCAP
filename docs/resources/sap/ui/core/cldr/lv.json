@@ -2678,7 +2678,7 @@
 				"abbreviated": [
 					"farvardīns",
 					"ordibehešts",
-					"hordāds",
+					"hord��ds",
 					"tīrs",
 					"mordāds",
 					"šahrivērs",
@@ -4750,7 +4750,7 @@
 			},
 			"temperature-generic": {
 				"displayName": "°",
-				"unitPattern-count-zero": "{0}°",
+				"unitPattern-count-zero": "{0}��",
 				"unitPattern-count-one": "{0}°",
 				"unitPattern-count-other": "{0}°"
 			},
