@@ -1,8 +1,9 @@
 <core:FragmentDefinition xmlns="sap.m" 
-    xmlns:core="sap.ui.core">
+    xmlns:core="sap.ui.core" 
+    xmlns:l="sap.ui.layout">
 
-    <HBox alignItems="Center">
-        <SlideTile class="sapUiSmallMarginEnd">
+    <l:HorizontalLayout>
+        <SlideTile class="sapUiSmallMargin meInline">
             <GenericTile header="Kentivo" 
                 subheader="https://kentivo.com" 
                 headerImage="sap-icon://competitor" 
@@ -31,7 +32,8 @@
                 </TileContent>
             </GenericTile>
         </SlideTile>
-        <HBox items="{OurSponsors>/}">
+        <l:Grid hSpacing="0" 
+            content="{OurSponsors>/}">
             <GenericTile header="{OurSponsors>header}" 
                 subheader="{OurSponsors>url}" 
                 headerImage="{OurSponsors>sponsorTypeImage}" 
@@ -42,6 +44,6 @@
                     <ImageContent src="{OurSponsors>logo}" />
                 </TileContent>
             </GenericTile>
-        </HBox>
-    </HBox>
+        </l:Grid>
+    </l:HorizontalLayout>
 </core:FragmentDefinition>
