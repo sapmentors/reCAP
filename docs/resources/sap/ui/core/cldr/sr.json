@@ -3586,7 +3586,7 @@
 			"relativeTime-type-past": {
 				"relativeTimePattern-count-one": "пре {0} нед.",
 				"relativeTimePattern-count-few": "пре {0} нед.",
-				"relativeTimePattern-count-other": "пре {0} нед."
+				"relativeTimePattern-count-other": "пр�� {0} нед."
 			},
 			"relativePeriod": "недеља која почиње {0}."
 		},
