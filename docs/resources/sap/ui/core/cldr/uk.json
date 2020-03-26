@@ -3571,7 +3571,7 @@
 				"relativeTimePattern-count-one": "за {0} міс.",
 				"relativeTimePattern-count-few": "за {0} міс.",
 				"relativeTimePattern-count-many": "за {0} міс.",
-				"relativeTimePattern-count-other": "за {0} ��іс."
+				"relativeTimePattern-count-other": "за {0} міс."
 			},
 			"relativeTime-type-past": {
 				"relativeTimePattern-count-one": "{0} міс. тому",
