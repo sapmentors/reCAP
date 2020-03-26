@@ -43,40 +43,69 @@
 
 					</l:BlockLayoutCell>
 					<l:BlockLayoutCell>
-						<VBox>
-							<HBox class="sapUiTinyMargin" 
-								alignItems="Center">
-								<core:Icon src="sap-icon://appointment" 
-									size="1.5rem" 
-									class="sapUiTinyMarginEnd" />
-								<Title text="2020 May 15th, 10:00 - 18:00" 
-									level="H4" 
-									titleStyle="H4" />
-							</HBox>
-							<HBox class="sapUiTinyMargin" 
-								alignItems="Center">
-								<core:Icon src="sap-icon://map-2" 
-									size="1.5rem" 
-									class="sapUiTinyMarginEnd" />
-								<Link text="j&amp;s-soft GmbH HQ, Heidelberg" 
-									href="https://bit.ly/2R6Zh0L" />
-							</HBox>
-							<HBox class="sapUiTinyMargin" 
-								alignItems="Center">
-								<core:Icon src="sap-icon://group" 
-									size="1.5rem" 
-									class="sapUiTinyMarginEnd" />
-									<Text text="50 seats" 
-										class="sapUiTinyMarginEnd" />
-							</HBox>
-							<HBox class="sapUiTinyMargin" 
-								alignItems="Center">
-								<core:Icon src="sap-icon://payment-approval" 
-									size="1.5rem" 
-									class="sapUiTinyMarginEnd" />
-								<Text text="free (as in 🍺)" />
-							</HBox>
-						</VBox>
+						<l:BlockLayout background="Dashboard">
+							<l:BlockLayoutRow>
+								<l:BlockLayoutCell title="1️⃣ online">
+									<VBox>
+										<HBox class="sapUiTinyMargin" 
+											alignItems="Center">
+											<core:Icon src="sap-icon://internet-browser" 
+												size="1.5rem" 
+												class="sapUiTinyMarginEnd" />
+											<Title text="2020 May 15th, 10:00 - 18:00" 
+												level="H4" 
+												titleStyle="H4" />
+										</HBox>
+										<HBox class="sapUiTinyMargin" 
+											alignItems="Center">
+											<core:Icon src="sap-icon://payment-approval" 
+												size="1.5rem" 
+												class="sapUiTinyMarginEnd" />
+											<Text text="free (as in 🍺)" />
+										</HBox>
+									</VBox>
+								</l:BlockLayoutCell>
+							</l:BlockLayoutRow>
+							<l:BlockLayoutRow>
+								<l:BlockLayoutCell title="2️⃣ on-site">
+
+									<VBox>
+										<HBox class="sapUiTinyMargin" 
+											alignItems="Center">
+											<core:Icon src="sap-icon://appointment" 
+												size="1.5rem" 
+												class="sapUiTinyMarginEnd" />
+											<Title text="tba, most likely late 2020" 
+												level="H4" 
+												titleStyle="H4" />
+										</HBox>
+										<HBox class="sapUiTinyMargin" 
+											alignItems="Center">
+											<core:Icon src="sap-icon://map-2" 
+												size="1.5rem" 
+												class="sapUiTinyMarginEnd" />
+											<Link text="j&amp;s-soft GmbH HQ, Heidelberg" 
+												href="https://bit.ly/2R6Zh0L" />
+										</HBox>
+										<HBox class="sapUiTinyMargin" 
+											alignItems="Center">
+											<core:Icon src="sap-icon://group" 
+												size="1.5rem" 
+												class="sapUiTinyMarginEnd" />
+											<Text text="50 seats" 
+												class="sapUiTinyMarginEnd" />
+										</HBox>
+										<HBox class="sapUiTinyMargin" 
+											alignItems="Center">
+											<core:Icon src="sap-icon://payment-approval" 
+												size="1.5rem" 
+												class="sapUiTinyMarginEnd" />
+											<Text text="free (as in 🍺)" />
+										</HBox>
+									</VBox>
+								</l:BlockLayoutCell>
+							</l:BlockLayoutRow>
+						</l:BlockLayout>
 					</l:BlockLayoutCell>
 				</l:BlockLayoutRow>
 				<l:BlockLayoutRow>
@@ -89,6 +118,9 @@
 								text="🤝 meet in person, 💫 exchange knowledge, 🧑‍💻👨‍💻 hack together!" 
 								wrapping="true" 
 								class="sapUiMediumMarginBegin" />
+							<Title level="H2" 
+								text="Due to the COVID-19 pandemic, we're splitting the event in an online- and on-site part!" 
+								class="sapUiSmallMarginTop" />
 						</VBox>
 					</l:BlockLayoutCell>
 				</l:BlockLayoutRow>
@@ -99,30 +131,41 @@
 								level="H4" 
 								titleStyle="H4" 
 								class="sapUiTinyMarginBottom" />
-							
+
 							<Text text="There's still a waiting list and free spots will be automatically re-assigned." />
+							<Text text="Issued tickets to both participants and speakers remain valid for the to-be-announced date of the on-site event!" />
 						</VBox>
-						<VBox>
-							<Title text="Event" 
+						<VBox class="sapUiSmallMarginBottom">
+							<Title text="online Event" 
 								level="H4" 
 								titleStyle="H4" 
 								class="sapUiTinyMarginBottom" />
-							<Text text="We'll meet in the j&amp;s-soft office in Heidelberg on May 15th." 
-								class="sapUiTinyMarginBottom" />
-							<Text text="Check-in opens at 9:00 - yes, there'll be ☕️" 
-								class="sapUiTinyMarginBottom" />
-							<Text text="After the opening keynote in the main conference room," />
-							<Text text="we'll split into groups and work/listen/demo at cosy ad-hoc meeting spots throughout the office -" />
-							<Link text="see the Agenda below" 
-								id="toAgenda" 
-								class="sapUiTinyMarginBottom" />
-							<core:HTML content="&lt;p class='sapMText' style='margin:0'&gt;There are 3 locations offering session-stlye capabilites, &lt;em&gt;OASIS&lt;/em&gt;, &lt;em&gt;Flynn&apos;s&lt;/em&gt;, &lt;em&gt;Mos Eisley&lt;/em&gt; (yeah, I know). Talks/Demos/Hands-On will be scheduled in these up-front.&lt;/p&gt;" />
-							<core:HTML content="&lt;p class='sapMText sapUiTinyMarginBottom' style='margin:0'&gt;An additional 4th spot (&lt;em&gt;Rylos&lt;/em&gt;) is an ad-hoc meeting space, ideally suited for &lt;a href=&quot;https://en.wikipedia.org/wiki/Birds_of_a_feather_(computing)&quot;&gt;BoF&lt;/a&gt;-stlye show&apos;n&apos;tell or hacking sessions. Mostly no planning, just gather, hook up and start doing stuff.&lt;/p&gt;" />
-							<Text text="(btw: 🎥 as many of the sessions as possible will be live-streamed!)" 
-								class="sapUiTinyMarginBottom" />
-							<Text text="After the event is before the 🎉 - there'll be the opportunity for talk and drink after the event - yes, there'll be 🍺" 
-								class="sapUiTinyMarginBottom" />
+
+							<Text text="We'll meet virtually on May 15th. Both platform and streaming service have yet to be announced." />
+
 						</VBox>
+						<Panel expandable="true" 
+							headerText="on-site Event">
+
+							<VBox>
+								<!-- <Title text="on-site Event" level="H4" titleStyle="H4" class="sapUiTinyMarginBottom" /> -->
+								<Text text="We'll meet in the j&amp;s-soft office in Heidelberg on a yet to be announced date." 
+									class="sapUiTinyMarginBottom" />
+								<Text text="Check-in opens at 9:00 - yes, there'll be ☕️" 
+									class="sapUiTinyMarginBottom" />
+								<Text text="After the opening keynote in the main conference room," />
+								<Text text="we'll split into groups and work/listen/demo at cosy ad-hoc meeting spots throughout the office -" />
+								<Link text="see the Agenda below" 
+									id="toAgenda" 
+									class="sapUiTinyMarginBottom" />
+								<core:HTML content="&lt;p class='sapMText' style='margin:0'&gt;There are 3 locations offering session-stlye capabilites, &lt;em&gt;OASIS&lt;/em&gt;, &lt;em&gt;Flynn&apos;s&lt;/em&gt;, &lt;em&gt;Mos Eisley&lt;/em&gt; (yeah, I know). Talks/Demos/Hands-On will be scheduled in these up-front.&lt;/p&gt;" />
+								<core:HTML content="&lt;p class='sapMText sapUiTinyMarginBottom' style='margin:0'&gt;An additional 4th spot (&lt;em&gt;Rylos&lt;/em&gt;) is an ad-hoc meeting space, ideally suited for &lt;a href=&quot;https://en.wikipedia.org/wiki/Birds_of_a_feather_(computing)&quot;&gt;BoF&lt;/a&gt;-stlye show&apos;n&apos;tell or hacking sessions. Mostly no planning, just gather, hook up and start doing stuff.&lt;/p&gt;" />
+								<Text text="(btw: 🎥 as many of the sessions as possible will be live-streamed!)" 
+									class="sapUiTinyMarginBottom" />
+								<Text text="After the event is before the 🎉 - there'll be the opportunity for talk and drink after the event - yes, there'll be 🍺" 
+									class="sapUiTinyMarginBottom" />
+							</VBox>
+						</Panel>
 					</l:BlockLayoutCell>
 				</l:BlockLayoutRow>
 				<l:BlockLayoutRow>
@@ -133,10 +176,19 @@
 					</l:BlockLayoutCell>
 				</l:BlockLayoutRow>
 				<l:BlockLayoutRow>
-					<l:BlockLayoutCell title="Agenda">
+					<l:BlockLayoutCell title="Agenda - online Event">
+						<core:Fragment fragmentName="capcom.recap.fragments.AgendaOnline" 
+							id="AgendaFragmentOnline" 
+							type="XML" />
+					</l:BlockLayoutCell>
+				</l:BlockLayoutRow>
+				<l:BlockLayoutRow>
+					<l:BlockLayoutCell>
+						<Panel expandable="true" headerText="Agenda - on-site Event">
 						<core:Fragment fragmentName="capcom.recap.fragments.Agenda" 
 							id="AgendaFragment" 
 							type="XML" />
+						</Panel>
 					</l:BlockLayoutCell>
 				</l:BlockLayoutRow>
 
@@ -145,7 +197,7 @@
 						<VBox>
 							<Text text="...is over!" 
 								class="sapUiTinyMarginBottom" />
-							<Text text="...🤖 agenda being built ... 🛠...⚙️..."/>
+							<Text text="...🤖 agenda being built ... 🛠...⚙️..." />
 							<core:HTML content="&lt;p&gt;&lt;em&gt;Note:&lt;/em&gt; there is no reimbursement or cover of travel cost for speakers. Hey, &lt;em&gt;un&lt;/em&gt;conference, ja?! 😀&lt;/p&gt;" />
 						</VBox>
 					</l:BlockLayoutCell>
