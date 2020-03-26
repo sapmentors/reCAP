@@ -3889,7 +3889,7 @@
 				"perUnitPattern": "{0}/平方厘米"
 			},
 			"area-square-mile": {
-				"displayName": "平���英里",
+				"displayName": "平方英里",
 				"unitPattern-count-other": "{0}平方英里",
 				"perUnitPattern": "{0}/平方英里"
 			},
