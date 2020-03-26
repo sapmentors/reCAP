@@ -696,7 +696,7 @@
 		"Java": "爪哇文",
 		"Jpan": "日文",
 		"Jurc": "女真文字",
-		"Kali": "克耶李文",
+		"Kali": "���耶李文",
 		"Kana": "片假名",
 		"Khar": "卡羅須提文",
 		"Khmr": "高棉文",
@@ -4411,7 +4411,7 @@
 				"unitPattern-count-other": "{0} 百帕"
 			},
 			"pressure-millimeter-of-mercury": {
-				"displayName": "毫米汞柱",
+				"displayName": "毫米��柱",
 				"unitPattern-count-other": "{0} 毫米汞柱"
 			},
 			"pressure-pound-per-square-inch": {

@@ -5590,7 +5590,7 @@
 				"unitPattern-count-other": "{0} مكيال متري"
 			},
 			"volume-cup-metric": {
-				"displayName": "كوب م��ري",
+				"displayName": "كوب متري",
 				"unitPattern-count-zero": "{0} كوب متري",
 				"unitPattern-count-one": "{0} كوب متري",
 				"unitPattern-count-two": "{0} كوب متري",

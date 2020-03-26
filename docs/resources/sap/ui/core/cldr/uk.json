@@ -3502,7 +3502,7 @@
 				"relativeTimePattern-count-other": "через {0} кв."
 			},
 			"relativeTime-type-past": {
-				"relativeTimePattern-count-one": "{0} кв. т��му",
+				"relativeTimePattern-count-one": "{0} кв. тому",
 				"relativeTimePattern-count-few": "{0} кв. тому",
 				"relativeTimePattern-count-many": "{0} кв. тому",
 				"relativeTimePattern-count-other": "{0} кв. тому"
