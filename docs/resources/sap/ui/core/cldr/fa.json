@@ -2822,7 +2822,7 @@
 					"دوشنبه",
 					"سه‌شنبه",
 					"چهارشنبه",
-					"پنجشنبه",
+					"پ��جشنبه",
 					"جمعه",
 					"شنبه"
 				]
@@ -4631,7 +4631,7 @@
 				"unitPattern-count-other": "{0} اینچ مکعب"
 			},
 			"volume-megaliter": {
-				"displayName": "مگال��تر",
+				"displayName": "مگالیتر",
 				"unitPattern-count-one": "{0} مگالیتر",
 				"unitPattern-count-other": "{0} مگالیتر"
 			},
