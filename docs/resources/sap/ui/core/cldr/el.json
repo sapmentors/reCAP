@@ -4333,7 +4333,7 @@
 			},
 			"length-yard": {
 				"displayName": "γιάρδες",
-				"unitPattern-count-one": "{0} γρδ",
+				"unitPattern-count-one": "{0} γρ��",
 				"unitPattern-count-other": "{0} γρδ"
 			},
 			"length-foot": {

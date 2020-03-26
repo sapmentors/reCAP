@@ -4397,7 +4397,7 @@
 				"unitPattern-count-other": "{0} м/с"
 			},
 			"speed-mile-per-hour": {
-				"displayName": "миля/сағат",
+				"displayName": "миля/сағ��т",
 				"unitPattern-count-one": "{0} миля/сағ",
 				"unitPattern-count-other": "{0} миля/сағ"
 			},

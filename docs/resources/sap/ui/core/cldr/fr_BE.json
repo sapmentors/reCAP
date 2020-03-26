@@ -4831,7 +4831,7 @@
 			},
 			"coordinateUnit": {
 				"displayName": "direction",
-				"east": "{0}��E",
+				"east": "{0} E",
 				"north": "{0} N",
 				"south": "{0} S",
 				"west": "{0} O"
