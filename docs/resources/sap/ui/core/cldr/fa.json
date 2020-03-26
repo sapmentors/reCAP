@@ -4449,7 +4449,7 @@
 			"mass-ounce": {
 				"displayName": "اونس",
 				"unitPattern-count-one": "{0} اونس",
-				"unitPattern-count-other": "{0} اونس",
+				"unitPattern-count-other": "{0} ��ونس",
 				"perUnitPattern": "{0} در اونس"
 			},
 			"mass-ounce-troy": {
