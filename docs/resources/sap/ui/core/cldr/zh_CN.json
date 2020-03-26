@@ -3972,7 +3972,7 @@
 			},
 			"digital-terabit": {
 				"displayName": "太比特",
-				"unitPattern-count-other": "{0}太比特"
+				"unitPattern-count-other": "{0}��比特"
 			},
 			"digital-gigabyte": {
 				"displayName": "吉字节",

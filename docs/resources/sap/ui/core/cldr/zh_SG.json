@@ -4257,7 +4257,7 @@
 				"unitPattern-count-other": "{0}微克"
 			},
 			"mass-ton": {
-				"displayName": "吨",
+				"displayName": "��",
 				"unitPattern-count-other": "{0}吨"
 			},
 			"mass-stone": {

@@ -3181,7 +3181,7 @@
 				},
 				"Md": {
 					"d": "dd/MM – dd/MM",
-					"M": "dd/MM �� dd/MM"
+					"M": "dd/MM – dd/MM"
 				},
 				"MEd": {
 					"d": "E dd/MM – E dd/MM",

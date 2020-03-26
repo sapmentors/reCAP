@@ -4509,7 +4509,7 @@
 			"speed-knot": {
 				"displayName": "नॉट",
 				"unitPattern-count-one": "{0} नॉट",
-				"unitPattern-count-other": "{0} ��ॉट"
+				"unitPattern-count-other": "{0} नॉट"
 			},
 			"temperature-generic": {
 				"displayName": "°",
