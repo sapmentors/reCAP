@@ -3584,7 +3584,7 @@
 			"displayName": "тиждень",
 			"relative-type--1": "минулого тижня",
 			"relative-type-0": "цього тижня",
-			"relative-type-1": "наступного тижня",
+			"relative-type-1": "наступного ти��ня",
 			"relativeTime-type-future": {
 				"relativeTimePattern-count-one": "через {0} тиждень",
 				"relativeTimePattern-count-few": "через {0} тижні",

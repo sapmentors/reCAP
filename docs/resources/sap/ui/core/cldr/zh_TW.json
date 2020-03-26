@@ -2673,7 +2673,7 @@
 				},
 				"GyMEd": {
 					"d": "GGGGG y-MM-dd, E – y-MM-dd, E",
-					"G": "GGGGG y-MM-dd, E �� GGGGG y-MM-dd, E",
+					"G": "GGGGG y-MM-dd, E – GGGGG y-MM-dd, E",
 					"M": "GGGGG y-MM-dd, E – y-MM-dd, E",
 					"y": "GGGGG y-MM-dd, E – y-MM-dd, E"
 				},

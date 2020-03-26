@@ -3992,7 +3992,7 @@
 				"unitPattern-count-other": "{0} व॰फ़ी॰"
 			},
 			"area-square-inch": {
-				"displayName": "व॰ इ��॰",
+				"displayName": "व॰ इं॰",
 				"unitPattern-count-one": "{0} व॰ इं॰",
 				"unitPattern-count-other": "{0} व॰ इं॰",
 				"perUnitPattern": "{0}/वर्ग इंच"
