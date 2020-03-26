@@ -1,31 +1,31 @@
 {
 	"name": "recap",
 	"version": "1.0.3",
-	"buildTimestamp": "202003261552",
+	"buildTimestamp": "202003261553",
 	"scmRevision": "",
 	"libraries": [
 		{
-			"name": "sap.ui.unified",
-			"version": "1.76.0",
-			"buildTimestamp": "202003261552",
-			"scmRevision": ""
-		},
-		{
 			"name": "sap.ui.core",
 			"version": "1.76.0",
-			"buildTimestamp": "202003261552",
-			"scmRevision": ""
-		},
-		{
-			"name": "sap.ui.layout",
-			"version": "1.76.0",
-			"buildTimestamp": "202003261552",
+			"buildTimestamp": "202003261553",
 			"scmRevision": ""
 		},
 		{
 			"name": "sap.m",
 			"version": "1.76.0",
-			"buildTimestamp": "202003261552",
+			"buildTimestamp": "202003261553",
+			"scmRevision": ""
+		},
+		{
+			"name": "sap.ui.layout",
+			"version": "1.76.0",
+			"buildTimestamp": "202003261553",
+			"scmRevision": ""
+		},
+		{
+			"name": "sap.ui.unified",
+			"version": "1.76.0",
+			"buildTimestamp": "202003261553",
 			"scmRevision": ""
 		}
 	]
