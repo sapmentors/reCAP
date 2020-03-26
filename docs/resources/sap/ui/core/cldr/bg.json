@@ -4792,7 +4792,7 @@
 			"volume-quart": {
 				"displayName": "кварти",
 				"unitPattern-count-one": "{0} кварта",
-				"unitPattern-count-other": "{0} кварт��"
+				"unitPattern-count-other": "{0} кварти"
 			},
 			"volume-pint": {
 				"displayName": "пинти",
