@@ -3502,7 +3502,7 @@
 				"relativeTimePattern-count-other": "через {0} кв."
 			},
 			"relativeTime-type-past": {
-				"relativeTimePattern-count-one": "{0} кв. тому",
+				"relativeTimePattern-count-one": "{0} кв. т��му",
 				"relativeTimePattern-count-few": "{0} кв. тому",
 				"relativeTimePattern-count-many": "{0} кв. тому",
 				"relativeTimePattern-count-other": "{0} кв. тому"
@@ -3584,7 +3584,7 @@
 			"displayName": "тиждень",
 			"relative-type--1": "минулого тижня",
 			"relative-type-0": "цього тижня",
-			"relative-type-1": "наступного ти��ня",
+			"relative-type-1": "наступного тижня",
 			"relativeTime-type-future": {
 				"relativeTimePattern-count-one": "через {0} тиждень",
 				"relativeTimePattern-count-few": "через {0} тижні",

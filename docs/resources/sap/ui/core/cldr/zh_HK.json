@@ -2932,7 +2932,7 @@
 				],
 				"narrow": [
 					"上午",
-					"下午"
+					"���午"
 				],
 				"wide": [
 					"上午",
@@ -4413,7 +4413,7 @@
 				"unitPattern-count-other": "{0}立方码"
 			},
 			"volume-cubic-foot": {
-				"displayName": "立方���尺",
+				"displayName": "立方英尺",
 				"unitPattern-count-other": "{0}立方英尺"
 			},
 			"volume-cubic-inch": {
