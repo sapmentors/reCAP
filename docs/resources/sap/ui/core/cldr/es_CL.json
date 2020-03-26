@@ -4650,7 +4650,7 @@
 			"volume-cubic-yard": {
 				"displayName": "yd³",
 				"unitPattern-count-one": "{0} yd³",
-				"unitPattern-count-other": "{0} yd��"
+				"unitPattern-count-other": "{0} yd³"
 			},
 			"volume-cubic-foot": {
 				"displayName": "ft³",
