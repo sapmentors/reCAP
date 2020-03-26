@@ -4004,7 +4004,7 @@
 			},
 			"digital-kilobit": {
 				"displayName": "千比特",
-				"unitPattern-count-other": "{0}���比特"
+				"unitPattern-count-other": "{0}千比特"
 			},
 			"digital-byte": {
 				"displayName": "字节",

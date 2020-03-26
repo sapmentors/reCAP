@@ -5376,7 +5376,7 @@
 				"unitPattern-count-one": "{0} كم/س",
 				"unitPattern-count-two": "{0} كم/س",
 				"unitPattern-count-few": "{0} كم/س",
-				"unitPattern-count-many": "{0} ك��/س",
+				"unitPattern-count-many": "{0} كم/س",
 				"unitPattern-count-other": "{0} كم/س"
 			},
 			"speed-meter-per-second": {
