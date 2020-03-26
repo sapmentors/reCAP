@@ -426,7 +426,7 @@
 		"pal": "ปะห์ลาวี",
 		"pam": "ปัมปางา",
 		"pap": "ปาเปียเมนโต",
-		"pau": "ปาเลา",
+		"pau": "ป���เลา",
 		"pcd": "ปิการ์",
 		"pcm": "พิดจิน",
 		"pdc": "เยอรมันเพนซิลเวเนีย",
@@ -4239,7 +4239,7 @@
 				"unitPattern-count-other": "{0} V"
 			},
 			"energy-kilocalorie": {
-				"displayName": "กิโลแ���ลอรี",
+				"displayName": "กิโลแคลอรี",
 				"unitPattern-count-other": "{0} กิโลแคลอรี"
 			},
 			"energy-calorie": {

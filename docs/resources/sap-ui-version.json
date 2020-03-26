@@ -5,6 +5,12 @@
 	"scmRevision": "",
 	"libraries": [
 		{
+			"name": "sap.ui.layout",
+			"version": "1.76.0",
+			"buildTimestamp": "202003261551",
+			"scmRevision": ""
+		},
+		{
 			"name": "sap.ui.core",
 			"version": "1.76.0",
 			"buildTimestamp": "202003261551",
@@ -12,12 +18,6 @@
 		},
 		{
 			"name": "sap.m",
-			"version": "1.76.0",
-			"buildTimestamp": "202003261551",
-			"scmRevision": ""
-		},
-		{
-			"name": "sap.ui.layout",
 			"version": "1.76.0",
 			"buildTimestamp": "202003261551",
 			"scmRevision": ""

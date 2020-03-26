@@ -3892,7 +3892,7 @@
 				"relativeTimePattern-count-one": "خلال ثانية واحدة",
 				"relativeTimePattern-count-two": "خلال ثانيتين",
 				"relativeTimePattern-count-few": "خلال {0} ثوانٍ",
-				"relativeTimePattern-count-many": "خلال {0} ثانية",
+				"relativeTimePattern-count-many": "خ��ال {0} ثانية",
 				"relativeTimePattern-count-other": "خلال {0} ثانية"
 			},
 			"relativeTime-type-past": {
