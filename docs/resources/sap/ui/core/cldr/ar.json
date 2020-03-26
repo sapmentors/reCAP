@@ -4332,7 +4332,7 @@
 				"unitPattern-count-two": "درجتان",
 				"unitPattern-count-few": "{0} درجات",
 				"unitPattern-count-many": "{0} درجة",
-				"unitPattern-count-other": "{0} درجة"
+				"unitPattern-count-other": "{0} ��رجة"
 			},
 			"angle-arc-minute": {
 				"displayName": "دقيقة قوسية",
@@ -5603,7 +5603,7 @@
 				"unitPattern-count-zero": "{0} فدان قدم",
 				"unitPattern-count-one": "{0} فدان قدم",
 				"unitPattern-count-two": "{0} فدان قدم",
-				"unitPattern-count-few": "{0} ��دان قدم",
+				"unitPattern-count-few": "{0} فدان قدم",
 				"unitPattern-count-many": "{0} فدان قدم",
 				"unitPattern-count-other": "{0} فدان قدم"
 			},

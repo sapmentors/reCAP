@@ -2265,7 +2265,7 @@
 					"сентября",
 					"октября",
 					"ноября",
-					"дека��ря"
+					"декабря"
 				]
 			},
 			"stand-alone": {
@@ -4840,7 +4840,7 @@
 			"mass-ounce-troy": {
 				"displayName": "тр. унц.",
 				"unitPattern-count-one": "{0} тр. унц.",
-				"unitPattern-count-few": "{0} тр. унц.",
+				"unitPattern-count-few": "{0} тр. ��нц.",
 				"unitPattern-count-many": "{0} тр. унц.",
 				"unitPattern-count-other": "{0} тр. унц."
 			},

@@ -4627,7 +4627,7 @@
 			},
 			"pressure-atmosphere": {
 				"displayName": "atm",
-				"unitPattern-count-one": "{0}���atm",
+				"unitPattern-count-one": "{0} atm",
 				"unitPattern-count-other": "{0} atm"
 			},
 			"pressure-kilopascal": {
