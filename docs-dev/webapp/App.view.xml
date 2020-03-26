@@ -58,6 +58,14 @@
 										</HBox>
 										<HBox class="sapUiTinyMargin" 
 											alignItems="Center">
+											<core:Icon src="sap-icon://my-view" 
+												size="1.5rem" 
+												class="sapUiTinyMarginEnd" />
+											<Text text="(tba)" 
+												class="sapUiTinyMarginEnd" />
+										</HBox>
+										<HBox class="sapUiTinyMargin" 
+											alignItems="Center">
 											<core:Icon src="sap-icon://payment-approval" 
 												size="1.5rem" 
 												class="sapUiTinyMarginEnd" />
@@ -119,7 +127,7 @@
 								wrapping="true" 
 								class="sapUiMediumMarginBegin" />
 							<Title level="H2" 
-								text="Due to the COVID-19 pandemic, we're splitting the event in an online- and on-site part!" 
+								text="Due to the 🦠 COVID-19 🦠 pandemic, we're splitting the event in an online- and on-site part!" 
 								class="sapUiSmallMarginTop" />
 						</VBox>
 					</l:BlockLayoutCell>
@@ -127,12 +135,6 @@
 				<l:BlockLayoutRow>
 					<l:BlockLayoutCell title="How It'll Go">
 						<VBox class="sapUiSmallMarginBottom">
-							<Title text="Registration (closed!)" 
-								level="H4" 
-								titleStyle="H4" 
-								class="sapUiTinyMarginBottom" />
-
-							<Text text="There's still a waiting list and free spots will be automatically re-assigned." />
 							<Text text="Issued tickets to both participants and speakers remain valid for the to-be-announced date of the on-site event!" />
 						</VBox>
 						<VBox class="sapUiSmallMarginBottom">
@@ -148,7 +150,18 @@
 							headerText="on-site Event">
 
 							<VBox>
-								<!-- <Title text="on-site Event" level="H4" titleStyle="H4" class="sapUiTinyMarginBottom" /> -->
+								<Title text="Registration (closed!)" 
+									level="H4" 
+									titleStyle="H4" 
+									class="sapUiTinyMarginBottom" />
+
+								<Text text="There's still a waiting list and free spots will be automatically re-assigned." 
+									class="sapUiTinyMarginBottom" />
+
+								<Title text="Event" 
+									level="H4" 
+									titleStyle="H4" 
+									class="sapUiTinyMarginBottom" />
 								<Text text="We'll meet in the j&amp;s-soft office in Heidelberg on a yet to be announced date." 
 									class="sapUiTinyMarginBottom" />
 								<Text text="Check-in opens at 9:00 - yes, there'll be ☕️" 
@@ -169,13 +182,6 @@
 					</l:BlockLayoutCell>
 				</l:BlockLayoutRow>
 				<l:BlockLayoutRow>
-					<l:BlockLayoutCell title="Sponsored by">
-						<core:Fragment fragmentName="capcom.recap.fragments.OurSponsors" 
-							id="OurSponsorsFragment" 
-							type="XML" />
-					</l:BlockLayoutCell>
-				</l:BlockLayoutRow>
-				<l:BlockLayoutRow>
 					<l:BlockLayoutCell title="Agenda - online Event">
 						<core:Fragment fragmentName="capcom.recap.fragments.AgendaOnline" 
 							id="AgendaFragmentOnline" 
@@ -184,10 +190,11 @@
 				</l:BlockLayoutRow>
 				<l:BlockLayoutRow>
 					<l:BlockLayoutCell>
-						<Panel expandable="true" headerText="Agenda - on-site Event">
-						<core:Fragment fragmentName="capcom.recap.fragments.Agenda" 
-							id="AgendaFragment" 
-							type="XML" />
+						<Panel expandable="true" 
+							headerText="Agenda - on-site Event">
+							<core:Fragment fragmentName="capcom.recap.fragments.Agenda" 
+								id="AgendaFragment" 
+								type="XML" />
 						</Panel>
 					</l:BlockLayoutCell>
 				</l:BlockLayoutRow>
@@ -197,7 +204,8 @@
 						<VBox>
 							<Text text="...is over!" 
 								class="sapUiTinyMarginBottom" />
-							<Text text="...🤖 agenda being built ... 🛠...⚙️..." />
+							<Text text="Session suggestions remain valid for the on-site event and will be re-evaluated once the on-site Event date is known." 
+								class="sapUiTinyMarginBottom" />
 							<core:HTML content="&lt;p&gt;&lt;em&gt;Note:&lt;/em&gt; there is no reimbursement or cover of travel cost for speakers. Hey, &lt;em&gt;un&lt;/em&gt;conference, ja?! 😀&lt;/p&gt;" />
 						</VBox>
 					</l:BlockLayoutCell>
@@ -206,6 +214,13 @@
 					<l:BlockLayoutCell title="Sponsoring">
 						<core:Fragment fragmentName="capcom.recap.fragments.Sponsors" 
 							id="SponsorsFragment" 
+							type="XML" />
+					</l:BlockLayoutCell>
+				</l:BlockLayoutRow>
+				<l:BlockLayoutRow>
+					<l:BlockLayoutCell title="Sponsored by">
+						<core:Fragment fragmentName="capcom.recap.fragments.OurSponsors" 
+							id="OurSponsorsFragment" 
 							type="XML" />
 					</l:BlockLayoutCell>
 				</l:BlockLayoutRow>
