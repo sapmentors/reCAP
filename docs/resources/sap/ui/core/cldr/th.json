@@ -4239,7 +4239,7 @@
 				"unitPattern-count-other": "{0} V"
 			},
 			"energy-kilocalorie": {
-				"displayName": "กิโลแคลอรี",
+				"displayName": "กิโลแ���ลอรี",
 				"unitPattern-count-other": "{0} กิโลแคลอรี"
 			},
 			"energy-calorie": {

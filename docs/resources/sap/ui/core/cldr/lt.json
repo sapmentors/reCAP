@@ -3230,7 +3230,7 @@
 				},
 				"MMMd": {
 					"d": "MMM d–d",
-					"M": "MMM d���MMM d"
+					"M": "MMM d–MMM d"
 				},
 				"MMMEd": {
 					"d": "MMM d, E – MMM d, E",
