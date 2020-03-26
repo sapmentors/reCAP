@@ -4449,7 +4449,7 @@
 			"mass-ounce": {
 				"displayName": "اونس",
 				"unitPattern-count-one": "{0} اونس",
-				"unitPattern-count-other": "{0} اونس",
+				"unitPattern-count-other": "{0} ��ونس",
 				"perUnitPattern": "{0} در اونس"
 			},
 			"mass-ounce-troy": {
@@ -4638,7 +4638,7 @@
 			"volume-hectoliter": {
 				"displayName": "هکتولیتر",
 				"unitPattern-count-one": "{0} هکتولیتر",
-				"unitPattern-count-other": "{0} ��کتولیتر"
+				"unitPattern-count-other": "{0} هکتولیتر"
 			},
 			"volume-liter": {
 				"displayName": "لیتر",

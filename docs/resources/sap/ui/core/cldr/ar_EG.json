@@ -4332,7 +4332,7 @@
 				"unitPattern-count-two": "درجتان",
 				"unitPattern-count-few": "{0} درجات",
 				"unitPattern-count-many": "{0} درجة",
-				"unitPattern-count-other": "{0} ��رجة"
+				"unitPattern-count-other": "{0} درجة"
 			},
 			"angle-arc-minute": {
 				"displayName": "دقيقة قوسية",
