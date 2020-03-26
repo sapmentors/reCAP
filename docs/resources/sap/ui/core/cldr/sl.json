@@ -4209,7 +4209,7 @@
 			},
 			"concentr-permille": {
 				"displayName": "promile",
-				"unitPattern-count-one": "{0} ‰",
+				"unitPattern-count-one": "{0} ���",
 				"unitPattern-count-two": "{0} ‰",
 				"unitPattern-count-few": "{0} ‰",
 				"unitPattern-count-other": "{0} ‰"

@@ -4613,7 +4613,7 @@
 			"volume-cubic-mile": {
 				"displayName": "مایل مکعب",
 				"unitPattern-count-one": "{0} مایل مکعب",
-				"unitPattern-count-other": "{0} مایل مکعب"
+				"unitPattern-count-other": "{0} مایل مکع��"
 			},
 			"volume-cubic-yard": {
 				"displayName": "یارد مکعب",
