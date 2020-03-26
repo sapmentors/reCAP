@@ -4347,7 +4347,7 @@
 				"displayName": "ثانية قوسية",
 				"unitPattern-count-zero": "{0} ثانية قوسية",
 				"unitPattern-count-one": "ثانية قوسية",
-				"unitPattern-count-two": "ثانيتان قوسيتان",
+				"unitPattern-count-two": "ث��نيتان قوسيتان",
 				"unitPattern-count-few": "{0} ثوانٍ قوسية",
 				"unitPattern-count-many": "{0} ثانية قوسية",
 				"unitPattern-count-other": "{0} ثانية قوسية"
@@ -4468,7 +4468,7 @@
 			"concentr-millimole-per-liter": {
 				"displayName": "م.مول/ل",
 				"unitPattern-count-zero": "{0} م.مول/ل",
-				"unitPattern-count-one": "{0} م.م��ل/ل",
+				"unitPattern-count-one": "{0} م.مول/ل",
 				"unitPattern-count-two": "{0} م.مول/ل",
 				"unitPattern-count-few": "{0} م.مول/ل",
 				"unitPattern-count-many": "{0} م.مول/ل",
