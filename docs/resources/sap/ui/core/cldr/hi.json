@@ -1840,7 +1840,7 @@
 					"श"
 				],
 				"wide": [
-					"र���िवार",
+					"रविवार",
 					"सोमवार",
 					"मंगलवार",
 					"बुधवार",
@@ -3945,7 +3945,7 @@
 			"angle-arc-second": {
 				"displayName": "आर्क सेकंड",
 				"unitPattern-count-one": "{0} आर्क से॰",
-				"unitPattern-count-other": "{0} आर्क से॰"
+				"unitPattern-count-other": "{0} आर्क से���"
 			},
 			"area-square-kilometer": {
 				"displayName": "वर्ग कि॰मी॰",

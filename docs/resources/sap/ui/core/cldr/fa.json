@@ -4638,7 +4638,7 @@
 			"volume-hectoliter": {
 				"displayName": "هکتولیتر",
 				"unitPattern-count-one": "{0} هکتولیتر",
-				"unitPattern-count-other": "{0} هکتولیتر"
+				"unitPattern-count-other": "{0} ��کتولیتر"
 			},
 			"volume-liter": {
 				"displayName": "لیتر",
