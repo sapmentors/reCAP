@@ -50,6 +50,10 @@
         "type": "sap.ui.model.json.JSONModel",
         "uri": "Agenda.json"
       },
+      "AgendaOnline": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "AgendaOnline.json"
+      },
       "OurSponsors": {
         "type": "sap.ui.model.json.JSONModel",
         "uri": "OurSponsors.json"

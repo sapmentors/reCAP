@@ -1,0 +1,21 @@
+<core:FragmentDefinition xmlns="sap.m" 
+    xmlns:core="sap.ui.core">
+    <Table id="AgendaOnline" 
+        alternateRowColors="true" 
+        fixedLayout="false"
+        items="{AgendaOnline>/}">
+        <columns>
+            <Column demandPopin="true" minScreenWidth="Tablet" hAlign="End" />
+            <Column demandPopin="true" minScreenWidth="Tablet" />
+        </columns>
+        <items>
+            <ColumnListItem vAlign="Middle">
+                <cells>
+                    <Title text="{AgendaOnline>time}"/>
+                    <ObjectIdentifier title="{AgendaOnline>name}" 
+                        text="{AgendaOnline>who}" />
+                </cells>
+            </ColumnListItem>
+        </items>
+    </Table>
+</core:FragmentDefinition>
