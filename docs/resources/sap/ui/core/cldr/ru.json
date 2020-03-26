@@ -3041,7 +3041,7 @@
 					"m": "h:mm – h:mm B"
 				},
 				"d": {
-					"d": "d���d"
+					"d": "d–d"
 				},
 				"Gy": {
 					"G": "y 'г'. G – y 'г'. G",
@@ -3604,7 +3604,7 @@
 			},
 			"relativeTime-type-past": {
 				"relativeTimePattern-count-one": "{0} неделю назад",
-				"relativeTimePattern-count-few": "{0} недели назад",
+				"relativeTimePattern-count-few": "{0} недели н��зад",
 				"relativeTimePattern-count-many": "{0} недель назад",
 				"relativeTimePattern-count-other": "{0} недели назад"
 			},
