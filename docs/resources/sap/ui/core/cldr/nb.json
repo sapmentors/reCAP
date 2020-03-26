@@ -2293,7 +2293,7 @@
 				"yMMM": {
 					"M": "MMM–MMM y G",
 					"y": "MMM y–MMM y G",
-					"G": "MMM y G–MMM y G"
+					"G": "MMM y G��MMM y G"
 				},
 				"yMMMd": {
 					"d": "d.–d. MMM y G",
