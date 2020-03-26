@@ -242,7 +242,7 @@
 		"ki": "кикуйю",
 		"kj": "кунама",
 		"kk": "казахский",
-		"kkj": "како",
+		"kkj": "к��ко",
 		"kl": "гренландский",
 		"kln": "календжин",
 		"km": "кхмерский",
@@ -4695,7 +4695,7 @@
 			},
 			"length-parsec": {
 				"displayName": "пк",
-				"unitPattern-count-one": "{0} пк",
+				"unitPattern-count-one": "{0} п��",
 				"unitPattern-count-few": "{0} пк",
 				"unitPattern-count-many": "{0} пк",
 				"unitPattern-count-other": "{0} пк"
@@ -5180,7 +5180,7 @@
 				"unitPattern-count-one": "{0} кварт.",
 				"unitPattern-count-few": "{0} кварт.",
 				"unitPattern-count-many": "{0} кварт.",
-				"unitPattern-count-other": "{0} кварт."
+				"unitPattern-count-other": "{0} кв��рт."
 			},
 			"volume-pint": {
 				"displayName": "пинт.",

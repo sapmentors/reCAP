@@ -52,7 +52,7 @@
 											<core:Icon src="sap-icon://internet-browser" 
 												size="1.5rem" 
 												class="sapUiTinyMarginEnd" />
-											<Title text="2020 May 15th, 09:30 ~ 16:30+ CET" 
+											<Title text="2020 May 15th, 09:30 ~ 16:30+" 
 												level="H4" 
 												titleStyle="H4" />
 										</HBox>

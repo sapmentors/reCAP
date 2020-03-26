@@ -4602,7 +4602,7 @@
 				"unitPattern-count-other": "{0}bbl"
 			},
 			"coordinateUnit": {
-				"displayName": "���",
+				"displayName": "쪽",
 				"east": "{0}E",
 				"north": "{0}N",
 				"south": "{0}S",
