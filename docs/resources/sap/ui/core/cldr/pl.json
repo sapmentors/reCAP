@@ -4087,7 +4087,7 @@
 	},
 	"currencyFormat-short": {
 		"1000-one": "0 tys'.' ¤",
-		"1000-few": "0��tys'.' ¤",
+		"1000-few": "0 tys'.' ¤",
 		"1000-many": "0 tys'.' ¤",
 		"1000-other": "0 tys'.' ¤",
 		"10000-one": "00 tys'.' ¤",
