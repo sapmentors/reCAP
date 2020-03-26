@@ -151,7 +151,7 @@
 		"fj": "斐济语",
 		"fo": "法罗语",
 		"fon": "丰语",
-		"fr": "��语",
+		"fr": "法语",
 		"fr_CA": "加拿大法语",
 		"fr_CH": "瑞士法语",
 		"frc": "卡真法语",
@@ -3898,7 +3898,7 @@
 				"unitPattern-count-other": "{0}英亩"
 			},
 			"area-square-yard": {
-				"displayName": "平方码",
+				"displayName": "平方���",
 				"unitPattern-count-other": "{0}平方码"
 			},
 			"area-square-foot": {

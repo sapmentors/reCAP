@@ -4547,7 +4547,7 @@
 				"unitPattern-count-other": "{0} مگاپاسکال"
 			},
 			"speed-kilometer-per-hour": {
-				"displayName": "کیلومتر در ��اعت",
+				"displayName": "کیلومتر در ساعت",
 				"unitPattern-count-one": "{0}‎ km/h",
 				"unitPattern-count-other": "{0}‎ km/h"
 			},
