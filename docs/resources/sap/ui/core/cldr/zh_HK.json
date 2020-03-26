@@ -3987,7 +3987,7 @@
 				"unitPattern-count-other": "{0}吉字节"
 			},
 			"digital-gigabit": {
-				"displayName": "吉比特",
+				"displayName": "吉比���",
 				"unitPattern-count-other": "{0}吉比特"
 			},
 			"digital-megabyte": {
@@ -4501,7 +4501,7 @@
 			},
 			"volume-barrel": {
 				"displayName": "桶",
-				"unitPattern-count-other": "{0}��"
+				"unitPattern-count-other": "{0}桶"
 			},
 			"coordinateUnit": {
 				"displayName": "方向",

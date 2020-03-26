@@ -4893,7 +4893,7 @@
 			"pressure-inch-hg": {
 				"displayName": "дюйми рт. ст.",
 				"unitPattern-count-one": "{0} дюйм рт. ст.",
-				"unitPattern-count-few": "{0} дюйми рт. ст.",
+				"unitPattern-count-few": "{0} д��йми рт. ст.",
 				"unitPattern-count-many": "{0} дюймів рт. ст.",
 				"unitPattern-count-other": "{0} дюйма рт. ст."
 			},
