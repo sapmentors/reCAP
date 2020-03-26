@@ -3151,7 +3151,7 @@
 					"y": "GGGGG y-MM-dd, E – y-MM-dd, E"
 				},
 				"GyMMM": {
-					"G": "G y MMM – G y MMM",
+					"G": "G y MMM ��� G y MMM",
 					"M": "G y MMM–MMM",
 					"y": "G y MMM – y MMM"
 				},
