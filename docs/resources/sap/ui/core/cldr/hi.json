@@ -4518,7 +4518,7 @@
 			"temperature-celsius": {
 				"displayName": "डिग्री सेल्सियस",
 				"unitPattern-count-one": "{0}°से॰",
-				"unitPattern-count-other": "{0}°स��॰"
+				"unitPattern-count-other": "{0}°से॰"
 			},
 			"temperature-fahrenheit": {
 				"displayName": "डिग्री फ़ेरनहाइट",
@@ -4713,7 +4713,7 @@
 		"100000000000-other": "0 ख॰ ¤",
 		"1000000000000-one": "00 ख॰ ¤",
 		"1000000000000-other": "00 ख॰ ¤",
-		"10000000000000-one": "0 नील ¤",
+		"10000000000000-one": "0 नी�� ¤",
 		"10000000000000-other": "0 नील ¤",
 		"100000000000000-one": "00 नील ¤",
 		"100000000000000-other": "00 नील ¤"

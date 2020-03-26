@@ -3892,7 +3892,7 @@
 				"relativeTimePattern-count-one": "خلال ثانية واحدة",
 				"relativeTimePattern-count-two": "خلال ثانيتين",
 				"relativeTimePattern-count-few": "خلال {0} ثوانٍ",
-				"relativeTimePattern-count-many": "خ��ال {0} ثانية",
+				"relativeTimePattern-count-many": "خلال {0} ثانية",
 				"relativeTimePattern-count-other": "خلال {0} ثانية"
 			},
 			"relativeTime-type-past": {
@@ -5741,7 +5741,7 @@
 		"1000000-two": "0 مليون ‪¤‬",
 		"1000000-few": "0 مليون ‪¤‬",
 		"1000000-many": "0 مليون ‪¤‬",
-		"1000000-other": "0 مليون ‪¤‬",
+		"1000000-other": "0 مليون ���¤‬",
 		"10000000-zero": "00 مليون ‪¤‬",
 		"10000000-one": "00 مليون ‪¤‬",
 		"10000000-two": "00 مليون ‪¤‬",
