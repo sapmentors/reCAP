@@ -3898,7 +3898,7 @@
 				"unitPattern-count-other": "{0}英亩"
 			},
 			"area-square-yard": {
-				"displayName": "平方���",
+				"displayName": "平方码",
 				"unitPattern-count-other": "{0}平方码"
 			},
 			"area-square-foot": {

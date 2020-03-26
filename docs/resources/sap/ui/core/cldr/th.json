@@ -4100,7 +4100,7 @@
 				"unitPattern-count-other": "{0}%"
 			},
 			"concentr-permille": {
-				"displayName": "��",
+				"displayName": "‰",
 				"unitPattern-count-other": "{0}‰"
 			},
 			"concentr-permyriad": {

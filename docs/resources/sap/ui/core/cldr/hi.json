@@ -3341,7 +3341,7 @@
 					"ति1",
 					"ति2",
 					"ति3",
-					"��ि4"
+					"ति4"
 				],
 				"narrow": [
 					"1",
@@ -4509,7 +4509,7 @@
 			"speed-knot": {
 				"displayName": "नॉट",
 				"unitPattern-count-one": "{0} नॉट",
-				"unitPattern-count-other": "{0} नॉट"
+				"unitPattern-count-other": "{0} ��ॉट"
 			},
 			"temperature-generic": {
 				"displayName": "°",
