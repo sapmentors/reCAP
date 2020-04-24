@@ -4635,7 +4635,7 @@
 			"volume-gallon-imperial": {
 				"displayName": "इम्पी॰ गैलन",
 				"unitPattern-count-one": "{0} इम्पी॰ गैलन",
-				"unitPattern-count-other": "{0} इम्पी॰ गैलन",
+				"unitPattern-count-other": "{0} इम्पी�� गैलन",
 				"perUnitPattern": "{0}/इम्पी॰ गैलन"
 			},
 			"volume-quart": {
