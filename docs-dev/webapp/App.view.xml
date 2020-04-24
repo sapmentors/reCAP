@@ -61,7 +61,8 @@
 											<core:Icon src="sap-icon://my-view" 
 												size="1.5rem" 
 												class="sapUiTinyMarginEnd" />
-											<Text text="(tba)" 
+											<Link text="https://www.twitch.tv/jssoftgmbh" 
+												href="https://www.twitch.tv/jssoftgmbh" 
 												class="sapUiTinyMarginEnd" />
 										</HBox>
 										<HBox class="sapUiTinyMargin" 
@@ -143,8 +144,9 @@
 								titleStyle="H4" 
 								class="sapUiTinyMarginBottom" />
 
-							<Text text="We'll meet virtually on May 15th. Both platform and streaming service have yet to be announced." />
-
+							<Text text="We'll meet virtually on May 15th. Stream's on Twitch:" />
+							<Link text="https://www.twitch.tv/jssoftgmbh" 
+								href="https://www.twitch.tv/jssoftgmbh" />
 						</VBox>
 						<Panel expandable="true" 
 							headerText="on-site Event">
