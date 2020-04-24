@@ -4040,7 +4040,7 @@
 				"perUnitPattern": "{0}/ตร.กม."
 			},
 			"area-hectare": {
-				"displayName": "เฮกตาร์",
+				"displayName": "เฮกตาร���",
 				"unitPattern-count-other": "{0} เฮกตาร์"
 			},
 			"area-square-meter": {

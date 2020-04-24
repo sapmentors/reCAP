@@ -3898,7 +3898,7 @@
 			},
 			"area-square-mile": {
 				"displayName": "平方英里",
-				"unitPattern-count-other": "{0}平方英里",
+				"unitPattern-count-other": "{0}平���英里",
 				"perUnitPattern": "{0}/平方英里"
 			},
 			"area-acre": {
