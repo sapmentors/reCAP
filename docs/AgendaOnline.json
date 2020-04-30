@@ -5,29 +5,34 @@
     "who": "re>≡CAP team"
   },
   {
-    "time": "09:39-10:30",
+    "time": "09:39-11:00",
     "name": "CAPdate (Keynote)",
     "who": "Daniel Hutzel, CAP inventor"
   },
   {
-    "time": "10:45-11:30",
+    "time": "11:15-12:00",
     "name": "Service consumption, messaging & eventing",
     "who": "David Kunz, CAP core team"
   },
   {
-    "time": "11:45-12:30",
+    "time": "12:15-13:00",
     "name": "Simplify Development of your Fiori Apps with SAP Fiori elements and SAP Fiori tools",
     "who": "Mariana Naboka / Marcel Wächter, Fiori tools team"
   },
   {
-    "time": "13:30-15:30",
-    "name": "Modularized CAP (e.g. other DBs)",
-    "who": "Marc Becker / Adrian Goerler / Andreas Schösser, CAP core team"
+    "time": "🍽",
+    "name": "lunch break",
+    "who": ""
+  },
+  {
+    "time": "14:00-15:30",
+    "name": "Modularized CAP (Java)",
+    "who": "Marc Becker / Adrian Görler / Andreas Schösser, CAP core team"
   },
   {
     "time": "15:45-16:30",
     "name": "One query language to rule them all",
-    "who": "David Kunz / Samuel Brucksch, CAP core team"
+    "who": "Vitaly Kozyura / David Kunz, CAP core team"
   },
   {
     "time": "🎉 🍺",

@@ -3600,7 +3600,7 @@
 				"relativeTimePattern-count-one": "через {0} неделю",
 				"relativeTimePattern-count-few": "через {0} недели",
 				"relativeTimePattern-count-many": "через {0} недель",
-				"relativeTimePattern-count-other": "через {0} ��едели"
+				"relativeTimePattern-count-other": "через {0} недели"
 			},
 			"relativeTime-type-past": {
 				"relativeTimePattern-count-one": "{0} неделю назад",

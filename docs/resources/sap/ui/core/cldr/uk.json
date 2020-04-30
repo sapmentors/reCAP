@@ -4278,7 +4278,7 @@
 				"displayName": "милі/англ. галон",
 				"unitPattern-count-one": "{0} миля/англ. галон",
 				"unitPattern-count-few": "{0} милі/англ. галон",
-				"unitPattern-count-many": "{0} миль/ан��л. галон",
+				"unitPattern-count-many": "{0} миль/англ. галон",
 				"unitPattern-count-other": "{0} милі/англ. галон"
 			},
 			"digital-petabyte": {
