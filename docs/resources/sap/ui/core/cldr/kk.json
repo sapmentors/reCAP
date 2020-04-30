@@ -4464,7 +4464,7 @@
 				"unitPattern-count-other": "{0} ярд³"
 			},
 			"volume-cubic-foot": {
-				"displayName": "��ут³",
+				"displayName": "фут³",
 				"unitPattern-count-one": "{0} фт³",
 				"unitPattern-count-other": "{0} фт³"
 			},
