@@ -632,7 +632,7 @@
 		"Limb": "林布文",
 		"Lina": "线形文字（A）",
 		"Linb": "线形文字（B）",
-		"Lisu": "傈僳文",
+		"Lisu": "��僳文",
 		"Loma": "洛马文",
 		"Lyci": "利西亚文",
 		"Lydi": "吕底亚文",
@@ -3885,7 +3885,7 @@
 			},
 			"area-square-centimeter": {
 				"displayName": "平方厘米",
-				"unitPattern-count-other": "{0}平方厘米",
+				"unitPattern-count-other": "{0}平方���米",
 				"perUnitPattern": "{0}/平方厘米"
 			},
 			"area-square-mile": {
