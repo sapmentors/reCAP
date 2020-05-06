@@ -2260,7 +2260,7 @@
 				"wide": [
 					"І тоқсан",
 					"ІІ тоқсан",
-					"ІІІ тоқс��н",
+					"ІІІ тоқсан",
 					"IV тоқсан"
 				]
 			}
@@ -3394,7 +3394,7 @@
 				"relativeTimePattern-count-one": "{0} апта бұрын",
 				"relativeTimePattern-count-other": "{0} апта бұрын"
 			},
-			"relativePeriod": "{0} аптасы"
+			"relativePeriod": "{0} ��птасы"
 		},
 		"week-short": {
 			"displayName": "ап.",
@@ -4464,7 +4464,7 @@
 				"unitPattern-count-other": "{0} ярд³"
 			},
 			"volume-cubic-foot": {
-				"displayName": "��ут³",
+				"displayName": "фут³",
 				"unitPattern-count-one": "{0} фт³",
 				"unitPattern-count-other": "{0} фт³"
 			},

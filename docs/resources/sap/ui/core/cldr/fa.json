@@ -4411,7 +4411,7 @@
 			},
 			"mass-kilogram": {
 				"displayName": "کیلوگرم",
-				"unitPattern-count-one": "{0} کیلوگرم",
+				"unitPattern-count-one": "{0} ک��لوگرم",
 				"unitPattern-count-other": "{0} کیلوگرم",
 				"perUnitPattern": "{0} در کیلوگرم"
 			},

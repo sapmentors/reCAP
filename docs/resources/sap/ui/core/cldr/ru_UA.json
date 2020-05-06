@@ -4660,7 +4660,7 @@
 				"displayName": "пм",
 				"unitPattern-count-one": "{0} пм",
 				"unitPattern-count-few": "{0} пм",
-				"unitPattern-count-many": "{0} пм",
+				"unitPattern-count-many": "{0} п��",
 				"unitPattern-count-other": "{0} пм"
 			},
 			"length-mile": {
