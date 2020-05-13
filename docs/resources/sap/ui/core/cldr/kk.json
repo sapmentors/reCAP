@@ -3394,7 +3394,7 @@
 				"relativeTimePattern-count-one": "{0} апта бұрын",
 				"relativeTimePattern-count-other": "{0} апта бұрын"
 			},
-			"relativePeriod": "{0} ��птасы"
+			"relativePeriod": "{0} аптасы"
 		},
 		"week-short": {
 			"displayName": "ап.",

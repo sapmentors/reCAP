@@ -2764,7 +2764,7 @@
 				},
 				"yMEd": {
 					"d": "E dd-MM-y – E dd-MM-y G",
-					"M": "E dd-MM-y – E dd-MM-y G",
+					"M": "E dd-MM-y �� E dd-MM-y G",
 					"y": "E dd-MM-y – E dd-MM-y G"
 				},
 				"yMMM": {
