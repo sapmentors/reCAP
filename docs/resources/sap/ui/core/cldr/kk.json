@@ -4389,7 +4389,7 @@
 			"speed-kilometer-per-hour": {
 				"displayName": "км/сағ",
 				"unitPattern-count-one": "{0} км/сағ",
-				"unitPattern-count-other": "{0} ��м/сағ"
+				"unitPattern-count-other": "{0} км/сағ"
 			},
 			"speed-meter-per-second": {
 				"displayName": "метр/секунд",
@@ -4596,7 +4596,7 @@
 		"10000-other": "00 мың ¤",
 		"100000-one": "000 мың ¤",
 		"100000-other": "000 мың ¤",
-		"1000000-one": "0 млн ¤",
+		"1000000-one": "0 мл�� ¤",
 		"1000000-other": "0 млн ¤",
 		"10000000-one": "00 млн ¤",
 		"10000000-other": "00 млн ¤",

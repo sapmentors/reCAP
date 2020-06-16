@@ -4131,7 +4131,7 @@
 	},
 	"currencyFormat-short": {
 		"1000-zero": "‫¤‎‬ 0 ألف",
-		"1000-one": "‫¤‎��� 0 ألف",
+		"1000-one": "‫¤‎‬ 0 ألف",
 		"1000-two": "‫¤‎‬ 0 ألف",
 		"1000-few": "‫¤‎‬ 0 ألف",
 		"1000-many": "‫¤‎‬ 0 ألف",
@@ -5605,7 +5605,7 @@
 				"unitPattern-count-two": "{0} فدان قدم",
 				"unitPattern-count-few": "{0} فدان قدم",
 				"unitPattern-count-many": "{0} فدان قدم",
-				"unitPattern-count-other": "{0} فدان قدم"
+				"unitPattern-count-other": "{0} ��دان قدم"
 			},
 			"volume-bushel": {
 				"displayName": "bu",
