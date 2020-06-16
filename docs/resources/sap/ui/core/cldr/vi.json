@@ -4552,7 +4552,7 @@
 		"plusSign": "+⁺₊➕﬩﹢＋"
 	},
 	"currencyFormat-sap-short": {
-		"1000-other": "0 N ¤",
+		"1000-other": "0 N ��",
 		"10000-other": "00 N ¤",
 		"100000-other": "000 N ¤",
 		"1000000-other": "0 Tr ¤",
