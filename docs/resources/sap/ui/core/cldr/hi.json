@@ -3965,7 +3965,7 @@
 				"perUnitPattern": "{0}/वर्ग मीटर"
 			},
 			"area-square-centimeter": {
-				"displayName": "वर्ग सें॰",
+				"displayName": "वर्ग ���ें॰",
 				"unitPattern-count-one": "{0} व॰ सें॰",
 				"unitPattern-count-other": "{0} व॰ सें॰",
 				"perUnitPattern": "{0}/वर्ग सें॰ मी॰"

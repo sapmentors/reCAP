@@ -5434,7 +5434,7 @@
 				"unitPattern-count-other": "{0}°ف"
 			},
 			"temperature-kelvin": {
-				"displayName": "د ��لفن",
+				"displayName": "د كلفن",
 				"unitPattern-count-zero": "{0} د كلفن",
 				"unitPattern-count-one": "{0} د كلفن",
 				"unitPattern-count-two": "{0} د كلفن",
