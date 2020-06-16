@@ -3959,7 +3959,7 @@
 				"insertBetween": " "
 			}
 		},
-		"sap-standard": "‏#,##0.00 ¤‎;‏-#,##0.00 ¤‎",
+		"sap-standard": "‏#,##0.00 ¤‎;���-#,##0.00 ¤‎",
 		"sap-accounting": "#,##0.00 ¤‎"
 	},
 	"miscPattern": {
