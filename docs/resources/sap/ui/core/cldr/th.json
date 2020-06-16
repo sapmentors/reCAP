@@ -1990,7 +1990,7 @@
 					"วันจันทร์",
 					"วันอังคาร",
 					"วันพุธ",
-					"วันพฤหัสบดี",
+					"���ันพฤหัสบดี",
 					"วันศุกร์",
 					"วันเสาร์"
 				]
@@ -4121,7 +4121,7 @@
 			},
 			"consumption-mile-per-gallon": {
 				"displayName": "ไมล์/แกลลอน",
-				"unitPattern-count-other": "{0} ไมล์/���กลลอน"
+				"unitPattern-count-other": "{0} ไมล์/แกลลอน"
 			},
 			"consumption-mile-per-gallon-imperial": {
 				"displayName": "ไมล์/แกลลอนอังกฤษ",

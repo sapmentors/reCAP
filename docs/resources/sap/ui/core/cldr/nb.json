@@ -2771,7 +2771,7 @@
 				},
 				"yMd": {
 					"d": "d.M.y–d.M.y G",
-					"M": "d.M.y–d.M.y G",
+					"M": "d.M.y���d.M.y G",
 					"y": "d.M.y–d.M.y G"
 				},
 				"yMEd": {
