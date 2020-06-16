@@ -5581,7 +5581,7 @@
 				"unitPattern-count-other": "{0} ملتر"
 			},
 			"volume-pint-metric": {
-				"displayName": "مكيال متر��",
+				"displayName": "مكيال متري",
 				"unitPattern-count-zero": "{0} مكيال متري",
 				"unitPattern-count-one": "{0} مكيال متري",
 				"unitPattern-count-two": "{0} مكيال متري",

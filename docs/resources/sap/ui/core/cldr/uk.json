@@ -3717,7 +3717,7 @@
 			}
 		},
 		"hour-short": {
-			"displayName": "г��д.",
+			"displayName": "год.",
 			"relative-type-0": "цієї години",
 			"relativeTime-type-future": {
 				"relativeTimePattern-count-one": "через {0} год",
@@ -3750,7 +3750,7 @@
 		},
 		"minute-wide": {
 			"displayName": "хвилина",
-			"relative-type-0": "цієї хвилин��",
+			"relative-type-0": "цієї хвилини",
 			"relativeTime-type-future": {
 				"relativeTimePattern-count-one": "через {0} хвилину",
 				"relativeTimePattern-count-few": "через {0} хвилини",
