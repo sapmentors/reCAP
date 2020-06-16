@@ -1018,7 +1018,7 @@
 		"TZ": "Танзания",
 		"UA": "Украина",
 		"UG": "Уганда",
-		"UM": "Малые Тихоокеанские Отдаленные Острова США",
+		"UM": "Малые Ти��оокеанские Отдаленные Острова США",
 		"UN": "Организация Объединенных Наций",
 		"UN-alt-short": "ООН",
 		"US": "Соединенные Штаты",
@@ -4352,7 +4352,7 @@
 				"displayName": "Гбит",
 				"unitPattern-count-one": "{0} Гбит",
 				"unitPattern-count-few": "{0} Гбит",
-				"unitPattern-count-many": "{0} ��бит",
+				"unitPattern-count-many": "{0} Гбит",
 				"unitPattern-count-other": "{0} Гбит"
 			},
 			"digital-megabyte": {
