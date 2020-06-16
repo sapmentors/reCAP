@@ -3778,7 +3778,7 @@
 		"100000000-one": "00 क॰",
 		"100000000-other": "00 क॰",
 		"1000000000-one": "0 अ॰",
-		"1000000000-other": "0 अ॰",
+		"1000000000-other": "0 अ��",
 		"10000000000-one": "00 अ॰",
 		"10000000000-other": "00 अ॰",
 		"100000000000-one": "0 ख॰",
@@ -3965,7 +3965,7 @@
 				"perUnitPattern": "{0}/वर्ग मीटर"
 			},
 			"area-square-centimeter": {
-				"displayName": "वर्ग ���ें॰",
+				"displayName": "वर्ग सें॰",
 				"unitPattern-count-one": "{0} व॰ सें॰",
 				"unitPattern-count-other": "{0} व॰ सें॰",
 				"perUnitPattern": "{0}/वर्ग सें॰ मी॰"
