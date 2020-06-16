@@ -23,9 +23,9 @@
                         visible="{= ${AgendaOnline>slides} ? true : false }">
                         <core:Icon src="sap-icon://download" 
                             class="sapUiTinyMargin" />
-                        <Link href="/recaponline-slides/{AgendaOnline>slides}" 
+                        <Link href="recaponline-slides/{AgendaOnline>slides}" 
                             text="{AgendaOnline>slides}" />
-                        <Link href="/recaponline-slides/{AgendaOnline>slides1}" 
+                        <Link href="recaponline-slides/{AgendaOnline>slides1}" 
                             text=", {AgendaOnline>slides1}" 
                             visible="{= ${AgendaOnline>slides1} ? true : false }" />
                     </HBox>
