@@ -2,18 +2,33 @@
     xmlns:core="sap.ui.core">
     <Table id="AgendaOnline" 
         alternateRowColors="true" 
-        fixedLayout="false"
+        fixedLayout="false" 
         items="{AgendaOnline>/}">
         <columns>
-            <Column demandPopin="true" minScreenWidth="Tablet" hAlign="End" />
-            <Column demandPopin="true" minScreenWidth="Tablet" />
+            <Column demandPopin="true" 
+                minScreenWidth="Tablet" 
+                hAlign="End" />
+            <Column demandPopin="true" 
+                minScreenWidth="Tablet" />
+            <Column demandPopin="true" 
+                minScreenWidth="Tablet" />
         </columns>
         <items>
             <ColumnListItem vAlign="Middle">
                 <cells>
-                    <Title text="{AgendaOnline>time}"/>
+                    <Title text="{AgendaOnline>time}" />
                     <ObjectIdentifier title="{AgendaOnline>name}" 
                         text="{AgendaOnline>who}" />
+                    <HBox alignItems="Center" 
+                        visible="{= ${AgendaOnline>slides} ? true : false }">
+                        <core:Icon src="sap-icon://download" 
+                            class="sapUiTinyMargin" />
+                        <Link href="/recaponline-slides/{AgendaOnline>slides}" 
+                            text="{AgendaOnline>slides}" />
+                        <Link href="/recaponline-slides/{AgendaOnline>slides1}" 
+                            text=", {AgendaOnline>slides1}" 
+                            visible="{= ${AgendaOnline>slides1} ? true : false }" />
+                    </HBox>
                 </cells>
             </ColumnListItem>
         </items>

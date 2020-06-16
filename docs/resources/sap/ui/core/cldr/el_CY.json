@@ -4689,7 +4689,7 @@
 			},
 			"volume-gallon-imperial": {
 				"displayName": "αγγλοσαξ. γαλόνια",
-				"unitPattern-count-one": "{0} αγγλοσαξ. γαλόνι",
+				"unitPattern-count-one": "{0} αγγλοσαξ. γαλό��ι",
 				"unitPattern-count-other": "{0} αγγλοσαξ. γαλόνια",
 				"perUnitPattern": "{0}/αγγλοσαξ. γαλόνι"
 			},

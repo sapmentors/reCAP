@@ -7,17 +7,20 @@
   {
     "time": "09:39-11:00",
     "name": "CAPdate (Keynote)",
-    "who": "Daniel Hutzel, CAP inventor / Sebastian van Syckel, CAP core"
+    "who": "Daniel Hutzel, CAP inventor / Sebastian van Syckel, CAP core",
+    "slides": "recap.pptx"
   },
   {
     "time": "11:15-12:00",
     "name": "Service consumption, messaging & eventing",
-    "who": "David Kunz, CAP core team"
+    "who": "David Kunz, CAP core team",
+    "slides": "service-consumption.pptx"
   },
   {
     "time": "12:15-13:00",
     "name": "Simplify Development of your Fiori Apps with SAP Fiori elements and SAP Fiori tools",
-    "who": "Mariana Naboka / Marcel Wächter, Fiori tools team"
+    "who": "Mariana Naboka / Marcel Wächter, Fiori tools team",
+    "slides": "ReCap_FE.pptx"
   },
   {
     "time": "🍽",
@@ -27,12 +30,15 @@
   {
     "time": "14:00-15:30",
     "name": "The new modularized CAP Java",
-    "who": "Marc Becker / Adrian Görler, CAP core team"
+    "who": "Marc Becker / Adrian Görler, CAP core team",
+    "slides": "reCAP - Java Session.pptx"
   },
   {
     "time": "15:45-16:30",
     "name": "One query language to rule them all",
-    "who": "Vitaly Kozyura / Matthias Schur, CAP core team"
+    "who": "Vitaly Kozyura / Matthias Schur, CAP core team",
+    "slides" : "CAP QL.pptx",
+    "slides1": "reCAP20200515-cds4j.pptx"
   },
   {
     "time": "🎉 🍺",

@@ -4389,7 +4389,7 @@
 			"speed-kilometer-per-hour": {
 				"displayName": "км/сағ",
 				"unitPattern-count-one": "{0} км/сағ",
-				"unitPattern-count-other": "{0} км/сағ"
+				"unitPattern-count-other": "{0} ��м/сағ"
 			},
 			"speed-meter-per-second": {
 				"displayName": "метр/секунд",
