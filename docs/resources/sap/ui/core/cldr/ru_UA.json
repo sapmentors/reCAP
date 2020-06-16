@@ -4352,7 +4352,7 @@
 				"displayName": "Гбит",
 				"unitPattern-count-one": "{0} Гбит",
 				"unitPattern-count-few": "{0} Гбит",
-				"unitPattern-count-many": "{0} Гбит",
+				"unitPattern-count-many": "{0} ��бит",
 				"unitPattern-count-other": "{0} Гбит"
 			},
 			"digital-megabyte": {
