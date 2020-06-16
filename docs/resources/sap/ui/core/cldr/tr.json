@@ -2669,7 +2669,7 @@
 				},
 				"GyMd": {
 					"d": "GGGGG dd.MM.y – dd.MM.y",
-					"G": "GGGGG dd.MM.y GGGGG – dd.MM.y",
+					"G": "GGGGG dd.MM.y GGGGG �� dd.MM.y",
 					"M": "GGGGG dd.MM.y – dd.MM.y",
 					"y": "GGGGG dd.MM.y – dd.MM.y"
 				},
