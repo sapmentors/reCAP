@@ -3858,7 +3858,7 @@
 			"relativeTime-type-past": {
 				"relativeTimePattern-count-zero": "قبل {0} دقيقة",
 				"relativeTimePattern-count-one": "قبل دقيقة واحدة",
-				"relativeTimePattern-count-two": "قبل دقيقتين",
+				"relativeTimePattern-count-two": "قبل د��يقتين",
 				"relativeTimePattern-count-few": "قبل {0} دقائق",
 				"relativeTimePattern-count-many": "قبل {0} دقيقة",
 				"relativeTimePattern-count-other": "قبل {0} دقيقة"
@@ -5605,7 +5605,7 @@
 				"unitPattern-count-two": "{0} فدان قدم",
 				"unitPattern-count-few": "{0} فدان قدم",
 				"unitPattern-count-many": "{0} فدان قدم",
-				"unitPattern-count-other": "{0} ��دان قدم"
+				"unitPattern-count-other": "{0} فدان قدم"
 			},
 			"volume-bushel": {
 				"displayName": "bu",

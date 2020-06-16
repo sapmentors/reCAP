@@ -4305,7 +4305,7 @@
 			},
 			"length-inch": {
 				"displayName": "इंच",
-				"unitPattern-count-one": "{0} इंच",
+				"unitPattern-count-one": "{0} इ��च",
 				"unitPattern-count-other": "{0} इंच",
 				"perUnitPattern": "{0}/इंच"
 			},
