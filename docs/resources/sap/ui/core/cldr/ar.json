@@ -2671,7 +2671,7 @@
 				"yMd": {
 					"d": "d‏/M‏/y – d‏/M‏/y G",
 					"M": "d‏/M‏/y – d‏/M‏/y G",
-					"y": "d‏/M‏/y – d��/M‏/y G"
+					"y": "d‏/M‏/y – d‏/M‏/y G"
 				},
 				"yMEd": {
 					"d": "E، dd‏/MM‏/y – E، dd‏/MM‏/y G",
@@ -5632,7 +5632,7 @@
 				"perUnitPattern": "{0}/غالون إمبراطوري"
 			},
 			"volume-quart": {
-				"displayName": "ربع غالون",
+				"displayName": "ربع ��الون",
 				"unitPattern-count-zero": "{0} ربع غالون",
 				"unitPattern-count-one": "ربع غالون",
 				"unitPattern-count-two": "{0} ربع غالون",

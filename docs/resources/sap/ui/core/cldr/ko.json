@@ -1663,7 +1663,7 @@
 					"y": "GGGGG y년 M월 d일 ~ y년 M월 d일"
 				},
 				"GyMEd": {
-					"d": "GGGGG y년 M월 d�� E요일 ~ y년 M월 d일 E요일",
+					"d": "GGGGG y년 M월 d일 E요일 ~ y년 M월 d일 E요일",
 					"G": "GGGGG y년 M월 d일 E요일 ~ GGGGG y년 M월 d일 E요일",
 					"M": "GGGGG y년 M월 d일 E요일 ~ y년 M월 d일 E요일",
 					"y": "GGGGG y년 M월 d일 E요일 ~ y년 M월 d일 E요일"
@@ -2301,7 +2301,7 @@
 				],
 				"narrow": [
 					"1월",
-					"2월",
+					"2���",
 					"3월",
 					"4월",
 					"5월",
