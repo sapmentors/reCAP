@@ -3872,7 +3872,7 @@
 			"area-square-kilometer": {
 				"displayName": "平方公里",
 				"unitPattern-count-other": "{0}平方公里",
-				"perUnitPattern": "{0}/平方公里"
+				"perUnitPattern": "{0}/平方��里"
 			},
 			"area-hectare": {
 				"displayName": "公顷",
