@@ -3515,7 +3515,7 @@
 				"relativeTimePattern-count-other": "{0}个月后"
 			},
 			"relativeTime-type-past": {
-				"relativeTimePattern-count-other": "{0}个月前"
+				"relativeTimePattern-count-other": "{0}��月前"
 			}
 		},
 		"month-narrow": {
