@@ -1018,7 +1018,7 @@
 		"TZ": "Танзания",
 		"UA": "Украина",
 		"UG": "Уганда",
-		"UM": "Малые Тихоокеанские Отдаленные Острова США",
+		"UM": "Малые Ти��оокеанские Отдаленные Острова США",
 		"UN": "Организация Объединенных Наций",
 		"UN-alt-short": "ООН",
 		"US": "Соединенные Штаты",
@@ -4737,7 +4737,7 @@
 			},
 			"length-mile-scandinavian": {
 				"displayName": "ск. мил.",
-				"unitPattern-count-one": "{0} ск. мил.",
+				"unitPattern-count-one": "{0} ск. ��ил.",
 				"unitPattern-count-few": "{0} ск. мил.",
 				"unitPattern-count-many": "{0} ск. мил.",
 				"unitPattern-count-other": "{0} ск. мил."
