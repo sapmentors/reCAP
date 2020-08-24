@@ -2,25 +2,35 @@
   {
     "time": "09:30-09:39",
     "name": "Welcome!",
-    "who": "re>≡CAP team"
+    "who": "re>≡CAP team",
+    "recording": "https://play.vidyard.com/nrup1TH7F1cvnLKMLAxwVh",
+    "recordingText": "0. hi!",
+    "recording1": "https://play.vidyard.com/s5hCo5WgTrGUL8Nr3KsRdF",
+    "recordingText1": "1. dj"
   },
   {
     "time": "09:39-11:00",
     "name": "CAPdate (Keynote)",
     "who": "Daniel Hutzel, CAP inventor / Sebastian van Syckel, CAP core",
-    "slides": "recap.pptx"
+    "slides": "recap.pptx",
+    "recording": "https://play.vidyard.com/A6LFVo2JFuNKWwggHDTu5Z",
+    "recordingText": "2. dan + seb"
   },
   {
     "time": "11:15-12:00",
     "name": "Service consumption, messaging & eventing",
     "who": "David Kunz, CAP core team",
-    "slides": "service-consumption.pptx"
+    "slides": "service-consumption.pptx",
+    "recording": "https://play.vidyard.com/QDYBS9mYVd1HwYGQ1L4SD1",
+    "recordingText": "3. dav"
   },
   {
     "time": "12:15-13:00",
     "name": "Simplify Development of your Fiori Apps with SAP Fiori elements and SAP Fiori tools",
     "who": "Mariana Naboka / Marcel Wächter, Fiori tools team",
-    "slides": "ReCap_FE.pptx"
+    "slides": "ReCap_FE.pptx",
+    "recording": "https://play.vidyard.com/ZmJCDRrtpVbVggGwNpvm8w",
+    "recordingText": "4. mari + mar"
   },
   {
     "time": "🍽",
@@ -31,18 +41,24 @@
     "time": "14:00-15:30",
     "name": "The new modularized CAP Java",
     "who": "Marc Becker / Adrian Görler, CAP core team",
-    "slides": "reCAP-JavaSession.pptx"
+    "slides": "reCAP-JavaSession.pptx",
+    "recording": "https://play.vidyard.com/pk7e1BASqXXu4HteUZrsBi",
+    "recordingText": "5. mar + adr"
   },
   {
     "time": "15:45-16:30",
     "name": "One query language to rule them all",
     "who": "Vitaly Kozyura / Matthias Schur, CAP core team",
     "slides" : "CAP QL.pptx",
-    "slides1": "reCAP20200515-cds4j.pptx"
+    "slides1": "reCAP20200515-cds4j.pptx",
+    "recording": "https://play.vidyard.com/8rkuVvNHDkDsohcCuGdcRi",
+    "recordingText": "6. vit + mat"
   },
   {
     "time": "🎉 🍺",
     "name": "we all share a $drink",
-    "who": "CAP community"
+    "who": "CAP community",
+    "recording": "https://play.vidyard.com/vhkACniZ812cCSYtaNaKSL",
+    "recordingText": "7. outro"
   }
 ]
