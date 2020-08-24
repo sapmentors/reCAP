@@ -2660,7 +2660,7 @@
 				},
 				"Gy": {
 					"G": "y G – y G",
-					"y": "y ��� y G"
+					"y": "y – y G"
 				},
 				"GyM": {
 					"G": "M/y GGGGG – M/y GGGGG",
@@ -4517,7 +4517,7 @@
 			"mass-metric-ton": {
 				"displayName": "t mètriques",
 				"unitPattern-count-one": "{0} t mètr.",
-				"unitPattern-count-other": "{0} t mètr."
+				"unitPattern-count-other": "{0} t m��tr."
 			},
 			"mass-kilogram": {
 				"displayName": "kg",

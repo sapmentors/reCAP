@@ -4292,7 +4292,7 @@
 			},
 			"power-megawatt": {
 				"displayName": "兆瓦",
-				"unitPattern-count-other": "{0}���瓦"
+				"unitPattern-count-other": "{0}兆瓦"
 			},
 			"power-kilowatt": {
 				"displayName": "千瓦",

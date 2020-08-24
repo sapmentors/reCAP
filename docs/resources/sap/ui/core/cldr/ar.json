@@ -4599,7 +4599,7 @@
 				"displayName": "ميغابايت",
 				"unitPattern-count-zero": "{0} ميغابايت",
 				"unitPattern-count-one": "{0} ميغابايت",
-				"unitPattern-count-two": "{0} ميغابايت",
+				"unitPattern-count-two": "{0} م��غابايت",
 				"unitPattern-count-few": "{0} ميغابايت",
 				"unitPattern-count-many": "{0} ميغابايت",
 				"unitPattern-count-other": "{0} ميغابايت"
