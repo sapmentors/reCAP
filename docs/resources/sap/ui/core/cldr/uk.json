@@ -4814,7 +4814,7 @@
 				"unitPattern-count-other": "{0} Да"
 			},
 			"mass-earth-mass": {
-				"displayName": "мас�� Землі",
+				"displayName": "маси Землі",
 				"unitPattern-count-one": "{0} M⊕",
 				"unitPattern-count-few": "{0} M⊕",
 				"unitPattern-count-many": "{0} M⊕",
