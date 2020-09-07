@@ -1626,7 +1626,7 @@
 					"d": "dd.MM.y – dd.MM.y G",
 					"G": "dd.MM.y G – dd.MM.y G",
 					"M": "dd.MM.y – dd.MM.y G",
-					"y": "dd.MM.y �� dd.MM.y G"
+					"y": "dd.MM.y – dd.MM.y G"
 				},
 				"GyMEd": {
 					"d": "ccc, dd.MM.y – ccc, dd.MM.y G",

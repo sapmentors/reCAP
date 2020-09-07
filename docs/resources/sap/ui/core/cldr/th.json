@@ -4124,7 +4124,7 @@
 				"unitPattern-count-other": "{0} ไมล์/แกลลอน"
 			},
 			"consumption-mile-per-gallon-imperial": {
-				"displayName": "ไมล์/แกลลอนอังกฤษ",
+				"displayName": "ไมล���/แกลลอนอังกฤษ",
 				"unitPattern-count-other": "{0} ไมล์ต่อแกลลอนอังกฤษ"
 			},
 			"digital-petabyte": {

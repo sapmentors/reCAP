@@ -84,7 +84,7 @@
 											<core:Icon src="sap-icon://appointment"
 												size="1.5rem"
 												class="sapUiTinyMarginEnd" />
-											<Title text="tba, most likely late 2020"
+											<Title text="tba, aiming for Q2 2021"
 												level="H4"
 												titleStyle="H4" />
 										</HBox>
