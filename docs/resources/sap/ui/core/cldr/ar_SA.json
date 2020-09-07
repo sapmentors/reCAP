@@ -2422,7 +2422,7 @@
 					"الربع الأول",
 					"الربع الثاني",
 					"الربع الثالث",
-					"الربع الرابع"
+					"الربع الراب��"
 				]
 			}
 		},
@@ -4537,7 +4537,7 @@
 				"unitPattern-count-zero": "{0} ميل/غالون",
 				"unitPattern-count-one": "{0} ميل/غالون",
 				"unitPattern-count-two": "{0} ميل/غالون",
-				"unitPattern-count-few": "{0} ميل/غالون",
+				"unitPattern-count-few": "{0} ميل/غ��لون",
 				"unitPattern-count-many": "{0} ميل/غالون",
 				"unitPattern-count-other": "{0} ميل/غالون"
 			},

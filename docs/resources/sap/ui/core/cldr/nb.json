@@ -4838,7 +4838,7 @@
 	},
 	"lenient-scope-number": {
 		"minusSign": "-‐‒–⁻₋−➖﹣－",
-		"commaSign": ",،٫、︐︑﹐﹑，､",
+		"commaSign": ",،٫、︐︑﹐��，､",
 		"plusSign": "+⁺₊➕﬩﹢＋"
 	},
 	"currencyFormat-sap-short": {
