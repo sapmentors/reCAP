@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/core/mvc/Controller","sap/ui/core/ComponentSupport"],e=>{"use strict";return e.extend("capcom.recap.App",{onInit(){},onAfterRendering(){const e=sap.ui.core.Fragment.createId("AgendaFragment","Agenda");const n=this.byId(e);this.byId("toAgenda").setHref(`#${n.getId()}`)},onSponsorPress(e){window.open(e)}})});
