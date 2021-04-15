@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<theme xmlns="http://www.sap.com/sap.ui.library.xsd" >
+<theme xmlns="http://www.sap.com/sap.ui.library.xsd">
 
 	<name>sap_fiori_3_hcb</name>
 	<vendor>SAP SE</vendor>
 	<copyright>OpenUI5
  * (c) Copyright 2009-2021 SAP SE or an SAP affiliate company.
  * Licensed under the Apache License, Version 2.0 - see LICENSE.txt.</copyright>
-<<<<<<< HEAD
-	<version>1.81.2</version>
-=======
 	<version>1.88.0</version>
->>>>>>> master
 
 	<documentation>SAPUI5 quartz high contrast black theme library.</documentation>
 
