@@ -1,6 +1,0 @@
-/*!
- * OpenUI5
- * (c) Copyright 2009-2020 SAP SE or an SAP affiliate company.
- * Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
- */
-sap.ui.define(["sap/ui/layout/library","sap/base/Log"],function(e,t){"use strict";var r={};r.render=function(r,a){var i=r;var l=a.getLayout();var s={role:"form"};i.write("<div");i.writeControlData(a);i.addClass("sapUiForm");i.addClass("sapUiFormLblColon");i.writeAttribute("data-sap-ui-customfastnavgroup","true");var d=e.form.FormHelper.addFormClass();if(d){i.addClass(d)}if(a.getEditable()){i.addClass("sapUiFormEdit");i.addClass("sapUiFormEdit-CTX")}else{s.readonly=""}if(a.getWidth()){i.addStyle("width",a.getWidth())}if(a.getTooltip_AsString()){i.writeAttributeEscaped("title",a.getTooltip_AsString())}i.writeClasses();i.writeStyles();var o=a.getTitle();var g=a.getToolbar();if(g){if(!a.getAriaLabelledBy()||a.getAriaLabelledBy().length==0){var n=e.form.FormHelper.getToolbarTitle(g);s["labelledby"]=n}}else if(o){var u="";if(typeof o=="string"){u=a.getId()+"--title"}else{u=o.getId()}s["labelledby"]={value:u,append:true}}else if(a._sSuggestedTitleId){s["labelledby"]={value:a._sSuggestedTitleId,append:true}}i.writeAccessibilityState(a,s);i.write(">");if(l){i.renderControl(l)}else{t.warning('Form "'+a.getId()+'" - Layout missing!',"Renderer","Form")}i.write("</div>")};return r},true);
