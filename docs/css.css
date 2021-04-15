@@ -1,0 +1,51 @@
+h1 {
+    /* font-size: 30px; */
+    font-family: "Source Code Pro", monospace;
+    color: white;
+}
+
+.terminal {
+    color: whitesmoke;
+    font-family: "Source Code Pro", monospace;
+    font-size: large;
+}
+
+.cmd {
+    background-color: #1c2327;
+    border: 0 #1c2327;
+}
+input.cmd:hover,
+input.cmd:focus {
+    background-color: #1c2327;
+    border: 0 #1c2327;
+    outline: none;
+}
+
+.cursor::after {
+    content: "";
+    display: inline-block;
+    margin-left: 3px;
+    background-color: white;
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+h1.cursor::after {
+    height: 24px;
+    width: 13px;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    49% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}

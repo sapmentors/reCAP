@@ -9,7 +9,13 @@
         justifyContent="Center"
         height="100%">
         <HBox justifyContent="SpaceAround">
-          <Text text="test" />
+          <VBox>
+            <core:HTML id="zsh"
+              content="{/cli}" />
+            <FormattedText id="output"
+              visible="false"
+              htmlText="{/HTML}" />
+          </VBox>
         </HBox>
       </VBox>
     </Page>
