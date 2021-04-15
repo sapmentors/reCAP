@@ -24,6 +24,11 @@
 	overflow-y: auto;
 }
 
+/* Allow MessagePage to be positioned inside ObjectPage */
+.sapUxAPBlockContainer .sapMMessagePageInner {
+	position: static;
+}
+
 .sapMMessagePageContentWrapper {
 	margin: auto;
 	display: -ms-flexbox;
@@ -52,6 +57,12 @@
 		& > .sapMMessagePageContentWrapper > * {
 			-ms-flex-negative: 0;
 			max-width: 100%;
+		}
+
+		.sapMBtn {
+			.sapUiIcon::before {
+				font-size: 1rem;
+			}
 		}
 	}
 

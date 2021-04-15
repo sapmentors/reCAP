@@ -3,13 +3,27 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>re&gt;&#x2261;CAP 2020</title>
-	<script id="sap-ui-bootstrap" src="resources/sap-ui-custom.js" data-sap-ui-theme="sap_fiori_3" data-sap-ui-bindingsyntax="complex" data-sap-ui-resourceroots="{&quot;capcom.recap&quot;: &quot;./&quot;}" data-sap-ui-oninit="module:sap/ui/core/ComponentSupport" data-sap-ui-async="true">
+	<title>re>≡CAP 2021</title>
+	<link rel="stylesheet" href="css.css">
+	<script id="sap-ui-bootstrap"
+			src="https://openui5.hana.ondemand.com/resources/sap-ui-core.js"
+			data-sap-ui-theme="sap_fiori_3_dark"
+			data-sap-ui-libs="sap.ui.core,sap.m"
+			data-sap-ui-resourceroots='{"capcom.recap": "./"}'
+			data-sap-ui-async="true">
 			</script>
+	<script>
+		sap.ui.getCore().attachInit(() => {
+			sap.ui.require(["sap/ui/core/mvc/XMLView"], async (XMLView) => {
+				const View = await XMLView.create({ viewName: "capcom.recap.App" })
+				View.placeAt("content")
+			})
+		})
+	</script>
 </head>
 
-<body class="sapUiBody" id="content">
-	<div data-sap-ui-component data-name="capcom.recap" data-id="container" data-settings="{&quot;id&quot; : &quot;recap&quot;}"></div>
+<body id="content">
+
 </body>
 
 </html>

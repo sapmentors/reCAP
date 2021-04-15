@@ -517,7 +517,7 @@
 
 @sapContent_Shadow3: 0 0.625rem 4rem 0 fade(@sapContent_ContrastShadowColor, 80), 0 0 0 0.125rem @sapContent_ShadowColor;
 
-@sapContent_TextShadow: none;
+@sapContent_TextShadow: -1px 0 @sapHC_StandardBackground, 0 1px @sapHC_StandardBackground, 1px 0 @sapHC_StandardBackground, 0 -1px @sapHC_StandardBackground;
 
 @sapContent_HeaderShadow: inset 0 -0.125rem @sapObjectHeader_BorderColor;
 
@@ -539,7 +539,9 @@
 // [Label "Content Monospace Font Family"]
 // [Description "Defines which monospaced font is used for specific texts in the content area."]
 // [Tags "Base", "Content", "Font", "Protected"]
-@sapContent_MonospaceFontFamily: lucida console, monospace;
+@sapContent_MonospaceFontFamily: "72Mono", "72Monofull", lucida console, monospace;
+
+@sapContent_MonospaceBoldFontFamily: "72Mono-Bold", "72Mono-Boldfull", lucida console, monospace;
 
 // [Label "Content Disabled Text Color"]
 // [Description "The color of texts on disabled screen elements in the content area."]
@@ -644,6 +646,8 @@
 
 @sapShell_GroupTitleTextColor: @sapTitleColor;
 
+@sapShell_GroupTitleTextShadow: -1px 0 @sapShell_Background, 0 1px @sapShell_Background, 1px 0 @sapShell_Background, 0 -1px @sapShell_Background;
+
 @sapShell_Hover_Background: @sapHighlightColor;
 
 @sapShell_Active_Background: @sapActiveColor;
@@ -661,15 +665,31 @@
 // [Tags "Base", "Shell", "URI", "Image"]
 @sapShell_Favicon: none;
 
-@sapShell_Navigation_Background: @sapBackgroundColor;
+@sapShell_Navigation_Background: @sapShellColor;
 
-@sapShell_Navigation_SelectedColor: @sapShell_TextColor;
+@sapShell_Navigation_Hover_Background: @sapShell_Hover_Background;
 
-@sapShell_Navigation_Selected_TextColor: @sapShell_TextColor;
+@sapShell_Navigation_SelectedColor: @sapShell_Navigation_Selected_TextColor;
 
-@sapShell_Navigation_TextColor: @sapShell_GroupTitleTextColor;
+@sapShell_Navigation_Selected_TextColor: @sapShell_InteractiveTextColor;
+
+@sapShell_Navigation_TextColor: contrast(@sapShell_Navigation_Background, @sapTextColor, @sapContent_ContrastTextColor, @sapContent_ContrastTextThreshold);
+
+@sapShell_Navigation_Active_TextColor: contrast(@sapShell_Navigation_Active_Background, @sapTextColor, @sapContent_ContrastTextColor, @sapContent_ContrastTextThreshold);
+
+@sapShell_Navigation_Active_Background: @sapShell_Active_Background;
 
 @sapShell_Shadow: 0 0.125rem 0 0 @sapShell_BorderColor;
+
+@sapShell_NegativeColor: @sapNegativeColor;
+
+@sapShell_CriticalColor: @sapCriticalColor;
+
+@sapShell_PositiveColor: @sapPositiveColor;
+
+@sapShell_InformativeColor: @sapInformativeColor;
+
+@sapShell_NeutralColor: @sapNeutralColor;
 
 // [Label "Button Border Thickness"]
 // [Description "The thickness of button borders."]
@@ -1275,10 +1295,16 @@
 
 @sapInfobar_Active_Background: @sapActiveColor;
 
+@sapInfobar_NonInteractive_Background: @sapHC_ReducedBackground;
+
+@sapInfobar_TextColor: contrast(@sapInfobar_Background, @sapTextColor, @sapContent_ContrastTextColor, @sapContent_ContrastTextThreshold);
+
 // [Label "Object Header Background Color"]
 // [Description "The background color of object headers."]
 // [Tags "Base", "Page", "Color"]
 @sapObjectHeader_Background: @sapBaseColor;
+
+@sapObjectHeader_Hover_Background: @sapHighlightColor;
 
 @sapObjectHeader_BorderColor: @sapHC_StandardForeground;
 
@@ -1317,6 +1343,8 @@
 @sapTile_IconColor: contrast(@sapTile_Background, @sapContent_IconColor, @sapContent_ContrastIconColor, @sapContent_ContrastTextThreshold);
 
 @sapTile_SeparatorColor: @sapTile_BorderColor;
+
+@sapTile_Interactive_BorderColor: @sapTile_BorderColor;
 
 // [Label "Chart Ordered Color 1"]
 // [Description "This color is used as a ordered color of a sequence of 11 chart colors. It has a defined contrast to its predecessor and successor."]

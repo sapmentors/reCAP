@@ -1,11 +1,11 @@
 {
-  "_version": "1.9.0",
+  "_version": "1.21.0",
   "sap.app": {
     "id": "sap.m",
     "type": "library",
     "embeds": [],
     "applicationVersion": {
-      "version": "1.81.2"
+      "version": "1.88.0"
     },
     "title": "The main UI5 control library, with responsive controls that can be used in touch devices as well as desktop browsers.",
     "description": "The main UI5 control library, with responsive controls that can be used in touch devices as well as desktop browsers.",
@@ -15,30 +15,80 @@
   },
   "sap.ui": {
     "technology": "UI5",
-    "supportedThemes": [
-      "base",
-      "sap_hcb"
-    ]
+    "supportedThemes": ["base", "sap_hcb"]
   },
   "sap.ui5": {
     "dependencies": {
-      "minUI5Version": "1.81",
+      "minUI5Version": "1.88",
       "libs": {
         "sap.ui.core": {
-          "minVersion": "1.81.2"
+          "minVersion": "1.88.0"
         },
         "sap.ui.layout": {
-          "minVersion": "1.81.2",
+          "minVersion": "1.88.0",
           "lazy": true
         },
         "sap.ui.unified": {
-          "minVersion": "1.81.2",
+          "minVersion": "1.88.0",
           "lazy": true
         }
       }
     },
     "library": {
-      "i18n": "messagebundle.properties",
+      "i18n": {
+        "bundleUrl": "messagebundle.properties",
+        "supportedLocales": [
+          "",
+          "ar",
+          "bg",
+          "ca",
+          "cs",
+          "cy",
+          "da",
+          "de",
+          "el",
+          "en",
+          "en-GB",
+          "en-US-sappsd",
+          "en-US-saprigi",
+          "en-US-saptrc",
+          "es",
+          "es-MX",
+          "et",
+          "fi",
+          "fr",
+          "fr-CA",
+          "hi",
+          "hr",
+          "hu",
+          "id",
+          "it",
+          "iw",
+          "ja",
+          "kk",
+          "ko",
+          "lt",
+          "lv",
+          "ms",
+          "nl",
+          "no",
+          "pl",
+          "pt",
+          "pt-PT",
+          "ro",
+          "ru",
+          "sh",
+          "sk",
+          "sl",
+          "sv",
+          "th",
+          "tr",
+          "uk",
+          "vi",
+          "zh-CN",
+          "zh-TW"
+        ]
+      },
       "content": {
         "controls": [
           "sap.m.ActionListItem",
@@ -71,6 +121,7 @@
           "sap.m.Dialog",
           "sap.m.DisplayListItem",
           "sap.m.DraftIndicator",
+          "sap.m.ExpandableText",
           "sap.m.FacetFilter",
           "sap.m.FacetFilterItem",
           "sap.m.FacetFilterList",
@@ -87,6 +138,7 @@
           "sap.m.HeaderContainer",
           "sap.m.IconTabBar",
           "sap.m.IconTabBarSelectList",
+          "sap.m.IconTabFilterExpandButtonBadge",
           "sap.m.IconTabHeader",
           "sap.m.Image",
           "sap.m.ImageContent",
@@ -261,6 +313,7 @@
           "sap.m.ViewSettingsCustomTab",
           "sap.m.ViewSettingsFilterItem",
           "sap.m.ViewSettingsItem",
+          "sap.m.plugins.ColumnResizer",
           "sap.m.plugins.DataStateIndicator",
           "sap.m.plugins.PluginBase",
           "sap.m.semantic.AddAction",
@@ -301,6 +354,7 @@
           "sap.m.AvatarColor",
           "sap.m.BackgroundDesign",
           "sap.m.BadgeState",
+          "sap.m.BadgeAnimationType",
           "sap.m.BarDesign",
           "sap.m.BreadcrumbsSeparatorStyle",
           "sap.m.ButtonType",
@@ -360,6 +414,7 @@
           "sap.m.QuickViewGroupElementType",
           "sap.m.RatingIndicatorVisualMode",
           "sap.m.ScreenSize",
+          "sap.m.SelectColumnRatio",
           "sap.m.SelectionDetailsActionLevel",
           "sap.m.SelectListKeyboardNavigationMode",
           "sap.m.SelectType",
@@ -383,6 +438,7 @@
           "sap.m.ValueCSSColor",
           "sap.m.VerticalPlacementType",
           "sap.m.WrappingType",
+          "sap.m.WizardRenderMode",
           "sap.m.semantic.SemanticRuleSetType"
         ],
         "interfaces": [
