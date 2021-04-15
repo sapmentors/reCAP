@@ -3,7 +3,7 @@
   xmlns:core="sap.ui.core"
   xmlns:mvc="sap.ui.core.mvc"
   height="100%">
-  <App id="app">
+  <App>
     <Page showHeader="false">
       <VBox alignItems="Center"
         justifyContent="Center"
@@ -12,9 +12,10 @@
           <VBox>
             <core:HTML id="zsh"
               content="{/cli}" />
-            <FormattedText id="output"
+            <Text id="output"
               visible="false"
-              htmlText="{/HTML}" />
+              renderWhitespace="true"
+              class="cursor" />
           </VBox>
         </HBox>
       </VBox>

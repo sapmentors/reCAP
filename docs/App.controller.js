@@ -8,10 +8,7 @@ sap.ui.define(
         return Controller.extend("capcom.recap.App", {
             onInit() {
                 const Model = new JSONModel({
-                    cli: `<p class="terminal">$&gt; <input type="text" id="terminal" class="cmd terminal" placeholder="cds watch"></p>`,
-                    HTML: `
-<h1 class="cursor"></h1>
-                    `
+                    cli: `<p class="green terminal">$&gt; <input type="text" id="terminal" class="cmd terminal" placeholder="cds watch"></p>`
                 })
                 this.getView().setModel(Model)
             },
@@ -20,10 +17,29 @@ sap.ui.define(
                 const prompt = document.getElementById("terminal")
                 prompt.addEventListener("keydown", (event) => {
                     if (event.key === "Enter" || event.keyCode === 13) {
-                        ui5.byId("output").setVisible(true)
-                        ui5.byId("zsh").setVisible(false)
+                        if (prompt.value === "cds watch") {
+                            ui5.byId("zsh").setVisible(false)
+                            ui5.typeIt()
+                        }
                     }
                 })
+            },
+            typeIt() {
+                const delay = (ms) => {
+                    return new Promise((resolve) => setTimeout(resolve, ms))
+                }
+                const cursor = this.byId("output")
+                cursor.setVisible(true)
+                const reducer = async (accumulator, curr) => {
+                    const res = await accumulator
+                    await delay(200)
+                    const acc = `${res}${curr}`
+                    cursor.setText(acc)
+                    return acc
+                }
+                ;`June 25th, 2021\nre>≡CAP online\n💚`
+                    .split("")
+                    .reduce(reducer, "")
             }
         })
     }
