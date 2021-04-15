@@ -1,0 +1,13 @@
+.silverListIcon > div > span {
+    color: silver;
+}
+.goldListIcon > div > span {
+    color: gold;
+}
+
+.gold {
+    color: gold;
+}
+.silver {
+    color: silver;
+}
