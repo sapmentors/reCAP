@@ -1,0 +1,17 @@
+<mvc:View controllerName="capcom.recap.App"
+  xmlns="sap.m"
+  xmlns:core="sap.ui.core"
+  xmlns:mvc="sap.ui.core.mvc"
+  height="100%">
+  <App id="app">
+    <Page showHeader="false">
+      <VBox alignItems="Center"
+        justifyContent="Center"
+        height="100%">
+        <HBox justifyContent="SpaceAround">
+          <Text text="test" />
+        </HBox>
+      </VBox>
+    </Page>
+  </App>
+</mvc:View>

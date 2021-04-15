@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>re>≡CAP 2021</title>
+	<script id="sap-ui-bootstrap"
+			src="https://openui5.hana.ondemand.com/resources/sap-ui-core.js"
+			data-sap-ui-theme="sap_fiori_3_dark"
+			data-sap-ui-libs="sap.ui.core,sap.m"
+			data-sap-ui-resourceroots='{"capcom.recap": "./"}'
+			data-sap-ui-async="true">
+			</script>
+	<script>
+		sap.ui.getCore().attachInit(() => {
+			sap.ui.require(["sap/ui/core/mvc/XMLView"], async (XMLView) => {
+				const View = await XMLView.create({ viewName: "capcom.recap.App" })
+				View.placeAt("content")
+			})
+		})
+	</script>
+</head>
+
+<body id="content">
+
+</body>
+
+</html>
