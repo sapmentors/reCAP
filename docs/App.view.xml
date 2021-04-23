@@ -8,14 +8,32 @@
 			<VBox alignItems="Center"
 				justifyContent="Center"
 				height="100%">
-				<HBox justifyContent="SpaceAround">
+				<HBox justifyContent="SpaceAround"
+					width="100%">
 					<VBox>
+						<Text renderWhitespace="true"
+							class="cursorText"
+							text="June 25th, 2021&#10;re>≡CAP online" />
+
 						<core:HTML id="zsh"
 							content="{/cli}" />
-						<Text id="output"
+						<Link id="output"
+							href="https://recap.cfapps.eu10.hana.ondemand.com"
+							visible="false"
+							wrapping="true"
+							class="cursor" />
+						<Text id="output1"
+							visible="false"
+							class="cursorText"
+							text="(⏰ May 21st)"
+							renderWhitespace="true" />
+
+						<Text id="output-past"
 							visible="false"
 							renderWhitespace="true"
 							class="cursor" />
+
+
 					</VBox>
 				</HBox>
 			</VBox>

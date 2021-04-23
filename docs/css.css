@@ -2,9 +2,15 @@
     color: whitesmoke;
     font-family: "Source Code Pro", monospace;
     font-size: large;
+    margin-top: 1.5em;
 }
 p.green {
     color: green;
+}
+
+[id$="output"],
+[id$="output-past"] {
+    margin-top: 1.5em;
 }
 
 .cmd {
@@ -18,6 +24,7 @@ input.cmd:focus {
     outline: none;
 }
 
+.cursorText,
 .cursor {
     font-size: 1.5rem !important;
     font-family: "Source Code Pro", monospace !important;
@@ -37,6 +44,18 @@ input.cmd:focus {
     width: 13px;
 }
 
+.cmd::-webkit-input-placeholder {
+    opacity: 0.6;
+}
+.cmd::-moz-placeholder {
+    opacity: 0.6;
+}
+.cmd:-ms-input-placeholder {
+    opacity: 0.6;
+}
+.cmd:-moz-placeholder {
+    opacity: 0.6;
+}
 @keyframes blink {
     0% {
         opacity: 1;
