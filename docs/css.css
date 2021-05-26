@@ -1,3 +1,12 @@
+body {
+    background-image: url("./recap-bg1.jpg");
+    background-size: cover;
+}
+.sapUiGlobalBackgroundColor,
+.sapMShellGlobalInnerBackground,
+.sapMPageBgStandard {
+    background-color: unset !important;
+}
 .terminal {
     color: whitesmoke;
     font-family: "Source Code Pro", monospace;
@@ -24,11 +33,21 @@ input.cmd:focus {
     outline: none;
 }
 
-.cursorText,
-.cursor {
+.when,
+.what {
     font-size: 1.5rem !important;
     font-family: "Source Code Pro", monospace !important;
-    color: whitesmoke;
+}
+.when {
+    color: #83c1f5 !important;
+}
+.what {
+    color: whitesmoke !important;
+}
+.cursor {
+    font-size: 1.25rem !important;
+    font-family: "Source Code Pro", monospace !important;
+    color: #ada7a7 !important;
 }
 .cursor::after {
     content: "";

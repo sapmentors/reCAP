@@ -8,7 +8,7 @@ sap.ui.define(
         return Controller.extend("capcom.recap.App", {
             onInit() {
                 const Model = new JSONModel({
-                    cli: `<p class="green terminal">$&gt; <input type="text" id="terminal" class="cmd terminal" placeholder="cds deploy"></p>`
+                    cli: `<p class="green terminal">$&gt; <input type="text" id="terminal" class="cmd terminal" placeholder="cds info"></p>`
                 })
                 this.getView().setModel(Model)
             },
@@ -18,12 +18,11 @@ sap.ui.define(
                 prompt.focus()
                 prompt.addEventListener("keydown", (event) => {
                     if (event.key === "Enter" || event.keyCode === 13) {
-                        if (prompt.value === "cds watch") {
+                        if (prompt.value === "cds info") {
                             ui5.byId("zsh").setVisible(false)
-                            ui5.typeIt("🐬 42 🪐")
-                        } else if (prompt.value === "cds deploy") {
-                            ui5.byId("zsh").setVisible(false)
-                            ui5.typeIt()
+                            ui5.typeIt(`[CfP] done (> May 21)
+[sessions] confirmations > June 4
+[agenda] > June 11`)
                         }
                     }
                 })
@@ -41,33 +40,11 @@ sap.ui.define(
                     return acc
                 }
                 if (m) {
-                    cursor = this.byId("output-past")
-                    cursor.setVisible(true)
-                    Promise.resolve()
-                        .then((_) => {
-                            return m.split("").reduce(reducer, "")
-                        })
-                        .then(async (_) => {
-                            await delay(1000)
-                            return cursor.setVisible(false)
-                        })
-                        .then((_) => {
-                            return this.byId("zsh").setVisible(true)
-                        })
-                        .finally((_) => {
-                            document.getElementById("terminal").value = ""
-                        })
-                } else {
                     cursor = this.byId("output")
                     cursor.setVisible(true)
-                    Promise.resolve()
-                        .then((_) => {
-                            return `➡️ CfP`.split("").reduce(reducer, "")
-                        })
-                        .finally(async (_) => {
-                            await delay(700)
-                            this.byId("output1").setVisible(true)
-                        })
+                    Promise.resolve().then((_) => {
+                        return m.split("").reduce(reducer, "")
+                    })
                 }
             }
         })
