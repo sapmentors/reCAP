@@ -1,0 +1,49 @@
+<core:FragmentDefinition xmlns="sap.m" 
+    xmlns:core="sap.ui.core" 
+    xmlns:l="sap.ui.layout">
+
+    <l:HorizontalLayout>
+        <SlideTile class="sapUiSmallMargin meInline">
+            <GenericTile header="Kentivo" 
+                subheader="https://kentivo.com" 
+                headerImage="sap-icon://competitor" 
+                backgroundImage="gold.png" 
+                press="onSponsorPress('https://kentivo.com')">
+                <TileContent footer="Kentivo">
+                    <ImageContent src="logos/kentivo.png" />
+                </TileContent>
+            </GenericTile>
+            <GenericTile header="paricon" 
+                subheader="https://paricon.de" 
+                headerImage="sap-icon://competitor" 
+                backgroundImage="gold.png" 
+                press="onSponsorPress('https://paricon.de')">
+                <TileContent footer="paricon">
+                    <ImageContent src="logos/paricon.png" />
+                </TileContent>
+            </GenericTile>
+            <GenericTile header="Q_PERIOR" 
+                subheader="https://www.q-perior.com" 
+                headerImage="sap-icon://competitor" 
+                backgroundImage="gold.png" 
+                press="onSponsorPress('https://www.q-perior.com')">
+                <TileContent footer="Q_PERIOR">
+                    <ImageContent src="logos/qperior.gif" />
+                </TileContent>
+            </GenericTile>
+        </SlideTile>
+        <l:Grid hSpacing="0" 
+            content="{OurSponsors>/}">
+            <GenericTile header="{OurSponsors>header}" 
+                subheader="{OurSponsors>url}" 
+                headerImage="{OurSponsors>sponsorTypeImage}" 
+                class="sapUiSmallMargin" 
+                backgroundImage="{OurSponsors>sponsorType}" 
+                press="onSponsorPress(${OurSponsors>url})">
+                <TileContent footer="{OurSponsors>text}">
+                    <ImageContent src="{OurSponsors>logo}" />
+                </TileContent>
+            </GenericTile>
+        </l:Grid>
+    </l:HorizontalLayout>
+</core:FragmentDefinition>

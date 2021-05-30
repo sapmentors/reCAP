@@ -1,13 +1,13 @@
 {
 	"name": "recap",
 	"version": "1.0.3",
-	"buildTimestamp": "202103291917",
+	"buildTimestamp": "202105300700",
 	"scmRevision": "",
 	"libraries": [
 		{
 			"name": "sap.m",
-			"version": "1.88.0",
-			"buildTimestamp": "202103291917",
+			"version": "1.90.1",
+			"buildTimestamp": "202105300700",
 			"scmRevision": "",
 			"manifestHints": {
 				"dependencies": {
@@ -25,8 +25,8 @@
 		},
 		{
 			"name": "sap.ui.codeeditor",
-			"version": "1.88.0",
-			"buildTimestamp": "202103291917",
+			"version": "1.90.1",
+			"buildTimestamp": "202105300700",
 			"scmRevision": "",
 			"manifestHints": {
 				"dependencies": {
@@ -38,14 +38,14 @@
 		},
 		{
 			"name": "sap.ui.core",
-			"version": "1.88.0",
-			"buildTimestamp": "202103291917",
+			"version": "1.90.1",
+			"buildTimestamp": "202105300700",
 			"scmRevision": ""
 		},
 		{
 			"name": "sap.ui.fl",
-			"version": "1.88.0",
-			"buildTimestamp": "202103291917",
+			"version": "1.90.1",
+			"buildTimestamp": "202105300700",
 			"scmRevision": "",
 			"manifestHints": {
 				"dependencies": {
@@ -64,8 +64,8 @@
 		},
 		{
 			"name": "sap.ui.layout",
-			"version": "1.88.0",
-			"buildTimestamp": "202103291917",
+			"version": "1.90.1",
+			"buildTimestamp": "202105300700",
 			"scmRevision": "",
 			"manifestHints": {
 				"dependencies": {
@@ -77,8 +77,8 @@
 		},
 		{
 			"name": "sap.ui.support",
-			"version": "1.88.0",
-			"buildTimestamp": "202103291917",
+			"version": "1.90.1",
+			"buildTimestamp": "202105300700",
 			"scmRevision": "",
 			"manifestHints": {
 				"dependencies": {
@@ -90,8 +90,8 @@
 		},
 		{
 			"name": "sap.ui.testrecorder",
-			"version": "1.88.0",
-			"buildTimestamp": "202103291917",
+			"version": "1.90.1",
+			"buildTimestamp": "202105300700",
 			"scmRevision": "",
 			"manifestHints": {
 				"dependencies": {
@@ -103,8 +103,8 @@
 		},
 		{
 			"name": "sap.ui.unified",
-			"version": "1.88.0",
-			"buildTimestamp": "202103291917",
+			"version": "1.90.1",
+			"buildTimestamp": "202105300700",
 			"scmRevision": "",
 			"manifestHints": {
 				"dependencies": {
