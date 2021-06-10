@@ -90,9 +90,32 @@ sap.ui.define(
                     ],
                     presentationLinks: []
                 }
+                const lunch = {
+                    id: 47114,
+                    title: "(lunch break)",
+                    description:
+                        "whereever you'll be like \n🍕🍑🍰🍔🍌🥐🍝🍦🍅🍫🍪🥓🍋🥔🥤🌰🍩🧀🥒🥯🥝🍓🍞🌽🥩🥨🍳🥧🌭🍘🍖🍍🍇🍊🥬🍢🌯🥪🍙🥘🍱🥠🫔🫕🧇🍚🌮🍤🍣🫒🦪🥦🥡🥕🍒🫐🍉🍠🍿🥟🧅🧄🫑🍜🥖🍲.\n or not.",
+                    location: "FRI",
+                    startTime: "12:00",
+                    endTime: "13:00",
+                    speakers: [
+                        {
+                            firstName: "#SAPCAP",
+                            lastName: "community",
+                            company: "the world",
+                            bio: "",
+                            funFact: "",
+                            twitterHandle: "",
+                            linkedInUrl: "",
+                            otherSocialMedia: null,
+                            photoUrl: ""
+                        }
+                    ],
+                    presentationLinks: []
+                }
                 const beer = {
                     id: 47113,
-                    title: "After-Event",
+                    title: "(after-event)",
                     description:
                         "we all hang in a Zoom session and share a 🍹\nZoom Link will be provided in the livestream!",
                     location: "FRI",
@@ -113,7 +136,7 @@ sap.ui.define(
                     ],
                     presentationLinks: []
                 }
-                return [opening, keynote, beer]
+                return [opening, keynote, lunch, beer]
             }
         })
     }
