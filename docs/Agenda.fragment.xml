@@ -2,12 +2,12 @@
     xmlns:core="sap.ui.core">
     <Table id="LineupModel"
         alternateRowColors="true"
-        fixedLayout="false"
+        fixedLayout="true"
         items="{LineupModel>/}">
         <columns>
             <Column demandPopin="true"
                 minScreenWidth="Tablet"
-                hAlign="End"
+                hAlign="Begin"
                 width="10%" />
             <Column demandPopin="true"
                 minScreenWidth="Tablet" />
@@ -28,7 +28,7 @@
                             <content>
                                 <Text text="{LineupModel>description}"
                                     class="sapUiLargeMarginBottom description" />
-                                <VBox items="{LineupModel>speakers}">
+                                <VBox items="{ path:'LineupModel>speakers', templateShareable:true}">
                                     <HBox class="sapUiMediumMarginBottom sapUiContentPadding"
                                         alignItems="Center">
                                         <VBox class="sapUiContentPadding">
@@ -39,7 +39,7 @@
                                                 class="small" />
                                         </VBox>
                                         <Text text="{LineupModel>bio}"
-                                            class="sapUiContentPadding bio" />
+                                            class="sapUiResponsiveContentPadding bio" />
                                     </HBox>
 
                                 </VBox>
