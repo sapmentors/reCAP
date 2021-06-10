@@ -13,9 +13,12 @@
 							text="June 25th, 2021" />
 						<Text class="what"
 							text="re>≡CAP online" />
-						<Link target="https://broadcast.co.sap.com/go/reCAP2021"
+						<Link href="https://broadcast.co.sap.com/go/reCAP2021"
 							text="https://broadcast.co.sap.com/go/reCAP2021"
-							class="when sapUiTinyMarginTop sapUiMediumMarginBottom" />
+							class="when sapUiTinyMarginTop sapUiSmallMarginBottom" />
+						<Text class="sapUiMediumMarginBottom"
+							text="(no registration required, all times CEST)" />
+
 						<core:Fragment fragmentName="capcom.recap.Agenda"
 							id="AgendaFragment"
 							type="XML"
