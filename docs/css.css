@@ -2,9 +2,12 @@ body {
     background-image: url("./recap-bg1.jpg");
     background-size: cover;
 }
-.small {
+.smallItalic {
     font-size: small;
     font-style: italic;
+}
+.small {
+    font-size: small;
 }
 .description {
     font-size: 1rem !important;
