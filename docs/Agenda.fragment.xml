@@ -1,0 +1,53 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <Table id="LineupModel"
+        alternateRowColors="true"
+        fixedLayout="false"
+        items="{LineupModel>/}">
+        <columns>
+            <Column demandPopin="true"
+                minScreenWidth="Tablet"
+                hAlign="End"
+                width="10%" />
+            <Column demandPopin="true"
+                minScreenWidth="Tablet" />
+        </columns>
+        <items>
+            <ColumnListItem vAlign="Middle">
+                <cells>
+                    <Title text="{LineupModel>startTime}" />
+
+                    <VBox>
+                        <Text text="{ 
+                            path:'LineupModel>speakers',
+                            formatter:'.daSpeakers'
+                        }" />
+                        <Panel headerText="{LineupModel>title}"
+                            expandable="true"
+                            expanded="false">
+                            <content>
+                                <Text text="{LineupModel>description}"
+                                    class="sapUiLargeMarginBottom description" />
+                                <VBox items="{LineupModel>speakers}">
+                                    <HBox class="sapUiMediumMarginBottom sapUiContentPadding"
+                                        alignItems="Center">
+                                        <VBox class="sapUiContentPadding">
+                                            <Avatar src="https://recap.cfapps.eu10.hana.ondemand.com{= ${LineupModel>photoUrl} }"
+                                                displaySize="M"
+                                                showBorder="true" />
+                                            <Text text="({LineupModel>firstName} {LineupModel>lastName})"
+                                                class="small" />
+                                        </VBox>
+                                        <Text text="{LineupModel>bio}"
+                                            class="sapUiContentPadding bio" />
+                                    </HBox>
+
+                                </VBox>
+                            </content>
+                        </Panel>
+                    </VBox>
+                </cells>
+            </ColumnListItem>
+        </items>
+    </Table>
+</core:FragmentDefinition>
