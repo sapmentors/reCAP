@@ -37,6 +37,9 @@
                                                 showBorder="true" />
                                             <Text text="({LineupModel>firstName} {LineupModel>lastName})"
                                                 class="smallItalic" />
+                                            <Text text="🛠{LineupModel>company}"
+                                                class="small"
+                                                wrapping="false" />
                                             <Link text="{LineupModel>twitterHandle}"
                                                 href="https://twitter.com/{LineupModel>twitterHandle}"
                                                 class="small" />
@@ -44,8 +47,6 @@
                                                 href="{LineupModel>linkedInUrl}"
                                                 class="small"
                                                 visible="{= ${LineupModel>linkedInUrl} ? true : false }" />
-
-
                                         </VBox>
                                         <Text text="{LineupModel>bio}"
                                             class="sapUiResponsiveContentPadding bio" />

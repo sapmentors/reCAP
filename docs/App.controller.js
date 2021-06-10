@@ -14,17 +14,13 @@ sap.ui.define(
                     .join(", ")
             },
             async onInit() {
-                const Model = new JSONModel({
-                    cli: `<p class="green terminal">$&gt; <input type="text" id="terminal" class="cmd terminal" placeholder="cds info"></p>`
-                })
-                this.getView().setModel(Model)
-
+                // get the live schedule
                 let _lineup = await fetch(
                     `https://recap.cfapps.eu10.hana.ondemand.com/api/proposal/lineup`
                 ).then((r) => r.json())
                 // inject opening, keynote, lunch, afterevent
                 _lineup = [..._lineup, ...this.inject()]
-                console.log(_lineup)
+                // sort by start time
                 const lineup = _lineup.sort((a, b) => {
                     if (a.startTime < b.startTime) {
                         return -1
@@ -61,7 +57,7 @@ sap.ui.define(
                         {
                             firstName: "Volker",
                             lastName: "Buzek",
-                            company: "j&uuml;s-soft GmbH",
+                            company: "j&s-soft GmbH",
                             bio: "",
                             funFact: "",
                             twitterHandle: "@vobu",
@@ -97,7 +93,8 @@ sap.ui.define(
                 const beer = {
                     id: 47113,
                     title: "After-Event",
-                    description: "we all hang in a Zoom session and share a 🍹",
+                    description:
+                        "we all hang in a Zoom session and share a 🍹\nZoom Link will be provided in the livestream!",
                     location: "FRI",
                     startTime: "16:00",
                     endTime: "20:00",

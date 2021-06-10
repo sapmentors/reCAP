@@ -8,7 +8,7 @@
 				justifyContent="Center">
 				<HBox justifyContent="SpaceAround"
 					width="100%">
-					<VBox width="90%">
+					<VBox width="95%">
 						<Text class="when"
 							text="June 25th, 2021" />
 						<Text class="what"
