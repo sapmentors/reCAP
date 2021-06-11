@@ -48,7 +48,7 @@
                                                 class="small"
                                                 visible="{= ${LineupModel>linkedInUrl} ? true : false }" />
                                         </VBox>
-                                        <Text text="{LineupModel>bio}"
+                                        <Text text="{ path:'LineupModel>bio', formatter:'.decode' }"
                                             class="sapUiResponsiveContentPadding bio" />
                                     </HBox>
 
