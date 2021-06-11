@@ -22,11 +22,11 @@
                             path:'LineupModel>speakers',
                             formatter:'.daSpeakers'
                         }" />
-                        <Panel headerText="{LineupModel>title}"
+                        <Panel headerText="{ path:'LineupModel>title', formatter:'.decode' }"
                             expandable="true"
                             expanded="false">
                             <content>
-                                <Text text="{LineupModel>description}"
+                                <Text text="{ path:'LineupModel>description', formatter:'.decode' }"
                                     class="sapUiTinyMarginBottom description" />
                                 <HBox items="{ path:'LineupModel>speakers', templateShareable:true}">
                                     <HBox class="sapUiContentPadding"

@@ -6,6 +6,14 @@ sap.ui.define(
     ],
     (Controller, JSONModel) => {
         return Controller.extend("capcom.recap.App", {
+            decode(encoded) {
+                let _
+                _ = document.createElement("span")
+                _.innerHTML = encoded
+                const __ = _.textContent || _.innerText
+                _ = null
+                return __
+            },
             daSpeakers(speakers) {
                 return speakers
                     .map(
