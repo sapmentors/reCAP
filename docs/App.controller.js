@@ -145,6 +145,10 @@ sap.ui.define(
                     presentationLinks: []
                 }
                 return [opening, keynote, lunch, beer]
+            },
+
+            onSponsorPress(sUrl) {
+                window.open(sUrl)
             }
         })
     }

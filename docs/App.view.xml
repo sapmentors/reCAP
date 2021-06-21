@@ -22,8 +22,15 @@
 						<core:Fragment fragmentName="capcom.recap.Agenda"
 							id="AgendaFragment"
 							type="XML"
-							class="sapUiTinyMarginBottom" />
+							class="sapUiLargeMarginBottom" />
 
+						<Text class="what"
+							text="🧡 our sponsors" />
+
+						<core:Fragment fragmentName="capcom.recap.Sponsors"
+							id="SponsorFragment"
+							type="XML"
+							class="sapUiTinyMarginBottom" />
 
 					</VBox>
 				</HBox>
