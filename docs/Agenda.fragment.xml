@@ -10,12 +10,21 @@
                 hAlign="Begin"
                 width="10%" />
             <Column demandPopin="true"
+                minScreenWidth="Tablet"
+                hAlign="Begin"
+                width="10%" />
+            <Column demandPopin="true"
                 minScreenWidth="Tablet" />
         </columns>
         <items>
             <ColumnListItem vAlign="Middle">
                 <cells>
                     <Title text="{LineupModel>startTime}" />
+
+
+                    <Link href="{LineupModel>video}"
+                        text="📽 (rec)"
+                        visible="{= ${LineupModel>video} ? true : false }" />
 
                     <VBox>
                         <Text text="{ 
@@ -56,6 +65,7 @@
                             </content>
                         </Panel>
                     </VBox>
+
                 </cells>
             </ColumnListItem>
         </items>
