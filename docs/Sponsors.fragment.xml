@@ -3,7 +3,7 @@
     xmlns:l="sap.ui.layout">
 
     <l:HorizontalLayout>
-        <l:Grid defaultSpan="XL3 L5 M5 S12">
+        <l:Grid defaultSpan="XL5 L5 M5 S12">
             <GenericTile header="j+s-soft GmbH"
                 subheader="https://www.js-soft.com"
                 class="sapUiSmallMargin"
