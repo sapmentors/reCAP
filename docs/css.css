@@ -1,6 +1,7 @@
 body {
     background-color: #1c2327;
 }
+/* mucho copypasta from https://css-tricks.com/how-to-create-neon-text-with-css/ */
 .neonText {
     color: #fff;
     text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa,
