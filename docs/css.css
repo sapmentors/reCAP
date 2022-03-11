@@ -25,10 +25,31 @@ body {
 .sapMPageBgStandard {
     background-color: unset !important;
 }
+
+.why,
+.sapMPanelHdr,
+.cfp,
 .where,
 .when,
 .what {
     font-family: "Source Code Pro", monospace !important;
+}
+.sapMPanel .sapMPanelExpandable {
+    width: 60%;
+}
+
+.hereswhy {
+    color: whitesmoke !important;
+    font-size: 1.1rem !important;
+    line-height: 1.3rem;
+}
+.why {
+    padding-top: 0.5em;
+    text-align: left;
+}
+.cfp {
+    padding-top: 1em;
+    font-size: 1.5rem !important;
 }
 
 .what {
@@ -46,6 +67,7 @@ body {
     font-size: 1.5rem !important;
 }
 .where {
+    padding-top: 1.5em;
     color: whitesmoke !important;
     font-size: 1.5rem !important;
 }

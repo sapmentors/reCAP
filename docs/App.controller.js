@@ -6,40 +6,12 @@ sap.ui.define(
     ],
     (Controller, JSONModel) => {
         return Controller.extend("capcom.recap.App", {
-            decode(encoded) {
-                let _
-                _ = document.createElement("span")
-                _.innerHTML = encoded
-                const __ = _.textContent || _.innerText
-                _ = null
-                return __
-            },
-            daSpeakers(speakers) {
-                return speakers
-                    .map(
-                        (speaker) => `${speaker.firstName} ${speaker.lastName}`
-                    )
-                    .join(", ")
-            },
-            async onInit() {
-                // get the live schedule
-                let _lineup = await fetch("./lineup.json").then((r) => r.json())
-                // sort by start time
-                const lineup = _lineup.sort((a, b) => {
-                    if (a.startTime < b.startTime) {
-                        return -1
-                    }
-                    if (a.startTime > b.startTime) {
-                        return 1
-                    }
-                    return 0
+            onInit() {
+                const oModel = new JSONModel({
+                    hereswhy: `<p>the pandemic isn't over - and as much as we'd like to have everyone come together in person,<br>
+              we can and will not risk to accidentally create a superspreader event</p>`
                 })
-                const LineupModel = new JSONModel(lineup)
-                this.getView().setModel(LineupModel, "LineupModel")
-            },
-
-            onSponsorPress(sUrl) {
-                window.open(sUrl)
+                this.getView().setModel(oModel)
             }
         })
     }
