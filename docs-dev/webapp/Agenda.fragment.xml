@@ -1,0 +1,73 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <Table id="LineupModel"
+        alternateRowColors="true"
+        fixedLayout="true"
+        items="{LineupModel>/}">
+        <columns>
+            <Column demandPopin="true"
+                minScreenWidth="Tablet"
+                hAlign="Begin"
+                width="10%" />
+            <Column demandPopin="true"
+                minScreenWidth="Tablet"
+                hAlign="Begin"
+                width="10%" />
+            <Column demandPopin="true"
+                minScreenWidth="Tablet" />
+        </columns>
+        <items>
+            <ColumnListItem vAlign="Middle">
+                <cells>
+                    <Title text="{LineupModel>startTime}" />
+
+
+                    <Link href="{LineupModel>video}"
+                        text="📽 (rec)"
+                        visible="{= ${LineupModel>video} ? true : false }" />
+
+                    <VBox>
+                        <Text text="{ 
+                            path:'LineupModel>speakers',
+                            formatter:'.daSpeakers'
+                        }" />
+                        <Panel headerText="{ path:'LineupModel>title', formatter:'.decode' }"
+                            expandable="true"
+                            expanded="false">
+                            <content>
+                                <Text text="{ path:'LineupModel>description', formatter:'.decode' }"
+                                    class="sapUiTinyMarginBottom description" />
+                                <HBox items="{ path:'LineupModel>speakers', templateShareable:true}">
+                                    <HBox class="sapUiContentPadding"
+                                        alignItems="Center">
+                                        <VBox class="sapUiContentPadding">
+                                            <Avatar src="https://recap.cfapps.eu10.hana.ondemand.com{= ${LineupModel>photoUrl} }"
+                                                displaySize="M"
+                                                showBorder="true" />
+                                            <Text text="({LineupModel>firstName} {LineupModel>lastName})"
+                                                class="smallItalic" />
+                                            <Text text="🛠{LineupModel>company}"
+                                                class="small"
+                                                wrapping="false" />
+                                            <Link text="{LineupModel>twitterHandle}"
+                                                href="https://twitter.com/{LineupModel>twitterHandle}"
+                                                class="small" />
+                                            <Link text="🔗 LinkedIn"
+                                                href="{LineupModel>linkedInUrl}"
+                                                class="small"
+                                                visible="{= ${LineupModel>linkedInUrl} ? true : false }" />
+                                        </VBox>
+                                        <Text text="{ path:'LineupModel>bio', formatter:'.decode' }"
+                                            class="sapUiResponsiveContentPadding bio" />
+                                    </HBox>
+
+                                </HBox>
+                            </content>
+                        </Panel>
+                    </VBox>
+
+                </cells>
+            </ColumnListItem>
+        </items>
+    </Table>
+</core:FragmentDefinition>
