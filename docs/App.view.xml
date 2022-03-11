@@ -7,33 +7,28 @@
       <VBox alignItems="Center"
         justifyContent="Center"
         height="100%">
-        <HBox justifyContent="SpaceAround">
-          <VBox class="center"
-            width="99%">
-            <Title level="H1"
-              text="re>≡CAP hybrid"
-              class="what" />
-            <Text text="Jun 1: 15 - 19 CEST&#13;&#10;Jun 2: 9 - 13 CEST"
-              class="when"
-              renderWhitespace="true" />
-            <Link href="https://recap.cfapps.eu10.hana.ondemand.com"
-              text="&#8594; call for proposals (until Apr 13)"
-              class="cfp" />
+        <Title level="H1"
+          text="re>≡CAP hybrid"
+          class="what" />
+        <Text text="Jun 1: 15 - 19 CEST&#13;&#10;Jun 2: 9 - 13 CEST"
+          class="when"
+          renderWhitespace="true" />
+        <Link href="https://recap.cfapps.eu10.hana.ondemand.com"
+          text="&#8594; CfP (until Apr 13)"
+          class="cfp" />
 
-            <Text text="for Speakers: 🎪 ROT3 + Rot24 (optional)&#13;&#10;for everyone: 🌍 online"
-              class="where" />
 
-            <HBox justifyContent="SpaceAround">
-              <Panel headerText="here's why"
-                expandable="true"
-                expanded="true"
-                class="why">
-                <FormattedText class="hereswhy"
-                  htmlText="{/hereswhy}" />
-              </Panel>
-            </HBox>
-          </VBox>
-        </HBox>
+        <Text text="for Speakers: 🎪 ROT3 + ROT24 (optional)&#13;&#10;for everyone: 🌍 online"
+          class="where" />
+        <VBox id="panelist">
+          <Panel headerText="here's why"
+            expandable="true"
+            expanded="false"
+            class="why">
+            <FormattedText class="hereswhy"
+              htmlText="{/hereswhy}" />
+          </Panel>
+        </VBox>
       </VBox>
     </Page>
   </App>

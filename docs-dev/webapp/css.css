@@ -34,14 +34,11 @@ body {
 .what {
     font-family: "Source Code Pro", monospace !important;
 }
-.sapMPanel .sapMPanelExpandable {
-    width: 60%;
-}
 
 .hereswhy {
     color: whitesmoke !important;
     font-size: 1.1rem !important;
-    line-height: 1.3rem;
+    line-height: 1.4em !important;
 }
 .why {
     padding-top: 0.5em;
@@ -50,6 +47,10 @@ body {
 .cfp {
     padding-top: 1em;
     font-size: 1.5rem !important;
+}
+
+.glow {
+    animation: pulsate 1.5s infinite alternate;
 }
 
 .what {
@@ -69,7 +70,7 @@ body {
 .where {
     padding-top: 1.5em;
     color: whitesmoke !important;
-    font-size: 1.5rem !important;
+    font-size: 1.1rem !important;
 }
 .center {
     text-align: center;
