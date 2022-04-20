@@ -10,7 +10,7 @@
         <Title level="H1"
           text="re>≡CAP hybrid"
           class="what" />
-        <Text text="Jun 1: 15 - 19 CEST&#13;&#10;Jun 2: 09 - 13 CEST"
+<Text text="Jun 1: 14 - 19 CEST&#13;&#10;Jun 2: 09 - 13 CEST"
           class="when"
           renderWhitespace="true" />
         <Link href="https://recap.cfapps.eu10.hana.ondemand.com"
