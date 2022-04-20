@@ -1,6 +1,7 @@
 <mvc:View controllerName="capcom.recap.App"
   xmlns="sap.m"
   xmlns:core="sap.ui.core"
+  xmlns:l="sap.ui.layout"
   xmlns:mvc="sap.ui.core.mvc">
   <App>
     <Page showHeader="false">
@@ -13,11 +14,6 @@
         <Text text="Jun 1: 14 - 19 CEST&#13;&#10;Jun 2: 09 - 13 CEST"
           class="when"
           renderWhitespace="true" />
-        <Link href="https://recap.cfapps.eu10.hana.ondemand.com"
-          text="&#8594; CfP (until Apr 13)"
-          class="cfp" />
-
-
         <Text text="for Speakers: 🎪 ROT3 + ROT24 (optional)&#13;&#10;for everyone: 🌍 online"
           class="where" />
         <VBox id="panelist">
@@ -29,6 +25,15 @@
               htmlText="{/hereswhy}" />
           </Panel>
         </VBox>
+        <Text text="Sponsored by:"
+          class="sapUiMediumMarginTop why" />
+        <Image src="img/Paricon_Logo_Negativ_RGB.png"
+          class="sapUiTinyMarginTop" />
+        <Image src="img/Rizing_Logo_RGB.svg"
+          width="200px"
+          class="sapUiTinyMarginTop" />
+        <Image src="img/js-soft.png"
+          class="sapUiTinyMarginTop" />
       </VBox>
     </Page>
   </App>
