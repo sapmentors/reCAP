@@ -25,15 +25,42 @@
               htmlText="{/hereswhy}" />
           </Panel>
         </VBox>
-        <Text text="Sponsored by:"
+        <Text text="Platin Sponsor"
           class="sapUiMediumMarginTop why" />
-        <Image src="img/Paricon_Logo_Negativ_RGB.png"
-          class="sapUiTinyMarginTop" />
         <Image src="img/Rizing_Logo_RGB.svg"
           width="200px"
-          class="sapUiTinyMarginTop" />
-        <Image src="img/js-soft.png"
-          class="sapUiTinyMarginTop" />
+          class="sapUiTinyMarginTop"
+          href="https://rizing.com/" />
+        <Link
+				text="rizing.com"
+				target="_blank"
+				href="https://rizing.com/" />
+        <Text text="Gold Sponsors"
+          class="sapUiMediumMarginTop why" />
+        <HBox id="goldsponsors">
+          <VBox id="paricon"
+            alignItems="Center"
+            justifyContent="Center"
+            width="230px">
+            <Image src="img/Paricon_Logo_Negativ_RGB.png"
+              class="sapUiTinyMarginTop" />
+            <Link
+            text="paricon.de"
+            target="_blank"
+            href="https://www.paricon.de/" />
+          </VBox>
+          <VBox id="jssoft"
+            alignItems="Center"
+            justifyContent="Center"
+            width="230px">
+            <Image src="img/js-soft.png"
+              class="sapUiTinyMarginTop" />
+            <Link
+            text="js-soft.com"
+            target="_blank"
+            href="https://www.js-soft.com/" />
+          </VBox>
+        </HBox>
       </VBox>
     </Page>
   </App>
