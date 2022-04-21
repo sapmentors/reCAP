@@ -29,12 +29,11 @@
           class="sapUiMediumMarginTop why" />
         <Image src="img/Rizing_Logo_RGB.svg"
           width="200px"
-          class="sapUiTinyMarginTop"
-          href="https://rizing.com/" />
+          class="sapUiTinyMarginTop" />
         <Link
-				text="rizing.com"
-				target="_blank"
-				href="https://rizing.com/" />
+        text="rizing.com"
+        target="_blank"
+        href="https://rizing.com/" />
         <Text text="Gold Sponsors"
           class="sapUiMediumMarginTop why" />
         <HBox id="goldsponsors">
@@ -61,6 +60,15 @@
             href="https://www.js-soft.com/" />
           </VBox>
         </HBox>
+       <Text text="Silver Sponsor"
+          class="sapUiMediumMarginTop why" />
+        <Image src="img/reply.png"
+          width="200px"
+          class="sapUiTinyMarginTop" />
+        <Link
+        text="reply.com"
+        target="_blank"
+        href="https://www.reply.com/" />
       </VBox>
     </Page>
   </App>
