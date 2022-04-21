@@ -1,6 +1,7 @@
 <mvc:View controllerName="capcom.recap.App"
   xmlns="sap.m"
   xmlns:core="sap.ui.core"
+  xmlns:l="sap.ui.layout"
   xmlns:mvc="sap.ui.core.mvc">
   <App>
     <Page showHeader="false">
@@ -10,25 +11,64 @@
         <Title level="H1"
           text="re>≡CAP hybrid"
           class="what" />
-        <Text text="Jun 1: 15 - 19 CEST&#13;&#10;Jun 2: 9 - 13 CEST"
+        <Text text="Jun 1: 14 - 19 CEST&#13;&#10;Jun 2: 09 - 13 CEST"
           class="when"
           renderWhitespace="true" />
-        <Link href="https://recap.cfapps.eu10.hana.ondemand.com"
-          text="&#8594; CfP (until Apr 13)"
-          class="cfp" />
-
-
         <Text text="for Speakers: 🎪 ROT3 + ROT24 (optional)&#13;&#10;for everyone: 🌍 online"
           class="where" />
         <VBox id="panelist">
           <Panel headerText="here's why"
             expandable="true"
-            expanded="true"
+            expanded="false"
             class="why">
             <FormattedText class="hereswhy"
               htmlText="{/hereswhy}" />
           </Panel>
         </VBox>
+        <Text text="Platin Sponsor"
+          class="sapUiMediumMarginTop why" />
+        <Image src="img/Rizing_Logo_RGB.svg"
+          width="200px"
+          class="sapUiTinyMarginTop" />
+        <Link
+        text="rizing.com"
+        target="_blank"
+        href="https://rizing.com/" />
+        <Text text="Gold Sponsors"
+          class="sapUiMediumMarginTop why" />
+        <HBox id="goldsponsors">
+          <VBox id="paricon"
+            alignItems="Center"
+            justifyContent="Center"
+            width="230px">
+            <Image src="img/Paricon_Logo_Negativ_RGB.png"
+              class="sapUiTinyMarginTop" />
+            <Link
+            text="paricon.de"
+            target="_blank"
+            href="https://www.paricon.de/" />
+          </VBox>
+          <VBox id="jssoft"
+            alignItems="Center"
+            justifyContent="Center"
+            width="230px">
+            <Image src="img/js-soft.png"
+              class="sapUiTinyMarginTop" />
+            <Link
+            text="js-soft.com"
+            target="_blank"
+            href="https://www.js-soft.com/" />
+          </VBox>
+        </HBox>
+       <Text text="Silver Sponsor"
+          class="sapUiMediumMarginTop why" />
+        <Image src="img/reply.png"
+          width="200px"
+          class="sapUiTinyMarginTop" />
+        <Link
+        text="reply.com"
+        target="_blank"
+        href="https://www.reply.com/" />
       </VBox>
     </Page>
   </App>
