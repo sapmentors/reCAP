@@ -3,6 +3,7 @@
   "sap.app": {
     "id": "capcom.recap",
     "type": "application",
+    "title": "re>≡CAP Conference Website",
     "i18n": {
       "bundleUrl": "i18n/i18n.properties",
       "supportedLocales": ["en"],
