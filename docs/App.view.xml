@@ -34,6 +34,9 @@
           class="sapUiTinyMarginTop" />
         <Image src="img/js-soft.png"
           class="sapUiTinyMarginTop" />
+        <Image src="img/reply.png"
+          class="sapUiTinyMarginTop" />
+
       </VBox>
     </Page>
   </App>
