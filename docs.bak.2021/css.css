@@ -1,0 +1,112 @@
+body {
+    background-image: url("./recap-bg1.jpg");
+    background-size: cover;
+}
+.smallItalic {
+    font-size: small;
+    font-style: italic;
+}
+.small {
+    font-size: small;
+}
+.description {
+    font-size: 1rem !important;
+    line-height: 1.3rem !important;
+}
+.bio {
+    line-height: 1.2rem !important;
+}
+
+.sapUiGlobalBackgroundColor,
+.sapMShellGlobalInnerBackground,
+.sapMPageBgStandard {
+    background-color: unset !important;
+}
+
+.sapMPanel > .sapMPanelHdr,
+.sapMPanelWrappingDiv,
+.sapMPanelWrappingDivTb {
+    border-bottom: 0 !important;
+}
+.terminal {
+    color: whitesmoke;
+    font-family: "Source Code Pro", monospace;
+    font-size: large;
+    margin-top: 1.5em;
+}
+p.green {
+    color: green;
+}
+
+[id$="output"],
+[id$="output-past"] {
+    margin-top: 1.5em;
+}
+
+.cmd {
+    background-color: #1c2327;
+    border: 0 #1c2327;
+}
+input.cmd:hover,
+input.cmd:focus {
+    background-color: #1c2327;
+    border: 0 #1c2327;
+    outline: none;
+}
+
+.when,
+.what {
+    font-size: 1.5rem !important;
+    font-family: "Source Code Pro", monospace !important;
+}
+.when {
+    color: #83c1f5 !important;
+}
+.what {
+    color: whitesmoke !important;
+}
+.cursor {
+    font-size: 1.25rem !important;
+    font-family: "Source Code Pro", monospace !important;
+    color: #ada7a7 !important;
+}
+.cursor::after {
+    content: "";
+    display: inline-block;
+    margin-left: 3px;
+    background-color: whitesmoke;
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+.cursor::after {
+    height: 1.5rem;
+    width: 13px;
+}
+
+.cmd::-webkit-input-placeholder {
+    opacity: 0.6;
+}
+.cmd::-moz-placeholder {
+    opacity: 0.6;
+}
+.cmd:-ms-input-placeholder {
+    opacity: 0.6;
+}
+.cmd:-moz-placeholder {
+    opacity: 0.6;
+}
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    49% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}

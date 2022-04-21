@@ -6,7 +6,6 @@
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 	-webkit-touch-callout: none;
 	-webkit-text-size-adjust: none;
-	-ms-text-size-adjust: none;
 }
 
 .sapMContainerMargin {
@@ -20,16 +19,13 @@
 html.sap-phone *, html.sap-tablet:not(.sap-desktop) * {   /* FIXME!!! (star rule with any-parent selector...) */
 	-webkit-user-select: none;
 	-moz-user-select: none;
-	-ms-user-select: none;
 	user-select: none;
-	-webkit-user-drag: none;
 }
 
 html.sap-phone input, html.sap-phone textarea, html.sap-phone [contenteditable=true], html.sap-phone [contenteditable=true] > *, html.sap-phone .sapUiSelectable,
 html.sap-tablet:not(.sap-desktop) input, html.sap-tablet:not(.sap-desktop) textarea, html.sap-tablet:not(.sap-desktop) [contenteditable=true], html.sap-tablet:not(.sap-desktop) [contenteditable=true] > *, html.sap-tablet:not(.sap-desktop) .sapUiSelectable {
 	-webkit-user-select: text;
 	-moz-user-select: text;
-	-ms-user-select: text;
 	user-select: text;
 }
 
@@ -345,7 +341,7 @@ html.sap-tablet:not(.sap-desktop) input, html.sap-tablet:not(.sap-desktop) texta
 	font-style: normal;
 	font-weight: 700;
 	unicode-range: U+0102-0103, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EB7, U+1EB8-1EC7, U+1EC8-1ECB, U+1ECC-1EE3, U+1EE4-1EF1, U+1EF4-1EF7;
-	src: local('Arial'), local('Helvetica'), local('sans-serif');
+	src: local('Arial Bold'), local('Arial'), local('Helvetica'), local('sans-serif');
 }
 
 @font-face {

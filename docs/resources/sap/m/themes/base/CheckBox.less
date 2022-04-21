@@ -14,7 +14,7 @@
 	text-align: left;
 	padding: 0 0 0 3rem;
 
-	&:not(.sapMCbBgDis) {
+	&:not(.sapMCbBgDis):not(.sapMCbDisplayOnly) {
 		&:hover,
 		.sapMCbLabel:hover {
 			cursor: pointer;
@@ -41,10 +41,6 @@
 			}
 		}
 	}
-}
-
-.sapUiForm .sapMCb {
-	display: table-cell;
 }
 
 .sapUiForm:not(.sapUiFormEdit-CTX) .sapMCb.sapMCbDisplayOnly {
@@ -149,7 +145,6 @@ html[dir="rtl"] .sapMCb {
 	background-clip: padding-box;
 }
 
-.sapUiSizeCompact.sapMCb .sapMCbMarkChecked.sapMCbMarkPartiallyChecked:before,
 .sapUiSizeCompact .sapMCbBg.sapMCbMarkChecked.sapMCbMarkPartiallyChecked:before {
 	border-width: 0.125rem;
 }

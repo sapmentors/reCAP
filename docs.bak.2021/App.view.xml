@@ -1,0 +1,35 @@
+<mvc:View controllerName="capcom.recap.App"
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc">
+	<App>
+		<Page showHeader="false">
+			<VBox alignItems="Center"
+				justifyContent="Center">
+				<HBox justifyContent="SpaceAround"
+					width="100%">
+					<VBox width="95%">
+						<Text class="when"
+							text="June 25th, 2021" />
+						<Text class="what sapUiMediumMarginBottom"
+							text="re>≡CAP online" />
+
+						<core:Fragment fragmentName="capcom.recap.Agenda"
+							id="AgendaFragment"
+							type="XML"
+							class="sapUiLargeMarginBottom" />
+
+						<Text class="what"
+							text="🧡 our sponsors" />
+
+						<core:Fragment fragmentName="capcom.recap.Sponsors"
+							id="SponsorFragment"
+							type="XML"
+							class="sapUiTinyMarginBottom" />
+
+					</VBox>
+				</HBox>
+			</VBox>
+		</Page>
+	</App>
+</mvc:View>

@@ -4,6 +4,8 @@
 /* ====================================== */
 
 .sapMRI {
+	text-shadow: @sapUiContentTextShadow;
+
 	.sapMRIUnsel {
 		color: @sapUiContentUnratedColor;
 	}
@@ -18,6 +20,8 @@
 }
 
 .sapMRI.sapMRIDisplayOnly {
+	text-shadow: none;
+
 	.sapMRIIconSel {
 		color: @sapUiBaseText;
 	}
@@ -27,13 +31,14 @@
 }
 
 .sapMRIDisabled {
+	text-shadow: none;
 	opacity: 0.4;
 }
 
 /* Custom focus outline */
 html.sap-desktop .sapMRI:focus:not(.sapMRIDisabled):not(.sapMRIDisplayOnly){
-	outline: 1px dotted @sapUiContentFocusColor;
-	outline-offset: -1px;
+	outline: @sapUiContentFocusWidth @sapUiContentFocusStyle @sapUiContentFocusColor;
+	outline-offset: 0.0625rem;
 }
 
 .sapMRIIconSel, .sapMRIIconUnsel, .sapMRIIconHov, .sapMRIIconReadOnly {

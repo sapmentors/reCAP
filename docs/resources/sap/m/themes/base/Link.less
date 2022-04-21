@@ -18,17 +18,17 @@
 
 .sapMLnk:active:not(.sapMLnkDsbl),
 .sapMLnk:focus:not(.sapMLnkDsbl) {
-	color: @sapUiLinkActive;
+	color: @sapUiLinkActiveColor;
 }
 .sapMLnk:visited {
-	color: @sapUiLinkVisited;
+	color: @sapUiLinkVisitedColor;
 }
 .sapMLnk:hover:not(.sapMLnkDsbl) {
-	color: @sapUiLinkHover;
+	color: @sapUiLinkHoverColor;
 }
 
 .sapUiInverted-CTX .sapUiLnk {
-	color: @sapUiLinkInverted;
+	color: @sapUiLinkInvertedColor;
 }
 
 .sapMLnk.sapMLnkWrapping {
@@ -55,7 +55,8 @@
 	vertical-align: text-bottom;
 }
 
-.sapMFT .sapMLnk {
+.sapMFT .sapMLnk,
+.sapMFT .sapMTitle .sapMLnk {
 	vertical-align: top;
 }
 
@@ -68,9 +69,6 @@ html.sap-desktop .sapMLnk:focus:not(.sapMLnkDsbl) {
 /* Link focus offset and visualization in sap.ui.table.* tables */
 html.sap-desktop .sapUiSizeCondensed .sapUiTableCell .sapMLnk:focus:not(.sapMLnkDsbl) {
 	outline-offset: -2px;
-}
-.sapUiAnalyticalTable .sapUiAnalyticalTableSum .sapUiTableCell .sapMLnk {
-	font-weight: bold;
 }
 
 /* Hover Decoration only for desktop clients*/
@@ -114,6 +112,14 @@ html.sap-desktop .sapMLnk:focus:not(.sapMLnkDsbl) {
 .sapMLnk .sapMEmptyIndicator {
 	color: @sapUiBaseText;
 }
+
+
+.sapMListTblRow.sapMLIBActive .sapMLnk,
+.sapMListTblSubRow.sapMLIBActive .sapMLnk,
+.sapMLIB.sapMLIBActive .sapMLink {
+	text-decoration: none;
+	text-shadow: none;
+ }
 
 /* Compact size */
 .sapUiSizeCompact .sapUiFormEdit .sapMLnk {

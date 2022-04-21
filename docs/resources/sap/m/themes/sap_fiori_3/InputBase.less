@@ -15,17 +15,31 @@
 @_sap_m_InputBase_IconWidth: 2.125rem;
 @_sap_m_InputBase_IconMinWidth: 2.125rem;
 
-.sapMInputBaseInner {
-	color: @sapUiFieldTextColor;
-}
-
 .sapMInputBaseContentWrapper {
-	border: @sapUiFieldBorderWidth solid @sapUiFieldBorderColor;
-	background: @sapUiFieldBackground;
-	border-radius: @sapUiFieldBorderCornerRadius;
+
+	&.sapMInputBaseContentWrapperState {
+		&.sapMInputBaseContentWrapperSuccess {
+			border-width: @sapField_SuccessBorderWidth;
+			border-style: @sapField_SuccessBorderStyle;
+		}
+
+		&.sapMInputBaseContentWrapperError {
+			border-width: @sapField_InvalidBorderWidth;
+			border-style: @sapField_InvalidBorderStyle;
+		}
+
+		&.sapMInputBaseContentWrapperWarning {
+			border-width: @sapField_WarningBorderWidth;
+			border-style: @sapField_WarningBorderStyle;
+		}
+
+		&.sapMInputBaseContentWrapperInformation {
+			border-width: @sapField_InformationBorderWidth;
+			border-style: @sapField_InformationBorderStyle;
+		}
+	}
 
 	&.sapMInputBaseContentWrapperState:not(.sapMInputBaseContentWrapperSuccess){
-		border-width: 2px;
 		/* calculated line-height excluding the top and bottom borders */
 		.sapMInputBaseIcon {
 			line-height: 2rem;
@@ -62,28 +76,27 @@
 	}
 }
 
-.sapMInputBaseContentWrapperWarning {
-	background: @sapUiFieldWarningBackground;
-	border-color: @sapUiFieldWarningColor;
+/* List specific styles */
+.sapMILI-CTX .sapMInputBaseContentWrapper,
+.sapMILI-CTX .sapMInputBaseInner,
+.sapMILI-CTX .sapMInputBaseDisabled .sapMInputBaseInner,
+.sapMILI-CTX .sapMInputBaseReadonlyWrapper .sapMInputBaseInner {
+	text-align: right;
+	background: transparent;
 }
 
-.sapMInputBaseContentWrapperSuccess {
-	background: @sapUiFieldSuccessBackground;
-	border-color: @sapUiFieldSuccessColor;
-}
-
-.sapMInputBaseContentWrapperError {
-	background: @sapUiFieldInvalidBackground;
-	border-color: @sapUiFieldInvalidColor;
-}
-
-.sapMInputBaseContentWrapperInformation {
-	background: @sapUiFieldInformationBackground;
-	border-color: @sapUiFieldInformationColor;
-}
-
-.sapMFocus .sapMInputBaseContentWrapper {
-	&::before {
-		border: 1px dotted @sapUiContentFocusColor;
+.sapMLIBActive {
+	.sapMInputBaseInner,
+	.sapMInputBaseContentWrapper {
+		color: @sapUiListActiveTextColor;
+		background: transparent;
 	}
+
+	.sapMInputDescriptionText {
+		color: @sapUiListActiveTextColor;
+	}
+}
+
+.sapMLIBActive .sapMInputBaseInner::-webkit-input-placeholder {
+	color: @sapUiListActiveTextColor;
 }

@@ -5,7 +5,7 @@
     "type": "library",
     "embeds": [],
     "applicationVersion": {
-      "version": "1.90.1"
+      "version": "1.101.0"
     },
     "title": "The main UI5 control library, with responsive controls that can be used in touch devices as well as desktop browsers.",
     "description": "The main UI5 control library, with responsive controls that can be used in touch devices as well as desktop browsers.",
@@ -22,17 +22,17 @@
   },
   "sap.ui5": {
     "dependencies": {
-      "minUI5Version": "1.90",
+      "minUI5Version": "1.101",
       "libs": {
         "sap.ui.core": {
-          "minVersion": "1.90.1"
+          "minVersion": "1.101.0"
         },
         "sap.ui.layout": {
-          "minVersion": "1.90.1",
+          "minVersion": "1.101.0",
           "lazy": true
         },
         "sap.ui.unified": {
-          "minVersion": "1.90.1",
+          "minVersion": "1.101.0",
           "lazy": true
         }
       }
@@ -124,6 +124,7 @@
           "sap.m.Dialog",
           "sap.m.DisplayListItem",
           "sap.m.DraftIndicator",
+          "sap.m.DynamicDateRange",
           "sap.m.ExpandableText",
           "sap.m.FacetFilter",
           "sap.m.FacetFilterItem",
@@ -143,6 +144,7 @@
           "sap.m.IconTabBarSelectList",
           "sap.m.IconTabFilterExpandButtonBadge",
           "sap.m.IconTabHeader",
+          "sap.m.IllustratedMessage",
           "sap.m.Image",
           "sap.m.ImageContent",
           "sap.m.Input",
@@ -214,6 +216,7 @@
           "sap.m.SegmentedButton",
           "sap.m.Select",
           "sap.m.SelectDialog",
+          "sap.m.SelectDialogBase",
           "sap.m.SelectList",
           "sap.m.SelectionDetails",
           "sap.m.Shell",
@@ -269,7 +272,16 @@
           "sap.m.semantic.SemanticPage",
           "sap.m.semantic.ShareMenuPage",
           "sap.m.semantic.FullscreenPage",
-          "sap.m.semantic.MasterPage"
+          "sap.m.semantic.MasterPage",
+          "sap.m.p13n.AbstractContainer",
+          "sap.m.p13n.BasePanel",
+          "sap.m.p13n.Container",
+          "sap.m.p13n.GroupPanel",
+          "sap.m.p13n.QueryPanel",
+          "sap.m.p13n.SelectionPanel",
+          "sap.m.p13n.SortPanel",
+          "sap.m.p13n.Popup",
+          "sap.m.table.columnmenu.Menu"
         ],
         "elements": [
           "sap.m.BadgeCustomData",
@@ -278,6 +290,9 @@
           "sap.m.ColumnPopoverCustomItem",
           "sap.m.ColumnPopoverItem",
           "sap.m.ColumnPopoverSortItem",
+          "sap.m.CustomDynamicDateOption",
+          "sap.m.DynamicDateOption",
+          "sap.m.DynamicDateValueHelpUIType",
           "sap.m.FlexItemData",
           "sap.m.FeedListItemAction",
           "sap.m.IconTabFilter",
@@ -308,6 +323,7 @@
           "sap.m.SinglePlanningCalendarWeekView",
           "sap.m.SinglePlanningCalendarWorkWeekView",
           "sap.m.SinglePlanningCalendarView",
+          "sap.m.StandardDynamicDateOption",
           "sap.m.SuggestionItem",
           "sap.m.TabContainerItem",
           "sap.m.TabStripItem",
@@ -322,7 +338,9 @@
           "sap.m.ViewSettingsItem",
           "sap.m.plugins.ColumnResizer",
           "sap.m.plugins.DataStateIndicator",
+          "sap.m.plugins.PasteProvider",
           "sap.m.plugins.PluginBase",
+          "sap.m.p13n.AbstractContainerItem",
           "sap.m.semantic.AddAction",
           "sap.m.semantic.CancelAction",
           "sap.m.semantic.DeleteAction",
@@ -351,7 +369,12 @@
           "sap.m.semantic.SendMessageAction",
           "sap.m.semantic.ShareInJamAction",
           "sap.m.semantic.SortAction",
-          "sap.m.semantic.SortSelect"
+          "sap.m.semantic.SortSelect",
+          "sap.m.table.columnmenu.Entry",
+          "sap.m.table.columnmenu.Item",
+          "sap.m.table.columnmenu.ItemBase",
+          "sap.m.table.columnmenu.QuickAction",
+          "sap.m.table.columnmenu.QuickActionBase"
         ],
         "types": [
           "sap.m.AvatarImageFitType",
@@ -390,6 +413,8 @@
           "sap.m.IconTabDensityMode",
           "sap.m.IconTabFilterDesign",
           "sap.m.IconTabHeaderMode",
+          "sap.m.IllustratedMessageSize",
+          "sap.m.IllustratedMessageType",
           "sap.m.ImageMode",
           "sap.m.InputTextFormatMode",
           "sap.m.InputType",
@@ -404,6 +429,7 @@
           "sap.m.ListType",
           "sap.m.LoadState",
           "sap.m.MenuButtonMode",
+          "sap.m.MultiSelectMode",
           "sap.m.ObjectHeaderPictureShape",
           "sap.m.ObjectMarkerType",
           "sap.m.ObjectMarkerVisibility",
@@ -427,6 +453,7 @@
           "sap.m.SelectType",
           "sap.m.Size",
           "sap.m.SplitAppMode",
+          "sap.m.StandardDynamicDateRangeKeys",
           "sap.m.StandardTileType",
           "sap.m.StepInputStepModeType",
           "sap.m.StepInputValidationMode",
@@ -447,12 +474,14 @@
           "sap.m.VerticalPlacementType",
           "sap.m.WrappingType",
           "sap.m.WizardRenderMode",
-          "sap.m.semantic.SemanticRuleSetType"
+          "sap.m.semantic.SemanticRuleSetType",
+          "sap.m.upload.UploaderHttpRequestMethod"
         ],
         "interfaces": [
           "sap.m.IBar",
           "sap.m.IBadge",
           "sap.m.IBreadcrumbs",
+          "sap.m.p13n.IContent",
           "sap.m.IconTab",
           "sap.m.IScale",
           "sap.m.semantic.IGroup",
