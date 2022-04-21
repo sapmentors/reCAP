@@ -14,7 +14,7 @@
         <Text text="Jun 1: 14 - 19 CEST&#13;&#10;Jun 2: 09 - 13 CEST"
           class="when"
           renderWhitespace="true" />
-        <Text text="for Speakers: 🎪 ROT3 + ROT24 (optional)&#13;&#10;for everyone: 🌍 online"
+        <Text text="for Speakers: 🎪 ROT03 + ROT24 (optional)&#13;&#10;for everyone: 🌍 online"
           class="where" />
         <VBox id="panelist">
           <Panel headerText="here's why"
