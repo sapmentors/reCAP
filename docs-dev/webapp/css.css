@@ -75,3 +75,9 @@ body {
 .center {
     text-align: center;
 }
+
+.sapMPanel>.sapMPanelHdr,
+.sapMPanelWrappingDiv,
+.sapMPanelWrappingDivTb {
+    border-bottom: 0 !important;
+}

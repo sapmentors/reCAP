@@ -3,14 +3,99 @@ sap.ui.define(
         "sap/ui/core/mvc/Controller",
         "sap/ui/model/json/JSONModel",
         "sap/ui/Device",
+        "sap/ui/core/Fragment",
         "sap/ui/core/ComponentSupport",
     ],
-    (Controller, JSONModel, Device) => {
+    (Controller, JSONModel, Device, Fragment) => {
         return Controller.extend("capcom.recap.App", {
+            decode(encoded) {
+                let _
+                _ = document.createElement("span")
+                _.innerHTML = encoded
+                const __ = _.textContent || _.innerText
+                _ = null
+                return __
+            },
+            daSpeakers(speakers) {
+                if (!speakers) return
+                return speakers
+                    .map(
+                        (speaker) => `${speaker.firstName} ${speaker.lastName}`
+                    )
+                    .join(", ")
+            },
+            async doAgenda() {
+                const keynote = {
+                    id: 1,
+                    title: "Keynote",
+                    type: "drive-by",
+                    description: "The KEYNOTE",
+                    location: "WED",
+                    startTime: "14:00",
+                    endTime: "14:50",
+                    speakers: [
+                        {
+                            firstName: "Daniel J",
+                            lastName: "Hutzel",
+                            company: "SAP",
+                            bio: "CAP papa",
+                            photoUrl: "",
+                        },
+                        {
+                            firstName: "DJ",
+                            lastName: "Adams",
+                            company: "SAP",
+                            bio: "Developer Advocate, CAP afficionado",
+                            photoUrl:
+                                "https://avatars.services.sap.com/images/dj.adams.png",
+                        },
+                    ],
+                    presentationLinks: [],
+                }
+
+                let _lineup = await fetch(
+                    "https://recap.cfapps.eu10.hana.ondemand.com/api/proposal/lineup"
+                ).then((r) => r.json())
+                _lineup.push(keynote)
+                // sort by start time
+                function sortByTime(a, b) {
+                    const _a = new Date(`October 21, 2015 ${a.startTime}`)
+                    const _b = new Date(`October 21, 2015 ${b.startTime}`)
+                    if (_a < _b) {
+                        return -1
+                    }
+                    if (_a > _b) {
+                        return 1
+                    }
+                    return 0
+                }
+                const agendaWednesday = _lineup
+                    .filter((session) => session.location === "WED")
+                    .sort((a, b) => sortByTime(a, b))
+                const agendaThursday = _lineup
+                    .filter((session) => session.location === "THU")
+                    .sort((a, b) => sortByTime(a, b))
+                const AgendaWednesdayModel = new JSONModel(agendaWednesday)
+                const AgendaThursdayModel = new JSONModel(agendaThursday)
+                this.byId(
+                    Fragment.createId("AgendaWednesdayFragment", "AgendaTable")
+                )
+                    .setModel(AgendaWednesdayModel)
+                    .setBusy(false)
+                this.byId(
+                    Fragment.createId("AgendaThursdayFragment", "AgendaTable")
+                )
+                    .setModel(AgendaThursdayModel)
+                    .setBusy(false)
+            },
             onInit() {
-                // const deviceModel = new JSONModel(Device)
-                // deviceModel.setDefaultBindingMode("OneWay")
-                // this.setModel(deviceModel, "device")
+                this.byId(
+                    Fragment.createId("AgendaWednesdayFragment", "AgendaTable")
+                ).setBusy(true)
+                this.byId(
+                    Fragment.createId("AgendaThursdayFragment", "AgendaTable")
+                ).setBusy(true)
+                this.doAgenda() //> intentionally side-eff'ing
 
                 const vpanel = this.byId("panelist")
                 if (Device.resize.width >= 697) {
