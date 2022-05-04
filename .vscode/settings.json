@@ -17,7 +17,7 @@
     "[xml]": {
         "editor.defaultFormatter": "DotJoshJohnson.xml"
     },
-    "editor.formatOnSave": true,
+    // "editor.formatOnSave": true,
     "editor.formatOnPaste": true,
     "files.autoSave": "onFocusChange",
     "files.eol": "\n",
