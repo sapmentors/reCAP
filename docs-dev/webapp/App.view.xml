@@ -13,9 +13,12 @@
         <Text text="Jun 1: 14 - 19 CEST&#13;&#10;Jun 2: 09 - 13 CEST"
           class="when"
           renderWhitespace="true" />
-        <Text text="for Speakers: 🎪 ROT03 + ROT24 (optional)&#13;&#10;for everyone: 🌍 online"
+        <Text text="for Speakers: 🎪 ROT03 + ROT24 (optional)&#13;&#10;for everyone: 🌍 online without registration at"
           class="where" />
-
+        <Link text="https://broadcast.sap.com/go/reCAP2022"
+          target="_blank"
+          href="https://broadcast.sap.com/go/reCAP2022"
+          class="where"  />
         <VBox width="95%">
           <Title level="H5"
             text="Wed, Jun 1" />
@@ -29,7 +32,6 @@
             id="AgendaThursdayFragment"
             type="XML"
             class="sapUiLargeMarginBottom" />
-
         </VBox>
 
 
