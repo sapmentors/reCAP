@@ -19,6 +19,37 @@
           target="_blank"
           href="https://broadcast.sap.com/go/reCAP2022"
           class="where"  />
+        <Text text="Block your calendar"
+          class="where" />
+        <HBox id="calendar">
+          <VBox id="day1"
+            alignItems="Center"
+            justifyContent="Center"
+            width="230px">
+            <Link text="Day 1 (ics)"
+              target="_blank"
+              href="https://cap.cloud.sap/resources/events/reCAP_2022_day1.ics"
+              class="where" />
+            <Link text="Day 1 (msg)"
+              target="_blank"
+              href="https://cap.cloud.sap/resources/events/reCAP_2022_day1.msg"
+              class="where" />
+          </VBox>
+          <VBox id="day2"
+            alignItems="Center"
+            justifyContent="Center"
+            width="230px">
+            <Link text="Day 2 (ics)"
+              target="_blank"
+              href="https://cap.cloud.sap/resources/events/reCAP_2022_day2.ics"
+              class="where" />
+            <Link text="Day 2 (msg)"
+              target="_blank"
+              href="https://cap.cloud.sap/resources/events/reCAP_2022_day2.msg"
+              class="where" />
+          </VBox>
+        </HBox>
+
         <VBox width="95%">
           <Title level="H5"
             text="Wed, Jun 1" />
