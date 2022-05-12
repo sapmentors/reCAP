@@ -18,6 +18,9 @@ sap.ui.define(
             },
             daSpeakers(speakers) {
                 if (!speakers) return
+                if (speakers[0].firstName === "Brigitte") {
+                    return "(5 min Yoga refresher)"
+                }
                 return speakers
                     .map(
                         (speaker) => `${speaker.firstName} ${speaker.lastName}`
@@ -52,11 +55,44 @@ sap.ui.define(
                     ],
                     presentationLinks: [],
                 }
+                function* times(n) {
+                    for (let i = 0; i < n; i++) {
+                        yield i
+                    }
+                }
+                const yogaWed = []
+                const yogaThu = []
+                const yogaSpeaker = {
+                    firstName: "Brigitte",
+                    lastName: "Felzmann",
+                    company: "Brigitte YOGA",
+                    bio: "www.brigitte.yoga",
+                }
+                for (const i of times(4)) {
+                    yogaWed.push({
+                        id: Date.now(),
+                        location: "WED",
+                        title: "🧘",
+                        description: "🧍 get up, stand up!",
+                        startTime: `1${5 + i}:55`,
+                        speakers: [yogaSpeaker],
+                    })
+                    yogaThu.push({
+                        id: Date.now(),
+                        location: "THU",
+                        title: "🧘",
+                        description: "🧍 get up, stand up!",
+                        startTime: `${9 + i}:55`,
+                        speakers: [yogaSpeaker],
+                    })
+                }
 
                 let _lineup = await fetch(
                     "https://recap.cfapps.eu10.hana.ondemand.com/api/proposal/lineup"
                 ).then((r) => r.json())
                 _lineup.push(keynote)
+                _lineup.push(...yogaWed)
+                _lineup.push(...yogaThu)
                 // sort by start time
                 function sortByTime(a, b) {
                     const _a = new Date(`October 21, 2015 ${a.startTime}`)
