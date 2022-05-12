@@ -18,6 +18,9 @@ sap.ui.define(
             },
             daSpeakers(speakers) {
                 if (!speakers) return
+                if (speakers[0].firstName === "Brigitte") {
+                    return "(5 min Yoga refresher)"
+                }
                 return speakers
                     .map(
                         (speaker) => `${speaker.firstName} ${speaker.lastName}`
@@ -52,11 +55,44 @@ sap.ui.define(
                     ],
                     presentationLinks: [],
                 }
+                function* times(n) {
+                    for (let i = 0; i < n; i++) {
+                        yield i
+                    }
+                }
+                const yogaWed = []
+                const yogaThu = []
+                const yogaSpeaker = {
+                    firstName: "Brigitte",
+                    lastName: "Felzmann",
+                    company: "Brigitte YOGA",
+                    bio: "www.brigitte.yoga",
+                }
+                for (const i of times(4)) {
+                    yogaWed.push({
+                        id: Date.now(),
+                        location: "WED",
+                        title: "🧘",
+                        description: "🧍 get up, stand up!",
+                        startTime: `1${5 + i}:55`,
+                        speakers: [yogaSpeaker],
+                    })
+                    yogaThu.push({
+                        id: Date.now(),
+                        location: "THU",
+                        title: "🧘",
+                        description: "🧍 get up, stand up!",
+                        startTime: `${9 + i}:55`,
+                        speakers: [yogaSpeaker],
+                    })
+                }
 
                 let _lineup = await fetch(
                     "https://recap.cfapps.eu10.hana.ondemand.com/api/proposal/lineup"
                 ).then((r) => r.json())
                 _lineup.push(keynote)
+                _lineup.push(...yogaWed)
+                _lineup.push(...yogaThu)
                 // sort by start time
                 function sortByTime(a, b) {
                     const _a = new Date(`October 21, 2015 ${a.startTime}`)
@@ -123,6 +159,7 @@ sap.ui.define(
                     (plus you'll be offered to wear <span class="glow">re>≡CAP swag</span> 🤭😜)</p>
                     <p>for such a manageable number of people, we can guarantee to have adequate safety and hygiene 🧴 measures in place - for the health 🤒 of everyone being at ROT.</p>
                     <h3>🌍 all talks will both be streamed live and recorded!</h3>`,
+                    where: `<p>Speakers: 🎪 ROT03 + ROT24 (optional)&#13;&#10;</p><p>for everyone: 🌍 online without registration<br>at <a href="https://broadcast.sap.com/go/reCAP2022">https://broadcast.sap.com/go/reCAP2022</a></p>`,
                 })
                 this.getView().setModel(oModel)
             },

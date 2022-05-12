@@ -13,24 +13,21 @@
         <Text text="Jun 1: 14 - 19 CEST&#13;&#10;Jun 2: 09 - 13 CEST"
           class="when"
           renderWhitespace="true" />
-        <Text text="for Speakers: 🎪 ROT03 + ROT24 (optional)&#13;&#10;for everyone: 🌍 online without registration at"
+        <FormattedText htmlText="{/where}"
           class="where" />
-        <Link text="https://broadcast.sap.com/go/reCAP2022"
-          target="_blank"
-          href="https://broadcast.sap.com/go/reCAP2022"
-          class="where"  />
-        <Text text="Block your calendar"
+        
+        <Text text="🗓 Block your calendar"
           class="where" />
-        <HBox id="calendar">
+        <HBox id="calendar" class="sapUiMediumMarginBottom">
           <VBox id="day1"
             alignItems="Center"
             justifyContent="Center"
             width="230px">
-            <Link text="Day 1 (ics)"
+            <Link text="🌅 Jun 1 (ics)"
               target="_blank"
               href="https://cap.cloud.sap/resources/events/reCAP_2022_day1.ics"
               class="where" />
-            <Link text="Day 1 (msg)"
+            <Link text="🌅 Jun 1 (msg)"
               target="_blank"
               href="https://cap.cloud.sap/resources/events/reCAP_2022_day1.msg"
               class="where" />
@@ -39,11 +36,11 @@
             alignItems="Center"
             justifyContent="Center"
             width="230px">
-            <Link text="Day 2 (ics)"
+            <Link text="🌅 Jun 2 (ics)"
               target="_blank"
               href="https://cap.cloud.sap/resources/events/reCAP_2022_day2.ics"
               class="where" />
-            <Link text="Day 2 (msg)"
+            <Link text="🌅 Jun 2 (msg)"
               target="_blank"
               href="https://cap.cloud.sap/resources/events/reCAP_2022_day2.msg"
               class="where" />
