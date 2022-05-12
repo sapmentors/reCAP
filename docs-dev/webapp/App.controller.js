@@ -123,6 +123,7 @@ sap.ui.define(
                     (plus you'll be offered to wear <span class="glow">re>≡CAP swag</span> 🤭😜)</p>
                     <p>for such a manageable number of people, we can guarantee to have adequate safety and hygiene 🧴 measures in place - for the health 🤒 of everyone being at ROT.</p>
                     <h3>🌍 all talks will both be streamed live and recorded!</h3>`,
+                    where: `<p>Speakers: 🎪 ROT03 + ROT24 (optional)&#13;&#10;</p><p>for everyone: 🌍 online without registration<br>at <a href="https://broadcast.sap.com/go/reCAP2022">https://broadcast.sap.com/go/reCAP2022</a></p>`,
                 })
                 this.getView().setModel(oModel)
             },
