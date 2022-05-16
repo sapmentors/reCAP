@@ -53,7 +53,7 @@
                                                 href="https://twitter.com/{twitterHandle}"
                                                 class="small" />
                                             <Link text="🔗 LinkedIn"
-                                                href="{linkedInUrl}"
+                                                href="https://www.linkedin.com/in/{linkedInUrl}"
                                                 class="small"
                                                 visible="{= ${linkedInUrl} ? true : false }" />
                                         </VBox>
