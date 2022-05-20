@@ -6,7 +6,7 @@
   <copyright>OpenUI5
  * (c) Copyright 2009-2022 SAP SE or an SAP affiliate company.
  * Licensed under the Apache License, Version 2.0 - see LICENSE.txt.</copyright>
-  <version>1.101.0</version>
+  <version>1.102.0</version>
 
   <documentation>The SAPUI5 Core Runtime.
 
@@ -234,6 +234,7 @@
         <exclude name="sap.ui.test.ControlTree" />
         <exclude name="sap.ui.test.TestEnv" />
         <exclude name="sap.ui.test.TestUtils" />
+        <exclude name="sap.ui.test.starter.runTest" />
         <exclude name="sap.ui.thirdparty." />
     </jscoverage>
     <!-- Thirdparty references -->
