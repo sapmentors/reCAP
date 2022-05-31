@@ -5,7 +5,7 @@
     "type": "library",
     "embeds": [],
     "applicationVersion": {
-      "version": "1.102.0"
+      "version": "1.102.1"
     },
     "title": "The main UI5 control library, with responsive controls that can be used in touch devices as well as desktop browsers.",
     "description": "The main UI5 control library, with responsive controls that can be used in touch devices as well as desktop browsers.",
@@ -25,14 +25,14 @@
       "minUI5Version": "1.102",
       "libs": {
         "sap.ui.core": {
-          "minVersion": "1.102.0"
+          "minVersion": "1.102.1"
         },
         "sap.ui.layout": {
-          "minVersion": "1.102.0",
+          "minVersion": "1.102.1",
           "lazy": true
         },
         "sap.ui.unified": {
-          "minVersion": "1.102.0",
+          "minVersion": "1.102.1",
           "lazy": true
         }
       }
@@ -262,6 +262,7 @@
           "sap.m.UploadCollection",
           "sap.m.UploadCollectionToolbarPlaceholder",
           "sap.m.upload.UploadSet",
+          "sap.m.upload.UploadSetToolbarPlaceholder",
           "sap.m.VariantManagement",
           "sap.m.VBox",
           "sap.m.ViewSettingsDialog",
@@ -408,6 +409,7 @@
           "sap.m.GenericTagDesign",
           "sap.m.GenericTagValueState",
           "sap.m.GenericTileMode",
+          "sap.m.Priority",
           "sap.m.GenericTileScope",
           "sap.m.HeaderLevel",
           "sap.m.IBarHTMLTag",
