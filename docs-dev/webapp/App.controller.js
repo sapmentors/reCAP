@@ -88,7 +88,7 @@ sap.ui.define(
                 }
 
                 let _lineup = await fetch(
-                    "https://recap.cfapps.eu10.hana.ondemand.com/api/proposal/lineup"
+                    "./lineup.json"
                 ).then((r) => r.json())
                 _lineup.push(keynote)
                 _lineup.push(...yogaWed)
