@@ -121,6 +121,7 @@ html.sap-desktop .sapMDialog {
 	html[data-sap-ui-browser^="sf"] & .sapMDialogSection {
 		/* For Safari - allow the vertical scroll bar to overlap the right padding which we use to compensate for its width. This happens by default for other browsers. */
 		overflow-y: overlay !important;
+		padding-right: 0px !important;
 	}
 }
 
@@ -205,7 +206,6 @@ html.sap-desktop .sapMDialog {
 
 .sapMDialog > header.sapMDialogTitle .sapMTitle {
 	color: @sapUiPageHeaderTextColor;
-	margin: 0;
 	vertical-align: middle;
 }
 
@@ -218,7 +218,6 @@ html.sap-desktop .sapMDialog {
 
 .sapMDialog > header.sapMDialogTitle .sapMDialogIcon.sapUiIcon {
 	font-size: 1.25rem;
-	margin-right: 0.5rem;
 	vertical-align: middle;
 }
 

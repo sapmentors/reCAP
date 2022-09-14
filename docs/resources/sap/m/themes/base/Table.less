@@ -107,7 +107,7 @@ tr.sapMListTblHeaderNone > .sapMTableTH {
 .sapMListTblSubCntSpr,
 .sapMListTblSubCntHdr,
 .sapMListTblSubCntVal {
-	display: inline;
+	display: inline-flex;
 }
 
 .sapMListTblSubCntValBlock {
@@ -364,6 +364,11 @@ tr.sapMListTblHeaderNone > .sapMTableTH {
 	outline-color: @sapUiContentContrastFocusColor;
 }
 
+// Allows truncation of text within children of a flex item.
+.sapMColumnHeaderContent {
+	min-width: 0;
+}
+
 .sapMColumnHeaderActive:active > .sapMColumnHeaderContent {
 	color: @sapUiListActiveTextColor;
 }
@@ -385,7 +390,7 @@ tr.sapMListTblHeaderNone > .sapMTableTH {
 	font-weight: normal;
 	align-self: center;
 	padding-left: 0.5rem;
-	padding-right: 0.5rem;
+	box-sizing: border-box;
 }
 
 [aria-sort=ascending] > .sapMColumnHeader::after {
@@ -440,6 +445,10 @@ html[data-sap-ui-browser^='ff'] .sapMTableRowCustomFocus:focus > :not(.sapMListT
 	margin-right: 0; // firefox seems fine with rendering borders clearly without additional margin
 }
 
+.sapMTablePopinHeaders {
+	display: none;
+}
+
 /********** COMPACT DESIGN ************/
 
 .sapUiSizeCompact .sapMListTblCell.sapMListTblCellNoData {
@@ -456,6 +465,10 @@ html[data-sap-ui-browser^='ff'] .sapMTableRowCustomFocus:focus > :not(.sapMListT
 	.sapMObjStatus {
 		vertical-align: middle;
 		line-height: 1.4;
+
+		.sapMObjStatusText {
+			line-height: inherit;
+		}
 	}
 }
 

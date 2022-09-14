@@ -5,13 +5,20 @@
     "type": "library",
     "embeds": [],
     "applicationVersion": {
-      "version": "1.102.1"
+      "version": "1.106.0"
     },
     "title": "The main UI5 control library, with responsive controls that can be used in touch devices as well as desktop browsers.",
     "description": "The main UI5 control library, with responsive controls that can be used in touch devices as well as desktop browsers.",
     "ach": "CA-UI5-CTR",
     "resources": "resources.json",
-    "offline": true
+    "offline": true,
+    "openSourceComponents": [
+      {
+        "name": "DOMPurify",
+        "packagedWithMySelf": true,
+        "version": "2.3.8"
+      }
+    ]
   },
   "sap.ui": {
     "technology": "UI5",
@@ -22,17 +29,17 @@
   },
   "sap.ui5": {
     "dependencies": {
-      "minUI5Version": "1.102",
+      "minUI5Version": "1.106",
       "libs": {
         "sap.ui.core": {
-          "minVersion": "1.102.1"
+          "minVersion": "1.106.0"
         },
         "sap.ui.layout": {
-          "minVersion": "1.102.1",
+          "minVersion": "1.106.0",
           "lazy": true
         },
         "sap.ui.unified": {
-          "minVersion": "1.102.1",
+          "minVersion": "1.106.0",
           "lazy": true
         }
       }
@@ -334,10 +341,12 @@
           "sap.m.UploadCollectionParameter",
           "sap.m.upload.Uploader",
           "sap.m.upload.UploadSetItem",
+          "sap.m.VariantItem",
           "sap.m.ViewSettingsCustomItem",
           "sap.m.ViewSettingsCustomTab",
           "sap.m.ViewSettingsFilterItem",
           "sap.m.ViewSettingsItem",
+          "sap.m.plugins.CellSelector",
           "sap.m.plugins.ColumnResizer",
           "sap.m.plugins.DataStateIndicator",
           "sap.m.plugins.PasteProvider",
@@ -424,6 +433,7 @@
           "sap.m.LabelDesign",
           "sap.m.LightBoxLoadingStates",
           "sap.m.LinkConversion",
+          "sap.m.LinkAccessibleRole",
           "sap.m.ListGrowingDirection",
           "sap.m.ListHeaderDesign",
           "sap.m.ListKeyboardMode",
@@ -478,6 +488,7 @@
           "sap.m.WrappingType",
           "sap.m.WizardRenderMode",
           "sap.m.semantic.SemanticRuleSetType",
+          "sap.m.table.columnmenu.Category",
           "sap.m.upload.UploaderHttpRequestMethod"
         ],
         "interfaces": [
