@@ -16,6 +16,7 @@
 @_sap_m_IconTabBar_More_Button_Focus_Offset: 0.125rem;
 @_sap_m_IconTabBar_Arrow_SubItem_Left_Padding: 0.375rem;
 @_sap_m_IconTabBar_More_Button_Border_Radius: inherit;
+@_sap_m_IconTabBar_HeaderMinHeight: 2.75rem;
 
 // ==================== Cozy size ====================
 
@@ -534,6 +535,7 @@
 
 				.sapMITBText {
 					color: @_sap_m_IconTabBar_Overflow_TextColorPressed;
+					text-shadow: none;
 				}
 
 				.sapMITHShowSubItemsIcon {
@@ -1193,12 +1195,14 @@ html.sap-desktop {
 
 	}
 
-	.sapMITBContentArrow {
-		height: @_sap_m_IconTabBar_Compact_ContentArrowHeight;
-	}
-
 	.sapMITBHorizontalWrapper {
 		height: 2rem;
+		overflow: visible;
+	}
+
+
+	.sapMITBContentArrow {
+		height: @_sap_m_IconTabBar_Compact_ContentArrowHeight;
 	}
 
 	.sapMITBHorizontal {
@@ -1298,6 +1302,7 @@ html[dir=rtl] {
 
 	box-shadow: @_sap_m_IconTabBar_ShellHeaderShadow;
 	background-color: @sapUiShellNavigationBackground;
+	min-height: @_sap_m_IconTabBar_HeaderMinHeight;
 
 	.sapMITBSelected .sapMITBContentArrow::after {
 		background: @sapUiShellNavigationSelectedColor;

@@ -105,9 +105,13 @@ tr.sapMListTblHeaderNone > .sapMTableTH {
 }
 
 .sapMListTblSubCntSpr,
-.sapMListTblSubCntHdr,
 .sapMListTblSubCntVal {
-	display: inline-flex;
+    display: inline;
+}
+
+// the header could have a FlexBox control which will occupy 100% width, thus corrupting the popin layout
+.sapMListTblSubCntHdr {
+    display: inline-flex;
 }
 
 .sapMListTblSubCntValBlock {
@@ -172,6 +176,7 @@ tr.sapMListTblHeaderNone > .sapMTableTH {
 /* Ensuring that the row height is not smaller that 3rem in Cozy mode */
 .sapMListTblRow {
 	height: @sapUiElementLineHeight;
+	position: static; /* override the position: relative rule of the list item */
 }
 
 .sapMListTblCell.sapMListTblCellNoData {
@@ -218,7 +223,7 @@ tr.sapMListTblHeaderNone > .sapMTableTH {
 /* sticky headerToolbar, infoToolbar and column headers */
 .sapMSticky .sapMListTblHeader {
 	position: sticky;
-	z-index: 1;
+	z-index: 2; /* allow controls to have own z-index: 1 */
 }
 
 /* .sapMSticky7 denotes that the headerToolbar, infoToolbar and column headers are sticky */
@@ -251,7 +256,13 @@ tr.sapMListTblHeaderNone > .sapMTableTH {
 
 /* busyIndicator should not block the toolbars if <table> is set busy */
 .sapMSticky > .sapMListTbl > .sapUiLocalBusyIndicator {
-	z-index: 1;
+	z-index: 3;
+}
+
+/* define outline for the block layer */
+.sapMListTblCnt > .sapUiBlockLayerOnly:focus {
+	outline: @_sap_m_ListItemBase_Focus_Outline;
+	outline-offset: @_sap_m_ListItemBase_Focus_OffsetWithGap;
 }
 
 /* table footer */
@@ -373,8 +384,8 @@ tr.sapMListTblHeaderNone > .sapMTableTH {
 	color: @sapUiListActiveTextColor;
 }
 
-.sapMColumnHeaderActive > .sapMColumnHeaderContent {
-	cursor: default;
+.sapMColumnHeaderActive, .sapMColumnHeaderActive > .sapMColumnHeaderContent {
+	cursor: pointer;
 }
 
 .sapMColumnHeaderFocusable:focus {
@@ -409,7 +420,7 @@ tr.sapMListTblHeaderNone > .sapMTableTH {
 .sapMTableRowCustomFocus:focus {
 	outline: none;
 
-	.sapMListTblCell > :first-child {
+	.sapMListTblCell:not(.sapMListTblCellDup) > :first-child {
 		position: relative;
 	}
 
@@ -456,19 +467,25 @@ html[data-sap-ui-browser^='ff'] .sapMTableRowCustomFocus:focus > :not(.sapMListT
 }
 
 /* overwrite text control styles */
-.sapUiSizeCompact .sapMListTblCell {
+.sapMListTblCell {
 	.sapMLnk,
 	.sapMText,
 	.sapMLabel,
 	.sapMObjectNumber,
 	.sapMObjectIdentifier,
 	.sapMObjStatus {
-		vertical-align: middle;
 		line-height: 1.4;
 
 		.sapMObjStatusText {
 			line-height: inherit;
 		}
+
+		.sapUiSizeCompact & {
+			vertical-align: middle;
+		}
+	}
+	.sapMFlexItem .sapMText {
+		line-height: inherit;
 	}
 }
 

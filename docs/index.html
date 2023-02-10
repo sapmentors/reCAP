@@ -1,14 +1,14 @@
 <!DOCTYPE html><html><head>
 	<meta charset="utf-8">
-	<title>re&gt;≡CAP 2022</title>
+	<title>re&gt;≡CAP 2023</title>
 	<link rel="stylesheet" href="css.css">
 	<link rel="icon" type="image/svg+xml" href="favicon.svg">
-	<script id="sap-ui-bootstrap" src="resources/sap-ui-custom.js" data-sap-ui-theme="sap_fiori_3_dark" data-sap-ui-libs="sap.ui.core,sap.m" data-sap-ui-resourceroots="{&quot;capcom.recap&quot;: &quot;./&quot;}" data-sap-ui-bindingsyntax="complex" data-sap-ui-async="true">
+	<script id="sap-ui-bootstrap" src="resources/sap-ui-custom.js" data-sap-ui-theme="sap_fiori_3_dark" data-sap-ui-libs="sap.ui.core,sap.m" data-sap-ui-resourceroots="{&quot;recap&quot;: &quot;./&quot;}" data-sap-ui-bindingsyntax="complex" data-sap-ui-async="true">
 					</script>
 	<script>
 		sap.ui.getCore().attachInit(() => {
 			sap.ui.require(["sap/ui/core/mvc/XMLView"], async (XMLView) => {
-				const View = await XMLView.create({ viewName: "capcom.recap.App" })
+				const View = await XMLView.create({ viewName: "recap.App" })
 				View.placeAt("content")
 			})
 		})

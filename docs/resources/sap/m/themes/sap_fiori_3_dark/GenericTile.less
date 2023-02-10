@@ -226,13 +226,6 @@ html.sap-desktop .sapMGTLineModePress .sapMGTFocusDiv {
 	border: @sapUiContentFocusWidth @sapUiContentFocusStyle @sapUiContentFocusColor;
 }
 
-html.sap-desktop .sapMGTActionButtonPress.sapMGT:focus
-{
-		.sapMGTFocusDiv{
-			border: none;
-		}
-}
-
 html.sap-desktop .sapMGTActionButtonPress.sapMGT:active
 {
 	.sapMGTFocusDiv{
@@ -255,5 +248,11 @@ html.sap-desktop .sapMGT.sapMGTBackgroundImage:active .sapMGTFocusDiv {
 		border-radius: 0.25rem;
 		border: @sapUiContentFocusWidth @sapUiContentFocusStyle @sapUiContentContrastFocusColor;
 		z-index: 0;
+	}
+}
+
+.sapMGT.sapMGTBackgroundImage {
+	.sapMGTOverlay {
+		border-radius: 0.15rem;
 	}
 }
