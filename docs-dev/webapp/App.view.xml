@@ -1,4 +1,4 @@
-<mvc:View controllerName="capcom.recap.App"
+<mvc:View controllerName="recap.App"
   xmlns="sap.m"
   xmlns:core="sap.ui.core"
   xmlns:l="sap.ui.layout"
@@ -6,80 +6,34 @@
   <App>
     <Page showHeader="false">
       <VBox alignItems="Center"
-        height="100%">
-        <Title level="H1"
-          text="re>≡CAP hybrid"
-          class="what" />
-        <Text text="Jun 1: 14 - 19 CEST&#13;&#10;Jun 2: 09 - 13 CEST"
+        class="sapUiResponsiveContentPadding">
+        <Image id="logo"
+          alt="reCAP 2023 logo"
+          src="img/recap-2023-logo.png"
+          class="sapUiLargeMarginBottom sapUiMediumMarginTop" />
+
+        <Text text="Jul 7, 2023"
           class="when"
           renderWhitespace="true" />
-        <FormattedText htmlText="{/where}"
-          class="where" />
 
-        <VBox width="95%">
-          <Title level="H5"
-            text="Wed, Jun 1" />
-          <core:Fragment fragmentName="capcom.recap.Agenda"
-            id="AgendaWednesdayFragment"
-            type="XML"
-            class="sapUiLargeMarginBottom" />
-          <Title level="H1"
-            text="Thu, Jun 2" />
-          <core:Fragment fragmentName="capcom.recap.Agenda"
-            id="AgendaThursdayFragment"
-            type="XML"
-            class="sapUiLargeMarginBottom" />
-        </VBox>
+        <Text text="the "
+          class="t"
+          renderWhitespace="true" />
+        <Text text="»back to back«"
+          class="what motto sapUiTinyMargin"
+          renderWhitespace="true" />
+        <Text text="edition."
+          class="t"
+          renderWhitespace="true" />
+        <Text text="on-prem."
+          class="t sapUiTinyMarginTop sapUiMediumMarginBottom"
+          renderWhitespace="true" />
 
-        <VBox id="panelist">
-          <Panel headerText="here's why"
-            expandable="true"
-            expanded="false"
-            class="why">
-            <FormattedText class="hereswhy"
-              htmlText="{/hereswhy}" />
-          </Panel>
+
+        <VBox width="80%">
+          <FormattedText htmlText="{/where}"
+            class="where" />
         </VBox>
-        <Text text="Platin Sponsor"
-          class="sapUiMediumMarginTop why" />
-        <Image src="img/Rizing_Logo_RGB.svg"
-          width="200px"
-          class="sapUiTinyMarginTop" />
-        <Link text="rizing.com"
-          target="_blank"
-          href="https://rizing.com/" />
-        <Text text="Gold Sponsors"
-          class="sapUiMediumMarginTop why" />
-        <HBox id="goldsponsors">
-          <VBox id="paricon"
-            alignItems="Center"
-            justifyContent="Center"
-            width="230px">
-            <Image src="img/Paricon_Logo_Negativ_RGB.png"
-              class="sapUiTinyMarginTop" />
-            <Link text="paricon.de"
-              target="_blank"
-              href="https://www.paricon.de/" />
-          </VBox>
-          <VBox id="jssoft"
-            alignItems="Center"
-            justifyContent="Center"
-            width="230px">
-            <Image src="img/js-soft.png"
-              class="sapUiTinyMarginTop" />
-            <Link text="js-soft.com"
-              target="_blank"
-              href="https://www.js-soft.com/" />
-          </VBox>
-        </HBox>
-        <Text text="Silver Sponsor"
-          class="sapUiMediumMarginTop why" />
-        <Image src="img/reply.png"
-          width="200px"
-          class="sapUiTinyMarginTop" />
-        <Link text="reply.com"
-          target="_blank"
-          href="https://www.reply.com/" />
       </VBox>
     </Page>
   </App>

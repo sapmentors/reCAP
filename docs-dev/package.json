@@ -4,7 +4,7 @@
   "description": "official website for the reCAP (un)conference",
   "main": "index.html",
   "scripts": {
-    "start": "ui5 serve --open 'index.html'",
+    "start": "ui5 serve --accept-remote-connections --open 'index.html'",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rm -rf ../docs/*; ui5 build self-contained --all --dest ../docs --exclude-task=createDebugFiles"
   },
