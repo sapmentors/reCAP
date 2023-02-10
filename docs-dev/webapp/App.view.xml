@@ -29,10 +29,11 @@
           class="t sapUiTinyMarginTop sapUiMediumMarginBottom"
           renderWhitespace="true" />
 
-
-        <VBox width="80%">
-          <FormattedText htmlText="{/where}"
-            class="where" />
+        <VBox alignItems="Center">
+          <VBox class="t1">
+            <FormattedText htmlText="{/where}"
+              class="where" />
+          </VBox>
         </VBox>
       </VBox>
     </Page>

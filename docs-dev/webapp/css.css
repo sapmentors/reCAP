@@ -82,3 +82,10 @@ body {
         font-family: monospace, "Arial" !important;
     }
 }
+
+/* mobile only */
+@media only screen and (max-width: 768px) {
+  .t1 {
+        width: 90%
+    }
+}
