@@ -8,7 +8,7 @@ sap.ui.define(
         return Controller.extend("recap.App", {
             onInit() {
                 const oModel = new JSONModel({
-                    where: `<p>Our friends from <a href="https://openui5.org/ui5con/germany2023/">UI5con</a> rock their event the previous day, Jul 6.</p><p>So you 🫵 can get the full stack conference experience, back to back.</p>`,
+                    where: `<p>Our friends from <a href="https://openui5.org/ui5con/germany2023/">UI5con</a> rock their event the previous day, Jul 6.</p><p>So you &#x1FAF5; can get the full stack conference experience, back to back.</p>`,
                 })
                 this.getView().setModel(oModel)
             },
