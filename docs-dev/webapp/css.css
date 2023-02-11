@@ -38,6 +38,7 @@ body {
     font-size: 1.1rem !important;
 }
 
+
 /* iOS */
 @supports (-webkit-touch-callout: none) {
     .why,
@@ -52,6 +53,7 @@ body {
         font-family: monospace, "Arial" !important;
     }
 }
+
 /* Chromium + Firefox + x */
 @supports (contain: paint) {
     .why,
@@ -63,8 +65,7 @@ body {
     .where,
     .when,
     .what {
-        /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important; */
-        font-family: Geneva !important;
+        font-family: sans-serif !important;
     }
 }
 
