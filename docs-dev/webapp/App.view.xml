@@ -10,11 +10,13 @@
         <Image id="logo"
           alt="reCAP 2023 logo"
           src="img/recap-2023-logo.png"
-          class="sapUiLargeMarginBottom sapUiMediumMarginTop" />
+          class="sapUiMediumMarginBottom sapUiMediumMarginTop" />
 
-        <Text text="Jul 7, 2023"
+        <Text text="Jul 7, 2023 - St. Leon-Rot, DE"
           class="when"
           renderWhitespace="true" />
+
+        <FormattedText class="cfp sapUiMediumMarginBottom" htmlText="{/cfp}" />
 
         <Text text="the "
           class="t"
