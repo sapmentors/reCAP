@@ -9,6 +9,7 @@ sap.ui.define(
         return Controller.extend("recap.App", {
             onInit() {
                 URLListValidator.add("mailto")
+                URLListValidator.add("https")
                 const oModel = new JSONModel({
                     sponsors: `
                     <p class="copyt">these packages are available:</p>
