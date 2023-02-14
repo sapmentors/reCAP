@@ -5,16 +5,28 @@
   xmlns:mvc="sap.ui.core.mvc">
   <App>
     <Page showHeader="false">
+      <VBox alignItems="End">
+        <Panel expandable="true"
+          headerText="Sponsors"
+          width="auto"
+          class="sapUiResponsiveMargin">
+          <content>
+            <FormattedText htmlText="{/sponsors}" />
+          </content>
+        </Panel>
+      </VBox>
       <VBox alignItems="Center"
         class="sapUiResponsiveContentPadding">
         <Image id="logo"
           alt="reCAP 2023 logo"
           src="img/recap-2023-logo.png"
-          class="sapUiLargeMarginBottom sapUiMediumMarginTop" />
+          class="sapUiMediumMarginBottom" />
 
-        <Text text="Jul 7, 2023"
+        <Text text="Jul 7, 2023&#13;&#10;St. Leon-Rot, DE"
           class="when"
           renderWhitespace="true" />
+
+
 
         <Text text="the "
           class="t"
@@ -28,6 +40,10 @@
         <Text text="on-prem."
           class="t sapUiTinyMarginTop sapUiMediumMarginBottom"
           renderWhitespace="true" />
+
+        <FormattedText class="cfp sapUiTinyMarginTop sapUiMediumMarginBottom"
+          htmlText="{/cfp}" />
+
 
         <VBox alignItems="Center">
           <VBox class="t1">
