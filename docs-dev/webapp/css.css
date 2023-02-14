@@ -8,7 +8,8 @@ body {
     background-color: unset !important;
 }
 
-.t, .cfp {
+.t,
+.cfp {
     color: whitesmoke !important;
     font-size: 1.5rem !important;
 }
@@ -44,6 +45,31 @@ body {
     font-size: 1.1rem !important;
 }
 
+.copyt {
+    color: whitesmoke !important;
+    font-size: 1rem !important;
+}
+
+.platin {
+    color: #ac9f3c;
+}
+.gold {
+    color: gold;
+}
+.silver {
+    color: silver;
+}
+.contact::before {
+    content: "\1F4E7";
+    display: inline;
+}
+.contact > a {
+    padding-left: 0.4em;
+    vertical-align: text-bottom !important;
+}
+li {
+    padding-bottom: 1rem;
+}
 
 /* iOS */
 @supports (-webkit-touch-callout: none) {
@@ -52,6 +78,7 @@ body {
     .sapMLnk,
     .cfp,
     .t,
+    .copyt,
     .motto,
     .where,
     .when,
@@ -67,6 +94,7 @@ body {
     .sapMLnk,
     .cfp,
     .t,
+    .copyt,
     .motto,
     .where,
     .when,
@@ -82,6 +110,7 @@ body {
     .sapMLnk,
     .cfp,
     .t,
+    .copyt,
     .motto,
     .where,
     .when,
@@ -92,7 +121,7 @@ body {
 
 /* mobile only */
 @media only screen and (max-width: 768px) {
-  .t1 {
-        width: 90%
+    .t1 {
+        width: 90%;
     }
 }
