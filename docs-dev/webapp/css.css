@@ -13,6 +13,9 @@ body {
     color: whitesmoke !important;
     font-size: 1.5rem !important;
 }
+.t-small {
+    font-size: small !important
+}
 
 .cfp > a {
     border: 0.1rem solid #a8a8a8;

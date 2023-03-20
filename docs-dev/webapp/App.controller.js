@@ -15,9 +15,9 @@ sap.ui.define(
                     sponsors: `
                     <p class="copyt">these packages are available:</p>
                     <ul class="copyt">
-                        <li><span class="platin">Platin</span> - from 2000€, up to 4000€ or more:<br>mention on website, agenda, slides, blogs, social media and the possibility for an own booth onsite / own session at the event</li>
-                        <li><span class="gold">Gold</span> - from 1000€, up to 2000€:<br>mention on website, agenda, slides, blogs, social media</li>
-                        <li><span class="silver">Silver</span> - from 500 to 1000€:<br>mention on website</li>
+                        <li><span class="platin">Platin</span> - from 2000€, up to 4000€ or more:<br>4 conference tickets, mention on website, agenda, slides, blogs, social media and the possibility for an own booth onsite / own session at the event</li>
+                        <li><span class="gold">Gold</span> - from 1000€, up to 2000€:<br>2 conference tickets, mention on website, agenda, slides, blogs, social media</li>
+                        <li><span class="silver">Silver</span> - from 500 to 1000€:<br>1 conference ticket, mention on website</li>
                     </ul>
                     <p class="copyt contact"><a href="mailto:recap.conf@gmail.com">drop a line</a> to get in touch, friend!</p>`,
                     cfp: `&rarr; <a href="https://recap.cfapps.eu12.hana.ondemand.com">CfP open</a> (until Mar 31)`,

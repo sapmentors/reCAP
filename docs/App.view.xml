@@ -38,12 +38,14 @@
         <Text text="edition."
           class="t"
           renderWhitespace="true" />
-        <Text text="on-prem."
-          class="t sapUiTinyMarginTop sapUiMediumMarginBottom"
+        <Text text="on-prem.ª"
+          class="t sapUiTinyMarginTop"
           renderWhitespace="true" />
+        <Text text="ª of course we'll also be streaming. sheeesh. 😆" class="t t-small sapUiMediumMarginBottom" />
 
         <FormattedText class="cfp sapUiTinyMarginTop sapUiMediumMarginBottom"
           htmlText="{/cfp}" />
+
 
 
         <VBox alignItems="Center">
