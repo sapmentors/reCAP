@@ -11,18 +11,18 @@ body {
 .t,
 .cfp {
     color: whitesmoke !important;
-    font-size: 1.5rem !important;
+    font-size: 1.1rem !important;
 }
 .t-small {
     font-size: small !important
 }
 
-.cfp > a {
+/* .cfp > a {
     border: 0.1rem solid #a8a8a8;
     border-radius: 0.8rem;
     padding: 0.4em;
     box-shadow: 0 0 0.8rem #00c8e8;
-}
+} */
 .what {
     animation: pulsate 1.5s infinite alternate;
     border: 0.1rem solid #a8a8a8;
