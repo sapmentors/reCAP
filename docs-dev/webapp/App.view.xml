@@ -43,7 +43,7 @@
           renderWhitespace="true" />
         <Text text="ª of course we'll also be streaming. sheeesh. 😆" class="t t-small sapUiMediumMarginBottom" />
 
-        <FormattedText class="cfp sapUiTinyMarginTop sapUiMediumMarginBottom"
+        <FormattedText class="cfp sapUiMediumMarginTop sapUiMediumMarginBottom"
           htmlText="{/cfp}" />
 
 
