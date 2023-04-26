@@ -1,5 +1,6 @@
 body {
     background-color: #1c2327;
+    font-family: sans-serif !important;
 }
 
 .sapUiGlobalBackgroundColor,
@@ -42,7 +43,7 @@ body {
     font-weight: bold;
 }
 .where {
-    padding-top: 1.5em;
+    /* padding-top: 1.5em; */
     color: whitesmoke !important;
     font-size: 1.1rem !important;
 }
@@ -82,7 +83,7 @@ li {
     .t,
     .copyt,
     .motto,
-    .where,
+    /* .where, */
     .when,
     .what {
         font-family: monospace, "Arial" !important;
@@ -98,7 +99,7 @@ li {
     .t,
     .copyt,
     .motto,
-    .where,
+    /* .where, */
     .when,
     .what {
         font-family: sans-serif !important;
@@ -114,7 +115,7 @@ li {
     .t,
     .copyt,
     .motto,
-    .where,
+    /* .where, */
     .when,
     .what {
         font-family: monospace, "Arial" !important;

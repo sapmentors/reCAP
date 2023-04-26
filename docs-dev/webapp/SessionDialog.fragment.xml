@@ -1,0 +1,62 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+
+    <QuickView placement="Auto"
+        navigate=".toSpeaker">
+        <QuickViewPage pageId="{/id}"
+            header="({/location}) {/startHour}:{/startMinute} - {/endHour}:{/endMinute}">
+            <!-- <avatar>
+                <Avatar src="{/speakers/0/photoUrl}" />
+            </avatar> -->
+            <QuickViewGroup>
+                <QuickViewGroupElement value="📍 » {/title} «"
+                    type="text" />
+
+                <QuickViewGroupElement value="📄 {/description}"
+                    type="text" />
+            </QuickViewGroup>
+            <QuickViewGroup elements="{ path: '/speakers', templateShareable: true }">
+                <QuickViewGroupElement value="💁 {firstName} {lastName}"
+                    type="pageLink"
+                    pageLinkId="speakerPage" />
+            </QuickViewGroup>
+
+        </QuickViewPage>
+        <QuickViewPage pageId="speakerPage"
+            description="{speaker>/company}"
+            title="{speaker>/firstName} {speaker>/lastName}">
+            <avatar>
+                <Avatar src="{speaker>/photoUrl}" />
+            </avatar>
+            <QuickViewGroup>
+                <QuickViewGroupElement value="{speaker>/bio}"
+                    type="text" />
+                <QuickViewGroupElement label="🐦"
+                    visible="{= ${speaker>/twitterHandle} !== undefined}"
+                    type="link"
+                    value="{speaker>/twitterHandle}"
+                    url="https://twitter.com/{speaker>/twitterHandle}">
+                </QuickViewGroupElement>
+                <QuickViewGroupElement label="🐙"
+                    visible="{= ${speaker>/githubUrl} !== undefined}"
+                    type="link"
+                    value="{speaker>/githubUrl}"
+                    url="{= ${speaker>/githubUrl}.includes('http') ? ${speaker>/githubUrl} : 'https://www.github.com/'+${speaker>/githubUrl} }">
+                </QuickViewGroupElement>
+                <QuickViewGroupElement label="LinkedIn"
+                    visible="{= ${speaker>/linkedInUrl} !== undefined}"
+                    type="link"
+                    value="{speaker>/linkedInUrl}"
+                    url="{= ${speaker>/linkedInUrl}.includes('http') ? ${speaker>/linkedInUrl} : 'https://www.linkedin.com/in/'+${speaker>/linkedInUrl} }">
+                </QuickViewGroupElement>
+                <QuickViewGroupElement label="🛸"
+                    visible="{= ${speaker>/otherSocialMedia} !== undefined}"
+                    type="link"
+                    value="{speaker>/otherSocialMedia}"
+                    url="{speaker>/otherSocialMedia}">
+                </QuickViewGroupElement>
+            </QuickViewGroup>
+        </QuickViewPage>
+    </QuickView>
+
+</core:FragmentDefinition>

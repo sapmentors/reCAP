@@ -3320,13 +3320,15 @@
 	 * Activate async loading by default.
 	 *
 	 * When URL parameter 'coverage' is used to enable client side coverage (as introduced by qunit-coverage),
-	 * then sync loading is used.
+	 * then it checks for 'coverage-mode' parameter and if it equals to "blanket", then sync loading is used.
 	 */
-	var bCoverage = /(?:^|\?|&)coverage(?:&|=|$)/.test(window.location.search);
+	var oSearchParams = new URLSearchParams(window.location.search);
+	var bCoverage = oSearchParams.has("coverage");
+	var bSyncLoad = bCoverage && oSearchParams.get("coverage-mode") === "blanket";
+	// Only configure loader to be sync if Blanket is used
 	sap.ui.loader.config({
-		async: !bCoverage
+		async: !bSyncLoad
 	});
-
 }());
 //@ui5-bundle-raw-include ui5loader-autoconfig.js
 /*!
@@ -3371,6 +3373,8 @@
 			return true;
 		}
 	}
+
+	var Object_hasOwn = Function.prototype.call.bind(Object.prototype.hasOwnProperty);
 
 	function ensureSlash(path) {
 		return path && path[path.length - 1] !== '/' ? path + '/' : path;
@@ -3567,7 +3571,7 @@
 			return attrValue;
 		}
 		// ... or an entry in the global config object
-		if ( Object.prototype.hasOwnProperty.call(oCfg, name) && (pattern == null || pattern.test(oCfg[name])) ) {
+		if ( Object_hasOwn(oCfg, name) && (pattern == null || pattern.test(oCfg[name])) ) {
 			return oCfg[name];
 		}
 		// compat fallback
