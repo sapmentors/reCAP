@@ -181,8 +181,16 @@ sap.ui.define(
             },
 
             onInit() {
-                const viewStates = new JSONModel({ plannerBusy: true })
+                const viewStates = new JSONModel({
+                    plannerBusy: true,
+                    landscape: sap.ui.Device.orientation.landscape,
+                })
                 this.getView().setModel(viewStates, "view")
+                sap.ui.Device.orientation.attachHandler((oEvent) => {
+                    this.getView()
+                        .getModel("view")
+                        .setProperty("/landscape", oEvent.landscape)
+                })
 
                 URLListValidator.add("mailto")
                 URLListValidator.add("https")

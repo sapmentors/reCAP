@@ -12,15 +12,22 @@
 
     <Page showHeader="false">
 
-      <f:ShellBar primaryTitle="re>≡CAP 2023"
-        secondaryTitle="St. Leon-Rot, DE">
-        <f:logo>
-          <fm:Avatar shape="Square">
-            <Image src="./img/recap-2023-logo-small.png" />
-          </fm:Avatar>
-        </f:logo>
-      </f:ShellBar>
-
+      <f:Bar>
+        <f:startContent>
+          <fm:Title level="H4"
+            text="re>≡CAP 2023" />
+        </f:startContent>
+        <f:middleContent>
+          <Image src="./img/recap-2023-logo-small.png"
+            height="80px" />
+        </f:middleContent>
+        <f:endContent>
+          <fm:Title level="H5"
+            text="»back to back« edition"
+            class="what" 
+            visible="{view>/landscape}"/>
+        </f:endContent>
+      </f:Bar>
 
       <Panel headerText="🎟️ Tickets!"
         expandable="true"
