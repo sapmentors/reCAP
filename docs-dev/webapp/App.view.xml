@@ -1,59 +1,91 @@
 <mvc:View controllerName="recap.App"
   xmlns="sap.m"
+  xmlns:c="sap.suite.ui.commons"
   xmlns:core="sap.ui.core"
+  xmlns:f="sap.ui.webc.fiori"
+  xmlns:fm="sap.ui.webc.main"
   xmlns:l="sap.ui.layout"
-  xmlns:mvc="sap.ui.core.mvc">
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns:unified="sap.ui.unified"
+  width="100%">
   <App>
+
     <Page showHeader="false">
-      <VBox alignItems="End">
-        <Panel expandable="true"
-          headerText="Sponsors"
-          width="auto"
-          class="sapUiResponsiveMargin">
-          <content>
-            <FormattedText htmlText="{/sponsors}" />
-          </content>
-        </Panel>
-      </VBox>
+      <!-- <HBox alignItems="End"> -->
+      <f:ShellBar primaryTitle="re>≡CAP 2023"
+        secondaryTitle="St. Leon-Rot, DE">
+        <f:logo>
+          <fm:Avatar shape="Square">
+            <Image src="./img/recap-2023-logo-small.png" />
+          </fm:Avatar>
+        </f:logo>
+      </f:ShellBar>
+      <!-- <FormattedText htmlText="{/when}" class="copyt sapUiMediumMarginBottom">
+          <layoutData>
+            <FlexItemData growFactor="0" />
+          </layoutData>
+        </FormattedText> -->
+      <!-- </HBox> -->
+      <Panel expandable="true"
+        headerText="July 5: Hackathon"
+        width="auto"
+        class="sapUiResponsiveMargin">
+        <content>
+
+          <c:Timeline content="{agenda>/rooms/1/sessions}"
+            sortOldestFirst="true"
+            textHeight="automatic">
+            <c:TimelineItem title="{agenda>title}"
+              text="{agenda>description}"
+              dateTime="{agenda>startTime}">
+            </c:TimelineItem>
+          </c:Timeline>
+          <!-- <c:Timeline content="{agenda>/rooms/2/sessions}" sortOldestFirst="true" textHeight="automatic">
+          <c:TimelineItem title="{agenda>title}" text="{agenda>description}" dateTime="{agenda>startTime}">
+          </c:TimelineItem>
+        </c:Timeline> -->
+        </content>
+      </Panel>
+
+<Panel expandable="true"
+expanded="true"
+  headerText="July 7: re>≡CAP"
+  width="auto"
+  class="sapUiResponsiveMargin">
+  <content>
+      <PlanningCalendar startDate="{agenda>/startDate}"
+        stickyHeader="true"
+        rows="{agenda>/rooms}"
+        appointmentSelect="onAppointmentSelect"
+        viewKey="A">
+        <views>
+          <PlanningCalendarView key="A"
+            appointmentHeight="Large"
+            intervalType="Hour"
+            intervalsS="2"
+            intervalsM="3"
+            intervalsL="3"
+            showSubIntervals="false"></PlanningCalendarView>
+        </views>
+        <rows>
+          <PlanningCalendarRow title="{agenda>name}"
+            appointments="{path : 'agenda>sessions', templateShareable: false}">
+            <appointments>
+              <unified:CalendarAppointment startDate="{agenda>startTime}"
+                endDate="{agenda>endTime}"
+                title="{agenda>title}"
+                text="{agenda>description}">
+              </unified:CalendarAppointment>
+            </appointments>
+          </PlanningCalendarRow>
+        </rows>
+      </PlanningCalendar>
+      </content>
+  </Panel>
       <VBox alignItems="Center"
-        class="sapUiResponsiveContentPadding">
-        <Image id="logo"
-          alt="reCAP 2023 logo"
-          src="img/recap-2023-logo.png"
-          class="sapUiMediumMarginBottom" />
-
-        <Text text="Jul 7, 2023&#13;&#10;St. Leon-Rot, DE"
-          class="when sapUiTinyMarginBottom"
-          renderWhitespace="true" />
-
-        <FormattedText htmlText="{/when}" class="copyt sapUiMediumMarginBottom"/>
-
-
-        <Text text="the "
-          class="t"
-          renderWhitespace="true" />
-        <Text text="»back to back«"
-          class="what motto sapUiTinyMargin"
-          renderWhitespace="true" />
-        <Text text="edition."
-          class="t"
-          renderWhitespace="true" />
-        <Text text="on-prem.ª"
-          class="t sapUiTinyMarginTop"
-          renderWhitespace="true" />
-        <Text text="ª of course we'll also be streaming. sheeesh. 😆" class="t t-small sapUiMediumMarginBottom" />
-
-        <FormattedText class="cfp sapUiMediumMarginTop sapUiMediumMarginBottom"
-          htmlText="{/cfp}" />
-
-
-
-        <VBox alignItems="Center">
-          <VBox class="t1">
-            <FormattedText htmlText="{/where}"
-              class="where" />
-          </VBox>
-        </VBox>
+        class="sapUiResponsiveContentPadding t1">
+        <FormattedText htmlText="{/where}"
+          class="where" />
       </VBox>
     </Page>
   </App>

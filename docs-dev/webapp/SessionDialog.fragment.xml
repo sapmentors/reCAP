@@ -1,0 +1,8 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <Dialog title="{/title}" resizable="true" draggable="true" class="sapUiResponsivePadding--content sapUiResponsivePadding--header sapUiResponsivePadding--footer sapUiResponsivePadding--subHeader">
+    <endButton>
+        <Button text="👍" press=".onCloseDialog" />
+    </endButton>
+    </Dialog>
+</core:FragmentDefinition>
