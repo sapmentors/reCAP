@@ -9,16 +9,34 @@ sap.ui.define(
     (Controller, JSONModel, URLListValidator, Fragment) => {
         return Controller.extend("recap.App", {
             isItTimeYet() {
-                // return new Date() > new Date(2023, 3, 27, 16, 0, 0)
-                return true
+                return Date.now() >= Date.UTC(2023, 3, 27, 14, 0, 0)
+            },
+            isItReallyTimeYet() {
+                return Date.now() >= Date.UTC(2023, 5, 28, 0, 0, 0)
+            },
+            isItTimeFor(event = "hackathon") {
+                if (event === "hackathon") {
+                    console.log("hackathon: yes!")
+                    return Date.now() >= Date.UTC(2023, 6, 4, 0, 0, 0)
+                }
+                if (event === "recap") {
+                    console.log("recap: yes!")
+                    return Date.now() >= Date.UTC(2023, 6, 6, 0, 0, 0)
+                } else {
+                    return false //> there's never time for anything...
+                }
             },
             toSpeaker(oEvent) {
                 if (
                     oEvent.getParameter("isTo") &&
                     oEvent.getParameter("navOrigin")
                 ) {
-                    const [_, firstName, lastName] = oEvent.getParameter("navOrigin").getText().split(" ")
-                    /** @type {Map} */ const speakers =  this.getView().getModel("speakers")
+                    const [_, firstName, lastName] = oEvent
+                        .getParameter("navOrigin")
+                        .getText()
+                        .split(" ")
+                    /** @type {Map} */ const speakers =
+                        this.getView().getModel("speakers")
                     const speaker = speakers.get(`${firstName} ${lastName}`)
                     console.log(speaker)
                     this.getView().setModel(new JSONModel(speaker), "speaker")
@@ -118,9 +136,12 @@ sap.ui.define(
                     _session.endHour = endHour
                     _session.endMinute = endMinute
                     _session.speakers = _session.speakers.map((s) => {
-                        const speaker = {...s}
+                        const speaker = { ...s }
                         speaker.photoUrl = `https://recap.cfapps.eu12.hana.ondemand.com${s.photoUrl}`
-                        speakerModel.set(`${s.firstName} ${s.lastName}`, speaker)
+                        speakerModel.set(
+                            `${s.firstName} ${s.lastName}`,
+                            speaker
+                        )
                         return speaker
                     })
                     return _session

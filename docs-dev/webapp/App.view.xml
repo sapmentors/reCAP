@@ -11,7 +11,7 @@
   <App>
 
     <Page showHeader="false">
-      <!-- <HBox alignItems="End"> -->
+
       <f:ShellBar primaryTitle="re>≡CAP 2023"
         secondaryTitle="St. Leon-Rot, DE">
         <f:logo>
@@ -21,12 +21,7 @@
         </f:logo>
       </f:ShellBar>
 
-      <!-- <FormattedText htmlText="{/when}" class="copyt sapUiMediumMarginBottom">
-          <layoutData>
-            <FlexItemData growFactor="0" />
-          </layoutData>
-        </FormattedText> -->
-      <!-- </HBox> -->
+
       <Panel headerText="🎟️ Tickets!"
         expandable="true"
         expanded="true"
@@ -40,14 +35,14 @@
             class="t-small" />
           <Text text="If sold out, you'll be put on the waiting list. The next free spot will automatically be yours!"
             class="t-small" />
-
-
         </content>
       </Panel>
+
       <Panel expandable="true"
         headerText="July 5: Hackathon"
         width="auto"
-        class="sapUiResponsiveMargin">
+        class="sapUiResponsiveMargin"
+        expanded="{value: 'hackathon', formatter: '.isItTimeFor'}">
         <content>
 
           <c:Timeline content="{agenda>/rooms/1/sessions}"
@@ -58,15 +53,12 @@
               dateTime="{agenda>startTime}">
             </c:TimelineItem>
           </c:Timeline>
-          <!-- <c:Timeline content="{agenda>/rooms/2/sessions}" sortOldestFirst="true" textHeight="automatic">
-          <c:TimelineItem title="{agenda>title}" text="{agenda>description}" dateTime="{agenda>startTime}">
-          </c:TimelineItem>
-        </c:Timeline> -->
+
         </content>
       </Panel>
 
       <Panel expandable="true"
-        expanded="true"
+        expanded="{value: 'recap', formatter: '.isItTimeFor'}"
         headerText="July 7: re>≡CAP"
         width="auto"
         class="sapUiResponsiveMargin">
@@ -91,8 +83,14 @@
                 <appointments>
                   <unified:CalendarAppointment startDate="{agenda>startTime}"
                     endDate="{agenda>endTime}"
-                    title="{agenda>title}"
-                    text="{agenda>description}">
+                    title="{= ${agenda>title}.toLowerCase().includes('lunch') ? '🍔 '+${agenda>title} : ${agenda>title}}"
+                    text="{agenda>description}"
+                    color="{= ${agenda>title}.toLowerCase().includes('lunch') ? 'lightgray' : 
+                    ${agenda>title}.toLowerCase().includes('keynote') ? '#1D74BF' :
+                    ${agenda>title}.toLowerCase().includes('intro') ? '#1D74BF' :
+                    ${agenda>type}.toLowerCase().includes('workshop') ? '#1DBFB9' :
+                    ${agenda>type}.toLowerCase().includes('meet_expert') ? '#1DBF68' :
+                    '#bf681d' }">
                   </unified:CalendarAppointment>
                 </appointments>
               </PlanningCalendarRow>
@@ -100,11 +98,13 @@
           </PlanningCalendar>
         </content>
       </Panel>
+
       <VBox alignItems="Center"
         class="sapUiResponsiveContentPadding t1">
         <FormattedText htmlText="{/where}"
           class="where" />
       </VBox>
+
     </Page>
   </App>
 </mvc:View>
