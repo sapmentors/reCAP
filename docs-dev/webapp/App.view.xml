@@ -44,13 +44,16 @@
         class="sapUiResponsiveMargin"
         expanded="{value: 'hackathon', formatter: '.isItTimeFor'}">
         <content>
-
-          <c:Timeline content="{agenda>/rooms/1/sessions}"
+          <Text text="goal: test the pluggability of the new CAP DB Layer by bolting in Azure Cosmos DB support!" class="where"></Text>
+          <c:Timeline content="{hackathon>/items}"
             sortOldestFirst="true"
-            textHeight="automatic">
-            <c:TimelineItem title="{agenda>title}"
-              text="{agenda>description}"
-              dateTime="{agenda>startTime}">
+            textHeight="automatic"
+            enableDoubleSided="true"
+            showHeaderBar="false">
+            <c:TimelineItem icon="{hackathon>icon}"
+              title="{hackathon>what}"
+              text="{hackathon>description}"
+              dateTime="{hackathon>startTime}">
             </c:TimelineItem>
           </c:Timeline>
 
@@ -59,7 +62,7 @@
 
       <Panel expandable="true"
         expanded="{value: 'recap', formatter: '.isItTimeFor'}"
-        headerText="July 7: re>≡CAP"
+        headerText="July 7: re>≡CAP (schedule subject to change!)"
         width="auto"
         class="sapUiResponsiveMargin">
         <content>

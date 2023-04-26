@@ -11,16 +11,11 @@ sap.ui.define(
             isItTimeYet() {
                 return Date.now() >= Date.UTC(2023, 3, 27, 14, 0, 0)
             },
-            isItReallyTimeYet() {
-                return Date.now() >= Date.UTC(2023, 5, 28, 0, 0, 0)
-            },
             isItTimeFor(event = "hackathon") {
                 if (event === "hackathon") {
-                    console.log("hackathon: yes!")
-                    return Date.now() >= Date.UTC(2023, 6, 4, 0, 0, 0)
+                    return Date.now() >= Date.UTC(2023, 5, 28, 0, 0, 0)
                 }
                 if (event === "recap") {
-                    console.log("recap: yes!")
                     return Date.now() >= Date.UTC(2023, 6, 6, 0, 0, 0)
                 } else {
                     return false //> there's never time for anything...
@@ -35,10 +30,15 @@ sap.ui.define(
                         .getParameter("navOrigin")
                         .getText()
                         .split(" ")
-                    /** @type {Map} */ const speakers =
-                        this.getView().getModel("speakers")
+
+                    /**
+                     * @type {Map<string, object>}
+                     */
+                    const speakers = this.getView()
+                        .getModel("speakers")
+                        .getData()
+
                     const speaker = speakers.get(`${firstName} ${lastName}`)
-                    console.log(speaker)
                     this.getView().setModel(new JSONModel(speaker), "speaker")
                 }
             },
@@ -54,7 +54,6 @@ sap.ui.define(
                     .getBindingContext("agenda")
                     .getObject()
                 const sessionModel = new JSONModel(session)
-                console.log(session)
                 if (!this.sessionDialog) {
                     const view = this.getView()
                     this.sessionDialog = Fragment.load({
@@ -71,7 +70,7 @@ sap.ui.define(
                     sessionDialog.openBy(appointment)
                 })
             },
-            async doAgenda() {
+            async doRecapAgenda() {
                 const year = 2023
                 const month = 6
                 const day = 7
@@ -165,8 +164,16 @@ sap.ui.define(
 
                 agendaModel.setProperty("/rooms", byRooms)
                 this.getView().setModel(agendaModel, "agenda")
-                this.getView().setModel(speakerModel, "speakers")
+                this.getView().setModel(new JSONModel(speakerModel), "speakers")
             },
+
+            doHackathonAgenda() {
+                const agenda = new JSONModel(
+                    sap.ui.require.toUrl("recap/models/hackathon.json")
+                )
+                this.getView().setModel(agenda, "hackathon")
+            },
+            
             onInit() {
                 URLListValidator.add("mailto")
                 URLListValidator.add("https")
@@ -189,7 +196,8 @@ sap.ui.define(
                     <a href="data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0AVERSION:2.0%0ABEGIN:VEVENT%0ADTSTART:20230707T070000Z%0ADTEND:20230707T150000Z%0ASUMMARY:reCAP%202023%0ALOCATION:SAP%20SE%20(ROT03),%20SAP-Allee%2027,%2068789%20St.%20Leon-Rot%20(Germany)%0ADESCRIPTION:Dear%20CAP%20community,%20%5Cn%5CnThis%20year%E2%80%99s%20reCAP%20(un)conference%20will%20be%20an%20in-person%20event,%20taking%20place%20in%20St.%20Leon-Rot/Germany.%5Cn%5CnThis%20is%20the%20most%20important%20event%20of%20the%20year%20for%20developers,%20customers,%20partners%20working%20with%20CAP.%20Interesting%20sessions%20held%20by%20the%20CAP%20product%20team%20as%20well%20as%20the%20CAP%20community%20will%20shed%20light%20on%20a%20variety%20of%20topics.%20On%20top%20of%20this,%20you%20will%20meet%20friends%20you%20didn't%20see%20for%20a%20while,%20get%20to%20know%20new%20people%20from%20the%20community%20and%20enjoy%20a%20great%20party%20in%20the%20evening%20event%20(already%20on%206th%20of%20July%20together%20with%20the%20UI5con).%5Cn%5Cn%20Please%20save%20the%20following%20details:%5Cn%5Cn%20Date:%2007/07/2023%20--%3E%20the%20evening%20event%20will%20already%20take%20place%20on%20the%206th%20of%20July%20together%20with%20our%20UI5con%20friends%5Cn%5Cn%20Location:%20SAP%20SE%20(ROT03),%20SAP-Allee%2027,%2068789%20St.%20Leon-Rot%20(Germany)%5Cn%5Cn%20Note%20that%20seats%20are%20limited,%20and%20registration%20is%20needed%20to%20be%20able%20to%20take%20part%20in%20this%20event!%20The%20registration%20process%20will%20open%20in%20April.%20For%20more%20details,%20please%20visit:%5Cn%5Cn-%20Conference%20landing%20page%20https://recap-conf.dev/%20%5Cn%5Cn-%20Propose%20your%20session%20here:%20https://recap.cfapps.eu12.hana.ondemand.com/%20%5Cn%5CnThe%20reCAP%20Orga%20Team%20%5Cn%5CnPS:%20Check-out%20the%20UI5con%202023%20which%20takes%20place%20one%20day%20before%20reCAP%20at%20the%20same%20location!%20https://openui5.org/ui5con/germany2023/%0AUID:1%0AEND:VEVENT%0AEND:VCALENDAR" download="reCAP2023.ics">iCal</a>`,
                 })
                 this.getView().setModel(oModel)
-                this.doAgenda()
+                this.doRecapAgenda()
+                this.doHackathonAgenda()
             },
         })
     }
