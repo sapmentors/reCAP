@@ -44,7 +44,8 @@
         class="sapUiResponsiveMargin"
         expanded="{value: 'hackathon', formatter: '.isItTimeFor'}">
         <content>
-          <Text text="goal: test the pluggability of the new CAP DB Layer by bolting in Azure Cosmos DB support!" class="where"></Text>
+          <Text text="goal: test the pluggability of the new CAP DB Layer by bolting in Azure Cosmos DB support!"
+            class="where"></Text>
           <c:Timeline content="{hackathon>/items}"
             sortOldestFirst="true"
             textHeight="automatic"
@@ -107,6 +108,20 @@
         <FormattedText htmlText="{/where}"
           class="where" />
       </VBox>
+
+      <Panel expandable="true"
+        expanded="false"
+        headerText="venue location"
+        width="auto"
+        class="sapUiResponsiveMargin">
+        <VBox alignItems="Center"
+          class="sapUiResponsiveContentPadding t1">
+          <Text text="ROT3, SAP-Allee 27, 68789 St. Leon-Rot (Germany)"
+            class="where sapUiTinyMarginBottom" />
+          <core:HTML content='&lt;iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2604.8752909794025!2d8.636467612205934!3d49.24085357359581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4797bcf474f4bda9%3A0x56d50ed1cac92e39!2sROT%2003%2C%20SAP-Allee%2027%2C%2068789%20St.%20Leon-Rot!5e0!3m2!1sde!2sde!4v1682518001626!5m2!1sde!2sde" width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"&gt;&lt;/iframe&gt;'></core:HTML>
+
+        </VBox>
+      </Panel>
 
     </Page>
   </App>
