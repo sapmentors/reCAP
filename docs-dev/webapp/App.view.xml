@@ -20,12 +20,30 @@
           </fm:Avatar>
         </f:logo>
       </f:ShellBar>
+
       <!-- <FormattedText htmlText="{/when}" class="copyt sapUiMediumMarginBottom">
           <layoutData>
             <FlexItemData growFactor="0" />
           </layoutData>
         </FormattedText> -->
       <!-- </HBox> -->
+      <Panel headerText="🎟️ Tickets!"
+        expandable="true"
+        expanded="true"
+        width="auto"
+        class="sapUiResponsiveMargin"
+        visible="{path: '', formatter: '.isItTimeYet'}">
+        <content>
+          <FormattedText htmlText="{/tickets}"
+            class="where" />
+          <Text text="Yes, you can register for the triplet (Hackathon, UI5con, reCAP) or for any combination at above URL 😄"
+            class="t-small" />
+          <Text text="If sold out, you'll be put on the waiting list. The next free spot will automatically be yours!"
+            class="t-small" />
+
+
+        </content>
+      </Panel>
       <Panel expandable="true"
         headerText="July 5: Hackathon"
         width="auto"
@@ -47,41 +65,41 @@
         </content>
       </Panel>
 
-<Panel expandable="true"
-expanded="true"
-  headerText="July 7: re>≡CAP"
-  width="auto"
-  class="sapUiResponsiveMargin">
-  <content>
-      <PlanningCalendar startDate="{agenda>/startDate}"
-        stickyHeader="true"
-        rows="{agenda>/rooms}"
-        appointmentSelect="onAppointmentSelect"
-        viewKey="A">
-        <views>
-          <PlanningCalendarView key="A"
-            appointmentHeight="Large"
-            intervalType="Hour"
-            intervalsS="2"
-            intervalsM="3"
-            intervalsL="3"
-            showSubIntervals="false"></PlanningCalendarView>
-        </views>
-        <rows>
-          <PlanningCalendarRow title="{agenda>name}"
-            appointments="{path : 'agenda>sessions', templateShareable: false}">
-            <appointments>
-              <unified:CalendarAppointment startDate="{agenda>startTime}"
-                endDate="{agenda>endTime}"
-                title="{agenda>title}"
-                text="{agenda>description}">
-              </unified:CalendarAppointment>
-            </appointments>
-          </PlanningCalendarRow>
-        </rows>
-      </PlanningCalendar>
-      </content>
-  </Panel>
+      <Panel expandable="true"
+        expanded="true"
+        headerText="July 7: re>≡CAP"
+        width="auto"
+        class="sapUiResponsiveMargin">
+        <content>
+          <PlanningCalendar startDate="{agenda>/startDate}"
+            stickyHeader="true"
+            rows="{agenda>/rooms}"
+            appointmentSelect="onAppointmentSelect"
+            viewKey="A">
+            <views>
+              <PlanningCalendarView key="A"
+                appointmentHeight="Large"
+                intervalType="Hour"
+                intervalsS="2"
+                intervalsM="3"
+                intervalsL="3"
+                showSubIntervals="false"></PlanningCalendarView>
+            </views>
+            <rows>
+              <PlanningCalendarRow title="{agenda>name}"
+                appointments="{path : 'agenda>sessions', templateShareable: false}">
+                <appointments>
+                  <unified:CalendarAppointment startDate="{agenda>startTime}"
+                    endDate="{agenda>endTime}"
+                    title="{agenda>title}"
+                    text="{agenda>description}">
+                  </unified:CalendarAppointment>
+                </appointments>
+              </PlanningCalendarRow>
+            </rows>
+          </PlanningCalendar>
+        </content>
+      </Panel>
       <VBox alignItems="Center"
         class="sapUiResponsiveContentPadding t1">
         <FormattedText htmlText="{/where}"

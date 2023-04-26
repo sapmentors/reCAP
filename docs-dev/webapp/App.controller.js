@@ -8,6 +8,10 @@ sap.ui.define(
     ],
     (Controller, JSONModel, URLListValidator, Fragment) => {
         return Controller.extend("recap.App", {
+            isItTimeYet() {
+                // return new Date() > new Date(2023, 3, 27, 16, 0, 0)
+                return true
+            },
             toSpeaker(oEvent) {
                 if (
                     oEvent.getParameter("isTo") &&
@@ -147,6 +151,7 @@ sap.ui.define(
                 URLListValidator.add("https")
                 URLListValidator.add("data")
                 const oModel = new JSONModel({
+                    tickets: `<p>🔥 Get'em while they're hot! 🔥<br> &rarr; <a href="https://ti.to/ui5con-and-recap/ui5con-and-recap-2023">https://ti.to/ui5con-and-recap/ui5con-and-recap-2023</a></p>`,
                     sponsors: `
                     <p class="copyt">these packages are available:</p>
                     <ul class="copyt">
