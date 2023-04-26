@@ -67,7 +67,9 @@
         width="auto"
         class="sapUiResponsiveMargin">
         <content>
-          <PlanningCalendar startDate="{agenda>/startDate}"
+          <PlanningCalendar busy="{view>/plannerBusy}"
+            busyIndicatorDelay="0"
+            startDate="{agenda>/startDate}"
             stickyHeader="true"
             rows="{agenda>/rooms}"
             appointmentSelect="onAppointmentSelect"
