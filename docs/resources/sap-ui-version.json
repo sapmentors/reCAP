@@ -1,13 +1,13 @@
 {
 	"name": "recap",
 	"version": "1.0.3",
-	"buildTimestamp": "202304261529",
+	"buildTimestamp": "202304261552",
 	"scmRevision": "",
 	"libraries": [
 		{
 			"name": "sap.m",
 			"version": "1.113.0",
-			"buildTimestamp": "202304261529",
+			"buildTimestamp": "202304261552",
 			"scmRevision": "",
 			"manifestHints": {
 				"dependencies": {
@@ -26,13 +26,13 @@
 		{
 			"name": "sap.ui.core",
 			"version": "1.113.0",
-			"buildTimestamp": "202304261529",
+			"buildTimestamp": "202304261552",
 			"scmRevision": ""
 		},
 		{
 			"name": "sap.ui.layout",
 			"version": "1.113.0",
-			"buildTimestamp": "202304261529",
+			"buildTimestamp": "202304261552",
 			"scmRevision": "",
 			"manifestHints": {
 				"dependencies": {
@@ -45,7 +45,7 @@
 		{
 			"name": "sap.ui.unified",
 			"version": "1.113.0",
-			"buildTimestamp": "202304261529",
+			"buildTimestamp": "202304261552",
 			"scmRevision": "",
 			"manifestHints": {
 				"dependencies": {

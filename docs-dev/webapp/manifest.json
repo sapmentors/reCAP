@@ -44,7 +44,11 @@
       "libs": {
         "sap.m": {},
         "sap.ui.core": {},
-        "sap.ui.layout": {}
+        "sap.ui.layout": {},
+        "sap.ui.webc.fiori": {},
+        "sap.ui.webc.main": {},
+        "sap.ui.unified": {},
+        "sap.suite.ui.commons": {}
       }
     },
     "contentDensities": {
