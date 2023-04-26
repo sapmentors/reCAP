@@ -6,27 +6,12 @@
   "scripts": {
     "start": "ui5 serve --accept-remote-connections --open 'index.html'",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rm -rf ../docs/*; ui5 build self-contained --all --dest ../docs --exclude-task=createDebugFiles"
+    "build": "rm -rf ../docs/*; ui5 build --dest ../docs --exclude-task=createDebugFiles"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@openui5/sap.m": "latest",
-    "@openui5/sap.ui.core": "latest",
-    "@openui5/sap.ui.support": "latest",
-    "@openui5/sap.ui.testrecorder": "latest",
-    "@openui5/sap.ui.layout": "latest",
-    "@openui5/themelib_sap_fiori_3": "latest",
-    "@ui5/cli": "^2.14.8",
+    "@ui5/cli": "^3",
     "ui5-middleware-livereload": "latest"
-  },
-  "ui5": {
-    "dependencies": [
-      "@openui5/sap.ui.core",
-      "@openui5/sap.m",
-      "@openui5/sap.ui.layout",
-      "@openui5/themelib_sap_fiori_3",
-      "ui5-middleware-livereload"
-    ]
   }
 }
