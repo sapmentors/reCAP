@@ -24,8 +24,8 @@
         <f:endContent>
           <fm:Title level="H5"
             text="»back to back« edition"
-            class="what" 
-            visible="{view>/landscape}"/>
+            class="what"
+            visible="{view>/landscape}" />
         </f:endContent>
       </f:Bar>
 
@@ -52,7 +52,7 @@
         expanded="{value: 'hackathon', formatter: '.isItTimeFor'}">
         <content>
           <Text text="goal: test the pluggability of the new CAP DB Layer by bolting in Azure Cosmos DB support!"
-            class="where"></Text>
+            class="where sapUiTinyMarginBottom"></Text>
           <c:Timeline content="{hackathon>/items}"
             sortOldestFirst="true"
             textHeight="automatic"
@@ -115,7 +115,44 @@
       <VBox alignItems="Center"
         class="sapUiResponsiveContentPadding t1">
         <FormattedText htmlText="{/where}"
-          class="where" />
+          class="where sapUiLargeMarginBottom" />
+        <fm:Title level="H5"
+          text="Platinum Sponsors"
+          class="sapUiTinyMarginBottom sponsors platin" />
+        <HBox alignItems="Center"
+          justifyContent="Center"
+          class="sapUiSmallMarginBottom"
+          wrap="Wrap">
+          <Image src="./img/rizing-wipro.png"
+            alt="Rizing is a platinum sponsor"
+            class="sapUiMediumMargin" />
+          <Image src="./img/aarini.png"
+            alt="aarini is a platinum sponsor"
+            class="sapUiMediumMargin" />
+        </HBox>
+        <fm:Title level="H5"
+          text="Gold Sponsors"
+          class="sapUiTinyMarginBottom sponsors gold" />
+        <HBox alignItems="Center"
+          justifyContent="Center"
+          wrap="Wrap">
+          <layoutData>
+            <l:GridData span="L2 M3 S12" />
+          </layoutData>
+          <Image src="./img/js-soft.png"
+            alt="j&amp;s-soft is a gold sponsor"
+            class="sapUiTinyMargin" />
+
+          <Image src="./img/amista.png"
+            alt="amista is a gold sponsor"
+            class="sapUiTinyMargin" />
+          <Image src="./img/syskoplan-reply.jpg"
+            alt="Syskoplan Reply is a gold sponsor"
+            class="sapUiTinyMargin" />
+          <Image src="./img/cbs.png"
+            alt="cbs is a gold sponsor"
+            class="sapUiTinyMargin" />
+        </HBox>
       </VBox>
 
       <Panel expandable="true"
