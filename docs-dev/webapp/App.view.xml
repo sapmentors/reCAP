@@ -123,10 +123,10 @@
           justifyContent="Center"
           class="sapUiSmallMarginBottom"
           wrap="Wrap">
-          <Image src="./img/rizing-wipro.png"
+          <Image src="img/rizing-wipro-logo.png"
             alt="Rizing is a platinum sponsor"
             class="sapUiMediumMargin" />
-          <Image src="./img/aarini.png"
+          <Image src="img/aarini-logo.png"
             alt="aarini is a platinum sponsor"
             class="sapUiMediumMargin" />
         </HBox>
@@ -139,17 +139,17 @@
           <layoutData>
             <l:GridData span="L2 M3 S12" />
           </layoutData>
-          <Image src="./img/js-soft.png"
-            alt="j&amp;s-soft is a gold sponsor"
+          <Image src="img/js-soft.png"
+            alt="js-soft is a gold sponsor"
             class="sapUiTinyMargin" />
 
-          <Image src="./img/amista.png"
+          <Image src="img/amista-logo.png"
             alt="amista is a gold sponsor"
             class="sapUiTinyMargin" />
-          <Image src="./img/syskoplan-reply.jpg"
+          <Image src="img/syskoplan-reply-logo.jpg"
             alt="Syskoplan Reply is a gold sponsor"
             class="sapUiTinyMargin" />
-          <Image src="./img/cbs.png"
+          <Image src="img/cbs-logo.png"
             alt="cbs is a gold sponsor"
             class="sapUiTinyMargin" />
         </HBox>
