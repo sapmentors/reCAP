@@ -25,6 +25,7 @@ jobs:
           cd docs-dev
           npm i
           npm run build
+          ls -alR ../docs
         env:
           CI: true
       - name: deploy
