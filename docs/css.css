@@ -2,7 +2,9 @@ body {
     background-color: #1c2327;
     font-family: sans-serif !important;
 }
-
+dd {
+    margin-bottom: 1rem;
+}
 .sapUiGlobalBackgroundColor,
 .sapMShellGlobalInnerBackground,
 .sapMPageBgStandard {
