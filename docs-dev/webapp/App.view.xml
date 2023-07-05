@@ -9,7 +9,6 @@
   xmlns:unified="sap.ui.unified"
   width="100%">
   <App>
-
     <Page showHeader="false">
 
       <f:Bar>
