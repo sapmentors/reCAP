@@ -203,7 +203,8 @@ sap.ui.define(
                         <dd><a href="https://teams.microsoft.com/l/meetup-join/19%3ameeting_NjA2MjgwYTYtNmI4MC00Yzg3LTkwNjItMTM1NGQwZGU3ODUz%40thread.v2/0?context=%7b%22Tid%22%3a%2242f7676c-f455-423c-82f6-dc2d99791af7%22%2c%22Oid%22%3a%223d4d6882-45a1-41ce-9418-35a35744348f%22%7d">MS Teams</a></dd>
                         <dt>Side Track 2 - W2</dt>
                         <dd><a href="https://teams.microsoft.com/l/meetup-join/19%3ameeting_Y2U0NDhhY2UtZDBkMi00ZGRiLWI2OGEtZjAwOTYzZjZhMjdj%40thread.v2/0?context=%7b%22Tid%22%3a%2242f7676c-f455-423c-82f6-dc2d99791af7%22%2c%22Oid%22%3a%223d4d6882-45a1-41ce-9418-35a35744348f%22%7d">MS Teams</a></dd>
-                        </dl>`,
+                        </dl>
+                        <p>🏟️ <strong>Event App</strong> 📱 <a href="https://recap2023.cfapps.eu10.hana.ondemand.com/">https://recap2023.cfapps.eu10.hana.ondemand.com/</a> (<em>any</em> SAP User works)</p>`,
                     tickets: `<p>🔥 Get'em while they're hot! 🔥<br> &rarr; <a href="https://ti.to/ui5con-and-recap/ui5con-and-recap-2023">https://ti.to/ui5con-and-recap/ui5con-and-recap-2023</a></p>`,
                     sponsors: `
                     <p class="copyt">these packages are available:</p>
