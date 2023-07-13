@@ -19,6 +19,16 @@ dd {
 .t-small {
     font-size: small !important
 }
+.t-big {
+    color: whitesmoke !important;
+    font-size: 6rem !important;
+    font-weight: bold;
+}
+.center {
+    text-align: center !important;
+}
+
+
 
 /* .cfp > a {
     border: 0.1rem solid #a8a8a8;
@@ -83,6 +93,7 @@ li {
     .sapMLnk,
     .cfp,
     .t,
+    .t-big,
     .copyt,
     .motto,
     /* .where, */
@@ -99,6 +110,7 @@ li {
     .sapMLnk,
     .cfp,
     .t,
+    .t-big,
     .copyt,
     .motto,
     /* .where, */
@@ -115,6 +127,7 @@ li {
     .sapMLnk,
     .cfp,
     .t,
+    .t-big,
     .copyt,
     .motto,
     /* .where, */
