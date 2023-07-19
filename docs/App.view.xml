@@ -23,20 +23,15 @@
             visible="{view>/landscape}" />
         </f:endContent>
       </f:Bar>
-
       <VBox alignItems="Center"
         class="sapUiResponsiveContentPadding">
-
         <Text text="Thank&#13;&#10;🤙&#13;&#10;you!"
           class="t-big sapUiLargeMarginTop"
           renderWhitespace="true"
           textAlign="Center" />
-
         <FormattedText htmlText="{/pics}"
           class="where" />
-
       </VBox>
-
     </Page>
   </App>
 </mvc:View>

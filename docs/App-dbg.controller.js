@@ -24,7 +24,8 @@ sap.ui.define(
                 URLListValidator.add("data")
                 const oModel = new JSONModel({
                     pics: `<p>📸&nbsp;&nbsp;<a href="https://photos.google.com/share/AF1QipOY4rVHUwVZCWE19QKJuCVJo1rc1MZ50DvFjSN5KYbDptsqkEUQcpL2JUeiABeQjQ?key=bjhGWXBFRVBzY2NnNGNfN2lKdlIyekFXQ2pZUDBB">Event Impressions</a></p>
-                    <p>🎦&nbsp;&nbsp;<a href="https://broadcast.sap.com/replay/23707_reCAP2023">AudiMax Track</a></p>`,
+                    <p>🎦&nbsp;&nbsp;<a href="https://broadcast.sap.com/replay/23707_reCAP2023">AudiMax Track</a></p>
+                    <p>🎦&nbsp;&nbsp;<a href="https://www.js-soft.com/recordings-of-recap-2023/">Side Tracks 1 + 2</a></p>`,
                 })
                 this.getView().setModel(oModel)
             },
