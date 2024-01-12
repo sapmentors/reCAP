@@ -3,6 +3,7 @@
   xmlns:f="sap.ui.webc.fiori"
   xmlns:fm="sap.ui.webc.main"
   xmlns:mvc="sap.ui.core.mvc"
+  xmlns:core="sap.ui.core"
   width="100%">
   <App>
     <Page showHeader="false">
@@ -10,27 +11,22 @@
       <f:Bar>
         <f:startContent>
           <fm:Title level="H4"
-            text="re>≡CAP 2023" />
+            text="re>≡CAP 2024" />
         </f:startContent>
         <f:middleContent>
           <Image src="./img/recap-2023-logo-small.png"
             height="80px" />
         </f:middleContent>
-        <f:endContent>
-          <fm:Title level="H5"
-            text="»back to back« edition"
-            class="what"
-            visible="{view>/landscape}" />
-        </f:endContent>
       </f:Bar>
       <VBox alignItems="Center"
         class="sapUiResponsiveContentPadding">
-        <Text text="Thank&#13;&#10;🤙&#13;&#10;you!"
-          class="t-big sapUiLargeMarginTop"
-          renderWhitespace="true"
-          textAlign="Center" />
-        <FormattedText htmlText="{/pics}"
+
+        <core:HTML content="{/what}"
+          class="t-big sapUiLargeMarginTop" />
+
+        <FormattedText htmlText="{/where}"
           class="where" />
+
       </VBox>
     </Page>
   </App>
