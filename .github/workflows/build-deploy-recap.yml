@@ -20,20 +20,20 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - name: build re>≡CAP website
-        run: |
-          cd docs-dev
-          npm i
-          npm run build
-          ls -alR ../docs
-        env:
-          CI: true
+      # - name: build re>≡CAP website
+      #   run: |
+      #     cd docs-dev
+      #     npm i
+      #     npm run build
+      #     ls -alR ../docs
+      #   env:
+      #     CI: true
       - name: deploy
         uses: peaceiris/actions-gh-pages@v2
         env:
           ACTIONS_DEPLOY_KEY: ${{ secrets.actions_deploy_secret }}
           PUBLISH_BRANCH: published-page
-          PUBLISH_DIR: ./
+          PUBLISH_DIR: ./static
         with:
           commitMessage: "docs: re>≡CAP website"
           keepFiles: true
