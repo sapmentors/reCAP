@@ -1,1 +1,0 @@
-ace.define("ace/snippets/pig",["require","exports","module"],function(e,t,o){"use strict";t.snippetText="";t.scope="pig"});(function(){ace.require(["ace/snippets/pig"],function(e){if(typeof module=="object"&&typeof exports=="object"&&module){module.exports=e}})})();

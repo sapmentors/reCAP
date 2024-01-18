@@ -1,1 +1,0 @@
-define("ace/snippets/logtalk",["require","exports","module"],function(e,o,t){"use strict";o.snippetText=undefined;o.scope="logtalk"});(function(){window.require(["ace/snippets/logtalk"],function(e){if(typeof module=="object"&&typeof exports=="object"&&module){module.exports=e}})})();

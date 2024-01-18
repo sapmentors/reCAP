@@ -1,1 +1,0 @@
-ace.define("ace/snippets/mel",["require","exports","module"],function(e,t,o){"use strict";t.snippetText="";t.scope="mel"});(function(){ace.require(["ace/snippets/mel"],function(e){if(typeof module=="object"&&typeof exports=="object"&&module){module.exports=e}})})();

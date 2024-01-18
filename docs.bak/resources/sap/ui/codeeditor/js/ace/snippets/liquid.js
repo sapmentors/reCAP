@@ -1,1 +1,0 @@
-ace.define("ace/snippets/liquid",["require","exports","module"],function(e,i,t){"use strict";i.snippetText="";i.scope="liquid"});(function(){ace.require(["ace/snippets/liquid"],function(e){if(typeof module=="object"&&typeof exports=="object"&&module){module.exports=e}})})();
