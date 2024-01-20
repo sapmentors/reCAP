@@ -464,6 +464,23 @@ a:is(.active) {
   text-decoration-color: var(--text-color);
 }
 
+.recap-email-link {
+  display: inline-flex;
+  color: var(--brand-color);
+}
+
+.recap-email-link:is(:hover) {
+  color: var(--brand-color-alt);
+  text-decoration-color: var(--brand-color-alt);
+}
+
+.recap-email-link:is(:focus, .active, .active:hover) {
+  outline: none;
+  color: var(--brand-color-alt);
+  text-decoration: underline;
+  text-decoration-color: var(--brand-color-alt);
+}
+
 .recap-btn {
   display: inline-block;
   padding-block: 1.125rem;
