@@ -430,6 +430,9 @@ h5 {
 
 ul {
   font-size: var(--type-0);
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 /* ---------------------- Interactive Elements ---------------------------  */
