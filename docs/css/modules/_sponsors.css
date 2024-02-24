@@ -147,6 +147,7 @@
   fill: var(--text-color);
   width: 14rem;
   max-height: 8rem;
+  min-height: 6rem;
 }
 
 .recap-sponsors-logo:is(picture) {
