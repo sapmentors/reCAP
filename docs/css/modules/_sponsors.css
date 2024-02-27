@@ -103,7 +103,7 @@
 }
 
 .recap-sponsors-item {
-  margin-block: 2rem 1rem;
+  margin-block: 2rem 4rem;
   gap: 3rem;
   display: flex;
   flex-direction: column;
@@ -145,9 +145,12 @@
 .recap-sponsors-logo {
   display: block;
   fill: var(--text-color);
+  color: var(--logo-color);
   width: 14rem;
   max-height: 8rem;
   min-height: 7rem;
+  display: flex;
+  align-items: center;
 }
 
 .recap-sponsors-logo:is(picture) {
