@@ -154,6 +154,17 @@
   margin-block: 2rem;
 }
 
+svg.agilita {
+  fill: #272525;
+}
+
+@media (prefers-color-scheme: dark) {
+
+  svg.agilita {
+    fill: var(--logo-color);
+  }
+}
+
 .recap-sponsors-badge {
   text-transform: uppercase;
   font-weight: 600;
