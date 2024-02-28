@@ -157,6 +157,11 @@
   margin-block: 2rem;
 }
 
+picture img {
+  max-width: 100%;
+  display: block;
+}
+
 svg.agilita {
   fill: #272525;
 }
