@@ -386,6 +386,11 @@ body {
   width: 1px;
 }
 
+#jssoft {
+  --js-color-1: #878887;
+  --js-color-2: #333366;
+}
+
 /* --------------------------- Typography ---------------------------  */
 h1 {
   font-size: var(--type-5);
@@ -752,5 +757,10 @@ footer a:is(:hover, :focus) svg {
   footer,
   footer a {
     color: var(--text-color);
+  }
+
+  #jssoft {
+    --js-color-1: var(--logo-color);
+    --js-color-2: var(--logo-color);
   }
 }
