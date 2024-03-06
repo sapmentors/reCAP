@@ -572,6 +572,15 @@ main {
   grid-template-columns: repeat(auto-fill, minmax(21rem, 1fr));
 }
 
+.recap-annonce {
+  font-size: var(--type-2);
+  font-weight: 900;
+  margin-block-start: 0;
+  background-image: linear-gradient(45deg, var(--brand-color-alt), var(--brand-color));
+  background-clip: text;
+  color: transparent;
+}
+
 @media only screen and (min-width: 768px) {
   .recap-wrap {
     padding-block: 6rem;
