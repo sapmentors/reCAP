@@ -166,9 +166,14 @@ svg.agilita {
   fill: #272525;
 }
 
+svg.asbrucon {
+  fill: #000;
+}
+
 @media (prefers-color-scheme: dark) {
 
-  svg.agilita {
+  svg.agilita,
+  svg.asbrucon {
     fill: var(--logo-color);
   }
 }
