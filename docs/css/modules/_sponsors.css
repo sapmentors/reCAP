@@ -1,105 +1,37 @@
-.recap-sponsors-table {
-  font-size: var(--type-0);
-  /* margin: auto; */
-  margin-block: 4rem;
+.recap-site-header.sponsors .recap-site-back {
+  gap: 0;
+  color: var(--brand-color-alt);
 }
 
-@media only screen and (max-width: 750px) {
-  .recap-sponsors-table {
-    font-size: .85rem;
-  }
+.recap-site-header.sponsors .recap-site-back:is(:focus) {
+  outline: none;
+  color: var(--brand-color);
+  text-decoration: underline;
 }
 
-.recap-sponsors-table tr {
+.recap-site-header.sponsors {
+  min-height: auto;
+  text-align: start;
+}
+
+.recap-site-header.sponsors .recap-wrap {
+  gap: 2rem;
+  display: flex;
+  flex-direction: row;
+  padding-block: 2rem 0;
+  justify-content: space-between;
+}
+
+.recap-site-header.sponsors .recap-wrap .recap-logo {
   height: 3rem;
 }
 
-.recap-sponsors-table thead th {
-  line-height: 1.75;
-}
-
-.recap-sponsors-sold {
-  position: relative;
-  color:rgba(255, 219, 207, .7);
-}
-
-.recap-sponsors-sold-badge {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  line-height: 2;
-  text-transform: uppercase;
-  background: rgba(255, 219, 207, .8);
-  backdrop-filter: blur(2px);
-  white-space: nowrap;
-  color: #5B1B00;
-  font-weight: 600;
-  transform: translate(-50%, -50%) rotate(-22.75deg);
-  padding: 0 10%;
-  --mask:
-    conic-gradient(from 45deg at left,#0000,#000 1deg 89deg,#0000 90deg) left/51% 10.00px repeat-y,
-    conic-gradient(from -135deg at right,#0000,#000 1deg 89deg,#0000 90deg) right/51% 10.00px repeat-y;
-  -webkit-mask: var(--mask);
-          mask: var(--mask);
-}
-
-.recap-sponsors-sold-badge:before,
-.recap-sponsors-sold-badge:after {
-  top: 0;
-  left: -10px;
-  content: "";
-  width: 10px;
-  height: 100%;
-  position: absolute;
-  background-color: rgba(255, 219, 207, .7);
-}
-
-.recap-sponsors-sold-badge:after {
-  left: auto;
-  right: -10px;
-  top: 0;
-  transform: scaleX(-1);
-}
-
-.recap-sponsors-table th:first-child {
-  text-align: left;
-  padding-inline-start: 0;
-}
-
-.recap-sponsors-table tbody th {
-  text-align: left;
-}
-
-.recap-sponsors-table th, .recap-sponsors-table td {
-  line-height: 1.5;
-}
-
-.recap-sponsors-table td {
-  text-align: center;
-
-}
-
-@media only screen and (min-width: 600px) {
-
-  .recap-sponsors-table th, .recap-sponsors-table td {
-    padding-block: .2rem;
-    padding-inline: .5rem;
-  }
-
-  .recap-sponsors-table td {
-    white-space: nowrap;
-  }
-}
-
-@media only screen and (min-width: 800px) {
-  .recap-sponsors-table th, .recap-sponsors-table td {
-    padding-block: .5rem;
-    padding-inline: 1rem;
-  }
+.recap-site-header.sponsors h1 {
+  font-size: var(--type-4);
 }
 
 .recap-sponsors-list {
-  margin-block: 6rem;
+  margin-block: 4rem 6rem;
 }
 
 .recap-sponsors-item {
@@ -198,5 +130,67 @@ svg.asbrucon {
 
  .recap-sponsors-container:first-child {
     align-items: flex-start;
+  }
+}
+
+.recap-sponsors-overview-list {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.recap-sponsors-overview-list a {
+  width: fit-content;
+}
+
+.recap-sponsors-overview-list li:first-child {
+  width: 100%;
+  text-align: center;
+
+  a {
+    margin: 0 auto;
+  }
+
+  .recap-sponsors-logo {
+    width: 10rem;
+  }
+}
+
+.recap-sponsors-overview-list .recap-sponsors-logo {
+  width: 8rem;
+  max-height: 4rem;
+  min-height: 4rem;
+}
+
+.recap-sponsors-overview-list .recap-sponsors-logo:is(picture) {
+    margin-block: 0;
+}
+
+.recap-sponsors-overview-info {
+  text-align: center;
+  margin-block-start: 3rem;
+}
+
+.recap-sponsors-overview-info p {
+  margin-block-end: 2rem;
+}
+
+@media only screen and (min-width: 900px) {
+  .recap-sponsors-overview-list {
+    gap: 4rem;
+  }
+
+  .recap-sponsors-overview-list .recap-sponsors-logo {
+    width: 12rem;
+    max-height: 6rem;
+    min-height: 6rem;
+  }
+
+  .recap-sponsors-overview-list li:first-child {
+    .recap-sponsors-logo {
+      width: 14rem;
+    }
   }
 }

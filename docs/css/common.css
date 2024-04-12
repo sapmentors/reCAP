@@ -8,6 +8,8 @@
   --sucess-color: #30914c;
   --logo-color: #000000;
   --code-connect-color: #3B4673;
+  --backdrop-color: rgba(0, 0, 0, 0.4);
+  --modala-shadow: .25rem .25rem 1.5rem rgba(0,0,0,.25);
 
   --type-0: clamp(1rem, 0.9286rem + 0.3571vw, 1.25rem);
   --type-1: clamp(1.2rem, 1.0964rem + 0.5179vw, 1.5625rem);
@@ -601,6 +603,7 @@ main {
   display: flex;
   align-items: center;
   flex-direction: column;
+  /* margin-block-start: 4rem; */
 }
 
 .recap-site-header .recap-container {
@@ -610,7 +613,12 @@ main {
 }
 
 .recap-site-header .recap-container b {
-    color: var(--brand-color);
+  color: var(--brand-color);
+}
+
+.recap-site-header .recap-container div {
+  gap: 2rem;
+  display: flex;
 }
 
 .recap-site-header p {
@@ -749,6 +757,8 @@ footer a:is(:hover, :focus) svg {
     --text-color: #fff;
     --code-connect-color: var(--brand-color-alt);
     --logo-color: #fff;
+    --backdrop-color: rgba(36, 36, 36, 0.8);
+    --modala-shadow: .1rem .1rem 1rem var(--brand-color-alt);
   }
 
   .recap-site-header {
