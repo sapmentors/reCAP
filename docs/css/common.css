@@ -603,7 +603,6 @@ main {
   display: flex;
   align-items: center;
   flex-direction: column;
-  /* margin-block-start: 4rem; */
 }
 
 .recap-site-header .recap-container {
@@ -644,6 +643,43 @@ main {
 
 .recap-site-header .recap-logo {
   height: clamp(6rem, 15vw, 15rem)
+}
+
+.recap-agenda-annonce a {
+  font-weight: 600;
+  display: inline-flex;
+  color: var(--brand-color-alt);
+}
+
+.recap-agenda-annonce a:is(:hover, :focus) {
+  color: var(--brand-color);
+  outline: none;
+}
+
+.recap-sponsors-header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-block-start: 3rem;
+}
+
+.recap-sponsors-header-overview-list {
+  gap: 3rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.recap-sponsors-header-overview-list .recap-sponsors-logo {
+    width: 7rem;
+    max-height: 3rem;
+    min-height: 2.5rem;
+}
+
+.recap-sponsors-header-overview-list .recap-sponsors-logo:is(picture) {
+    margin-block-start: 1rem;
+    margin-block-end: 0;
 }
 
 @media only screen and (min-width: 768px) {
