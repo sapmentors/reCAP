@@ -8,6 +8,8 @@
   --sucess-color: #30914c;
   --logo-color: #000000;
   --code-connect-color: #3B4673;
+  --backdrop-color: rgba(0, 0, 0, 0.4);
+  --modala-shadow: .25rem .25rem 1.5rem rgba(0,0,0,.25);
 
   --type-0: clamp(1rem, 0.9286rem + 0.3571vw, 1.25rem);
   --type-1: clamp(1.2rem, 1.0964rem + 0.5179vw, 1.5625rem);
@@ -610,7 +612,12 @@ main {
 }
 
 .recap-site-header .recap-container b {
-    color: var(--brand-color);
+  color: var(--brand-color);
+}
+
+.recap-site-header .recap-container div {
+  gap: 2rem;
+  display: flex;
 }
 
 .recap-site-header p {
@@ -636,6 +643,43 @@ main {
 
 .recap-site-header .recap-logo {
   height: clamp(6rem, 15vw, 15rem)
+}
+
+.recap-agenda-annonce a {
+  font-weight: 600;
+  display: inline-flex;
+  color: var(--brand-color-alt);
+}
+
+.recap-agenda-annonce a:is(:hover, :focus) {
+  color: var(--brand-color);
+  outline: none;
+}
+
+.recap-sponsors-header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-block-start: 3rem;
+}
+
+.recap-sponsors-header-overview-list {
+  gap: 3rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.recap-sponsors-header-overview-list .recap-sponsors-logo {
+    width: 7rem;
+    max-height: 3rem;
+    min-height: 2.5rem;
+}
+
+.recap-sponsors-header-overview-list .recap-sponsors-logo:is(picture) {
+    margin-block-start: 1rem;
+    margin-block-end: 0;
 }
 
 @media only screen and (min-width: 768px) {
@@ -749,6 +793,8 @@ footer a:is(:hover, :focus) svg {
     --text-color: #fff;
     --code-connect-color: var(--brand-color-alt);
     --logo-color: #fff;
+    --backdrop-color: rgba(36, 36, 36, 0.8);
+    --modala-shadow: .1rem .1rem 1rem var(--brand-color-alt);
   }
 
   .recap-site-header {

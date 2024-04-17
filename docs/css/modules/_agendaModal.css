@@ -1,0 +1,137 @@
+[v-cloak] { display: none; }
+
+.recap-agenda-modal-backdrop {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  position: fixed;
+  transition: all 0.3s;
+  background-color: var(--backdrop-color);
+}
+
+.recap-agenda-modal-backdrop:focus {
+  outline: none;
+}
+
+.recap-agenda-modal {
+  top: 50%;
+  left: 50%;
+  width: 75vw;
+  max-height: 90vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  max-width: 1100px;
+  position: absolute;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  transform: translate(-50%, -50%);
+  background: var(--white);
+  backdrop-filter: blur(2px);
+  border-radius: 1.25rem;
+  box-shadow: var(--modala-shadow);
+}
+
+.recap-agenda-modal::-webkit-scrollbar {
+  display: none;
+}
+
+.recap-agenda-modal:focus {
+  outline: none;
+}
+
+.recap-agenda-modal button {
+  top: 0;
+  left: 100%;
+  display: flex;
+  width: 3rem;
+  cursor: pointer;
+  position: sticky;
+  height: 3rem;
+  background: none;
+  font-size: 1.5rem;
+  min-width: 3rem;
+  max-width: 3rem;
+  font-weight: 400;
+  align-items: center;
+  min-height: 3rem;
+  max-height: 3rem;
+  border-radius: 0.25rem;
+  justify-content: center;
+  transition: all .3s ease;
+  color: var(--brand-color-alt);
+  border: none;
+}
+
+.recap-agenda-modal article {
+  text-align: center;
+}
+
+.recap-agenda-modal button:hover {
+  font-weight: 700;
+  color: var(--brand-color);
+}
+
+.recap-agenda-modal button:focus {
+  outline: none;
+  color: var(--brand-color);
+  transform: scale(1.2);
+}
+
+.recap-agenda-modal-content-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  margin-block-end: 3rem;
+  padding-inline: 3rem;
+} 
+
+.recap-agenda-modal-content-container header h3 {
+  margin-block: 0;
+}
+
+.recap-agenda-modal-content-container header p {
+  margin-block: 0;
+}
+
+.recap-agenda-modal-speaker-image {
+  width: clamp(3rem, 20vw , 20rem);
+  height: clamp(3rem, 20vw , 20rem);
+  border-radius: 50rem;
+}
+
+.recap-agenda-modal-social-links {
+  gap: 2rem;
+  display: flex;
+  justify-content: center;
+  margin-block-start: 3rem;
+}
+
+.recap-agenda-modal-social-links a svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.recap-agenda-modal-social-links a:is(:hover) {
+  width: 2rem;
+  height: 2rem;
+  color: var(--brand-color);
+}
+
+@media only screen and (min-width: 1100px) {
+  .recap-agenda-modal article {
+    text-align: start;
+  }
+
+  .recap-agenda-modal-content-container {
+    flex-direction: row;
+  }
+
+  .recap-agenda-modal-social-links {
+    gap: 1rem;
+    justify-content: flex-start;
+    margin-block-start: 1rem;
+  }
+}
