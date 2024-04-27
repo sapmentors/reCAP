@@ -1,0 +1,39 @@
+.recap-faq ul {
+    list-style: none;
+    text-align: start;
+}
+
+.recap-faq li {
+   border-bottom: 0.0625rem solid var(--brand-color);
+}
+
+.recap-faq h3 {
+   font-size: var(--type-1);
+   padding-block: 0;
+   margin-block: 1.5rem;
+   cursor: pointer;
+}
+
+.recap-faq h3.active {
+   color: var(--brand-color);
+}
+
+.recap-faq h3:is(:hover) {
+   color: var(--brand-color);
+}
+
+.recap-faq p {
+   margin-block-start: 0.5rem;
+   margin-block-end: 1rem;
+   display: none;
+}
+
+.recap-faq h3.active + p {
+   display: block;
+}
+
+@media only screen and (min-width: 768px) {
+  .recap-faq ul {
+     text-align: start;
+   }
+}
