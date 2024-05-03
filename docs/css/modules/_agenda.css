@@ -82,7 +82,7 @@
 }
 
 .recap-agenda-slot-info {
-    gap: 1.5rem;
+    gap: 0.5rem;
     display: flex;
     font-weight: 600;
     margin-block-end: 1rem;
@@ -90,6 +90,7 @@
 
 .recap-agenda-slot-info span {
     text-transform: uppercase;
+    font-size: 0.9rem;
 }
 
 .recap-agenda-slot-talk h3 {
@@ -184,6 +185,14 @@
 }
 
 @media only screen and (min-width: 768px) {
+    .recap-agenda-slot-info {
+        gap: 1.5rem;
+    }
+
+    .recap-agenda-slot-info span {
+        font-size: var(--type-0);
+    }
+
     .recap-agenda-slot-container {
         gap: 2rem;
         height: 100%;
