@@ -1,0 +1,51 @@
+.recap-faq ul {
+    list-style: none;
+    text-align: start;
+}
+
+.recap-faq li {
+   border-bottom: 0.0625rem solid var(--brand-color);
+}
+
+.recap-faq h3 {
+   font-size: var(--type-1);
+   padding-block: 0;
+   margin-block: 1.5rem;
+   cursor: pointer;
+}
+
+.recap-faq h3.active {
+   color: var(--brand-color);
+}
+
+.recap-faq h3:is(:hover) {
+   color: var(--brand-color);
+}
+
+.recap-faq p {
+   margin-block-start: 0.5rem;
+   margin-block-end: 1rem;
+   display: none;
+}
+
+.recap-faq h3.active + p {
+   display: block;
+}
+
+.recap-faq a {
+   display: inline;
+   text-decoration: underline;
+   text-decoration-color: var(--text-color);
+   text-decoration-thickness: 0.125rem;
+   text-underline-offset: 0.25rem;
+}
+
+.recap-faq a:is(:hover) {
+  text-decoration-color: var(--brand-color);
+}
+
+@media only screen and (min-width: 768px) {
+  .recap-faq ul {
+     text-align: start;
+   }
+}

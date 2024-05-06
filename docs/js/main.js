@@ -23,6 +23,10 @@ var main = new Vue({
       });
   },
   methods: {
+    toggleAnswer(event) {
+      console.log(event.target);
+      event.target.classList.toggle("active");
+    },
     onFilterChange($event) {
       this.filter = $event.target.value;
       this.formattedLineup = this.formatLineup();
