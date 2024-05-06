@@ -48,7 +48,7 @@
           technical concepts, current projects, ideas for the future, and way more…
         </p>
 
-        <p class="recap-agenda-annonce">Check our <a href="#agenda">agenda</a>  for more details!</p>
+        <p class="recap-agenda-annonce">Check our <a href="#agenda">agenda</a> and <a href="#recap-faq">FAQ</a> for more details!</p>
 
         <div class="recap-sponsors-header">
           <ul class="recap-sponsors-header-overview-list">
@@ -191,34 +191,50 @@
       </div>
     </section>
 
-    <!-- <section class="recap-faq">
+    <section id="recap-faq" class="recap-faq">
       <div class="recap-wrap">
         <h2>FAQ</h2>
         <ul>
+         
           <li>
-            <h3 @click="toggleAnswer($event)">Frequently Asked Question?</h3>
-            <p>Answer. Donec vitae tellus risus. Aenean sed fermentum risus. Phasellus venenatis
-              ultricies dignissim. Nunc ante lectus, accumsan non porta at. Donec vitae tellus risus. Aenean sed
-              fermentum risus. Phasellus venenatis ultricies dignissim.</p>
+            <h3 @click="toggleAnswer($event)">How big is the event?</h3>
+            <p>There will be ~400 people on site in St. Leon-Rot. The number of people attending online is hard to predict.</p>
           </li>
 
           <li>
-            <h3 @click="toggleAnswer($event)">Frequently Asked Question?</h3>
-            <p>Answer. Donec vitae tellus risus. Aenean sed fermentum risus. Phasellus venenatis
-              ultricies dignissim. Nunc ante lectus, accumsan non porta at. Donec vitae tellus risus. Aenean sed
-              fermentum risus. Phasellus venenatis ultricies dignissim.</p>
+            <h3 @click="toggleAnswer($event)">Is there a conference app?</h3>
+            <p>Yes: <a href="https://recap2024.cfapps.eu10.hana.ondemand.com">https://recap2024.cfapps.eu10.hana.ondemand.com</a> (any SAP-user works).</p>
           </li>
 
           <li>
-            <h3 @click="toggleAnswer($event)">Frequently Asked Question?</h3>
-            <p>Answer. Donec vitae tellus risus. Aenean sed fermentum risus. Phasellus venenatis
-              ultricies dignissim. Nunc ante lectus, accumsan non porta at. Donec vitae tellus risus. Aenean sed
-              fermentum risus. Phasellus venenatis ultricies dignissim.</p>
+            <h3 @click="toggleAnswer($event)">Livestreams: do I need to register?</h3>
+            <p>No 😁. All streams will be publicly accessible. We'll put up the URLs everywhere (including this site) as soon as
+              the streams are live.</p>
           </li>
 
+          <li>
+            <h3 @click="toggleAnswer($event)">Will there be food and drinks on-site?</h3>
+            <p>Yes 😋. And plenty, including coffee and vegetarian options. All free. Also for the evening event.<br>
+            In case you have special dietary requirements (such as gluten- or lactose intolerance), let us know <a href="mailto:recap.conf@gmail.com">via e-mail</a> and we'll work something out.</p>
+          </li>
+
+          <li>
+            <h3 @click="toggleAnswer($event)">WLAN on-site?</h3>
+            <p>Yes. SSID and access code(s) will be provided upon check-in and in the conference app.</p>
+          </li>
+
+          <li>
+            <h3 @click="toggleAnswer($event)">I'm off after the event. Any place to park my bags/luggage?</h3>
+            <p>Yes. There'll be a locked room available to park bags/luggage in. Just ask at the registration desk.</p>
+          </li>
+
+          <li>
+            <h3 @click="toggleAnswer($event)">Is there a dress code?</h3>
+            <p>Please. No. You wear what you're comfy an. So will the org team.</p>
+          </li>
         </ul>
       </div>
-    </section> -->
+    </section> 
 
     <section id="agenda" ref="agenda" v-if="this.formattedLineup">
       <div class="recap-wrap">
