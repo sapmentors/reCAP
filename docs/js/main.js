@@ -277,6 +277,10 @@ var main = new Vue({
           return "talk";
         } else if (value.startsWith("workshop")) {
           return "workshop";
+        } else if (value.startsWith("yoga")) {
+          return "yoga";
+        } else if (value.startsWith("lunch")) {
+          return "dining";
         } else {
           return value;
         }
