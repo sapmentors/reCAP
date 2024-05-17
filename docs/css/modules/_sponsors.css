@@ -145,17 +145,9 @@ svg.asbrucon {
   width: fit-content;
 }
 
-.recap-sponsors-overview-list li:first-child {
-  width: 100%;
-  text-align: center;
-
-  a {
-    margin: 0 auto;
-  }
-
-  .recap-sponsors-logo {
-    width: 10rem;
-  }
+.recap-sponsors-overview-list li:nth-child(2)::after{
+    content: "\a";
+    white-space: pre;
 }
 
 .recap-sponsors-overview-list .recap-sponsors-logo {
@@ -177,6 +169,16 @@ svg.asbrucon {
   margin-block-end: 2rem;
 }
 
+.recap-wrap.sponsors {
+  text-align: center;
+}
+
+.recap-wrap.sponsors .recap-sponsors-badge {
+  display: block;
+  margin-inline: auto;
+  margin-block: 2rem;
+}
+
 @media only screen and (min-width: 900px) {
   .recap-sponsors-overview-list {
     gap: 4rem;
@@ -186,11 +188,5 @@ svg.asbrucon {
     width: 12rem;
     max-height: 6rem;
     min-height: 6rem;
-  }
-
-  .recap-sponsors-overview-list li:first-child {
-    .recap-sponsors-logo {
-      width: 14rem;
-    }
   }
 }

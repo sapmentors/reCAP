@@ -97,11 +97,11 @@ var main = new Vue({
         };
       });
 
-      const sortedScheduleTemp = tempLineUp.sort((a, b) =>
-        luxon.DateTime.fromISO(a.startTime) >
-        luxon.DateTime.fromISO(b.startTime)
-          ? 1
-          : -1
+      const sortedScheduleTemp = tempLineUp.sort(
+        (a, b) =>
+          luxon.DateTime.fromISO(a.startTime) -
+            luxon.DateTime.fromISO(b.startTime) ||
+          a.location.localeCompare(b.location)
       );
 
       const sortedSchedule = sortedScheduleTemp.filter(
