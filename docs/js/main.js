@@ -279,7 +279,7 @@ var main = new Vue({
           return "workshop";
         } else if (value.startsWith("yoga")) {
           return "yoga";
-        } else if (value.startsWith("lunch")) {
+        } else if (value.startsWith("lunch") || value.startsWith("food") ) {
           return "dining";
         } else {
           return value;
