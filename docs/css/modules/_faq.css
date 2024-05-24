@@ -40,6 +40,23 @@
    text-underline-offset: 0.25rem;
 }
 
+.recap-faq .livestream-link {
+   text-decoration: none;
+   margin-inline-end: 1.5rem;
+}
+ 
+.livestream-link {
+  font-weight: 600;
+  display: inline-flex;
+  color: var(--brand-color-alt);
+}
+
+.livestream-link:is(:hover, :focus) {
+  color: var(--brand-color);
+  outline: none;
+}
+
+
 .recap-faq a:is(:hover) {
   text-decoration-color: var(--brand-color);
 }
