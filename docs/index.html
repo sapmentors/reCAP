@@ -50,6 +50,20 @@
 
         <p class="recap-agenda-annonce">Check our <a href="#agenda">agenda</a>, <a href="#recap-faq">FAQ</a> and <a href="https://recap2024.cfapps.eu10.hana.ondemand.com" target="_blank" title="conrefence app, click to open on a new page">app</a> for more details!</p>
 
+        <p>
+          Can't join us in person? No problem! Watch the conference online via our livestreams. Tune in and stay connected from
+          anywhere!
+        </p>
+
+        <div class="recap-agenda-annonce">
+          <a href="https://broadcast.sap.com/go/reCAP" target="_blank"
+            title="link to the broadcast of main track in Audimax">Main Track - Audimax</a>
+        
+          <a href="https://teams.microsoft.com/l/meetup-join/19%3ameeting_MDIxNmRhYWQtZjFmMS00ZTkxLTgwNzMtYjZmNjY4YzBmMjkz%40thread.v2/0?context=%7b%22Tid%22%3a%2242f7676c-f455-423c-82f6-dc2d99791af7%22%2c%22Oid%22%3a%223d4d6882-45a1-41ce-9418-35a35744348f%22%7d"
+           target="_blank"
+           title="link to the broadcast of side track in W1/W2">Side Track - W1/W2</a>
+        </div>
+
         <div class="recap-sponsors-header">
           <ul class="recap-sponsors-header-overview-list">
             <li>
@@ -208,8 +222,16 @@
 
           <li>
             <h3 @click="toggleAnswer($event)">Livestreams: do I need to register?</h3>
-            <p>No 😁. All streams will be publicly accessible. We'll put up the URLs everywhere (including this site) as soon as
-              the streams are live.</p>
+            <p>No 😁. All streams will be publicly accessible. <br><br>
+              <a class="livestream-link" href="https://broadcast.sap.com/go/reCAP" target="_blank"
+               title="link to the broadcast of main track in Audimax">Main Track - Audimax</a>
+            
+              <a
+               class="livestream-link"
+               href="https://teams.microsoft.com/l/meetup-join/19%3ameeting_MDIxNmRhYWQtZjFmMS00ZTkxLTgwNzMtYjZmNjY4YzBmMjkz%40thread.v2/0?context=%7b%22Tid%22%3a%2242f7676c-f455-423c-82f6-dc2d99791af7%22%2c%22Oid%22%3a%223d4d6882-45a1-41ce-9418-35a35744348f%22%7d"
+               target="_blank"
+               title="link to the broadcast of side track in W1/W2">Side Track - W1/W2</a>
+            </p>
           </li>
 
           <li>
@@ -250,6 +272,15 @@
         <h2>Agenda</h2>
         <!-- <pre>{{this.formattedLineup}}</pre> -->
 
+        <div class="recap-agenda-broadcast">
+          <a href="https://broadcast.sap.com/go/reCAP" target="_blank"
+             title="link to the broadcast of main track in Audimax">Livestream - Audimax</a>
+        
+          <a href="https://teams.microsoft.com/l/meetup-join/19%3ameeting_MDIxNmRhYWQtZjFmMS00ZTkxLTgwNzMtYjZmNjY4YzBmMjkz%40thread.v2/0?context=%7b%22Tid%22%3a%2242f7676c-f455-423c-82f6-dc2d99791af7%22%2c%22Oid%22%3a%223d4d6882-45a1-41ce-9418-35a35744348f%22%7d"
+             target="_blank"
+             title="link to the broadcast of side track in W1/W2">Livestream - W1/W2</a>
+        </div>
+        
         <div class="recap-agenda-filter">
           <div class="recap-agenda-filter-container">
             <fieldset>
@@ -317,6 +348,8 @@
             </div>
           </fieldset>
         </div>
+
+        
 
         <ol class="recap-agenda">
           <li class="recap-agenda-slot" v-for="event in this.formattedLineup" :key="event.id" v-cloak>

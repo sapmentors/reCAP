@@ -184,6 +184,24 @@
     outline-color: var(--brand-color-alt);
 }
 
+.recap-agenda-broadcast {
+    gap: 2rem;
+    display: flex;
+    margin-block: 2rem;
+}
+
+.recap-agenda-broadcast a {
+  font-weight: 600;
+  display: inline-flex;
+  font-size: var(--type-1);
+  color: var(--brand-color-alt);
+}
+
+.recap-agenda-broadcast a:is(:hover, :focus) {
+  color: var(--brand-color);
+  outline: none;
+}
+
 @media only screen and (min-width: 768px) {
     .recap-agenda-slot-info {
         gap: 1.5rem;
