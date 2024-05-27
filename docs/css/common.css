@@ -682,6 +682,20 @@ main {
     margin-block-end: 0;
 }
 
+.recap-live {
+  display: flex;
+  line-height: 1;
+  color: var(--brand-color);
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 900;
+  text-align: center;
+  background-image: linear-gradient(35deg, var(--brand-color), var(--brand-color-alt));
+  background-clip: text;
+  color: transparent;
+  margin-block: 1rem 2rem;
+}
+
+
 @media only screen and (min-width: 768px) {
   .recap-site-header .recap-wrap {
     flex-direction: row-reverse;

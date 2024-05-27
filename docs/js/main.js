@@ -1,5 +1,56 @@
 'use strict';
 
+var header = new Vue({
+  el: "#header",
+  data() {
+    return {
+      showLive: false,
+    };
+  },
+  mounted() {
+    this.updateLiveSession();
+    
+    let interval2;
+    let timeNow = new Date().toISOString();
+    const confStartTime = new Date(
+      "2024-06-04T00:00:00.000+02:00"
+    ).toISOString();
+
+    const confEndTime = new Date("2024-06-04T18:00:00.000+02:00").toISOString();
+
+    if (timeNow >= confStartTime && timeNow <= confEndTime) {
+      interval2 = setInterval(() => {
+        timeNow = new Date().toISOString();
+        if (timeNow > confEndTime) {
+          clearInterval(interval2);
+          return;
+        }
+        this.updateLiveSession();
+      }, 30000);
+    }
+
+  },
+  methods: {
+    updateLiveSession() {
+      let timeNow = new Date().toISOString();
+
+      const confStartTime = new Date(
+        "2024-06-04T09:00:00.000+02:00"
+      ).toISOString();
+      
+      const confEndTime = new Date(
+        "2024-06-04T18:00:00.000+02:00"
+      ).toISOString();
+
+      if (timeNow > confStartTime && timeNow <= confEndTime) {
+        this.showLive = true;
+      } else {
+        this.showLive = false;
+      }
+    },
+  },
+});
+
 var main = new Vue({
   el: "#main",
   data() {
@@ -21,6 +72,31 @@ var main = new Vue({
         this.lineup = response.data;
         this.formattedLineup = this.formatLineup();
       });
+
+    this.updateLiveSession();
+    
+    let interval;
+    
+    let timeNow = new Date().toISOString();
+    
+    const startCounterTime = new Date(
+      "2024-06-04T00:00:00.000+02:00"
+    ).toISOString();
+    
+    const endCounterTime = new Date(
+      "2024-06-04T18:10:00.000+02:00"
+    ).toISOString();
+
+    if (timeNow > startCounterTime && timeNow <= endCounterTime) {
+      interval = setInterval(() => {
+        timeNow = new Date().toISOString();
+        if (timeNow > endCounterTime) {
+          clearInterval(interval);
+          return;
+        }
+        this.updateLiveSession();
+      }, 30000);
+    }
   },
   methods: {
     toggleAnswer(event) {
@@ -240,6 +316,19 @@ var main = new Vue({
         return "https://bsky.app/profile/" + handle.replace("@", "");
       }
     },
+    updateLiveSession() {
+      return this.formattedLineup.map((session) => {
+        let timeNow = new Date().toISOString();
+        let sessionTimeStart = new Date(session.startTime).toISOString();
+        let sessionTimeEnd = new Date(session.endTime).toISOString();
+
+        if (timeNow >= sessionTimeStart && timeNow < sessionTimeEnd) {
+          session.liveNow = true;
+        } else {
+          session.liveNow = false;
+        }
+      });
+    },
   },
   filters: {
     trimTime: function (value) {
@@ -265,7 +354,7 @@ var main = new Vue({
         } else if (value.startsWith("w1") || value.startsWith("w2")) {
           return "Room W1 | W2";
         } else if (value.startsWith("w3")) {
-          return "Room W3"
+          return "Room W3";
         } else {
           return value;
         }
@@ -279,7 +368,7 @@ var main = new Vue({
           return "workshop";
         } else if (value.startsWith("yoga")) {
           return "yoga";
-        } else if (value.startsWith("lunch") || value.startsWith("food") ) {
+        } else if (value.startsWith("lunch") || value.startsWith("food")) {
           return "dining";
         } else {
           return value;
