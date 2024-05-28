@@ -202,6 +202,42 @@
   outline: none;
 }
 
+.recap-agenda-slot-live {
+    font-weight: 600;
+    display: block;
+    margin-block-end: 1rem;
+    color: var(--brand-color-alt);
+}
+
+.recap-agenda-slot-live {
+    -webkit-animation: color_change 1s infinite alternate;
+    -moz-animation: color_change 1s infinite alternate;
+    -ms-animation: color_change 1s infinite alternate;
+    -o-animation: color_change 1s infinite alternate;
+    animation: color_change 1s infinite alternate;
+}
+
+@-webkit-keyframes color_change {
+    from { color: var(--brand-color-alt); }
+    to { color: var(--brand-color); }
+}
+@-moz-keyframes color_change {
+    from { color: var(--brand-color-alt); }
+    to { color: var(--brand-color); }
+}
+@-ms-keyframes color_change {
+    from { color: var(--brand-color-alt); }
+    to { color: var(--brand-color); }
+}
+@-o-keyframes color_change {
+    from { color: var(--brand-color-alt); }
+    to { color: var(--brand-color); }
+}
+@keyframes color_change {
+    from { color: var(--brand-color-alt); }
+    to { color: var(--brand-color); }
+}
+
 @media only screen and (min-width: 768px) {
     .recap-agenda-slot-info {
         gap: 1.5rem;

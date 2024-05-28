@@ -50,7 +50,8 @@
 
         <p class="recap-agenda-annonce">Check our <a href="#agenda">agenda</a>, <a href="#recap-faq">FAQ</a> and <a href="https://recap2024.cfapps.eu10.hana.ondemand.com" target="_blank" title="conrefence app, click to open on a new page">app</a> for more details!</p>
 
-        <p>
+        <div class="recap-live" v-if="showLive">WE ARE LIVE</div>
+        <p v-else>
           Can't join us in person? No problem! Watch the conference online via our livestreams. Tune in and stay connected from
           anywhere!
         </p>
@@ -353,12 +354,15 @@
           </fieldset>
         </div>
 
-        
-
         <ol class="recap-agenda">
           <li class="recap-agenda-slot" v-for="event in this.formattedLineup" :key="event.id" v-cloak>
             <div class="recap-agenda-slot-container">
               <div class="recap-agenda-slot-talk">
+                <span 
+                  class="recap-agenda-slot-live" 
+                  v-if="event.liveNow && (event.location.toLowerCase() === 'audimax' || event.location.toLowerCase() === 'w1')">
+                  LIVE NOW
+                </span>
                 <div class="recap-agenda-slot-info">
                   <span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
