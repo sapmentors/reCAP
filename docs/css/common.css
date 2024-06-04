@@ -696,6 +696,7 @@ main {
 }
 
 .recap-btn.secondary {
+  color: var(--text-color);
   margin-block: 2rem;
   background: transparent;
   border: 2px solid var(--brand-color-alt);
