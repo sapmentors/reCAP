@@ -695,6 +695,17 @@ main {
   margin-block: 1rem 2rem;
 }
 
+.recap-btn.secondary {
+  margin-block: 2rem;
+  background: transparent;
+  border: 2px solid var(--brand-color-alt);
+}
+
+.recap-btn.secondary:is(:hover,:focus) {
+  margin-block: 2rem;
+  background: transparent;
+  border-color: var(--brand-color);
+}
 
 @media only screen and (min-width: 768px) {
   .recap-site-header .recap-wrap {
