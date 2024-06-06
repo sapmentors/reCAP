@@ -1,56 +1,5 @@
 'use strict';
 
-var header = new Vue({
-  el: "#header",
-  data() {
-    return {
-      showLive: false,
-    };
-  },
-  mounted() {
-    this.updateLiveSession();
-    
-    let interval2;
-    let timeNow = new Date().toISOString();
-    const confStartTime = new Date(
-      "2024-06-04T00:00:00.000+02:00"
-    ).toISOString();
-
-    const confEndTime = new Date("2024-06-04T18:00:00.000+02:00").toISOString();
-
-    if (timeNow >= confStartTime && timeNow <= confEndTime) {
-      interval2 = setInterval(() => {
-        timeNow = new Date().toISOString();
-        if (timeNow > confEndTime) {
-          clearInterval(interval2);
-          return;
-        }
-        this.updateLiveSession();
-      }, 30000);
-    }
-
-  },
-  methods: {
-    updateLiveSession() {
-      let timeNow = new Date().toISOString();
-
-      const confStartTime = new Date(
-        "2024-06-04T09:00:00.000+02:00"
-      ).toISOString();
-      
-      const confEndTime = new Date(
-        "2024-06-04T18:00:00.000+02:00"
-      ).toISOString();
-
-      if (timeNow > confStartTime && timeNow <= confEndTime) {
-        this.showLive = true;
-      } else {
-        this.showLive = false;
-      }
-    },
-  },
-});
-
 var main = new Vue({
   el: "#main",
   data() {
