@@ -495,8 +495,8 @@ a:is(.active) {
 
 .recap-btn {
   display: inline-block;
-  padding-block: 1.125rem;
-  padding-inline: 2.125rem;
+  padding-block: 0.75rem;
+  padding-inline: 1rem;
   background-image: linear-gradient(45deg, var(--brand-color-alt), var(--brand-color));
   border-radius: 0.6rem;
   color: var(--white);

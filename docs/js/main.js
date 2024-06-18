@@ -12,16 +12,12 @@ var main = new Vue({
       proposalLineup: [],
       formattedLineup: [],
       lastFocussedElementID: "",
+      agendaJson: agendaJson,
     };
   },
   mounted() {
-    axios
-      .get("https://recap.cfapps.eu12.hana.ondemand.com/api/proposal/lineup")
-      .then((response) => {
-        this.lineup = response.data;
-        this.formattedLineup = this.formatLineup();
-      });
-
+    this.lineup = agendaJson;
+    this.formattedLineup = this.formatLineup();
     this.updateLiveSession();
     
     let interval;

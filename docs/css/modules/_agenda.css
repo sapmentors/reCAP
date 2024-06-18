@@ -167,6 +167,7 @@
 .recap-agenda-slot-materials ul {
     gap: 1.5rem;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .recap-agenda-slot-materials a {
@@ -174,14 +175,15 @@
     text-decoration: none; 
     padding-block: 0.1rem;
     padding-inline: 0.25rem;
-}
-
-.recap-agenda-slot-materials a:is(:hover) {
     color: var(--brand-color-alt);
 }
 
+.recap-agenda-slot-materials a:is(:hover) {
+    color: var(--brand-color);
+}
+
 .recap-agenda-slot-materials a:is(:focus) {
-    outline-color: var(--brand-color-alt);
+    outline-color: var(--brand-color);
 }
 
 .recap-agenda-broadcast {
