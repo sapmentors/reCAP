@@ -1,5 +1,7 @@
 "use strict";
-Vue.component("calendar-link", {
+
+// Store component definition for Vue 3
+window.CalendarLinkComponent = {
   props: ["type", "link", "download", "cal"],
   template: `<li>
   <a class="agenda-slot-linkitem" :href="''+link" :class="{ 'is-calendar' : cal }" target="_blank" :download="download">
@@ -20,4 +22,4 @@ Vue.component("calendar-link", {
   <span><slot></slot></span></a>
 </li>
 `,
-});
+};

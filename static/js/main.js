@@ -1,7 +1,8 @@
 'use strict';
 
-var nav = new Vue({
-  el: "#nav",
+const { createApp } = Vue;
+
+const nav = createApp({
   data() {
     return {
       windowHeight: window.innerHeight,
@@ -22,7 +23,7 @@ var nav = new Vue({
       }
     },
   },
-  beforeDestroy() {
+  beforeUnmount() {
     window.removeEventListener("resize", this.onResize);
   },
   methods: {
@@ -33,18 +34,42 @@ var nav = new Vue({
   },
 });
 
+// Register components with nav app if they exist
+if (window.NavSectionComponent) {
+  nav.component('nav-section', window.NavSectionComponent);
+}
+if (window.NavSectionMobileComponent) {
+  nav.component('nav-section-mobile', window.NavSectionMobileComponent);
+}
+nav.mount("#nav");
 
-var header = new Vue({
-  el: '#header',
+
+const header = createApp({
   data() {
-    return {};
+    return {
+      showCalendars: false,
+    };
   },
   mounted() {},
-  methods: {}
+  methods: {
+    toggleCalendars() {
+      this.showCalendars = !this.showCalendars;
+      const container = document.getElementById("links-container");
+      if (container) {
+        if (this.showCalendars) {
+          container.classList.remove("links-container--hidden");
+          container.classList.add("links-container--visible");
+        } else {
+          container.classList.remove("links-container--visible");
+          container.classList.add("links-container--hidden");
+        }
+      }
+    },
+  },
 });
+header.mount("#header");
 
-var main = new Vue({
-  el: "#main",
+const main = createApp({
   data() {
     return {
       team: [
@@ -497,8 +522,6 @@ var main = new Vue({
 
       return decoded;
     },
-  },
-  filters: {
     formatLocation: function (value) {
       if (value) {
         if (value.toLowerCase().includes("audimax")) {
@@ -554,10 +577,21 @@ var main = new Vue({
   },
 });
 
-var footer = new Vue({
-  el: '#footer',
+// Register calendar-link component with main app if it exists
+if (window.CalendarLinkComponent) {
+  main.component('calendar-link', window.CalendarLinkComponent);
+}
+main.mount("#main");
+
+const footer = createApp({
   data() {
     return {};
   },
 });
+
+// Register footer-section component with footer app if it exists
+if (window.FooterSectionComponent) {
+  footer.component('footer-section', window.FooterSectionComponent);
+}
+footer.mount('#footer');
 

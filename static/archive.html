@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<title>re>≡CAP 2025</title>
+	<title>re>≡CAP 2026</title>
 	<meta name="description"
 		  content="reCAP: the (un)conference on the SAP Cloud Application Programming Model (CAP)” establishing the link between the CAP community and the CAP development team. It was initiated by our great CAP community and quickly grew to a global onsite and broadcasting event." />
 	<meta name="keywords"
@@ -12,12 +12,12 @@
 
 	<meta property="twitter:card" content="summary" />
 	<meta property="twitter:url" content="https://recap-conf.dev/" />
-	<meta property="twitter:title" content="reCAP (un)conference - July 8, 2025" />
+	<meta property="twitter:title" content="reCAP (un)conference - July 15th, 2026" />
 	<meta property="twitter:description"
 		  content="re>≡CAP: the (un)conference on the SAP Cloud Application Programming Model (CAP)” establishing the link between the CAP community and the CAP development team. It was initiated by our great CAP community and quickly grew to a global onsite and broadcasting event." />
 	<meta property="twitter:image" content="https://recap-conf.dev/images/share-recap.png" />
 
-	<meta property="og:title" content="reCAP (un)conference - July 8, 2025" />
+	<meta property="og:title" content="reCAP (un)conference - July 15th, 2026" />
 	<meta property="og:description"
 		  content="reCAP: the (un)conference on the SAP Cloud Application Programming Model (CAP)” establishing the link between the CAP community and the CAP development team. It was initiated by our great CAP community and quickly grew to a global onsite and broadcasting event." />
 	<meta property="og:image" content="https://recap-conf.dev/images/share-recap.png" />
@@ -28,20 +28,20 @@
 	<link rel="stylesheet" href="./css/common.css" />
 	<link rel="stylesheet" href="./css/modules.css" />
 
-	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+	<script src="https://unpkg.com/vue@3"></script>
 	<script src="https://js.tito.io/v2/with/inline" async></script>
 </head>
 <body>
 	<nav class="nav" aria-label="Main navigation" id="nav">
-		<nav-section></nav-section>
+		<nav-section v-if="!showMobileNav"></nav-section>
+		<nav-section-mobile v-else></nav-section-mobile>
 	</nav>
 
 	<main>
 		<section>
 			<div class="wrap">
 				<div class="box">
-					<h2 class="section-heading">
-						<span aria-hidden="true">&#8594;</span>
+					<h2 class="section-heading section-heading--cube-12">
 						<span>Event Archive</span>
 					</h2>
 
@@ -51,19 +51,54 @@
 					Whether you're on the hunt for the latest CAP features, expert-approved best practices, or in-depth technical talks that
 					make you feel like a genius, this archive has you covered. It's a buffet of knowledge from the brilliant reCAP community, and it's all-you-can-watch.
 					</p>
-
+					<br><br><br>
 					<h3>Past events:</h3>
 
 					<ol class="archive">
 						<li>
-							<a href="https://www.youtube.com/watch?v=WwFSGuKw0k4&list=PLHUs_FUbq4dWMOi7NVuPS0hGwT8-gCi9C&pp=gAQB" title="" hreflang="en" rel="external">
+							<a href="https://www.youtube.com/playlist?list=PLJDFklpD_2cT6lFS3kSq55bUmzTUi9bn7" title="" hreflang="en" target="_blank"
+							   rel="external">
+						
+								<img src="images/archive/reCAP_2025_Entrance.jpg" alt="reCAP 2025 entrance area">
+								reCAP 2025 (Yellow Room)
+								<small>Watch the playlist on YouTube</small>
+							</a>
+						</li>
+						<li>
+							<a href="https://www.youtube.com/playlist?list=PLJDFklpD_2cTjReIS8xQ2L0HnfjoxPUxd" title="" hreflang="en" target="_blank"  rel="external">
+						
+								<img src="images/archive/reCAP_2025_Inside.jpg" alt="reCAP 2025 hallway">
+								reCAP 2025 (Blue Room)
+								<small>Watch the playlist on YouTube</small>
+							</a>
+						</li>
+						<li>
+							<a href="https://photos.google.com/share/AF1QipNJWdmVLuXu09yCtmHLnoLlH7VCufMFqw6FpSBtuJifxkUb_sYnE9NUaoFPickRjg?key=ZXdVa0w3aVI4c3BWV0x0emJEQWlDMWY1TUtjcWdB" title="" hreflang="en"  target="_blank" rel="external">
+						
+								<img src="images/archive/reCAP_2025_Welcome.png" alt="reCAP 2025 branding image">
+								reCAP 2025 Event Photos
+								<small>View photo gallery</small>
+							</a>
+						</li>
+						<li>
+							<a href="https://www.youtube.com/playlist?list=PLJDFklpD_2cQtnAF22FKky5gmujxDd4AY" title="" hreflang="en" rel="external"  target="_blank">
 
-								<img src="images/archive/reCAP-24.jpg" alt="reCAP 2024 entrance area">
+								<img src="images/archive/reCAP_2024_Entrance.jpg" alt="reCAP 2024 entrance area">
 								reCAP 2024
-								<small>Watch the playlist on youtube</small>
+								<small>Watch the playlist on YouTube</small>
+							</a>
+						</li>
+						<li>
+							<a href="https://photos.google.com/share/AF1QipO_t4QIIyiT5gKRc82ehY0jhtQV0Gp_vnqbZOSC5Ed5tFKCUeTXIf44Lhqy7YnpWw?key=aXowTjV1YXZHN0xrM3dWSUxjeGlTVUVKc1BlczNR" title="" hreflang="en"
+							   rel="external"  target="_blank">
+						
+								<img src="images/archive/reCAP_2024_Welcome.png" alt="reCAP 2024 branding image">
+								reCAP 2024 Event Photos
+								<small>View photo gallery</small>
 							</a>
 						</li>
 					</ol>
+					<div aria-hidden="true" style="height: 200px;"></div>
 
 				</div>
 			</div>
@@ -75,6 +110,7 @@
 	</footer>
 
 	<script src="./components/nav-section.component.js"></script>
+	<script src="./components/nav-section-mobile.component.js"></script>
 	<script src="./components/footer-section.component.js"></script>
 	<script src="./js/main.js"></script>
 </body>
