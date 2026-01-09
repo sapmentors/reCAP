@@ -56,18 +56,23 @@
 		}
 
 		@keyframes pixelFloat {
-			0%, 100% {
+
+			0%,
+			100% {
 				opacity: 0.3;
 				transform: translateY(0px) scale(0.8) rotate(0deg);
 			}
+
 			25% {
 				opacity: 0.8;
 				transform: translateY(-15px) scale(1.1) rotate(5deg);
 			}
+
 			50% {
 				opacity: 1;
 				transform: translateY(-8px) scale(1.2) rotate(-3deg);
 			}
+
 			75% {
 				opacity: 0.6;
 				transform: translateY(-20px) scale(0.9) rotate(8deg);
@@ -75,10 +80,13 @@
 		}
 
 		@keyframes pixelPulse {
-			0%, 100% {
+
+			0%,
+			100% {
 				opacity: 0.4;
 				transform: scale(0.7);
 			}
+
 			50% {
 				opacity: 1;
 				transform: scale(1.3);
@@ -86,14 +94,18 @@
 		}
 
 		@keyframes pixelDrift {
-			0%, 100% {
+
+			0%,
+			100% {
 				opacity: 0.2;
 				transform: translateX(0px) translateY(0px) scale(0.8);
 			}
+
 			33% {
 				opacity: 0.9;
 				transform: translateX(20px) translateY(-10px) scale(1.1);
 			}
+
 			66% {
 				opacity: 0.7;
 				transform: translateX(-15px) translateY(-25px) scale(1.0);
@@ -117,53 +129,54 @@
 
 	<header class="head" id="header">
 
-			<div class="wrap">
-				<!-- Animated Pixel Background -->
-				<div class="pixel-background">
-					<svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-						<!-- Colorful floating pixel squares with varied animations -->
-						<rect class="pixel" x="5%" y="10%" width="60" height="60" 
-							  fill="#0090DA"
-							  style="animation-delay: 0s;"/>
-						
-						<rect class="pixel-pulse" x="18%" y="68%" width="50" height="50" 
-							  fill="#00C8E8" 
-							  style="animation-delay: 0.8s;"/>
-						
-						<rect class="pixel-drift" x="75%" y="15%" width="70" height="70" 
-							  fill="#30914c"
-							  style="animation-delay: 1.5s;"/>
-						
-						<rect class="pixel" x="80%" y="65%" width="60" height="60" 
-							  fill="#8838EC" 
-							  style="animation-delay: 2.2s;"/>
-						
-						<rect class="pixel-pulse" x="40%" y="25%" width="50" height="50" 
-							  fill="#FF5D17"
-							  style="animation-delay: 2.8s;"/>
-						
-						<rect class="pixel-drift" x="10%" y="30%" width="60" height="60" 
-							  fill="#BA066C" 
-							  style="animation-delay: 3.5s;"/>
-						
-						<rect class="pixel" x="65%" y="65%" width="55" height="55" 
-							  fill="#9D6B57"
-							  style="animation-delay: 4.1s;"/>
-						
-						<rect class="pixel-pulse" x="35%" y="5%" width="45" height="45" 
-							  fill="#D9D100" 
-							  style="animation-delay: 4.8s;"/>
-					</svg>
-				</div>
+		<div class="wrap">
+			<!-- Animated Pixel Background -->
+			<div class="pixel-background">
+				<svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+					<!-- Colorful floating pixel squares with varied animations -->
+					<rect class="pixel" x="5%" y="10%" width="60" height="60"
+						  fill="#0090DA"
+						  style="animation-delay: 0s;" />
 
-				<div class="head-banner">
-					<img
-						 src="../static/images/recap_logo.svg"
-						 alt="reCAP logo" />
+					<rect class="pixel-pulse" x="18%" y="68%" width="50" height="50"
+						  fill="#00C8E8"
+						  style="animation-delay: 0.8s;" />
 
-					<time datetime="2026-07-15" class="head-detail">15. July 2026 <br><small>St. Leon-Rot, GER</small></time>
-				
-				</div>
+					<rect class="pixel-drift" x="75%" y="15%" width="70" height="70"
+						  fill="#30914c"
+						  style="animation-delay: 1.5s;" />
+
+					<rect class="pixel" x="80%" y="65%" width="60" height="60"
+						  fill="#8838EC"
+						  style="animation-delay: 2.2s;" />
+
+					<rect class="pixel-pulse" x="40%" y="25%" width="50" height="50"
+						  fill="#FF5D17"
+						  style="animation-delay: 2.8s;" />
+
+					<rect class="pixel-drift" x="10%" y="30%" width="60" height="60"
+						  fill="#BA066C"
+						  style="animation-delay: 3.5s;" />
+
+					<rect class="pixel" x="65%" y="65%" width="55" height="55"
+						  fill="#9D6B57"
+						  style="animation-delay: 4.1s;" />
+
+					<rect class="pixel-pulse" x="35%" y="5%" width="45" height="45"
+						  fill="#D9D100"
+						  style="animation-delay: 4.8s;" />
+				</svg>
+			</div>
+
+			<div class="head-banner">
+				<img
+					 src="../static/images/recap_logo.svg"
+					 alt="reCAP logo" />
+
+				<time datetime="2026-07-15" class="head-detail">15. July 2026 <br><small>St. Leon-Rot,
+						GER</small></time>
+
+			</div>
 
 			<div class="head-container">
 
@@ -171,36 +184,40 @@
 					<h1>Get Ready for reCAP 2026!</h1>
 
 					<p>
-						The awesome developer conference all around the SAP Cloud Application Programming Model (CAP). The time of the year
-						where our vivid communities, customers, and partners meet the CAP Product Team and exchange best practices, technical
+						The awesome developer conference all around the SAP Cloud Application Programming Model (CAP).
+						The time of the year
+						where our vivid communities, customers, and partners meet the CAP Product Team and exchange best
+						practices, technical
 						concepts, current projects, ideas for the future, and way more…
 					</p>
 
 					<div class="head-cta">
-					
+
 						<button class="btn btn-shape" @click="toggleCalendars">Save the Date</button>
-					
+
 						<div class="links-container links-container--hidden" id="links-container">
 							<!-- Google Calendar Link -->
-							<a href="https://calendar.google.com/calendar/render?action=TEMPLATE&dates=20260715%2F20260716&details=Join%20the%20awesome%20developer%20conference%20all%20around%20the%20SAP%20Cloud%20Application%20Programming%20Model%20%28CAP%29.%20The%20time%20of%20the%20year%20where%20our%20vivid%20communities%2C%20customers%2C%20and%20partners%20meet%20the%20CAP%20Product%20Team%20and%20exchange%20best%20practices%2C%20technical%20concepts%2C%20current%20projects%2C%20ideas%20for%20the%20future%2C%20and%20way%20more%E2%80%A6%0A%20%0AFind%20more%20information%20here%3A%20https%3A%2F%2Frecap-conf.dev%2F%0A%28Links%20to%20live%20streams%20and%20recordings%20will%20be%20available%20there%29%0A%20%0AImportant%20dates%3A%0ACall%20for%20content%3A%20until%2013th%20of%20March%0AEarly%20Bird%20ticket%20application%3A%20until%2024th%20of%20March%0ARegistration%20for%20onsite%20attendance%3A%20opens%2010th%20of%20April%0A%20%0AGet%20in%20contact%20with%20us%20in%20case%20of%20further%20questions%3A%20recap.conf%40gmail.com%0A%20%0AYour%20re%3E%E2%89%A1CAP%20orga%20team&location=SAP%20SE%20%28ROT03%29%2C%20SAP-Allee%2027%2C%2068789%20Sankt%20Leon-Rot%2C%20Germany&text=re%3E%E2%89%A1CAP%202026"
+							<a href="https://calendar.google.com/calendar/render?action=TEMPLATE&dates=20260715%2F20260716&details=Join%20the%20awesome%20developer%20conference%20all%20around%20the%20SAP%20Cloud%20Application%20Programming%20Model%20%28CAP%29.%20The%20time%20of%20the%20year%20where%20our%20vivid%20communities%2C%20customers%2C%20and%20partners%20meet%20the%20CAP%20Product%20Team%20and%20exchange%20best%20practices%2C%20technical%20concepts%2C%20current%20projects%2C%20ideas%20for%20the%20future%2C%20and%20way%20more%E2%80%A6%0A%20%0AFind%20more%20information%20here%3A%20https%3A%2F%2Frecap-conf.dev%2F%0A%28Links%20to%20live%20streams%20and%20recordings%20will%20be%20available%20there%29%0A%20%0AImportant%20dates%3A%0A-%20Call%20for%20content%3A%20until%2013th%20of%20March%0A-%20Early%20Bird%20ticket%20application%3A%20until%2024th%20of%20March%0A-%20Registration%20for%20onsite%20attendance%3A%20opens%2010th%20of%20April%0A%20%0AGet%20in%20contact%20with%20us%20in%20case%20of%20further%20questions%3A%20recap.conf%40gmail.com%0A%20%0AYour%20re%3E%E2%89%A1CAP%20orga%20team&location=SAP%20SE%20%28ROT03%29%2C%20SAP-Allee%2027%2C%2068789%20Sankt%20Leon-Rot%2C%20Germany&text=re%3E%E2%89%A1CAP%202026"
 							   target="_blank">
 								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 256 256">
 									<path fill="#FFF" d="M195.368 60.632H60.632v134.736h134.736z" />
-									<path fill="#EA4335" d="M195.368 256L256 195.368l-30.316-5.172l-30.316 5.172l-5.533 27.73z" />
+									<path fill="#EA4335"
+										  d="M195.368 256L256 195.368l-30.316-5.172l-30.316 5.172l-5.533 27.73z" />
 									<path fill="#188038"
 										  d="M0 195.368v40.421C0 246.956 9.044 256 20.21 256h40.422l6.225-30.316l-6.225-30.316l-33.033-5.172z" />
 									<path fill="#1967D2"
 										  d="M256 60.632V20.21C256 9.044 246.956 0 235.79 0h-40.422q-5.532 22.554-5.533 33.196q0 10.641 5.533 27.436q20.115 5.76 30.316 5.76T256 60.631" />
 									<path fill="#FBBC04" d="M256 60.632h-60.632v134.736H256z" />
 									<path fill="#34A853" d="M195.368 195.368H60.632V256h134.736z" />
-									<path fill="#4285F4" d="M195.368 0H20.211C9.044 0 0 9.044 0 20.21v175.158h60.632V60.632h134.736z" />
+									<path fill="#4285F4"
+										  d="M195.368 0H20.211C9.044 0 0 9.044 0 20.21v175.158h60.632V60.632h134.736z" />
 									<path fill="#4285F4"
 										  d="M88.27 165.154c-5.036-3.402-8.523-8.37-10.426-14.94l11.689-4.816q1.59 6.063 5.558 9.398c2.627 2.223 5.827 3.318 9.566 3.318q5.734 0 9.852-3.487c2.746-2.324 4.127-5.288 4.127-8.875q0-5.508-4.345-8.994c-2.897-2.324-6.535-3.486-10.88-3.486h-6.754v-11.57h6.063q5.608 0 9.448-3.033c2.56-2.02 3.84-4.783 3.84-8.303c0-3.132-1.145-5.625-3.435-7.494c-2.29-1.87-5.188-2.813-8.708-2.813c-3.436 0-6.164.91-8.185 2.745a16.1 16.1 0 0 0-4.413 6.754l-11.57-4.817c1.532-4.345 4.345-8.185 8.471-11.503s9.398-4.985 15.798-4.985c4.733 0 8.994.91 12.767 2.745c3.772 1.836 6.736 4.379 8.875 7.613c2.14 3.25 3.2 6.888 3.2 10.93c0 4.126-.993 7.613-2.98 10.476s-4.43 5.052-7.327 6.585v.69a22.25 22.25 0 0 1 9.398 7.327c2.442 3.284 3.672 7.208 3.672 11.79c0 4.58-1.163 8.673-3.487 12.26c-2.324 3.588-5.54 6.417-9.617 8.472c-4.092 2.055-8.69 3.1-13.793 3.1c-5.912.016-11.369-1.685-16.405-5.087m71.797-58.005l-12.833 9.28l-6.417-9.734l23.023-16.607h8.825v78.333h-12.598z" />
 								</svg>Google
 							</a>
-					
+
 							<!-- Outlook/iCal Link -->
-							<a href="data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0D%0AVERSION:2.0%0D%0APRODID:-//reCAP 2026//EN%0D%0ACALSCALE:GREGORIAN%0D%0ABEGIN:VEVENT%0D%0ADTSTART:20260715%0D%0ADTEND:20260716%0D%0ASUMMARY:re>≡CAP 2026%0D%0ADESCRIPTION:Join the awesome developer conference all around the SAP Cloud Application Programming Model (CAP). The time of the year where our vivid communities%2C customers%2C and partners meet the CAP Product Team and exchange best practices%2C technical concepts%2C current projects%2C ideas for the future%2C and way more…%5Cn%5CnFind more information here: https://recap-conf.dev/%5Cn(Links to live streams and recordings will be available there)%5Cn%5CnImportant dates:%5CnCall for content: until 13th of March%5CnEarly Bird ticket application: until 24th of March%5CnRegistration for onsite attendance: opens 10th of April%5Cn%5CnGet in contact with us in case of further questions: recap.conf@gmail.com%5Cn%5CnYour re>≡CAP orga team%0D%0ALOCATION:SAP SE (ROT03)%2C SAP-Allee 27%2C 68789 Sankt Leon-Rot%2C Germany%0D%0AEND:VEVENT%0D%0AEND:VCALENDAR"
+							<a href="data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0D%0AVERSION:2.0%0D%0APRODID:-//reCAP 2026//EN%0D%0ACALSCALE:GREGORIAN%0D%0ABEGIN:VEVENT%0D%0ADTSTART:20260715%0D%0ADTEND:20260716%0D%0ASUMMARY:re>≡CAP 2026%0D%0ADESCRIPTION:Join the awesome developer conference all around the SAP Cloud Application Programming Model (CAP). The time of the year where our vivid communities%2C customers%2C and partners meet the CAP Product Team and exchange best practices%2C technical concepts%2C current projects%2C ideas for the future%2C and way more…%5Cn%5CnFind more information here: https://recap-conf.dev/%5Cn(Links to live streams and recordings will be available there)%5Cn%5CnImportant dates:%5Cn- Call for content: until 13th of March%5Cn- Early Bird ticket application: until 24th of March%5Cn- Registration for onsite attendance: opens 10th of April%5Cn%5CnGet in contact with us in case of further questions: recap.conf@gmail.com%5Cn%5CnYour re>≡CAP orga team%0D%0ALOCATION:SAP SE (ROT03)%2C SAP-Allee 27%2C 68789 Sankt Leon-Rot%2C Germany%0D%0AEND:VEVENT%0D%0AEND:VCALENDAR"
 							   download="reCAP_2026.ics">
 								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32">
 									<path fill="#0072c6"
@@ -211,19 +228,20 @@
 										  d="M2.153 5.155v21.427L18.453 30V2Zm10.908 14.336a3.23 3.23 0 0 1-2.7 1.361a3.19 3.19 0 0 1-2.64-1.318A5.46 5.46 0 0 1 6.706 16.1a5.87 5.87 0 0 1 1.036-3.616a3.27 3.27 0 0 1 2.744-1.384a3.12 3.12 0 0 1 2.61 1.321a5.64 5.64 0 0 1 1 3.484a5.76 5.76 0 0 1-1.035 3.586" />
 								</svg>Outlook
 							</a>
-					
+
 							<!-- Office 365 Link -->
-							<a href="https://outlook.office.com/calendar/0/deeplink/compose?path=/calendar/action/compose&rru=addevent&startdt=2026-07-15&enddt=2026-07-16&subject=re>≡CAP+2026&body=Join+the+awesome+developer+conference+all+around+the+SAP+Cloud+Application+Programming+Model+(CAP).+The+time+of+the+year+where+our+vivid+communities,+customers,+and+partners+meet+the+CAP+Product+Team+and+exchange+best+practices,+technical+concepts,+current+projects,+ideas+for+the+future,+and+way+more…%0D%0A%0D%0AFind+more+information+here:+https://recap-conf.dev/%0D%0A(Links+to+live+streams+and+recordings+will+be+available+there)%0D%0A%0D%0AImportant+dates:%0D%0ACall+for+content:+until+13th+of+March%0D%0AEarly+Bird+ticket+application:+until+24th+of+March%0D%0ARegistration+for+onsite+attendance:+opens+10th+of+April%0D%0A%0D%0AGet+in+contact+with+us+in+case+of+further+questions:+recap.conf@gmail.com%0D%0A%0D%0AYour+re>≡CAP+orga+team&location=SAP+SE+(ROT03),+SAP-Allee+27,+68789+Sankt+Leon-Rot,+Germany"
+							<a href="https://outlook.office.com/calendar/0/deeplink/compose?path=/calendar/action/compose&rru=addevent&startdt=2026-07-15&enddt=2026-07-16&subject=re>≡CAP+2026&body=Join+the+awesome+developer+conference+all+around+the+SAP+Cloud+Application+Programming+Model+(CAP).+The+time+of+the+year+where+our+vivid+communities,+customers,+and+partners+meet+the+CAP+Product+Team+and+exchange+best+practices,+technical+concepts,+current+projects,+ideas+for+the+future,+and+way+more…%3Cbr%3E%3Cbr%3EFind+more+information+here:+https://recap-conf.dev/%3Cbr%3E(Links+to+live+streams+and+recordings+will+be+available+there)%3Cbr%3E%3Cbr%3EImportant+dates:%3Cbr%3E-+Call+for+content:+until+13th+of+March%3Cbr%3E-+Early+Bird+ticket+application:+until+24th+of+March%3Cbr%3E-+Registration+for+onsite+attendance:+opens+10th+of+April%3Cbr%3E%3Cbr%3EGet+in+contact+with+us+in+case+of+further+questions:+recap.conf@gmail.com%3Cbr%3E%3Cbr%3EYour+re>≡CAP+orga+team&location=SAP+SE+(ROT03),+SAP-Allee+27,+68789+Sankt+Leon-Rot,+Germany"
 							   target="_blank">
 								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-									<path fill="none" stroke="#eb3c00" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+									<path fill="none" stroke="#eb3c00" stroke-linecap="round" stroke-linejoin="round"
+										  stroke-width="1.5"
 										  d="M4 18V6l10.5-4L20 4v16l-5.5 2zm0 0l10 .5V6L8.5 7.5v8z" color="#eb3c00" />
 								</svg>Office 365
 							</a>
 						</div>
-					
+
 					</div>
-					
+
 
 				</div>
 			</div>
@@ -239,14 +257,17 @@
 					<span>Latest News</span>
 				</h2>
 
-				<h3>Call for Papers - Share Your Knowledge</h3>
+				<!-- <h3>Call for Papers - Share Your Knowledge</h3>
 				<p>
 					Are you passionate about the SAP Cloud Application Programming Model (CAP)? We're looking for speakers to share their expertise, real-world experiences, and innovative solutions at reCAP 2026. Whether you're building enterprise applications with CAP, exploring advanced features, or have lessons learned from your CAP journey, we'd love to hear your story. <a href="https://recap.cfapps.eu12.hana.ondemand.com/" target="_blank" rel="noopener">Propose your topic</a> until  <time datetime="2026-03-13">March 13th, 2026</time>.
-				</p>
+				</p> -->
 
 				<h3>Join Our Team - Become a Volunteer</h3>
 
-				<p>Help us make reCAP 2026 an unforgettable experience! We're seeking enthusiastic volunteers to support us both onsite during the conference and online with conference preparation. Join our amazing community and contribute to one of the premier SAP developer conferences. <a href="mailto:recap.conf@gmail.com">Reach out to us</a> to get involved!</p>
+				<p>Help us make reCAP 2026 an unforgettable experience! We're seeking enthusiastic volunteers to support
+					us both onsite during the conference and online with conference preparation. Join our amazing
+					community and contribute to one of the premier SAP developer conferences. <a
+					   href="mailto:recap.conf@gmail.com">Reach out to us</a> to get involved!</p>
 			</div>
 		</section>
 
@@ -258,11 +279,15 @@
 				</h2>
 
 				<p>
-					Would you like to support one of the best developer conferences out there and become sponsor of re>≡CAP 2026? It's a great move to strengthen your presence in the SAP and CAP ecosystem, build relationships, and drive your growth by
-					directly engaging with a highly specialized audience. Most importantly: The gods will thank you and push your karma
-					account to new heights… 
+					Would you like to support one of the best developer conferences out there and become sponsor of
+					re>≡CAP 2026? It's a great move to strengthen your presence in the SAP and CAP ecosystem, build
+					relationships, and drive your growth by
+					directly engaging with a highly specialized audience. Most importantly: The gods will thank you and
+					push your karma
+					account to new heights…
 				</p>
-				<p><a href="mailto:recap.conf@gmail.com">Get in contact</a> with us if you are interested and we'll talk about it. </p>
+				<p><a href="mailto:recap.conf@gmail.com">Get in contact</a> with us if you are interested and we'll talk
+					about it. </p>
 			</div>
 		</section>
 
@@ -291,7 +316,7 @@
 		</section> -->
 
 		<!-- CODE CONNECT SECTION-->
-		 <section class="alternate">
+		<section class="alternate">
 			<div class="wrap">
 
 				<h2 class="section-heading section-heading--cube-5">
@@ -301,53 +326,66 @@
 				<ul class="cc-links">
 					<li>
 						<a href="https://code-connect.dev/" aria-label="Jump to Code Connect website">
-							<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cc-logo" viewBox="0 0 209 49">
-								<path d="M59.238 20.13c-1.681-.919-2.945-2.195-3.794-3.826-.849-1.631-1.272-3.51-1.272-5.637 0-2.128.458-4.037 1.375-5.644.916-1.608 2.22-2.846 3.912-3.716C61.15.437 63.124 0 65.382 0c2.376 0 4.34.463 5.894 1.387 1.553.925 2.778 2.297 3.676 4.117l-5 2.373a5.36 5.36 0 0 0-1.768-1.965c-.754-.51-1.67-.765-2.743-.765-1.006 0-1.89.227-2.655.683-.765.456-1.356 1.1-1.775 1.936-.42.837-.628 1.803-.628 2.9 0 1.74.42 3.117 1.264 4.131.843 1.014 2.098 1.52 3.763 1.52 1.243 0 2.268-.31 3.077-.933A6.034 6.034 0 0 0 70.32 13.1l4.94 2.552c-.72 1.72-1.881 3.128-3.484 4.22-1.603 1.094-3.725 1.64-6.367 1.64-2.435 0-4.493-.46-6.174-1.379l.002-.002Zm22.677 0c-1.681-.919-2.957-2.197-3.83-3.834-.873-1.637-1.31-3.513-1.31-5.63 0-2.116.45-4.05 1.346-5.658.897-1.607 2.189-2.843 3.875-3.71C83.683.434 85.68.002 87.986.002c2.307 0 4.284.439 5.96 1.314 1.676.875 2.963 2.116 3.861 3.724.897 1.607 1.346 3.483 1.346 5.629 0 2.146-.464 4.055-1.391 5.696-.927 1.642-2.236 2.91-3.928 3.805-1.69.896-3.651 1.343-5.879 1.343-2.347 0-4.36-.46-6.041-1.379l.001-.002Zm8.682-4.502c.725-.48 1.272-1.148 1.641-2.003.37-.855.555-1.843.555-2.96s-.2-2.047-.6-2.878c-.4-.83-.962-1.474-1.686-1.928-.725-.454-1.566-.683-2.522-.683-.957 0-1.832.227-2.566.683-.734.454-1.3 1.096-1.694 1.922-.394.825-.591 1.787-.591 2.884s.197 2.106.591 2.967c.395.86.957 1.528 1.687 2.002.73.475 1.578.713 2.545.713 1.035 0 1.915-.24 2.64-.72ZM102.188.311h8.652c3.668 0 6.468.846 8.401 2.536 1.932 1.692 2.899 4.277 2.899 7.758 0 2.245-.456 4.164-1.368 5.756a8.887 8.887 0 0 1-3.861 3.62c-1.661.82-3.592 1.23-5.79 1.23h-8.933V.312Zm8.652 15.858c1.665 0 2.931-.47 3.794-1.41.864-.939 1.294-2.305 1.294-4.094 0-1.789-.426-3.023-1.279-3.939-.853-.914-2.152-1.372-3.897-1.372h-2.514v10.814h2.604l-.002.001ZM125.485.311h15.782v4.896h-9.732v3.1h8.815v4.94h-8.815v3.04h10.338v4.926h-16.388V.311ZM59.06 47.62c-1.68-.92-2.945-2.196-3.794-3.827-.848-1.632-1.272-3.51-1.272-5.637s.458-4.037 1.375-5.644c.916-1.608 2.22-2.846 3.913-3.716 1.69-.87 3.665-1.306 5.923-1.306 2.375 0 4.34.463 5.893 1.387 1.554.925 2.778 2.297 3.676 4.117l-5 2.373a5.36 5.36 0 0 0-1.768-1.965c-.754-.51-1.669-.765-2.743-.765-1.006 0-1.89.227-2.655.683-.764.454-1.356 1.1-1.774 1.936-.42.837-.63 1.803-.63 2.9 0 1.74.422 3.117 1.265 4.131.843 1.014 2.098 1.52 3.764 1.52 1.243 0 2.267-.31 3.076-.933a6.034 6.034 0 0 0 1.834-2.285l4.94 2.552c-.72 1.72-1.881 3.128-3.484 4.22-1.602 1.094-3.725 1.64-6.366 1.64-2.436 0-4.494-.46-6.175-1.379l.002-.002Zm22.676 0c-1.68-.92-2.957-2.198-3.83-3.835-.872-1.637-1.31-3.513-1.31-5.63 0-2.116.45-4.05 1.346-5.658.897-1.607 2.189-2.843 3.876-3.71 1.686-.865 3.682-1.297 5.99-1.297 2.307 0 4.284.439 5.96 1.314 1.675.875 2.962 2.116 3.86 3.724.897 1.607 1.346 3.483 1.346 5.629 0 2.146-.464 4.055-1.391 5.696-.927 1.642-2.235 2.91-3.927 3.805-1.69.896-3.652 1.343-5.88 1.343-2.347 0-4.36-.46-6.041-1.379l.001-.002Zm8.682-4.502c.725-.48 1.273-1.148 1.642-2.003.37-.855.554-1.842.554-2.96 0-1.116-.2-2.046-.6-2.877-.4-.831-.962-1.474-1.686-1.928-.725-.455-1.566-.683-2.522-.683-.957 0-1.832.227-2.566.682-.734.455-1.3 1.096-1.693 1.922-.394.826-.592 1.788-.592 2.885 0 1.097.198 2.105.592 2.966.394.86.956 1.529 1.686 2.003.73.474 1.578.712 2.545.712 1.035 0 1.916-.24 2.64-.719Zm11.592-15.316h7.114l7.262 14.003c-.119-.88-.178-2.62-.178-5.222v-8.781h5.576v20.901h-7.203l-7.129-13.424c.078 1.939.118 3.91.118 5.92v7.506h-5.56V27.802Zm23.875 0h7.114l7.262 14.003c-.119-.88-.178-2.62-.178-5.222v-8.781h5.576v20.901h-7.203l-7.129-13.424c.078 1.939.118 3.91.118 5.92v7.506h-5.56V27.802Zm23.874 0h15.781v4.895h-9.732v3.1h8.816v4.94h-8.816v3.041h10.338v4.925h-16.387V27.802Zm23.779 19.818c-1.681-.92-2.945-2.196-3.794-3.827-.849-1.632-1.272-3.51-1.272-5.637s.458-4.037 1.375-5.644c.916-1.608 2.22-2.846 3.912-3.716 1.691-.87 3.665-1.306 5.923-1.306 2.376 0 4.341.463 5.894 1.387 1.553.925 2.778 2.297 3.676 4.117l-5 2.373a5.367 5.367 0 0 0-1.768-1.965c-.754-.51-1.669-.765-2.743-.765-1.006 0-1.891.227-2.655.683-.765.454-1.356 1.1-1.775 1.936-.419.837-.629 1.803-.629 2.9 0 1.74.421 3.117 1.265 4.131.843 1.014 2.098 1.52 3.763 1.52 1.243 0 2.268-.31 3.076-.933a6.039 6.039 0 0 0 1.835-2.285l4.94 2.552c-.72 1.72-1.881 3.128-3.484 4.22-1.603 1.094-3.725 1.64-6.367 1.64-2.435 0-4.493-.46-6.175-1.379l.003-.002Zm23.349-14.774h-6.049v-5.044H209v5.044h-6.05v15.857h-6.064V32.846h.001ZM37.217 27.13c-4.166 0-7.976 2.463-9.708 6.278a3.922 3.922 0 0 1-7.143 0 10.716 10.716 0 0 0-2.713-3.645l-.03-.025c-.184-.16-.375-.316-.57-.464l-.027-.019a10.939 10.939 0 0 0-.564-.394l-.07-.047c-.192-.122-.39-.24-.59-.35-.04-.024-.08-.045-.12-.066a10.475 10.475 0 0 0-.627-.314 3.935 3.935 0 0 1-2.298-3.583c0-1.543.898-2.943 2.298-3.582.213-.098.42-.203.625-.314l.124-.067a10.751 10.751 0 0 0 1.215-.788l.035-.026c.193-.145.38-.299.565-.458l.038-.033c1.142-1 2.07-2.236 2.707-3.641a3.922 3.922 0 0 1 7.143 0c1.732 3.815 5.543 6.278 9.708 6.278 5.877 0 10.658-4.795 10.658-10.689S43.094.491 37.217.491c-4.166 0-7.976 2.465-9.708 6.28a3.922 3.922 0 0 1-7.143 0c-.011-.025-.024-.047-.035-.071a11.4 11.4 0 0 0-.312-.626l-.008-.014c-.11-.2-.226-.396-.348-.588l-.08-.125a10.869 10.869 0 0 0-.912-1.204 10.864 10.864 0 0 0-1.038-1.035s-.002-.003-.004-.003A10.59 10.59 0 0 0 11.517.53l-.155-.012a10.255 10.255 0 0 0-.704-.025C4.78.492 0 5.287 0 11.182a10.73 10.73 0 0 0 6.26 9.736A3.935 3.935 0 0 1 8.558 24.5a3.935 3.935 0 0 1-2.298 3.582A10.73 10.73 0 0 0 0 37.82c0 5.894 4.781 10.69 10.658 10.69.237 0 .471-.011.704-.026l.155-.012a10.6 10.6 0 0 0 6.114-2.578 10.9 10.9 0 0 0 1.04-1.038 10.59 10.59 0 0 0 .989-1.327c.122-.193.24-.391.351-.593l.006-.008c.111-.206.214-.415.313-.628.01-.024.024-.045.034-.07a3.922 3.922 0 0 1 7.143 0c1.732 3.815 5.543 6.28 9.708 6.28 5.877 0 10.658-4.796 10.658-10.69 0-5.894-4.781-10.69-10.658-10.69h.002Z"/>
-								<animate attributeName="fill" dur="20s" repeatCount="indefinite" values="#FF5D17; #0090DA; #BA066C; #8838EC; #FF5D17"/>
+							<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="cc-logo"
+								 viewBox="0 0 209 49">
+								<path
+									  d="M59.238 20.13c-1.681-.919-2.945-2.195-3.794-3.826-.849-1.631-1.272-3.51-1.272-5.637 0-2.128.458-4.037 1.375-5.644.916-1.608 2.22-2.846 3.912-3.716C61.15.437 63.124 0 65.382 0c2.376 0 4.34.463 5.894 1.387 1.553.925 2.778 2.297 3.676 4.117l-5 2.373a5.36 5.36 0 0 0-1.768-1.965c-.754-.51-1.67-.765-2.743-.765-1.006 0-1.89.227-2.655.683-.765.456-1.356 1.1-1.775 1.936-.42.837-.628 1.803-.628 2.9 0 1.74.42 3.117 1.264 4.131.843 1.014 2.098 1.52 3.763 1.52 1.243 0 2.268-.31 3.077-.933A6.034 6.034 0 0 0 70.32 13.1l4.94 2.552c-.72 1.72-1.881 3.128-3.484 4.22-1.603 1.094-3.725 1.64-6.367 1.64-2.435 0-4.493-.46-6.174-1.379l.002-.002Zm22.677 0c-1.681-.919-2.957-2.197-3.83-3.834-.873-1.637-1.31-3.513-1.31-5.63 0-2.116.45-4.05 1.346-5.658.897-1.607 2.189-2.843 3.875-3.71C83.683.434 85.68.002 87.986.002c2.307 0 4.284.439 5.96 1.314 1.676.875 2.963 2.116 3.861 3.724.897 1.607 1.346 3.483 1.346 5.629 0 2.146-.464 4.055-1.391 5.696-.927 1.642-2.236 2.91-3.928 3.805-1.69.896-3.651 1.343-5.879 1.343-2.347 0-4.36-.46-6.041-1.379l.001-.002Zm8.682-4.502c.725-.48 1.272-1.148 1.641-2.003.37-.855.555-1.843.555-2.96s-.2-2.047-.6-2.878c-.4-.83-.962-1.474-1.686-1.928-.725-.454-1.566-.683-2.522-.683-.957 0-1.832.227-2.566.683-.734.454-1.3 1.096-1.694 1.922-.394.825-.591 1.787-.591 2.884s.197 2.106.591 2.967c.395.86.957 1.528 1.687 2.002.73.475 1.578.713 2.545.713 1.035 0 1.915-.24 2.64-.72ZM102.188.311h8.652c3.668 0 6.468.846 8.401 2.536 1.932 1.692 2.899 4.277 2.899 7.758 0 2.245-.456 4.164-1.368 5.756a8.887 8.887 0 0 1-3.861 3.62c-1.661.82-3.592 1.23-5.79 1.23h-8.933V.312Zm8.652 15.858c1.665 0 2.931-.47 3.794-1.41.864-.939 1.294-2.305 1.294-4.094 0-1.789-.426-3.023-1.279-3.939-.853-.914-2.152-1.372-3.897-1.372h-2.514v10.814h2.604l-.002.001ZM125.485.311h15.782v4.896h-9.732v3.1h8.815v4.94h-8.815v3.04h10.338v4.926h-16.388V.311ZM59.06 47.62c-1.68-.92-2.945-2.196-3.794-3.827-.848-1.632-1.272-3.51-1.272-5.637s.458-4.037 1.375-5.644c.916-1.608 2.22-2.846 3.913-3.716 1.69-.87 3.665-1.306 5.923-1.306 2.375 0 4.34.463 5.893 1.387 1.554.925 2.778 2.297 3.676 4.117l-5 2.373a5.36 5.36 0 0 0-1.768-1.965c-.754-.51-1.669-.765-2.743-.765-1.006 0-1.89.227-2.655.683-.764.454-1.356 1.1-1.774 1.936-.42.837-.63 1.803-.63 2.9 0 1.74.422 3.117 1.265 4.131.843 1.014 2.098 1.52 3.764 1.52 1.243 0 2.267-.31 3.076-.933a6.034 6.034 0 0 0 1.834-2.285l4.94 2.552c-.72 1.72-1.881 3.128-3.484 4.22-1.602 1.094-3.725 1.64-6.366 1.64-2.436 0-4.494-.46-6.175-1.379l.002-.002Zm22.676 0c-1.68-.92-2.957-2.198-3.83-3.835-.872-1.637-1.31-3.513-1.31-5.63 0-2.116.45-4.05 1.346-5.658.897-1.607 2.189-2.843 3.876-3.71 1.686-.865 3.682-1.297 5.99-1.297 2.307 0 4.284.439 5.96 1.314 1.675.875 2.962 2.116 3.86 3.724.897 1.607 1.346 3.483 1.346 5.629 0 2.146-.464 4.055-1.391 5.696-.927 1.642-2.235 2.91-3.927 3.805-1.69.896-3.652 1.343-5.88 1.343-2.347 0-4.36-.46-6.041-1.379l.001-.002Zm8.682-4.502c.725-.48 1.273-1.148 1.642-2.003.37-.855.554-1.842.554-2.96 0-1.116-.2-2.046-.6-2.877-.4-.831-.962-1.474-1.686-1.928-.725-.455-1.566-.683-2.522-.683-.957 0-1.832.227-2.566.682-.734.455-1.3 1.096-1.693 1.922-.394.826-.592 1.788-.592 2.885 0 1.097.198 2.105.592 2.966.394.86.956 1.529 1.686 2.003.73.474 1.578.712 2.545.712 1.035 0 1.916-.24 2.64-.719Zm11.592-15.316h7.114l7.262 14.003c-.119-.88-.178-2.62-.178-5.222v-8.781h5.576v20.901h-7.203l-7.129-13.424c.078 1.939.118 3.91.118 5.92v7.506h-5.56V27.802Zm23.875 0h7.114l7.262 14.003c-.119-.88-.178-2.62-.178-5.222v-8.781h5.576v20.901h-7.203l-7.129-13.424c.078 1.939.118 3.91.118 5.92v7.506h-5.56V27.802Zm23.874 0h15.781v4.895h-9.732v3.1h8.816v4.94h-8.816v3.041h10.338v4.925h-16.387V27.802Zm23.779 19.818c-1.681-.92-2.945-2.196-3.794-3.827-.849-1.632-1.272-3.51-1.272-5.637s.458-4.037 1.375-5.644c.916-1.608 2.22-2.846 3.912-3.716 1.691-.87 3.665-1.306 5.923-1.306 2.376 0 4.341.463 5.894 1.387 1.553.925 2.778 2.297 3.676 4.117l-5 2.373a5.367 5.367 0 0 0-1.768-1.965c-.754-.51-1.669-.765-2.743-.765-1.006 0-1.891.227-2.655.683-.765.454-1.356 1.1-1.775 1.936-.419.837-.629 1.803-.629 2.9 0 1.74.421 3.117 1.265 4.131.843 1.014 2.098 1.52 3.763 1.52 1.243 0 2.268-.31 3.076-.933a6.039 6.039 0 0 0 1.835-2.285l4.94 2.552c-.72 1.72-1.881 3.128-3.484 4.22-1.603 1.094-3.725 1.64-6.367 1.64-2.435 0-4.493-.46-6.175-1.379l.003-.002Zm23.349-14.774h-6.049v-5.044H209v5.044h-6.05v15.857h-6.064V32.846h.001ZM37.217 27.13c-4.166 0-7.976 2.463-9.708 6.278a3.922 3.922 0 0 1-7.143 0 10.716 10.716 0 0 0-2.713-3.645l-.03-.025c-.184-.16-.375-.316-.57-.464l-.027-.019a10.939 10.939 0 0 0-.564-.394l-.07-.047c-.192-.122-.39-.24-.59-.35-.04-.024-.08-.045-.12-.066a10.475 10.475 0 0 0-.627-.314 3.935 3.935 0 0 1-2.298-3.583c0-1.543.898-2.943 2.298-3.582.213-.098.42-.203.625-.314l.124-.067a10.751 10.751 0 0 0 1.215-.788l.035-.026c.193-.145.38-.299.565-.458l.038-.033c1.142-1 2.07-2.236 2.707-3.641a3.922 3.922 0 0 1 7.143 0c1.732 3.815 5.543 6.278 9.708 6.278 5.877 0 10.658-4.795 10.658-10.689S43.094.491 37.217.491c-4.166 0-7.976 2.465-9.708 6.28a3.922 3.922 0 0 1-7.143 0c-.011-.025-.024-.047-.035-.071a11.4 11.4 0 0 0-.312-.626l-.008-.014c-.11-.2-.226-.396-.348-.588l-.08-.125a10.869 10.869 0 0 0-.912-1.204 10.864 10.864 0 0 0-1.038-1.035s-.002-.003-.004-.003A10.59 10.59 0 0 0 11.517.53l-.155-.012a10.255 10.255 0 0 0-.704-.025C4.78.492 0 5.287 0 11.182a10.73 10.73 0 0 0 6.26 9.736A3.935 3.935 0 0 1 8.558 24.5a3.935 3.935 0 0 1-2.298 3.582A10.73 10.73 0 0 0 0 37.82c0 5.894 4.781 10.69 10.658 10.69.237 0 .471-.011.704-.026l.155-.012a10.6 10.6 0 0 0 6.114-2.578 10.9 10.9 0 0 0 1.04-1.038 10.59 10.59 0 0 0 .989-1.327c.122-.193.24-.391.351-.593l.006-.008c.111-.206.214-.415.313-.628.01-.024.024-.045.034-.07a3.922 3.922 0 0 1 7.143 0c1.732 3.815 5.543 6.28 9.708 6.28 5.877 0 10.658-4.796 10.658-10.69 0-5.894-4.781-10.69-10.658-10.69h.002Z" />
+								<animate attributeName="fill" dur="20s" repeatCount="indefinite"
+										 values="#FF5D17; #0090DA; #BA066C; #8838EC; #FF5D17" />
 							</svg>
 							<span class="sr-only">Code Connect 2025 Conferences</span>
 						</a>
 					</li>
 
 					<li>
-						<a class="event-marker event-marker-ui5con" href="https://openui5.org/ui5con/" aria-label="Jump to UI5con event website">
-							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 324 155" aria-hidden="true">
-								<path fill="currentColor" d="M.009 93.09V.004h33.64v92.522a42.2 42.2 0 0 0 6.845 25.54 25.603 25.603 0 0 0 9.805 6.853 25.694 25.694 0 0 0 11.864 1.662 24.526 24.526 0 0 0 11.608-1.658 24.408 24.408 0 0 0 9.487-6.854 40.217 40.217 0 0 0 6.844-25.543V0h33.072v93.09a92.269 92.269 0 0 1-3.422 24.975 51.031 51.031 0 0 1-11.403 19.302 43.025 43.025 0 0 1-19.386 11.918 81.447 81.447 0 0 1-27.371 3.973 81.447 81.447 0 0 1-27.371-3.973 47.589 47.589 0 0 1-18.913-11.964 47.29 47.29 0 0 1-11.309-19.253A74.384 74.384 0 0 1 .006 93.091h.003Zm152.816 57.898V.003H185.9v150.985h-33.075Zm54.17-17.029 17.111-21.567a68.945 68.945 0 0 0 17.104 11.349 52.19 52.19 0 0 0 20.526 4.542c10.264 0 17.676-2.269 22.241-7.38a27.559 27.559 0 0 0 6.841-19.298 27.245 27.245 0 0 0-6.844-19.864 24.25 24.25 0 0 0-8.857-5.862 24.339 24.339 0 0 0-10.53-1.518 33.596 33.596 0 0 0-14.825 3.404 39.876 39.876 0 0 0-13.117 10.787l-21.666-6.814 6.273-81.17h92.372l-1.708 24.41h-65.005l-2.85 34.058a49.29 49.29 0 0 1 11.403-6.811 60.745 60.745 0 0 1 19.386-2.838 53.641 53.641 0 0 1 21.102 3.972 42.036 42.036 0 0 1 15.623 10.469 41.773 41.773 0 0 1 9.465 16.21 50.87 50.87 0 0 1 2.851 20.432 61.331 61.331 0 0 1-3.994 22.14 51.673 51.673 0 0 1-11.974 17.026 64.268 64.268 0 0 1-18.816 11.352 75.337 75.337 0 0 1-25.088 3.973 81.533 81.533 0 0 1-32.501-5.676 119.006 119.006 0 0 1-24.523-15.326Z"/>
+						<a class="event-marker event-marker-ui5con" href="https://openui5.org/ui5con/"
+						   aria-label="Jump to UI5con event website">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 324 155"
+								 aria-hidden="true">
+								<path fill="currentColor"
+									  d="M.009 93.09V.004h33.64v92.522a42.2 42.2 0 0 0 6.845 25.54 25.603 25.603 0 0 0 9.805 6.853 25.694 25.694 0 0 0 11.864 1.662 24.526 24.526 0 0 0 11.608-1.658 24.408 24.408 0 0 0 9.487-6.854 40.217 40.217 0 0 0 6.844-25.543V0h33.072v93.09a92.269 92.269 0 0 1-3.422 24.975 51.031 51.031 0 0 1-11.403 19.302 43.025 43.025 0 0 1-19.386 11.918 81.447 81.447 0 0 1-27.371 3.973 81.447 81.447 0 0 1-27.371-3.973 47.589 47.589 0 0 1-18.913-11.964 47.29 47.29 0 0 1-11.309-19.253A74.384 74.384 0 0 1 .006 93.091h.003Zm152.816 57.898V.003H185.9v150.985h-33.075Zm54.17-17.029 17.111-21.567a68.945 68.945 0 0 0 17.104 11.349 52.19 52.19 0 0 0 20.526 4.542c10.264 0 17.676-2.269 22.241-7.38a27.559 27.559 0 0 0 6.841-19.298 27.245 27.245 0 0 0-6.844-19.864 24.25 24.25 0 0 0-8.857-5.862 24.339 24.339 0 0 0-10.53-1.518 33.596 33.596 0 0 0-14.825 3.404 39.876 39.876 0 0 0-13.117 10.787l-21.666-6.814 6.273-81.17h92.372l-1.708 24.41h-65.005l-2.85 34.058a49.29 49.29 0 0 1 11.403-6.811 60.745 60.745 0 0 1 19.386-2.838 53.641 53.641 0 0 1 21.102 3.972 42.036 42.036 0 0 1 15.623 10.469 41.773 41.773 0 0 1 9.465 16.21 50.87 50.87 0 0 1 2.851 20.432 61.331 61.331 0 0 1-3.994 22.14 51.673 51.673 0 0 1-11.974 17.026 64.268 64.268 0 0 1-18.816 11.352 75.337 75.337 0 0 1-25.088 3.973 81.533 81.533 0 0 1-32.501-5.676 119.006 119.006 0 0 1-24.523-15.326Z" />
 							</svg>
 						</a>
 					</li>
 
 					<li>
-						<a class="event-marker event-marker-recap" href="https://recap-conf.dev/" aria-label="Jump to ReCAP event website">
+						<a class="event-marker event-marker-recap" href="https://recap-conf.dev/"
+						   aria-label="Jump to ReCAP event website">
 							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -50 275 275" aria-hidden="true">
-								<path fill="currentColor" d="M8.15 136.29s-10.4 5.84 2.75 13.34c11.7 6.67 25.76-.25 25.76-.25l-11.44-14.92-17.08 1.83ZM272.48 111.53c0 4.74-.23 9.05-.66 12.57-.58 4.78-1.51 8.09-2.67 9.01-.13.11-.26.19-.39.23-32.75 11.78-77.43.19-79.44-.34 0 0-64.36-22.43-115.94-26.43.08-.03.15-.07.23-.1-.17 0-.26.08-.42.08h-.04v-.02l21.14-54.54s2.47-7.4 8.01-15.7c4.69-7.05 11.58-14.74 21.07-19.11 7.23-3.3 16.15-5.31 25.03-6.54 5.76-.8 11.5-1.27 16.75-1.54h.09c7.86-.4 16.39-.78 16.39-.78.83-5.42 6.41-6.09 8.48-5.77 4.75.72 7.28 3.95 6.53 8.06 0 0 33.45 15.65 41.65 22.32 3.81 3.09 19.39 18.53 26.38 34.22A73.05 73.05 0 0 1 268.81 79c2.61 10.39 3.68 22.43 3.69 32.53Z"/>
-								<path d="M189.31 133.01c-1.12 1.16-21.09 21.66-48.16 34.86-6.19-11.33-30.43-51.42-67.85-61.26.02 0 .05-.02.07-.03 51.58 4 115.94 26.43 115.94 26.43Z" fill="currentColor"/>
-								<path d="M141.15 167.87c-9.91 4.83-20.77 8.68-32.01 10.24-6.29.88-12.69 1.03-19.1.24 1.48-19.04 2.1-58.81-16.79-71.71.02 0 .04-.02.06-.03 37.41 9.84 61.65 49.93 67.85 61.26Z" fill="currentColor"/>
-								<path d="M90.03 178.36c-.86-.1-1.72-.23-2.58-.37-8.56-1.39-17.12-4.5-25.45-9.88-13.15-8.49-44.65-32.68-54.14-31.59h-.09l.12-.02c-1.16.14 17.7-8.44 36.8-17.03l-.16-.06h.29c4.04-1.82 8.09-3.64 11.96-5.38 6.2-2.78 11.94-5.36 16.46-7.39 18.9 12.9 18.28 52.68 16.79 71.71Z" fill="currentColor"/>
+								<path fill="currentColor"
+									  d="M8.15 136.29s-10.4 5.84 2.75 13.34c11.7 6.67 25.76-.25 25.76-.25l-11.44-14.92-17.08 1.83ZM272.48 111.53c0 4.74-.23 9.05-.66 12.57-.58 4.78-1.51 8.09-2.67 9.01-.13.11-.26.19-.39.23-32.75 11.78-77.43.19-79.44-.34 0 0-64.36-22.43-115.94-26.43.08-.03.15-.07.23-.1-.17 0-.26.08-.42.08h-.04v-.02l21.14-54.54s2.47-7.4 8.01-15.7c4.69-7.05 11.58-14.74 21.07-19.11 7.23-3.3 16.15-5.31 25.03-6.54 5.76-.8 11.5-1.27 16.75-1.54h.09c7.86-.4 16.39-.78 16.39-.78.83-5.42 6.41-6.09 8.48-5.77 4.75.72 7.28 3.95 6.53 8.06 0 0 33.45 15.65 41.65 22.32 3.81 3.09 19.39 18.53 26.38 34.22A73.05 73.05 0 0 1 268.81 79c2.61 10.39 3.68 22.43 3.69 32.53Z" />
+								<path d="M189.31 133.01c-1.12 1.16-21.09 21.66-48.16 34.86-6.19-11.33-30.43-51.42-67.85-61.26.02 0 .05-.02.07-.03 51.58 4 115.94 26.43 115.94 26.43Z"
+									  fill="currentColor" />
+								<path d="M141.15 167.87c-9.91 4.83-20.77 8.68-32.01 10.24-6.29.88-12.69 1.03-19.1.24 1.48-19.04 2.1-58.81-16.79-71.71.02 0 .04-.02.06-.03 37.41 9.84 61.65 49.93 67.85 61.26Z"
+									  fill="currentColor" />
+								<path d="M90.03 178.36c-.86-.1-1.72-.23-2.58-.37-8.56-1.39-17.12-4.5-25.45-9.88-13.15-8.49-44.65-32.68-54.14-31.59h-.09l.12-.02c-1.16.14 17.7-8.44 36.8-17.03l-.16-.06h.29c4.04-1.82 8.09-3.64 11.96-5.38 6.2-2.78 11.94-5.36 16.46-7.39 18.9 12.9 18.28 52.68 16.79 71.71Z"
+									  fill="currentColor" />
 							</svg>
 						</a>
 					</li>
 
 					<li>
-						<a class="event-marker event-marker-hanaconf" href="https://hanatech.community/" aria-label="Jump to HANA Tech Con event website">
-							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 500 500" aria-hidden="true">
-								<rect width="244" height="244" x="128" y="128" fill="currentColor" rx="20"/>
-								<rect width="84" height="31" x="25" y="314" fill="currentColor" rx="15.5"/>
-								<rect width="84" height="31" x="24" y="261" fill="currentColor" rx="15.5"/>
-								<rect width="84" height="31" x="25" y="208" fill="currentColor" rx="15.5"/>
-								<rect width="84" height="31" x="25" y="155" fill="currentColor" rx="15.5"/>
-								<rect width="84" height="31" x="392" y="155" fill="currentColor" rx="15.5"/>
-								<rect width="84" height="31" x="392" y="208" fill="currentColor" rx="15.5"/>
-								<rect width="84" height="31" x="392" y="261" fill="currentColor" rx="15.5"/>
-								<rect width="84" height="31" x="392" y="314" fill="currentColor" rx="15.5"/>
-								<rect width="31" height="84" x="314" y="25" fill="currentColor" rx="15.5"/>
-								<rect width="31" height="84" x="261" y="25" fill="currentColor" rx="15.5"/>
-								<rect width="31" height="84" x="208" y="25" fill="currentColor" rx="15.5"/>
-								<rect width="31" height="84" x="155" y="25" fill="currentColor" rx="15.5"/>
-								<rect width="31" height="84" x="314" y="392" fill="currentColor" rx="15.5"/>
-								<rect width="31" height="84" x="261" y="392" fill="currentColor" rx="15.5"/>
-								<rect width="31" height="84" x="208" y="392" fill="currentColor" rx="15.5"/>
-								<rect width="31" height="84" x="155" y="392" fill="currentColor" rx="15.5"/>
+						<a class="event-marker event-marker-hanaconf" href="https://hanatech.community/"
+						   aria-label="Jump to HANA Tech Con event website">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 500 500"
+								 aria-hidden="true">
+								<rect width="244" height="244" x="128" y="128" fill="currentColor" rx="20" />
+								<rect width="84" height="31" x="25" y="314" fill="currentColor" rx="15.5" />
+								<rect width="84" height="31" x="24" y="261" fill="currentColor" rx="15.5" />
+								<rect width="84" height="31" x="25" y="208" fill="currentColor" rx="15.5" />
+								<rect width="84" height="31" x="25" y="155" fill="currentColor" rx="15.5" />
+								<rect width="84" height="31" x="392" y="155" fill="currentColor" rx="15.5" />
+								<rect width="84" height="31" x="392" y="208" fill="currentColor" rx="15.5" />
+								<rect width="84" height="31" x="392" y="261" fill="currentColor" rx="15.5" />
+								<rect width="84" height="31" x="392" y="314" fill="currentColor" rx="15.5" />
+								<rect width="31" height="84" x="314" y="25" fill="currentColor" rx="15.5" />
+								<rect width="31" height="84" x="261" y="25" fill="currentColor" rx="15.5" />
+								<rect width="31" height="84" x="208" y="25" fill="currentColor" rx="15.5" />
+								<rect width="31" height="84" x="155" y="25" fill="currentColor" rx="15.5" />
+								<rect width="31" height="84" x="314" y="392" fill="currentColor" rx="15.5" />
+								<rect width="31" height="84" x="261" y="392" fill="currentColor" rx="15.5" />
+								<rect width="31" height="84" x="208" y="392" fill="currentColor" rx="15.5" />
+								<rect width="31" height="84" x="155" y="392" fill="currentColor" rx="15.5" />
 							</svg>
 						</a>
 					</li>
@@ -370,4 +408,5 @@
 	<script src="./js/speaker-lineup.js"></script>
 	<script src="./js/main.js"></script>
 </body>
+
 </html>
