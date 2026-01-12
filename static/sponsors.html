@@ -34,6 +34,7 @@
 	<script src="https://unpkg.com/vue@3"></script>
 	<script src="https://js.tito.io/v2/with/inline" async></script>
 </head>
+
 <body>
 	<nav class="nav" aria-label="Main navigation" id="nav">
 		<nav-section v-if="!showMobileNav"></nav-section>
@@ -100,15 +101,23 @@
 						<div>
 							<a class="sponsors-logo" href="https://www.brandeis.de/" rel="external nofollow"
 							   aria-label="Brandeis Consulting GmbH" hreflang="en" target="_blank">
-								<svg class="brandeis" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" overflow="hidden"
+								<svg class="brandeis" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+									 overflow="hidden"
 									 viewBox="0 0 869 265">
-									<text fill="currentColor" font-family="Tahoma,Tahoma_MSFontService,sans-serif" font-size="128"
-										  font-weight="400" transform="matrix(1 0 0 1.00227 254.908 102)">Brandeis</text>
-									<text fill="currentColor" font-family="Tahoma,Tahoma_MSFontService,sans-serif" font-size="128"
-										  font-weight="400" transform="matrix(1 0 0 1.00227 254.908 238)">Consulting</text>
-									<path fill="#0C3C60" fill-rule="evenodd" d="M215 2.005v251.57L68 171.228 215 2.005Z" />
-									<path fill="#E46C0A" fill-rule="evenodd" d="M7 265.603V14.032l147 82.347L7 265.603Z" />
-									<path fill="#785435" fill-rule="evenodd" d="m68.094 171.686 13.828 7.506 72.01-83.027-13.828-7.506Z" />
+									<text fill="currentColor" font-family="Tahoma,Tahoma_MSFontService,sans-serif"
+										  font-size="128"
+										  font-weight="400"
+										  transform="matrix(1 0 0 1.00227 254.908 102)">Brandeis</text>
+									<text fill="currentColor" font-family="Tahoma,Tahoma_MSFontService,sans-serif"
+										  font-size="128"
+										  font-weight="400"
+										  transform="matrix(1 0 0 1.00227 254.908 238)">Consulting</text>
+									<path fill="#0C3C60" fill-rule="evenodd"
+										  d="M215 2.005v251.57L68 171.228 215 2.005Z" />
+									<path fill="#E46C0A" fill-rule="evenodd"
+										  d="M7 265.603V14.032l147 82.347L7 265.603Z" />
+									<path fill="#785435" fill-rule="evenodd"
+										  d="m68.094 171.686 13.828 7.506 72.01-83.027-13.828-7.506Z" />
 								</svg>
 							</a>
 						</div>
@@ -117,7 +126,8 @@
 							<h3>Brandeis Consulting GmbH</h3>
 							<ul class="sponsors-socials">
 								<li>
-									<a href="https://www.brandeis.de/" aria-label="Website of Brandeis Consulting GmbH" rel="nofollow"
+									<a href="https://www.brandeis.de/" aria-label="Website of Brandeis Consulting GmbH"
+									   rel="nofollow"
 									   target="_blank">
 										<svg class="icon" aria-hidden="true">
 											<use xlink:href="images/icons/sprite.svg#website"></use>
@@ -126,14 +136,16 @@
 								</li>
 								<li>
 									<a href="https://www.linkedin.com/company/brandeis-consulting/"
-									   aria-label="Linkedin profile of Brandeis Consulting GmbH" rel="nofollow" target="_blank">
+									   aria-label="Linkedin profile of Brandeis Consulting GmbH" rel="nofollow"
+									   target="_blank">
 										<svg class="icon" aria-hidden="true">
 											<use xlink:href="images/icons/sprite.svg#linkedin"></use>
 										</svg>
 									</a>
 								</li>
 								<li>
-									<a href="https://bsky.app/profile/brandeis.de" aria-label="Bluesky profile of Brandeis Consulting GmbH"
+									<a href="https://bsky.app/profile/brandeis.de"
+									   aria-label="Bluesky profile of Brandeis Consulting GmbH"
 									   rel="nofollow" target="_blank">
 										<svg class="icon" aria-hidden="true">
 											<use xlink:href="images/icons/sprite.svg#bluesky"></use>
@@ -141,10 +153,14 @@
 									</a>
 								</li>
 							</ul>
-							<p>Brandeis Consulting is your competent partner for training and coaching in the field of software development
-								on S/4HANA and BW/4HANA systems. With our in-depth expertise, we support SAP customers and partners in
-								designing and optimizing the architecture of their applications. Our tailored consulting services
-								and practice-oriented training courses ensure that you can exploit the full potential of your SAP
+							<p>Brandeis Consulting is your competent partner for training and coaching in the field of
+								software development
+								on S/4HANA and BW/4HANA systems. With our in-depth expertise, we support SAP customers
+								and partners in
+								designing and optimizing the architecture of their applications. Our tailored consulting
+								services
+								and practice-oriented training courses ensure that you can exploit the full potential of
+								your SAP
 								solutions and use future-oriented technologies effectively.</p>
 						</div>
 					</li>
@@ -709,6 +725,8 @@
 						</div>
 					</li> -->
 
+					<!-- Add this to push the footer down to the bottom -->
+					<li style="min-height: 60vh;"></li>
 				</ul>
 
 			</div>
