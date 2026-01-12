@@ -24,5 +24,5 @@
     "html.format.wrapAttributes": "preserve-aligned",
     "xmlTools.splitAttributesOnFormat": true,
     "xmlTools.enforcePrettySelfClosingTagOnFormat": true,
-    "liveServer.settings.port": 5502,
+    "liveServer.settings.port": 5503,
 }

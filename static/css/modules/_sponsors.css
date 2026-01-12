@@ -7,9 +7,8 @@
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
-	margin-block-end: 2rem;
 	list-style-type: none;
-	margin: 0;
+	margin: 5rem 0 2rem;
 	padding: 0;
 }
 
