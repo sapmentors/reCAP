@@ -1365,6 +1365,14 @@ footer {
 
 /* ---------------------------- misc ----------------------------  */
 
+.link-bullet {
+	display: inline-block;
+	width: 0.6rem;
+	height: 0.6rem;
+	background: var(--brand-color);
+	margin-inline-end: 0.5rem;
+}
+
 .location-address {
 	position: relative;
 }
