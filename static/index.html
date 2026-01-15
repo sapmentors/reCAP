@@ -44,71 +44,17 @@
 		}
 
 		.pixel {
-			animation: pixelFloat 8s infinite ease-in-out;
+			animation: pixelFade 5s infinite ease-in-out;
 		}
 
-		.pixel-pulse {
-			animation: pixelPulse 6s infinite ease-in-out;
-		}
-
-		.pixel-drift {
-			animation: pixelDrift 10s infinite ease-in-out;
-		}
-
-		@keyframes pixelFloat {
-
-			0%,
-			100% {
-				opacity: 0.3;
-				transform: translateY(0px) scale(0.8) rotate(0deg);
+		@keyframes pixelFade {
+			0%, 100% {
+				opacity: 0;
+				transform: translateY(0px);
 			}
-
-			25% {
+			50% {
 				opacity: 0.8;
-				transform: translateY(-15px) scale(1.1) rotate(5deg);
-			}
-
-			50% {
-				opacity: 1;
-				transform: translateY(-8px) scale(1.2) rotate(-3deg);
-			}
-
-			75% {
-				opacity: 0.6;
-				transform: translateY(-20px) scale(0.9) rotate(8deg);
-			}
-		}
-
-		@keyframes pixelPulse {
-
-			0%,
-			100% {
-				opacity: 0.4;
-				transform: scale(0.7);
-			}
-
-			50% {
-				opacity: 1;
-				transform: scale(1.3);
-			}
-		}
-
-		@keyframes pixelDrift {
-
-			0%,
-			100% {
-				opacity: 0.2;
-				transform: translateX(0px) translateY(0px) scale(0.8);
-			}
-
-			33% {
-				opacity: 0.9;
-				transform: translateX(20px) translateY(-10px) scale(1.1);
-			}
-
-			66% {
-				opacity: 0.7;
-				transform: translateX(-15px) translateY(-25px) scale(1.0);
+				transform: translateY(-8px);
 			}
 		}
 
@@ -133,38 +79,46 @@
 			<!-- Animated Pixel Background -->
 			<div class="pixel-background">
 				<svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-					<!-- Colorful floating pixel squares with varied animations -->
-					<rect class="pixel" x="5%" y="10%" width="60" height="60"
+					<!-- Randomly positioned squares with varying sizes -->
+					<rect class="pixel" x="8%" y="15%" width="45" height="45"
 						  fill="#0090DA"
 						  style="animation-delay: 0s;" />
 
-					<rect class="pixel-pulse" x="18%" y="68%" width="50" height="50"
+					<rect class="pixel" x="25%" y="72%" width="65" height="65"
 						  fill="#00C8E8"
-						  style="animation-delay: 0.8s;" />
+						  style="animation-delay: 1s;" />
 
-					<rect class="pixel-drift" x="75%" y="15%" width="70" height="70"
-						  fill="#30914c"
+					<rect class="pixel" x="72%" y="18%" width="80" height="80"
+						  fill="#0090DA"
+						  style="animation-delay: 2s;" />
+
+					<rect class="pixel" x="15%" y="45%" width="50" height="50"
+						  fill="#00C8E8"
+						  style="animation-delay: 2.5s;" />
+
+					<rect class="pixel" x="85%" y="68%" width="55" height="55"
+						  fill="#0090DA"
+						  style="animation-delay: 3s;" />
+
+					<rect class="pixel" x="45%" y="8%" width="40" height="40"
+						  fill="#00C8E8"
+						  style="animation-delay: 0.5s;" />
+
+					<rect class="pixel" x="62%" y="55%" width="70" height="70"
+						  fill="#0090DA"
 						  style="animation-delay: 1.5s;" />
 
-					<rect class="pixel" x="80%" y="65%" width="60" height="60"
-						  fill="#8838EC"
-						  style="animation-delay: 2.2s;" />
-
-					<rect class="pixel-pulse" x="40%" y="25%" width="50" height="50"
-						  fill="#FF5D17"
-						  style="animation-delay: 2.8s;" />
-
-					<rect class="pixel-drift" x="10%" y="30%" width="60" height="60"
-						  fill="#BA066C"
+					<rect class="pixel" x="38%" y="35%" width="48" height="48"
+						  fill="#00C8E8"
 						  style="animation-delay: 3.5s;" />
 
-					<rect class="pixel" x="65%" y="65%" width="55" height="55"
-						  fill="#9D6B57"
-						  style="animation-delay: 4.1s;" />
+					<rect class="pixel" x="5%" y="78%" width="60" height="60"
+						  fill="#0090DA"
+						  style="animation-delay: 4s;" />
 
-					<rect class="pixel-pulse" x="35%" y="5%" width="45" height="45"
-						  fill="#D9D100"
-						  style="animation-delay: 4.8s;" />
+					<rect class="pixel" x="52%" y="82%" width="43" height="43"
+						  fill="#00C8E8"
+						  style="animation-delay: 4.5s;" />
 				</svg>
 			</div>
 
