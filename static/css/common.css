@@ -28,6 +28,34 @@
 
 	font-family: Inter, sans-serif;
 	font-feature-settings:  "dlig", "frac", "dnom" 0, "numr" 0, "subs" 0, "sups" 0, "tnum", "zero", "ss01", "ss02" 0, "ss03" 0, "ss04" 0, "ss05" 0, "ss06" 0, "ss08", "cv01", "cv02", "cv03", "cv04", "cv05", "cv06", "cv07", "cv08" 0, "cv09", "cv10", "cpsp" 0, "c2sc" 0, "salt" 0, "aalt" 0, "calt", "ccmp", "locl", "kern";
+
+	/* Original cube SVGs */
+	--cube-1: url("data:image/svg+xml,%3Csvg width='72' height='48' viewBox='0 0 72 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 24L0 48L24 48L24 24L0 24Z' fill='%23F16A36'/%3E%3Cpath d='M24 24L24 48L48 48L48 24L24 24Z' fill='%23F16A36'/%3E%3Cpath d='M48 0L48 24L72 24L72 0L48 0Z' fill='%238838EC'/%3E%3C/svg%3E");
+	--cube-2: url("data:image/svg+xml,%3Csvg width='72' height='48' viewBox='0 0 72 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 24L0 48L24 48L24 24L0 24Z' fill='%23F16A36'/%3E%3Cpath d='M24 24L24 48L48 48L48 24L24 24Z' fill='%23F16A36'/%3E%3Cpath d='M48 0L48 24L72 24L72 0L48 0Z' fill='%23F79B36'/%3E%3C/svg%3E");
+	--cube-3: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M24 24L24 48L48 48L48 24L24 24Z' fill='%23F16A36'/%3E%3Cpath d='M0 0L0 24L24 24L24 0L0 0Z' fill='%23F79B36'/%3E%3C/svg%3E");
+	--cube-4: url("data:image/svg+xml,%3Csvg width='72' height='48' viewBox='0 0 72 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 24L0 48L24 48L24 24L0 24Z' fill='%23F16A36'/%3E%3Cpath d='M24 0L24 24L48 24L48 0L24 0Z' fill='%23F79B36'/%3E%3Cpath d='M48 0L48 24L72 24L72 0L48 0Z' fill='%238838EC'/%3E%3C/svg%3E");
+	--cube-5: url("data:image/svg+xml,%3Csvg width='96' height='48' viewBox='0 0 96 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M48 24L48 0L24 0L24 24L48 24Z' fill='%23D9D100'/%3E%3Cpath d='M96 48L96 24L72 24L72 48L96 48Z' fill='%23F16A36'/%3E%3Cpath d='M24 24L24 0L0 0L0 24L24 24Z' fill='%238838EC'/%3E%3Cpath d='M96 24L96 0L72 0L72 24L96 24Z' fill='%23BA066C'/%3E%3Cpath d='M72 48L72 24L48 24L48 48L72 48Z' fill='%23009BE2'/%3E%3C/svg%3E");
+	--cube-6: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M24 0L24 24L48 24L48 0L24 0Z' fill='%23D9D100'/%3E%3Cpath d='M24 24L24 48L48 48L48 24L24 24Z' fill='%23BA066C'/%3E%3Cpath d='M0 24L0 48L24 48L24 24L0 24Z' fill='%23009BE2'/%3E%3C/svg%3E");
+	--cube-7: url("data:image/svg+xml,%3Csvg width='72' height='48' viewBox='0 0 72 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 24L0 48L24 48L24 24L0 24Z' fill='%23F16A36'/%3E%3Cpath d='M48 0L48 24L72 24L72 0L48 0Z' fill='%238838EC'/%3E%3Cpath d='M48 24L48 48L72 48L72 24L48 24Z' fill='%23BA066C'/%3E%3Cpath d='M24 24L24 48L48 48L48 24L24 24Z' fill='%23009BE2'/%3E%3C/svg%3E");
+	--cube-8: url("data:image/svg+xml,%3Csvg width='72' height='48' viewBox='0 0 72 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 24L0 48L24 48L24 24L0 24Z' fill='%23F16A36'/%3E%3Cpath d='M48 0L48 24L72 24L72 0L48 0Z' fill='%238838EC'/%3E%3Cpath d='M48 24L48 48L72 48L72 24L48 24Z' fill='%23BA066C'/%3E%3Cpath d='M24 24L24 48L48 48L48 24L24 24Z' fill='%23009BE2'/%3E%3C/svg%3E");
+	--cube-9: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M24 0L24 24L48 24L48 0L24 0Z' fill='%23D9D100'/%3E%3Cpath d='M24 24L24 48L48 48L48 24L24 24Z' fill='%23BA066C'/%3E%3Cpath d='M0 24L0 48L24 48L24 24L0 24Z' fill='%23009BE2'/%3E%3C/svg%3E");
+	--cube-10: url("data:image/svg+xml,%3Csvg width='72' height='48' viewBox='0 0 72 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M48 24L48 48L72 48L72 24L48 24Z' fill='%23D9D100'/%3E%3Cpath d='M24 0L24 24L48 24L48 0L24 0Z' fill='%238838EC'/%3E%3Cpath d='M24 24L24 48L48 48L48 24L24 24Z' fill='%23BA066C'/%3E%3Cpath d='M0 24L0 48L24 48L24 24L0 24Z' fill='%23009BE2'/%3E%3C/svg%3E");
+	--cube-11: url("data:image/svg+xml,%3Csvg width='72' height='48' viewBox='0 0 72 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M48 0L48 24L72 24L72 0L48 0Z' fill='%23F16A36'/%3E%3Cpath d='M24 24L24 48L48 48L48 24L24 24Z' fill='%23D9D100'/%3E%3Cpath d='M24 0L24 24L48 24L48 0L24 0Z' fill='%238838EC'/%3E%3Cpath d='M0 24L0 48L24 48L24 24L0 24Z' fill='%23BA066C'/%3E%3C/svg%3E");
+	--cube-12: url("data:image/svg+xml,%3Csvg width='96' height='48' viewBox='0 0 96 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M72 0L72 24L96 24L96 0L72 0Z' fill='%23F16A36'/%3E%3Cpath d='M48 24L48 48L72 48L72 24L48 24Z' fill='%23D9D100'/%3E%3Cpath d='M48 0L48 24L72 24L72 0L48 0Z' fill='%238838EC'/%3E%3Cpath d='M24 24L24 48L48 48L48 24L24 24Z' fill='%23BA066C'/%3E%3Cpath d='M0 0L0 24L24 24L24 0L0 0Z' fill='%23009BE2'/%3E%3C/svg%3E");
+
+	/* Hover state cube SVGs with different colors */
+	--cube-1-hover: url("data:image/svg+xml,%3Csvg width='72' height='48' viewBox='0 0 72 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 24L0 48L24 48L24 24L0 24Z' fill='%23D9D100'/%3E%3Cpath d='M24 24L24 48L48 48L48 24L24 24Z' fill='%23BA066C'/%3E%3Cpath d='M48 0L48 24L72 24L72 0L48 0Z' fill='%23009BE2'/%3E%3C/svg%3E");
+	--cube-2-hover: url("data:image/svg+xml,%3Csvg width='72' height='48' viewBox='0 0 72 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 24L0 48L24 48L24 24L0 24Z' fill='%238838EC'/%3E%3Cpath d='M24 24L24 48L48 48L48 24L24 24Z' fill='%238838EC'/%3E%3Cpath d='M48 0L48 24L72 24L72 0L48 0Z' fill='%23BA066C'/%3E%3C/svg%3E");
+	--cube-3-hover: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M24 24L24 48L48 48L48 24L24 24Z' fill='%23D9D100'/%3E%3Cpath d='M0 0L0 24L24 24L24 0L0 0Z' fill='%23009BE2'/%3E%3C/svg%3E");
+	--cube-4-hover: url("data:image/svg+xml,%3Csvg width='72' height='48' viewBox='0 0 72 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 24L0 48L24 48L24 24L0 24Z' fill='%23D9D100'/%3E%3Cpath d='M24 0L24 24L48 24L48 0L24 0Z' fill='%23009BE2'/%3E%3Cpath d='M48 0L48 24L72 24L72 0L48 0Z' fill='%23BA066C'/%3E%3C/svg%3E");
+	--cube-5-hover: url("data:image/svg+xml,%3Csvg width='96' height='48' viewBox='0 0 96 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M48 24L48 0L24 0L24 24L48 24Z' fill='%23009BE2'/%3E%3Cpath d='M96 48L96 24L72 24L72 48L96 48Z' fill='%23BA066C'/%3E%3Cpath d='M24 24L24 0L0 0L0 24L24 24Z' fill='%23F16A36'/%3E%3Cpath d='M96 24L96 0L72 0L72 24L96 24Z' fill='%238838EC'/%3E%3Cpath d='M72 48L72 24L48 24L48 48L72 48Z' fill='%23D9D100'/%3E%3C/svg%3E");
+	--cube-6-hover: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M24 0L24 24L48 24L48 0L24 0Z' fill='%23009BE2'/%3E%3Cpath d='M24 24L24 48L48 48L48 24L24 24Z' fill='%238838EC'/%3E%3Cpath d='M0 24L0 48L24 48L24 24L0 24Z' fill='%23F16A36'/%3E%3C/svg%3E");
+	--cube-7-hover: url("data:image/svg+xml,%3Csvg width='72' height='48' viewBox='0 0 72 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 24L0 48L24 48L24 24L0 24Z' fill='%23D9D100'/%3E%3Cpath d='M48 0L48 24L72 24L72 0L48 0Z' fill='%23F16A36'/%3E%3Cpath d='M48 24L48 48L72 48L72 24L48 24Z' fill='%238838EC'/%3E%3Cpath d='M24 24L24 48L48 48L48 24L24 24Z' fill='%23F79B36'/%3E%3C/svg%3E");
+	--cube-8-hover: url("data:image/svg+xml,%3Csvg width='72' height='48' viewBox='0 0 72 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 24L0 48L24 48L24 24L0 24Z' fill='%23D9D100'/%3E%3Cpath d='M48 0L48 24L72 24L72 0L48 0Z' fill='%23F16A36'/%3E%3Cpath d='M48 24L48 48L72 48L72 24L48 24Z' fill='%238838EC'/%3E%3Cpath d='M24 24L24 48L48 48L48 24L24 24Z' fill='%23F79B36'/%3E%3C/svg%3E");
+	--cube-9-hover: url("data:image/svg+xml,%3Csvg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M24 0L24 24L48 24L48 0L24 0Z' fill='%23009BE2'/%3E%3Cpath d='M24 24L24 48L48 48L48 24L24 24Z' fill='%238838EC'/%3E%3Cpath d='M0 24L0 48L24 48L24 24L0 24Z' fill='%23F16A36'/%3E%3C/svg%3E");
+	--cube-10-hover: url("data:image/svg+xml,%3Csvg width='72' height='48' viewBox='0 0 72 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M48 24L48 48L72 48L72 24L48 24Z' fill='%23009BE2'/%3E%3Cpath d='M24 0L24 24L48 24L48 0L24 0Z' fill='%23F16A36'/%3E%3Cpath d='M24 24L24 48L48 48L48 24L24 24Z' fill='%238838EC'/%3E%3Cpath d='M0 24L0 48L24 48L24 24L0 24Z' fill='%23F79B36'/%3E%3C/svg%3E");
+	--cube-11-hover: url("data:image/svg+xml,%3Csvg width='72' height='48' viewBox='0 0 72 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M48 0L48 24L72 24L72 0L48 0Z' fill='%23D9D100'/%3E%3Cpath d='M24 24L24 48L48 48L48 24L24 24Z' fill='%23009BE2'/%3E%3Cpath d='M24 0L24 24L48 24L48 0L24 0Z' fill='%23F16A36'/%3E%3Cpath d='M0 24L0 48L24 48L24 24L0 24Z' fill='%238838EC'/%3E%3C/svg%3E");
+	--cube-12-hover: url("data:image/svg+xml,%3Csvg width='96' height='48' viewBox='0 0 96 48' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M72 0L72 24L96 24L96 0L72 0Z' fill='%23D9D100'/%3E%3Cpath d='M48 24L48 48L72 48L72 24L48 24Z' fill='%23009BE2'/%3E%3Cpath d='M48 0L48 24L72 24L72 0L48 0Z' fill='%23F16A36'/%3E%3Cpath d='M24 24L24 48L48 48L48 24L24 24Z' fill='%238838EC'/%3E%3Cpath d='M0 0L0 24L24 24L24 0L0 0Z' fill='%23F79B36'/%3E%3C/svg%3E");
 }
 
 @supports (font-variation-settings: normal) {
@@ -372,12 +400,53 @@ summary {
 p {
 	margin-block-end: 1rem;
 	font-size: var(--type-0);
-	line-height: 1.25;
+	line-height: 1.5;
 }
 
 li::marker {
+	font-size: 1.4rem;
+}
+
+li:nth-child(1)::marker {
+	color: var(--brand-color);
+}
+
+li:nth-child(2)::marker {
 	color: var(--brand-color-alt);
 }
+
+li:nth-child(3)::marker {
+	color: var(--brand-color-hana);
+}
+
+li:nth-child(4)::marker {
+	color: var(--sucess-color);
+}
+
+li:nth-child(5)::marker {
+	color: var(--brand-color-codejam);
+}
+
+li:nth-child(6)::marker {
+	color: var(--brand-color-recap);
+}
+
+li:nth-child(7)::marker {
+	color: var(--brand-color-ui5con);
+}
+
+li:nth-child(8)::marker {
+	color: var(--code-connect-color);
+}
+
+li:nth-child(9)::marker {
+	color: var(--brand-color-contrast);
+}
+
+li:nth-child(n+10)::marker {
+	color: var(--brand-color);
+}
+
 
 *,
 *:after,
@@ -459,6 +528,7 @@ h5 {
 }
 
 ul {
+	list-style: square;
 	font-size: var(--type-0);
 }
 
@@ -731,6 +801,13 @@ main {
 	margin-inline: auto;
 	padding-block: 4rem;
 	padding-inline: 3vw;
+
+	&:hover {
+
+		.section-heading span {
+			filter: url(#pixelate);
+		}
+	}
 }
 
 /* @media only screen and (min-width: 1440px) {
@@ -764,9 +841,21 @@ main {
 }
 
 .head-banner {
+	gap: 2rem;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
 	padding-block-start: 2rem;
 	padding-block-end: 3rem;
-	padding-inline: 2rem;
+}
+
+.head-banner img {
+	width: 95%;
+}
+
+.head-banner time {
+	flex: 1;
+	font-size: var(--type-3);
 }
 
 .head .wrap {
@@ -776,62 +865,12 @@ main {
 	padding-block-start: 2rem;
 }
 
-@media only screen and (min-width: 580px) {
-
-	.lines {
-		background-size: 800px auto;
-		background-position: -34px 0px;
-	}
-}
-
-@media only screen and (min-width: 760px) {
-
-	.lines {
-		background-size: 1075px auto;
-		background-position: -45px 0px;
-	}
-
-	.head-banner {
-		padding-block-start: 4rem;
-		padding-block-end: 3rem;
-		padding-inline: 3rem;
-	}
-}
-
-@media only screen and (min-width: 1024px) {
-
-	.lines {
-		background-size: 100% auto;
-		background-position: center 0px;
-	}
-
-	.head-banner {
-		padding-block-start: 5rem;
-		padding-block-end: 5rem;
-		padding-inline: 7rem;
-	}
-}
-
-@media only screen and (min-width: 1240px) {
-
-	.lines {
-		background: transparent url(../images/head-background-center-test.svg) no-repeat;
-		background-position: center 0;
-		background-size: auto 344px;
-	}
-
-	.head-banner {
-		padding-block-start: 7rem;
-		padding-block-end: 7rem;
-		padding-inline: 8rem;
-	}
-}
 
 .head-detail {
 	display: block;
 	font-weight: 800;
 	text-align: center;
-	align-self: flex-end;
+	align-self: flex-start;
 	font-size: var(--type-2);
 }
 
@@ -856,6 +895,8 @@ main {
 	.head-container {
 		gap: 2rem;
 		flex-direction: row;
+		max-width: 80%;
+		text-wrap: balance;
 	}
 
 	.head-container img {
@@ -863,9 +904,53 @@ main {
 		align-self: flex-start;
 	}
 
+	.head-banner img {
+		width: 50%;
+	}
+
 	.head-detail {
 		text-align: start;
+		align-self: flex-end;
 	}
+
+	.head-banner  {
+		gap: 2rem;
+		flex-direction: row;
+	}
+}
+
+.head-cta {
+	padding-block: 1rem 0;
+	position: relative;
+	padding-bottom: 3rem;
+}
+
+.head-cta .links-container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	margin-block: 0;
+	margin-inline: 0;
+	position: absolute;
+	transition: opacity 0.3s ease, transform 0.3s ease, margin-top 0.3s ease;
+	z-index: 10;
+}
+
+.head-cta .links-container--hidden {
+	opacity: 0;
+	transform: translateY(-10px);
+	pointer-events: none;
+}
+
+.head-cta .links-container--visible {
+	opacity: 1;
+	transform: translateY(0);
+	pointer-events: auto;
+	margin-top: 2rem;
+}
+
+.head-cta .links-container a svg {
+	margin-inline-end: 0.25rem;
 }
 
 /* ---------------------------- Calendars -----------------------------  */
@@ -901,15 +986,112 @@ main {
 
 .section-heading {
 	width: fit-content;
-	padding-inline: 0.75rem;
-	padding-block: 0.25rem;
-	border: 0.0625rem solid var(--brand-color-alt);
-	border-top-width: 0.75rem;
+	position: relative;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
 }
 
-p ~ .section-heading {
-	margin-block-start: 4rem;
+/* Cube icon system */
+.section-heading::after {
+	content: '';
+	width: 80px;
+	height: 32px;
+	flex: 0 0 auto;
+	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
 }
+
+/* Cube variants */
+.section-heading--cube-1::after { background-image: var(--cube-1); }
+.section-heading--cube-2::after { background-image: var(--cube-2); }
+.section-heading--cube-3::after { background-image: var(--cube-3); }
+.section-heading--cube-4::after { background-image: var(--cube-4); }
+.section-heading--cube-5::after { background-image: var(--cube-5); }
+.section-heading--cube-6::after { background-image: var(--cube-6); }
+.section-heading--cube-7::after { background-image: var(--cube-7); }
+.section-heading--cube-8::after { background-image: var(--cube-8); }
+.section-heading--cube-9::after { background-image: var(--cube-9); }
+.section-heading--cube-10::after { background-image: var(--cube-10); }
+.section-heading--cube-11::after { background-image: var(--cube-11); }
+.section-heading--cube-12::after { background-image: var(--cube-12); }
+
+/* Hover animations - Switch to hover SVGs */
+@media not (prefers-reduced-motion: reduce) {
+	.wrap:hover {
+		.section-heading--cube-1::after {
+			background-image: var(--cube-1-hover);
+		}
+
+		.section-heading--cube-2::after {
+			background-image: var(--cube-2-hover);
+		}
+
+		.section-heading--cube-3::after {
+			background-image: var(--cube-3-hover);
+		}
+
+		.section-heading--cube-4::after {
+			background-image: var(--cube-4-hover);
+		}
+
+		.section-heading--cube-5::after {
+			background-image: var(--cube-5-hover);
+		}
+
+		.section-heading--cube-6::after {
+			background-image: var(--cube-6-hover);
+		}
+
+		.section-heading--cube-7::after {
+			background-image: var(--cube-7-hover);
+		}
+
+		.section-heading--cube-8::after {
+			background-image: var(--cube-8-hover);
+		}
+
+		.section-heading--cube-9::after {
+			background-image: var(--cube-9-hover);
+		}
+
+		.section-heading--cube-10::after {
+			background-image: var(--cube-10-hover);
+		}
+
+		.section-heading--cube-11::after {
+			background-image: var(--cube-11-hover);
+		}
+
+		.section-heading--cube-12::after {
+			background-image: var(--cube-12-hover);
+		}
+
+		/* Optional transform effects */
+		.section-heading::after {
+			transform: scale(1.05);
+		}
+
+		.section-heading--spin::after {
+			transform: rotate(15deg) scale(1.05);
+		}
+
+		.section-heading--bounce::after {
+			animation: cubeBounce 0.6s ease-in-out;
+		}
+	}
+}
+
+/* Keyframes for bounce animation */
+@keyframes cubeBounce {
+	0%, 100% { transform: translateY(0) rotate(0deg); }
+	25% { transform: translateY(-8px) rotate(5deg); }
+	50% { transform: translateY(-4px) rotate(-5deg); }
+	75% { transform: translateY(-2px) rotate(3deg); }
+}
+
 
 /* ------------------------------ Teaser -------------------------------  */
 
@@ -1014,7 +1196,6 @@ p ~ .section-heading {
 
 .event-marker {
 	display: inline-block;
-	border-radius: 50%;
 	background-color: var(--logo-color);
 	color: var(--white);
 	width: 3rem;
@@ -1183,6 +1364,14 @@ footer {
 }
 
 /* ---------------------------- misc ----------------------------  */
+
+.link-bullet {
+	display: inline-block;
+	width: 0.6rem;
+	height: 0.6rem;
+	background: var(--brand-color);
+	margin-inline-end: 0.5rem;
+}
 
 .location-address {
 	position: relative;

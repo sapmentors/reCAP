@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<title>re>≡CAP 2025</title>
+	<title>re>≡CAP 2026</title>
 	<meta name="description"
 		  content="reCAP: the (un)conference on the SAP Cloud Application Programming Model (CAP)” establishing the link between the CAP community and the CAP development team. It was initiated by our great CAP community and quickly grew to a global onsite and broadcasting event." />
 	<meta name="keywords"
@@ -12,12 +12,12 @@
 
 	<meta property="twitter:card" content="summary" />
 	<meta property="twitter:url" content="https://recap-conf.dev/" />
-	<meta property="twitter:title" content="reCAP (un)conference - July 8, 2025" />
+	<meta property="twitter:title" content="reCAP (un)conference - July 15th, 2026" />
 	<meta property="twitter:description"
 		  content="re>≡CAP: the (un)conference on the SAP Cloud Application Programming Model (CAP)” establishing the link between the CAP community and the CAP development team. It was initiated by our great CAP community and quickly grew to a global onsite and broadcasting event." />
 	<meta property="twitter:image" content="https://recap-conf.dev/images/share-recap.png" />
 
-	<meta property="og:title" content="reCAP (un)conference - July 8, 2025" />
+	<meta property="og:title" content="reCAP (un)conference - July 15th, 2026" />
 	<meta property="og:description"
 		  content="reCAP: the (un)conference on the SAP Cloud Application Programming Model (CAP)” establishing the link between the CAP community and the CAP development team. It was initiated by our great CAP community and quickly grew to a global onsite and broadcasting event." />
 	<meta property="og:image" content="https://recap-conf.dev/images/share-recap.png" />
@@ -31,9 +31,10 @@
 	<link rel="stylesheet" href="./css/common.css" />
 	<link rel="stylesheet" href="./css/modules.css" />
 
-	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+	<script src="https://unpkg.com/vue@3"></script>
 	<script src="https://js.tito.io/v2/with/inline" async></script>
 </head>
+
 <body>
 	<nav class="nav" aria-label="Main navigation" id="nav">
 		<nav-section v-if="!showMobileNav"></nav-section>
@@ -43,13 +44,23 @@
 	<main>
 		<section>
 			<div class="wrap">
-				<h2 class="section-heading">
-					<span aria-hidden="true">&#8594;</span>
+				<h2 class="section-heading section-heading--cube-8">
+					<span>Become a Sponsor</span>
+				</h2>
+				<p>
+					Interested in supporting re>≡CAP 2026 as a sponsor? Find all available packages and details in our <a href="https://cap.cloud.sap/resources/events/Code_Connect_2026_Sponsor_Packages.pdf"
+					   target="_blank">sponsorship prospectus</a> or <a href="mailto:recap.conf@gmail.com">get in touch</a> with us directly.
+				</p>
+			</div>
+		</section>
+		<section>
+			<div class="wrap">
+				<h2 class="section-heading section-heading--cube-11">
 					<span>Our Sponsors</span>
 				</h2>
 
 				<ul class="sponsors-list">
-					<li>
+					<!-- <li>
 						<div>
 							<a class="sponsors-logo" href="https://www.aarini.com" rel="external nofollow"
 							   aria-label="aarini" hreflang="en" target="_blank">
@@ -95,21 +106,29 @@
 							beyond SAP and Azure.
 							</p>
 						</div>
-					</li>
+					</li> -->
 
 					<li>
 						<div>
 							<a class="sponsors-logo" href="https://www.brandeis.de/" rel="external nofollow"
 							   aria-label="Brandeis Consulting GmbH" hreflang="en" target="_blank">
-								<svg class="brandeis" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" overflow="hidden"
+								<svg class="brandeis" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+									 overflow="hidden"
 									 viewBox="0 0 869 265">
-									<text fill="currentColor" font-family="Tahoma,Tahoma_MSFontService,sans-serif" font-size="128"
-										  font-weight="400" transform="matrix(1 0 0 1.00227 254.908 102)">Brandeis</text>
-									<text fill="currentColor" font-family="Tahoma,Tahoma_MSFontService,sans-serif" font-size="128"
-										  font-weight="400" transform="matrix(1 0 0 1.00227 254.908 238)">Consulting</text>
-									<path fill="#0C3C60" fill-rule="evenodd" d="M215 2.005v251.57L68 171.228 215 2.005Z" />
-									<path fill="#E46C0A" fill-rule="evenodd" d="M7 265.603V14.032l147 82.347L7 265.603Z" />
-									<path fill="#785435" fill-rule="evenodd" d="m68.094 171.686 13.828 7.506 72.01-83.027-13.828-7.506Z" />
+									<text fill="currentColor" font-family="Tahoma,Tahoma_MSFontService,sans-serif"
+										  font-size="128"
+										  font-weight="400"
+										  transform="matrix(1 0 0 1.00227 254.908 102)">Brandeis</text>
+									<text fill="currentColor" font-family="Tahoma,Tahoma_MSFontService,sans-serif"
+										  font-size="128"
+										  font-weight="400"
+										  transform="matrix(1 0 0 1.00227 254.908 238)">Consulting</text>
+									<path fill="#0C3C60" fill-rule="evenodd"
+										  d="M215 2.005v251.57L68 171.228 215 2.005Z" />
+									<path fill="#E46C0A" fill-rule="evenodd"
+										  d="M7 265.603V14.032l147 82.347L7 265.603Z" />
+									<path fill="#785435" fill-rule="evenodd"
+										  d="m68.094 171.686 13.828 7.506 72.01-83.027-13.828-7.506Z" />
 								</svg>
 							</a>
 						</div>
@@ -118,7 +137,8 @@
 							<h3>Brandeis Consulting GmbH</h3>
 							<ul class="sponsors-socials">
 								<li>
-									<a href="https://www.brandeis.de/" aria-label="Website of Brandeis Consulting GmbH" rel="nofollow"
+									<a href="https://www.brandeis.de/" aria-label="Website of Brandeis Consulting GmbH"
+									   rel="nofollow"
 									   target="_blank">
 										<svg class="icon" aria-hidden="true">
 											<use xlink:href="images/icons/sprite.svg#website"></use>
@@ -127,14 +147,16 @@
 								</li>
 								<li>
 									<a href="https://www.linkedin.com/company/brandeis-consulting/"
-									   aria-label="Linkedin profile of Brandeis Consulting GmbH" rel="nofollow" target="_blank">
+									   aria-label="Linkedin profile of Brandeis Consulting GmbH" rel="nofollow"
+									   target="_blank">
 										<svg class="icon" aria-hidden="true">
 											<use xlink:href="images/icons/sprite.svg#linkedin"></use>
 										</svg>
 									</a>
 								</li>
 								<li>
-									<a href="https://bsky.app/profile/brandeis.de" aria-label="Bluesky profile of Brandeis Consulting GmbH"
+									<a href="https://bsky.app/profile/brandeis.de"
+									   aria-label="Bluesky profile of Brandeis Consulting GmbH"
 									   rel="nofollow" target="_blank">
 										<svg class="icon" aria-hidden="true">
 											<use xlink:href="images/icons/sprite.svg#bluesky"></use>
@@ -142,16 +164,20 @@
 									</a>
 								</li>
 							</ul>
-							<p>Brandeis Consulting is your competent partner for training and coaching in the field of software development
-								on S/4HANA and BW/4HANA systems. With our in-depth expertise, we support SAP customers and partners in
-								designing and optimizing the architecture of their applications. Our tailored consulting services
-								and practice-oriented training courses ensure that you can exploit the full potential of your SAP
+							<p>Brandeis Consulting is your competent partner for training and coaching in the field of
+								software development
+								on S/4HANA and BW/4HANA systems. With our in-depth expertise, we support SAP customers
+								and partners in
+								designing and optimizing the architecture of their applications. Our tailored consulting
+								services
+								and practice-oriented training courses ensure that you can exploit the full potential of
+								your SAP
 								solutions and use future-oriented technologies effectively.</p>
 						</div>
 					</li>
 
 
-					<li>
+					<!-- <li>
 						<div>
 							<a class="sponsors-logo" href="https://www.asbrucon.com" rel="external nofollow" aria-label="Asbrucon" hreflang="en" target="_blank">
 								<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
@@ -708,8 +734,10 @@
 								toolchain,
 								automating and orchestrating a low-risk approach to deliver on SAP DevOps initiatives.</p>
 						</div>
-					</li>
+					</li> -->
 
+					<!-- Add this to push the footer down to the bottom -->
+					<li style="min-height: 60vh;"></li>
 				</ul>
 
 			</div>

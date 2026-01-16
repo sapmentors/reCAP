@@ -1,5 +1,7 @@
 'use strict';
-Vue.component("nav-section-mobile", {
+
+// Store component definition for Vue 3
+window.NavSectionMobileComponent = {
   data: function () {
     return {
       currentPage: "",
@@ -33,9 +35,9 @@ Vue.component("nav-section-mobile", {
     </div>
 
     <ul class="mobile-nav-menu" v-if="hamburgerMenuVisible">
-        <li>
+        <!-- <li>
             <a href="program.html" :class="{ active: isActive('program') }" :aria-current="isActive('program')">Agenda</a>
-        </li>
+        </li>-->
         <!-- <li>
             <a href="speakerinfo.html" :class="{ active: isActive('speakerinfo') }" :aria-current="isActive('speakerinfo')">Speakers</a>
         </li>-->
@@ -51,10 +53,10 @@ Vue.component("nav-section-mobile", {
         <li>
             <a href="https://code-connect.dev/faq.html" target="_blank" :class="{ active: isActive('faq') }" :aria-current="isActive('faq')">FAQ</a>
         </li>
-        <!--<li>
+        <li>
             <a href="archive.html" :class="{ active: isActive('archive') }" :aria-current="isActive('archive')">Archive</a>
-        </li>-->
+        </li>
     </ul>
   </div>
   `,
-});
+};
