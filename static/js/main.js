@@ -91,21 +91,6 @@ const main = createApp({
       ],
       committee: [
         {
-          name: "Daniel Hutzel",
-          role: "CPO CAP",
-          image: "images/committee/daniel-hutzel.jpg",
-        },
-        {
-          name: "Mariana Naboka",
-          role: "Fiori Elements & Tools Expert",
-          image: "images/committee/mariana-naboka.png",
-        },
-        {
-          name: "Ole Lilienthal",
-          role: "Unit Lead CAP",
-          image: "images/committee/ole-lilienthal.jpg",
-        },
-        {
           name: "DJ Adams",
           role: "Developer Advocate",
           image: "images/committee/dj-adams.jpg",
@@ -116,19 +101,44 @@ const main = createApp({
           image: "images/committee/volker-buzek.jpg",
         },
         {
-          name: "Gregor Wolf",
-          role: "Computerservice Wolf, SAP Mentor",
-          image: "images/committee/gregor-wolf.webp",
+          name: "Daniel Hutzel",
+          role: "CPO CAP",
+          image: "images/committee/daniel-hutzel.jpg",
         },
         {
-          name: "Marian Zeis",
-          role: "Independent SAP Consultant & Developer",
-          image: "images/committee/marian-zeis.jpg",
+          name: "Frank Köppert",
+          role: "asbrucon GmbH",
+          image: "images/committee/frank-koeppert.jpg",
         },
         {
-          name: "Wouter Lemaire",
-          role: "SAP Solution Architect, Developer & Mentor",
-          image: "images/committee/wouter-lemaire.jpg",
+          name: "Ole Lilienthal",
+          role: "Unit Lead CAP",
+          image: "images/committee/ole-lilienthal.jpg",
+        },
+        {
+          name: "Danielle Lyle",
+          role: "Comentec",
+          image: "images/committee/danielle-lyle.jpg",
+        },
+        {
+          name: "Ben Patterson",
+          role: "Rev-Trac",
+          image: "images/committee/ben-patterson.jpg",
+        },
+        {
+          name: "Holger Schäfer",
+          role: "Uniorg",
+          image: "images/committee/holger-schaefer.jpg",
+        },
+        {
+          name: "Daniel Schipper",
+          role: "Blackwyse",
+          image: "images/committee/daniel-schipper.jpg",
+        },
+        {
+          name: "Harikishore Sreenivasalu",
+          role: "Aarini Consulting",
+          image: "images/committee/harikishore-sreenivasalu.jpg",
         },
         {
           name: "Martin Stenzig",
@@ -136,9 +146,9 @@ const main = createApp({
           image: "images/committee/martin-stenzig.jpg",
         },
         {
-          name: "Sebastian Schmidt ",
-          role: "Manager CAP",
-          image: "images/committee/sebastian-schmidt.jpg",
+          name: "Mike Zaschka",
+          role: "Independent SAP Solution Architect",
+          image: "images/committee/mike-zaschka.jpg",
         },
       ],
       activeSpeakers: null,
