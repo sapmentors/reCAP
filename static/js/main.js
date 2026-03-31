@@ -70,6 +70,9 @@ const header = createApp({
 header.mount("#header");
 
 const main = createApp({
+  compilerOptions: {
+    isCustomElement: (tag) => tag === "tito-widget",
+  },
   data() {
     return {
       team: [
@@ -167,15 +170,15 @@ const main = createApp({
     };
   },
   mounted() {
-     this.speakers = speakerLineupJson;
-     this.lineup = proposalLineupJson;
-     this.formattedLineup = this.formatLineup();
+    this.speakers = speakerLineupJson;
+    this.lineup = proposalLineupJson;
+    this.formattedLineup = this.formatLineup();
 
-     this.formattedSpeakers = this.formatSpeakers(
-       this.formattedLineup,
-       this.speakers
-     );
-     this.groupExpertCornerTopics();
+    this.formattedSpeakers = this.formatSpeakers(
+      this.formattedLineup,
+      this.speakers,
+    );
+    this.groupExpertCornerTopics();
   },
   methods: {
     openSpeakerInfoModal(speakers, id) {
@@ -230,10 +233,10 @@ const main = createApp({
       }
 
       const filteredFocussableElements = focussableElements.filter(
-        (el) => el !== undefined
+        (el) => el !== undefined,
       );
       const activeElementIndex = filteredFocussableElements.indexOf(
-        $event.target
+        $event.target,
       );
 
       if (activeElementIndex != filteredFocussableElements.length - 1) {
@@ -287,7 +290,7 @@ const main = createApp({
 
       for (let start = 0; start < length; start++) {
         const randomPosition = Math.floor(
-          (filteredArray.length - start) * Math.random()
+          (filteredArray.length - start) * Math.random(),
         );
         const randomItem = filteredArray.splice(randomPosition, 1);
         filteredArray.push(...randomItem);
@@ -314,7 +317,7 @@ const main = createApp({
 
         if (speaker.mastodonHandle) {
           speaker.mastodonHandle = this.formatMastodonLink(
-            speaker.mastodonHandle
+            speaker.mastodonHandle,
           );
         }
 
@@ -340,7 +343,7 @@ const main = createApp({
         session.speakers.map((speaker) => {
           if (speaker.twitterHandle) {
             speaker.twitterHandle = this.formatTwitterLink(
-              speaker.twitterHandle
+              speaker.twitterHandle,
             );
           }
 
@@ -350,13 +353,13 @@ const main = createApp({
 
           if (speaker.mastodonHandle) {
             speaker.mastodonHandle = this.formatMastodonLink(
-              speaker.mastodonHandle
+              speaker.mastodonHandle,
             );
           }
 
           if (speaker.blueskyHandle) {
             speaker.blueskyHandle = this.formatBlueskyLink(
-              speaker.blueskyHandle
+              speaker.blueskyHandle,
             );
           }
         });
@@ -388,59 +391,59 @@ const main = createApp({
         return {
           ...session,
           startTime: newStartTime,
-          endTime: newEndTime
+          endTime: newEndTime,
         };
       });
 
       const sortedScheduleTemp = tempLineUp.sort(
         (a, b) =>
           luxon.DateTime.fromISO(a.startTime) -
-          luxon.DateTime.fromISO(b.startTime)
+          luxon.DateTime.fromISO(b.startTime),
       );
 
       this.expertCornerLineupUnsorted = sortedScheduleTemp.filter((schedule) =>
-        schedule.location.includes("expert")
+        schedule.location.includes("expert"),
       );
 
       const sortedSchedule = sortedScheduleTemp.filter(
-        (schedule) => !schedule.type.includes("expert")
+        (schedule) => !schedule.type.includes("expert"),
       );
 
       if (this.filter === "all") {
         return sortedSchedule;
       } else if (this.filter === "talks") {
         return sortedSchedule.filter((schedule) =>
-          schedule.type.includes("presentation")
+          schedule.type.includes("presentation"),
         );
       } else if (this.filter === "workshops") {
         return sortedSchedule.filter(
           (schedule) =>
             schedule.type.includes("hands") ||
-            schedule.type.includes("workshop")
+            schedule.type.includes("workshop"),
         );
       } else if (this.filter === "audimax") {
         return sortedSchedule.filter(
-          (schedule) => schedule.location.toLowerCase() === "audimax"
+          (schedule) => schedule.location.toLowerCase() === "audimax",
         );
       } else if (this.filter === "w1") {
         return sortedSchedule.filter((schedule) =>
-          schedule.location.toLowerCase().includes("w1")
+          schedule.location.toLowerCase().includes("w1"),
         );
       } else if (this.filter === "w3") {
         return sortedSchedule.filter((schedule) =>
-          schedule.location.toLowerCase().includes("w3")
+          schedule.location.toLowerCase().includes("w3"),
         );
       } else if (this.filter === "beginner") {
         return sortedSchedule.filter(
-          (schedule) => schedule.proficiencyLevel === "beginner"
+          (schedule) => schedule.proficiencyLevel === "beginner",
         );
       } else if (this.filter === "intermediate") {
         return sortedSchedule.filter(
-          (schedule) => schedule.proficiencyLevel === "intermediate"
+          (schedule) => schedule.proficiencyLevel === "intermediate",
         );
       } else if (this.filter === "advanced") {
         return sortedSchedule.filter(
-          (schedule) => schedule.proficiencyLevel === "advanced"
+          (schedule) => schedule.proficiencyLevel === "advanced",
         );
       } else {
         return sortedSchedule;
@@ -449,7 +452,7 @@ const main = createApp({
     formatSpeakers(talks, speakers) {
       // Create a lookup map from talk ID to location
       const talkIdToRoomMap = new Map(
-        talks.map((talk) => [talk.id, talk.location])
+        talks.map((talk) => [talk.id, talk.location]),
       );
 
       // Loop through speakers and their proposals to enrich with location
