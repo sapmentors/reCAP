@@ -446,14 +446,14 @@ const main = createApp({
         };
         const sessionLocation = (location) => {
           if (location.toLowerCase().includes("audimax")) {
-            return "Yellow Room";
+            return "Audimax";
           } else if (
             location.toLowerCase().includes("w1") ||
             location.toLowerCase().includes("w2")
           ) {
-            return "Blue Room";
+            return "Room W1/W2";
           } else if (location.toLowerCase().includes("w3")) {
-            return "Orange Room";
+            return "Room W3";
           } else {
             return location;
           }
