@@ -165,19 +165,32 @@ const main = createApp({
       formattedSpeakers: [],
       expertCornerLineup: {},
       expertCornerLineupUnsorted: [],
-      proposalLineupJson: proposalLineupJson,
-      speakerLineupJson: speakerLineupJson,
+      speakerLineupJson: [],
+      activeSession: null,
+      agendaViewMode: "grid", // 'grid' or 'linear'
     };
   },
-  mounted() {
-    this.speakers = speakerLineupJson;
-    this.lineup = proposalLineupJson;
+  async mounted() {
+    try {
+      const response = await fetch('https://recap.cfapps.eu12.hana.ondemand.com/api/speaker/lineup');
+      this.speakerLineupJson = await response.json();
+    } catch (e) {
+      console.error('Failed to fetch speaker lineup:', e);
+      this.speakerLineupJson = [];
+    }
+    this.speakers = this.speakerLineupJson;
+
+    try {
+      const response = await fetch('https://recap.cfapps.eu12.hana.ondemand.com/api/proposal/lineup');
+      this.lineup = await response.json();
+    } catch (e) {
+      console.error('Failed to fetch proposal lineup:', e);
+      this.lineup = [];
+    }
+
     this.formattedLineup = this.formatLineup();
 
-    this.formattedSpeakers = this.formatSpeakers(
-      this.formattedLineup,
-      this.speakers,
-    );
+    this.formattedSpeakers = this.formatSpeakers(this.formattedLineup, this.speakers);
     this.groupExpertCornerTopics();
   },
   methods: {
@@ -263,11 +276,13 @@ const main = createApp({
       if (!handle.startsWith("https:")) {
         return "https://twitter.com/" + handle;
       }
+      return handle;
     },
     formatLinkedInLink(handle) {
       if (!handle.startsWith("https:")) {
         return "https://www.linkedin.com/in/" + handle;
       }
+      return handle;
     },
     formatMastodonLink(handle) {
       if (!handle.startsWith("https:")) {
@@ -282,6 +297,7 @@ const main = createApp({
       if (!handle.startsWith("https:")) {
         return "https://bsky.app/profile/" + handle.replace("@", "");
       }
+      return handle;
     },
     shuffleSpeakersArray(array) {
       const newArray = [...array];
@@ -364,29 +380,24 @@ const main = createApp({
           }
         });
 
-        let start = session.startTime;
-        let end = session.endTime;
+        let start = session.startTime || "";
+        let end = session.endTime || "";
 
-        if (
-          session.location === "canteen" &&
-          session.title.toLowerCase().includes("breakfast")
-        ) {
-          start = "08:00";
+        if (start && end) {
+          let tempStart = start.substring(0, start.indexOf(":"));
+          let tempEnd = end.substring(0, end.indexOf(":"));
+
+          if (tempStart.length == 1 && !tempStart.startsWith("0")) {
+            start = "0" + start;
+          }
+
+          if (tempEnd.length == 1 && !tempEnd.startsWith("0")) {
+            end = "0" + end;
+          }
         }
 
-        let tempStart = start.substring(0, start.indexOf(":"));
-        let tempEnd = end.substring(0, end.indexOf(":"));
-
-        if (tempStart.length == 1 && !tempStart.startsWith("0")) {
-          start = "0" + start;
-        }
-
-        if (tempEnd.length == 1 && !tempEnd.startsWith("0")) {
-          end = "0" + end;
-        }
-
-        let newStartTime = "2025-07-09T" + start + ":00.000+02:00";
-        let newEndTime = "2025-07-09T" + end + ":00.000+02:00";
+        let newStartTime = "2026-07-15T" + start + ":00.000+02:00";
+        let newEndTime = "2026-07-15T" + end + ":00.000+02:00";
 
         return {
           ...session,
@@ -402,7 +413,7 @@ const main = createApp({
       );
 
       this.expertCornerLineupUnsorted = sortedScheduleTemp.filter((schedule) =>
-        schedule.location.includes("expert"),
+        schedule.type.includes("expert"),
       );
 
       const sortedSchedule = sortedScheduleTemp.filter(
@@ -416,10 +427,8 @@ const main = createApp({
           schedule.type.includes("presentation"),
         );
       } else if (this.filter === "workshops") {
-        return sortedSchedule.filter(
-          (schedule) =>
-            schedule.type.includes("hands") ||
-            schedule.type.includes("workshop"),
+        return sortedSchedule.filter((schedule) =>
+          schedule.type.includes("hands"),
         );
       } else if (this.filter === "audimax") {
         return sortedSchedule.filter(
@@ -450,12 +459,10 @@ const main = createApp({
       }
     },
     formatSpeakers(talks, speakers) {
-      // Create a lookup map from talk ID to location
       const talkIdToRoomMap = new Map(
         talks.map((talk) => [talk.id, talk.location]),
       );
 
-      // Loop through speakers and their proposals to enrich with location
       speakers.forEach((speaker) => {
         speaker.proposals.forEach((proposal) => {
           const location = talkIdToRoomMap.get(proposal.id);
@@ -471,12 +478,141 @@ const main = createApp({
     },
     groupExpertCornerTopics() {
       this.expertCornerLineupUnsorted.forEach((corner) => {
-        const key = `${corner.startTime}|${corner.endTime}`;
-        if (!this.expertCornerLineup[key]) {
-          this.expertCornerLineup[key] = [];
+        const timeSlot = corner.startTime;
+        if (!this.expertCornerLineup[timeSlot]) {
+          this.expertCornerLineup[timeSlot] = [];
         }
-        this.expertCornerLineup[key].push(corner);
+        this.expertCornerLineup[timeSlot].push(corner);
       });
+    },
+    getSessionsByRoom(room) {
+      // Get sessions for this specific room
+      const roomSessions = this.lineup.filter(
+        (session) =>
+          session.location === room &&
+          session.type &&
+          !session.type.includes("expert"),
+      );
+
+      // Get sessions that should appear in all rooms (canteen, breaks)
+      const allRoomsSessions = this.lineup.filter(
+        (session) =>
+          session.location === "canteen" || session.type === "catering",
+      );
+
+      // Combine and sort by start time
+      return [...roomSessions, ...allRoomsSessions].sort((a, b) =>
+        a.startTime.localeCompare(b.startTime),
+      );
+    },
+    timeToMinutes(timeStr) {
+      const [hours, minutes] = timeStr.split(":").map(Number);
+      return hours * 100 + minutes;
+    },
+    isBreakSession(session) {
+      const lowerTitle = session.title.toLowerCase();
+      const lowerType = (session.type || "").toLowerCase();
+
+      return (
+        lowerType.includes("break") ||
+        lowerType.includes("lunch") ||
+        lowerType.includes("catering") ||
+        lowerTitle.includes("break") ||
+        lowerTitle.includes("lunch") ||
+        lowerTitle.includes("coffee") ||
+        session.location === "canteen"
+      );
+    },
+    isPitchSession(session) {
+      const lowerType = (session.type || "").toLowerCase();
+      return lowerType.includes("pitch");
+    },
+    toggleAgendaView() {
+      this.agendaViewMode = this.agendaViewMode === "grid" ? "linear" : "grid";
+    },
+    getAllSessionsSorted() {
+      // Get all sessions except expert corner sessions
+      const allSessions = this.lineup.filter(
+        (session) => session.type && !session.type.includes("expert"),
+      );
+
+      // Sort by start time (convert to minutes for proper numerical comparison)
+      return allSessions.sort((a, b) => {
+        const timeA = this.timeToMinutes(a.startTime);
+        const timeB = this.timeToMinutes(b.startTime);
+        return timeA - timeB;
+      });
+    },
+    getSessionSpeakers(sessionId) {
+      // Find the session and return its speakers array directly
+      const session = this.lineup.find((s) => s.id === sessionId);
+      return session && session.speakers ? session.speakers : [];
+    },
+    openSessionDialog(session) {
+      this.activeSession = session;
+      this.$refs.agenda.ariaHidden = true;
+      this.$refs.sessionModal.ariaHidden = false;
+      this.$refs.sessionModal.style.display = "flex";
+
+      setTimeout(() => {
+        this.$refs.sessionModal.focus();
+      }, 0);
+    },
+    closeSessionDialog() {
+      this.activeSession = null;
+      this.$refs.agenda.ariaHidden = false;
+      this.$refs.sessionModal.ariaHidden = true;
+      this.$refs.sessionModal.style.display = "none";
+    },
+    focusTrapSessionModal($event) {
+      let focussableElements = [];
+      focussableElements.push(this.$refs.sessionCloseButton);
+
+      for (const key in this.$refs) {
+        if (
+          key.startsWith("session-twitter") ||
+          key.startsWith("session-github") ||
+          key.startsWith("session-linkedin") ||
+          key.startsWith("session-mastodon") ||
+          key.startsWith("session-bluesky")
+        ) {
+          const element = this.$refs[key];
+          if (Array.isArray(element)) {
+            focussableElements.push(element[0]);
+          } else {
+            focussableElements.push(element);
+          }
+        }
+      }
+
+      const filteredFocussableElements = focussableElements.filter(
+        (el) => el !== undefined,
+      );
+      const activeElementIndex = filteredFocussableElements.indexOf(
+        $event.target,
+      );
+
+      if ($event.shiftKey) {
+        // Shift+Tab - go backwards
+        if (activeElementIndex === 0) {
+          // If at first element, go to last
+          filteredFocussableElements[
+            filteredFocussableElements.length - 1
+          ].focus();
+        } else {
+          // Otherwise go to previous
+          filteredFocussableElements[activeElementIndex - 1].focus();
+        }
+      } else {
+        // Tab - go forwards
+        if (activeElementIndex === filteredFocussableElements.length - 1) {
+          // If at last element, go to first
+          filteredFocussableElements[0].focus();
+        } else {
+          // Otherwise go to next
+          filteredFocussableElements[activeElementIndex + 1].focus();
+        }
+      }
     },
     formatProficiencyLevel(value) {
       if (!value) return "";
@@ -487,55 +623,47 @@ const main = createApp({
 
       if (value) {
         if (value.toLowerCase().includes("audimax")) {
-          return "Yellow";
+          return "A";
         } else if (
           value.toLowerCase().includes("w1") ||
           value.toLowerCase().includes("w2")
         ) {
-          return "Blue";
+          return "W1/2";
         } else if (value.toLowerCase().includes("w3")) {
-          return "Orange";
+          return "W3";
         } else if (value.toLowerCase().includes("expert")) {
-          return "Experts Corner";
-        } else if (
-          value.toLowerCase().includes("canteen") ||
-          value.toLowerCase().includes("catering")
-        ) {
-          return "Canteen";
+          return "EXP";
+        } else if (value.toLowerCase().includes("canteen")) {
+          return "CAN";
         } else {
           return value;
         }
       }
     },
-    showSessionCalendars(session) {
-      if (
-        (session.location.toLowerCase().includes("audimax") ||
-          session.location.toLowerCase().includes("w1") ||
-          session.location.toLowerCase().includes("w2") ||
-          session.location.toLowerCase().includes("w3")) &&
-        !(
-          session.title.toLowerCase().includes("welcome") ||
-          session.title.toLowerCase().includes("closing")
-        )
-      ) {
-        return true;
-      } else {
-        return false;
-      }
-    },
     decodeBioHtml(value) {
       if (!value) return "";
-
       const txt = document.createElement("textarea");
       txt.innerHTML = value;
 
       let decoded = txt.value;
+
+      // Replace "&amp;" or "&" with " and "
       decoded = decoded.replace(/&amp;|&/g, " and ");
+
+      // Replace \n or /n with <br> for HTML rendering
       decoded = decoded.replace(/\\n|\/n|\n/g, "<br>");
 
       return decoded;
     },
-    formatLocation: function (value) {
+    trimTime(value) {
+      let time = value.substring(value.indexOf("T") + 1);
+      let timeSplit = time.split(":");
+      let hour = timeSplit[0].startsWith("0")
+        ? timeSplit[0].replace(/^0+/, "")
+        : timeSplit[0];
+      return hour + ":" + timeSplit[1];
+    },
+    formatLocation(value) {
       if (value) {
         if (value.toLowerCase().includes("audimax")) {
           return "Y";
@@ -548,46 +676,33 @@ const main = createApp({
           return "O";
         } else if (value.toLowerCase().includes("expert")) {
           return "EXP";
-        } else if (
-          value.toLowerCase().includes("canteen") ||
-          value.toLowerCase().includes("catering")
-        ) {
+        } else if (value.toLowerCase().includes("canteen")) {
           return "CA";
         } else {
           return value;
         }
       }
     },
-    formatLevel: function (value) {
-      if (!value) return "";
-      return value.charAt(0).toUpperCase();
-    },
-    trimTime: function (value) {
-      let time = value.substring(value.indexOf("T") + 1);
-      let timeSplit = time.split(":");
-      let hour = timeSplit[0].startsWith("0")
-        ? timeSplit[0].replace(/^0+/, "")
-        : timeSplit[0];
-      return hour + ":" + timeSplit[1];
-    },
-    trimExpertText: function (value) {
+    trimExpertText(value) {
       return value.replace(/^Expert Corner: /, "");
     },
-    convertTime: function (value, eventTime) {
-      if (eventTime === "local") {
-        return luxon.DateTime.fromISO(value)
-          .toLocal()
-          .toISO({ suppressMilliseconds: true });
-      }
-      return value;
-    },
-    decodeHtml: function (value) {
+    decodeHtml(value) {
       if (!value) return "";
       const txt = document.createElement("textarea");
       txt.innerHTML = value;
       return txt.value;
     },
-  },
+    formatSessionType(value) {
+      if (!value) return "";
+      if (value.toLowerCase().includes("presentation")) {
+        return "Talk";
+      } else if (value.toLowerCase().includes("hands")) {
+        return "Workshop";
+      } else {
+        return value;
+      } 
+    },
+  }
 });
 
 // Register calendar-link component with main app if it exists
