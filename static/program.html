@@ -32,6 +32,12 @@
 	<link rel="stylesheet" href="./css/modules.css" />
 
 	<script src="https://unpkg.com/vue@3"></script>
+	<!-- Tito compatibility shim for Vue 3 -->
+	<script>
+		if (window.Vue && !window.Vue.use) {
+			window.Vue.use = function() { /* no-op */ };
+		}
+	</script>
 	<script src="https://js.tito.io/v2" async></script>
 </head>
 

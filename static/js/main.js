@@ -67,7 +67,9 @@ const header = createApp({
     },
   },
 });
-header.mount("#header");
+if (document.getElementById('header')) {
+  header.mount("#header");
+}
 
 const main = createApp({
   compilerOptions: {
@@ -196,10 +198,10 @@ const main = createApp({
   methods: {
     openSpeakerInfoModal(speakers, id) {
       this.activeSpeakers = speakers;
-      this.$refs.agenda.ariaHidden = true;
+      this.lastFocussedElementID = id;
+
       this.$refs.speakerModal.ariaHidden = false;
       this.$refs.speakerModal.style.display = "flex";
-      this.lastFocussedElementID = id;
 
       setTimeout(() => {
         this.$refs.speakerModal.focus();
@@ -207,21 +209,15 @@ const main = createApp({
     },
     closeSpeakerInfoModal() {
       this.activeSpeakers = null;
-      this.$refs.agenda.ariaHidden = false;
+
+      // Blur focus before hiding the modal
+      if (document.activeElement && this.$refs.speakerModal.contains(document.activeElement)) {
+        document.activeElement.blur();
+      }
+
       this.$refs.speakerModal.ariaHidden = true;
       this.$refs.speakerModal.style.display = "none";
 
-      for (const key in this.$refs) {
-        if (
-          key.startsWith("twitter") ||
-          key.startsWith("github") ||
-          key.startsWith("linkedin") ||
-          key.startsWith("mastodon") ||
-          key.startsWith("bluesky")
-        ) {
-          delete this.$refs[key];
-        }
-      }
       document.getElementById(this.lastFocussedElementID).focus();
     },
     focusTrapModal($event) {
@@ -683,7 +679,7 @@ const main = createApp({
     },
     openSessionDialog(session) {
       this.activeSession = session;
-      this.$refs.agenda.ariaHidden = true;
+
       this.$refs.sessionModal.ariaHidden = false;
       this.$refs.sessionModal.style.display = "flex";
 
@@ -693,7 +689,12 @@ const main = createApp({
     },
     closeSessionDialog() {
       this.activeSession = null;
-      this.$refs.agenda.ariaHidden = false;
+
+      // Blur focus before hiding the modal
+      if (document.activeElement && this.$refs.sessionModal.contains(document.activeElement)) {
+        document.activeElement.blur();
+      }
+
       this.$refs.sessionModal.ariaHidden = true;
       this.$refs.sessionModal.style.display = "none";
     },
