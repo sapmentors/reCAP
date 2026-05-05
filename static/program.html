@@ -74,22 +74,15 @@
 					<div class="timetable" :class="{ 'timetable--linear': agendaViewMode === 'linear' }">
 						<!-- Grid View -->
 						<template v-if="agendaViewMode === 'grid'">
-							<div class="timetable--head" aria-hidden="true">
-								<div class="timetable--inner-head">
-									<div class="stage-headline">Audimax</div>
-									<div class="stage-headline">W1/W2</div>
-									<div class="stage-headline">W3</div>
-								</div>
-							</div>
 							<div class="timetable--body">
 								<div class="hours" aria-hidden="true">
 									<div v-for="hour in 10" :key="hour">
-										<time :datetime="`${(hour + 8).toString().padStart(2, '0')}:00`">
-											{{ (hour + 8).toString().padStart(2, '0') }}:00
+										<time :datetime="`${(hour + 7).toString().padStart(2, '0')}:00`">
+											{{ (hour + 7).toString().padStart(2, '0') }}:00
 										</time>
 									</div>
 								</div>
-	
+
 								<!-- Audimax -->
 								<div class="stage" style="--column: 2;">
 									<h2 class="stage-headline">Audimax</h2>
@@ -110,13 +103,13 @@
 											role="button"
 											:aria-label="`View details for ${session.title}`">
 											<h3>
-												<span class="time">{{ session.startTime }} - {{ session.endTime }}</span>
+												<span class="time">{{ trimTime(session.startTime) }} - {{ trimTime(session.endTime) }}</span>
 												<span v-html="decodeBioHtml(session.title)"></span>
 											</h3>
 										</li>
 									</ol>
 								</div>
-	
+
 								<!-- W1/W2 -->
 								<div class="stage" style="--column: 3;">
 									<h2 class="stage-headline">W1/W2</h2>
@@ -137,13 +130,13 @@
 											role="button"
 											:aria-label="`View details for ${session.title}`">
 											<h3>
-												<span class="time">{{ session.startTime }} - {{ session.endTime }}</span>
+												<span class="time">{{ trimTime(session.startTime) }} - {{ trimTime(session.endTime) }}</span>
 												<span v-html="decodeBioHtml(session.title)"></span>
 											</h3>
 										</li>
 									</ol>
 								</div>
-	
+
 								<!-- W3 -->
 								<div class="stage" style="--column: 4;">
 									<h2 class="stage-headline">W3</h2>
@@ -164,7 +157,30 @@
 											role="button"
 											:aria-label="`View details for ${session.title}`">
 											<h3>
-												<span class="time">{{ session.startTime }} - {{ session.endTime }}</span>
+												<span class="time">{{ trimTime(session.startTime) }} - {{ trimTime(session.endTime) }}</span>
+												<span v-html="decodeBioHtml(session.title)"></span>
+											</h3>
+										</li>
+									</ol>
+								</div>
+
+								<!-- Breaks -->
+								<div class="stage" style="--column: 5;">
+									<h2 class="stage-headline">CAN</h2>
+									<ol class="session-list" role="list">
+										<li
+											v-for="session in getBreakSessions()"
+											:key="session.id"
+											class="session break"
+											:style="`--start: ${timeToMinutes(session.startTime)}; --end: ${timeToMinutes(session.endTime)};`"
+											@click="openSessionDialog(session)"
+											@keydown.enter="openSessionDialog(session)"
+											@keydown.space.prevent="openSessionDialog(session)"
+											tabindex="0"
+											role="button"
+											:aria-label="`View details for ${session.title}`">
+											<h3>
+												<span class="time">{{ trimTime(session.startTime) }} - {{ trimTime(session.endTime) }}</span>
 												<span v-html="decodeBioHtml(session.title)"></span>
 											</h3>
 										</li>
@@ -362,7 +378,7 @@
 							</h2>
 	
 							<p class="sr-only" id="session-dialog-description" v-if="activeSession">
-								Session from {{ activeSession.startTime }} to {{ activeSession.endTime }}.
+								Session from {{ trimTime(activeSession.startTime) }} to {{ trimTime(activeSession.endTime) }}.
 								{{ activeSession.description }}
 							</p>
 	
@@ -381,10 +397,10 @@
 								<div class="agenda-modal-details">
 									<p>
 										<span>time</span>
-										<time>{{ activeSession.startTime }} - {{ activeSession.endTime }}</time>
+										<time>{{ trimTime(activeSession.startTime) }} - {{ trimTime(activeSession.endTime) }}</time>
 									</p>
 	
-									<p><span>location</span> {{ activeSession.location }}</p>
+									<p><span>location</span> {{ formatLocation(activeSession.location) }}</p>
 	
 									<p v-if="activeSession.proficiencyLevel"><span>complexity</span> {{
 										activeSession.proficiencyLevel }}</p>

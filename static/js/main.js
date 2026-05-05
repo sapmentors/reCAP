@@ -383,6 +383,13 @@ const main = createApp({
         let start = session.startTime || "";
         let end = session.endTime || "";
 
+        if (
+          session.location === "canteen" &&
+          session.title.toLowerCase().includes("breakfast")
+        ) {
+          start = "08:00";
+        }
+
         if (start && end) {
           let tempStart = start.substring(0, start.indexOf(":"));
           let tempEnd = end.substring(0, end.indexOf(":"));
@@ -396,13 +403,126 @@ const main = createApp({
           }
         }
 
-        let newStartTime = "2026-07-15T" + start + ":00.000+02:00";
-        let newEndTime = "2026-07-15T" + end + ":00.000+02:00";
+        // Default values for sessions without valid times
+        let newStartTime = start ? "2026-07-15T" + start + ":00.000+02:00" : null;
+        let newEndTime = end ? "2026-07-15T" + end + ":00.000+02:00" : null;
+
+        let calendarStartDate = "";
+        let calendarEndDate = "";
+        let officeStartDate = "";
+        let officeEndDate = "";
+
+        // Only generate calendar dates if we have valid times
+        if (newStartTime && newEndTime) {
+          const startDate = new Date(newStartTime);
+          const endDate = new Date(newEndTime);
+
+          // Check if dates are valid before calling toISOString
+          if (!isNaN(startDate.getTime()) && !isNaN(endDate.getTime())) {
+            calendarStartDate = startDate.toISOString().replace(/-|:|\.\d+/g, "");
+            calendarEndDate = endDate.toISOString().replace(/-|:|\.\d+/g, "");
+            officeStartDate = startDate.toISOString();
+            officeEndDate = endDate.toISOString();
+          }
+        }
+
+        const forbiddenCharacters = new RegExp("#", "g");
+        const removeForbiddenCharachters = (text) => {
+          if (typeof text === "string") {
+            let formattedText = text.replace(/(&amp;|&)/g, " and ");
+            return formattedText.replace(forbiddenCharacters, "");
+          }
+          return "";
+        };
+
+        const removeForbiddenCharachtersOutlook = (text) => {
+          if (typeof text === "string") {
+            let formattedText = text.replace(/(?:\r\n|\r|\n)/g, "\\n");
+            formattedText = formattedText.replace(/<br>/g, "\\n");
+            formattedText = formattedText.replace(/(&amp;|&)/g, " and ");
+            return formattedText.replace(forbiddenCharacters, "");
+          }
+          return "";
+        };
+        const sessionLocation = (location) => {
+          if (location.toLowerCase().includes("audimax")) {
+            return "Yellow Room";
+          } else if (
+            location.toLowerCase().includes("w1") ||
+            location.toLowerCase().includes("w2")
+          ) {
+            return "Blue Room";
+          } else if (location.toLowerCase().includes("w3")) {
+            return "Orange Room";
+          } else {
+            return location;
+          }
+        };
+
+        let cal = [
+          "BEGIN:VCALENDAR",
+          "VERSION:2.0",
+          "BEGIN:VEVENT",
+          "DTSTART:" + calendarStartDate,
+          "DTEND:" + calendarEndDate,
+          "SUMMARY:" +
+            "reCAP: " +
+            removeForbiddenCharachtersOutlook(session.title),
+          "LOCATION:" + sessionLocation(session.location),
+          "DESCRIPTION:" +
+            removeForbiddenCharachtersOutlook(session.description),
+          "UID:" + session.id,
+          "END:VEVENT",
+          "END:VCALENDAR",
+        ].join("\n");
+
+        let calDescription = "";
+
+        if (session.description) {
+          let formattedDescription = session.description.replace(/&amp;/g, "&");
+          calDescription = formattedDescription.replace(
+            /(?:\r\n|\r|\n)/g,
+            "<br>",
+          );
+        }
 
         return {
           ...session,
           startTime: newStartTime,
           endTime: newEndTime,
+          calendars: [
+            {
+              google: encodeURI(
+                [
+                  "https://www.google.com/calendar/render",
+                  "?action=TEMPLATE",
+                  "&text=" +
+                    "reCAP: " +
+                    removeForbiddenCharachters(session.title),
+                  "&dates=" + calendarStartDate,
+                  "/" + calendarEndDate,
+                  "&location=" + sessionLocation(session.location),
+                  "&details=" + removeForbiddenCharachters(calDescription),
+                  "&sprop=&sprop=name:",
+                ].join(""),
+              ),
+              office365: encodeURI(
+                [
+                  "https://outlook.office365.com/owa/",
+                  "?path=/calendar/action/compose",
+                  "&rru=addevent",
+                  "&subject=" +
+                    "reCAP: " +
+                    removeForbiddenCharachters(session.title),
+                  "&startdt=" + officeStartDate,
+                  "&enddt=" + officeEndDate,
+                  "&location=" + sessionLocation(session.location),
+                  "&body=" + removeForbiddenCharachters(calDescription),
+                ].join(""),
+              ),
+              ics: encodeURI("data:text/calendar;charset=utf8," + cal),
+            },
+          ],
         };
       });
 
@@ -486,26 +606,39 @@ const main = createApp({
       });
     },
     getSessionsByRoom(room) {
-      // Get sessions for this specific room
-      const roomSessions = this.lineup.filter(
+      // Get sessions for this specific room (excluding break sessions)
+      const roomSessions = this.formattedLineup.filter(
         (session) =>
           session.location === room &&
           session.type &&
-          !session.type.includes("expert"),
+          !session.type.includes("expert") &&
+          !this.isBreakSession(session)
       );
 
-      // Get sessions that should appear in all rooms (canteen, breaks)
-      const allRoomsSessions = this.lineup.filter(
-        (session) =>
-          session.location === "canteen" || session.type === "catering",
-      );
-
-      // Combine and sort by start time
-      return [...roomSessions, ...allRoomsSessions].sort((a, b) =>
+      // Sort by start time
+      return roomSessions.sort((a, b) =>
         a.startTime.localeCompare(b.startTime),
       );
     },
+    getBreakSessions() {
+      // Get all break/catering sessions
+      return this.formattedLineup.filter(
+        (session) => this.isBreakSession(session)
+      ).sort((a, b) =>
+        a.startTime.localeCompare(b.startTime)
+      );
+    },
     timeToMinutes(timeStr) {
+      if (!timeStr) return 0;
+
+      // Handle ISO format (e.g., "2026-07-15T09:00:00.000+02:00")
+      if (timeStr.includes("T")) {
+        const time = timeStr.substring(timeStr.indexOf("T") + 1);
+        const [hours, minutes] = time.split(":").map(Number);
+        return hours * 100 + minutes;
+      }
+
+      // Handle simple format (e.g., "9:00")
       const [hours, minutes] = timeStr.split(":").map(Number);
       return hours * 100 + minutes;
     },
@@ -656,6 +789,7 @@ const main = createApp({
       return decoded;
     },
     trimTime(value) {
+      if (!value) return "";
       let time = value.substring(value.indexOf("T") + 1);
       let timeSplit = time.split(":");
       let hour = timeSplit[0].startsWith("0")
@@ -666,18 +800,18 @@ const main = createApp({
     formatLocation(value) {
       if (value) {
         if (value.toLowerCase().includes("audimax")) {
-          return "Y";
+          return "Audimax";
         } else if (
           value.toLowerCase().includes("w1") ||
           value.toLowerCase().includes("w2")
         ) {
-          return "B";
+          return "W1/W2";
         } else if (value.toLowerCase().includes("w3")) {
-          return "O";
+          return "W3";
         } else if (value.toLowerCase().includes("expert")) {
-          return "EXP";
+          return "Expert Corner";
         } else if (value.toLowerCase().includes("canteen")) {
-          return "CA";
+          return "Canteen";
         } else {
           return value;
         }
