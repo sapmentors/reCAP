@@ -441,6 +441,8 @@ const main = createApp({
           return "";
         };
         const sessionLocation = (location) => {
+          if (!location) return "";
+
           if (location.toLowerCase().includes("audimax")) {
             return "Audimax";
           } else if (
@@ -708,7 +710,8 @@ const main = createApp({
           key.startsWith("session-github") ||
           key.startsWith("session-linkedin") ||
           key.startsWith("session-mastodon") ||
-          key.startsWith("session-bluesky")
+          key.startsWith("session-bluesky") ||
+          key.startsWith("session-calendar-")
         ) {
           const element = this.$refs[key];
           if (Array.isArray(element)) {
@@ -725,6 +728,9 @@ const main = createApp({
       const activeElementIndex = filteredFocussableElements.indexOf(
         $event.target,
       );
+
+      // Prevent default tab behavior
+      $event.preventDefault();
 
       if ($event.shiftKey) {
         // Shift+Tab - go backwards

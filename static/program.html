@@ -275,10 +275,10 @@
 	
 												<span class="agenda-room"
 													  :class="{
-															w1: session.location.toLowerCase().includes('w1') || session.location.toLowerCase().includes('w2'),
-															w3: session.location.toLowerCase().includes('w3'),
-															canteen: session.location.toLowerCase().includes('canteen'),
-															experts: session.location.toLowerCase().includes('experts')
+															w1: session.location && (session.location.toLowerCase().includes('w1') || session.location.toLowerCase().includes('w2')),
+															w3: session.location && session.location.toLowerCase().includes('w3'),
+															canteen: session.location && session.location.toLowerCase().includes('canteen'),
+															experts: session.location && session.location.toLowerCase().includes('experts')
 														}">
 													{{ formatLocationTitle(session.location) }}
 												</span>
@@ -549,6 +549,8 @@
 								<div class="agenda-modal-calendars" v-if="activeSession.calendars && activeSession.calendars.length > 0">
 									<!-- Google Calendar Link -->
 									<a :href="activeSession.calendars[0].google"
+									   ref="session-calendar-google"
+									   v-on:keydown.tab.prevent="focusTrapSessionModal($event)"
 									   target="_blank">
 										<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
 											 viewBox="0 0 256 256">
@@ -570,6 +572,8 @@
 
 									<!-- Outlook/iCal Link -->
 									<a :href="activeSession.calendars[0].ics"
+									   ref="session-calendar-outlook"
+									   v-on:keydown.tab.prevent="focusTrapSessionModal($event)"
 									   download="recap_session.ics">
 										<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32">
 											<path fill="#0072c6"
@@ -583,6 +587,8 @@
 
 									<!-- Office 365 Link -->
 									<a :href="activeSession.calendars[0].office365"
+									   ref="session-calendar-office365"
+									   v-on:keydown.tab.prevent="focusTrapSessionModal($event)"
 									   target="_blank">
 										<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
 											<path fill="#D83B01" stroke="#D83B01" stroke-linecap="round"

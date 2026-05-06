@@ -8,7 +8,7 @@
 	--end-time: 18;
 	--event-duration: calc(var(--end-time) - var(--start-time) + 1);
 	--rows: auto repeat(calc(var(--event-duration) * 12), minmax(var(--time-unit-height), auto));
-	--columns: var(--th-width) repeat(var(--stages), 1fr);
+	--columns: var(--th-width) repeat(3, 1fr) 0.5fr;
 	--zebra-color-one: var(--background-color);
 	--zebra-color-two: var(--background-color-alternate);
 
