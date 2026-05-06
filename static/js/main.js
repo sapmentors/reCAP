@@ -2,33 +2,291 @@
 
 const { createApp } = Vue;
 
+// ========================
+// Constants
+// ========================
+const MOBILE_BREAKPOINT = 780;
+const DEBOUNCE_DELAY = 150;
+const EVENT_DATE = "2026-07-15";
+const EVENT_TIMEZONE = "+02:00";
+const EVENT_TITLE_PREFIX = "reCAP: ";
+const ICS_PRODID = "-//reCAP Conference//recap.cfapps.eu12.hana.ondemand.com//EN";
+
+const API_BASE_URL = "https://recap.cfapps.eu12.hana.ondemand.com/api";
+const API_ENDPOINTS = {
+  speakerLineup: `${API_BASE_URL}/speaker/lineup`,
+  proposalLineup: `${API_BASE_URL}/proposal/lineup`,
+};
+
+// Cached regex for calendar text sanitization
+const FORBIDDEN_CHARS_REGEX = /#/g;
+
+// Pattern to identify break/catering sessions
+const BREAK_SESSION_PATTERN = /break|lunch|coffee|catering/i;
+
+// Session type identifiers
+const SESSION_TYPES = {
+  PRESENTATION: "presentation",
+  HANDS_ON: "hands",
+  EXPERT_CORNER: "expert",
+  PITCH: "pitch",
+};
+
+// Session-specific constants
+const BREAKFAST_START_TIME = "08:00";
+const CANTEEN_LOCATION = "canteen";
+
+// Social media configuration
+const SOCIAL_PLATFORMS = {
+  twitter: { prefix: "https://twitter.com/" },
+  linkedin: { prefix: "https://www.linkedin.com/in/" },
+  github: { 
+    prefix: "https://github.com/",
+    transform: (handle) => {
+      // Strip "github.com/" if it's already in the handle
+      return handle.replace(/^github\.com\//, "");
+    }
+  },
+  mastodon: { 
+    prefix: "https://saptodon.org/",
+    transform: (handle) => {
+      if (handle.includes("@saptodon.org")) {
+        return handle.replace("@saptodon.org", "");
+      }
+      return handle;
+    }
+  },
+  bluesky: { 
+    prefix: "https://bsky.app/profile/",
+    transform: (handle) => handle.replace("@", "")
+  },
+};
+
+// Location mapping configuration
+const LOCATION_CONFIG = [
+  { match: "audimax", full: "Audimax", short: "A", calendar: "Audimax" },
+  { match: "w1", full: "W1/W2", short: "W1/2", calendar: "Room W1/W2" },
+  { match: "w2", full: "W1/W2", short: "W1/2", calendar: "Room W1/W2" },
+  { match: "w3", full: "W3", short: "W3", calendar: "Room W3" },
+  { match: "expert", full: "Expert Corner", short: "EXP", calendar: "Expert Corner" },
+  { match: "canteen", full: "Canteen", short: "CAN", calendar: "Canteen" },
+];
+
+// ========================
+// Utility Functions
+// ========================
+
+// Reusable HTML decoder using DOMParser for better performance
+const htmlDecoder = new DOMParser();
+// Decodes HTML entities in a string
+function decodeHtmlEntities(html) {
+  if (!html || typeof html !== "string") return "";
+  const doc = htmlDecoder.parseFromString(html, "text/html");
+  return doc.documentElement.textContent || "";
+}
+
+// Delays function execution until after a pause in calls
+function debounce(fn, delay) {
+  let timeoutId;
+  return function (...args) {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => fn.apply(this, args), delay);
+  };
+}
+
+// Traps focus within a modal by finding all focusable elements automatically
+function handleFocusTrap($event, modalElement) {
+  // Query for all naturally focusable elements within the modal
+  const focusableElements = modalElement.querySelectorAll(
+    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+  );
+
+  if (focusableElements.length === 0) return;
+
+  const firstElement = focusableElements[0];
+  const lastElement = focusableElements[focusableElements.length - 1];
+
+  // Always prevent default to trap focus within modal
+  $event.preventDefault();
+
+  // Tab forward from last element: wrap to first
+  if (!$event.shiftKey && document.activeElement === lastElement) {
+    firstElement.focus();
+    return;
+  }
+
+  // Tab backward from first element: wrap to last
+  if ($event.shiftKey && document.activeElement === firstElement) {
+    lastElement.focus();
+    return;
+  }
+
+  // Otherwise, move focus naturally within the modal
+  const currentIndex = Array.from(focusableElements).indexOf(document.activeElement);
+  if (currentIndex === -1) {
+    // If current element not in list, focus the first element
+    firstElement.focus();
+    return;
+  }
+
+  // Move to next or previous focusable element
+  if ($event.shiftKey) {
+    focusableElements[currentIndex - 1].focus();
+  } else {
+    focusableElements[currentIndex + 1].focus();
+  }
+}
+
+// Converts social media handles to full URLs
+function formatSocialLink(handle, platform) {
+  // Return if empty or already a complete URL
+  if (!handle || typeof handle !== 'string') return handle;
+
+  // Trim whitespace
+  const trimmedHandle = handle.trim();
+
+  // Check if already a complete URL
+  if (trimmedHandle.startsWith("https://") || trimmedHandle.startsWith("http://")) {
+    return trimmedHandle;
+  }
+
+  const config = SOCIAL_PLATFORMS[platform];
+  if (!config) return trimmedHandle;
+
+  const transformedHandle = config.transform ? config.transform(trimmedHandle) : trimmedHandle;
+  return config.prefix + transformedHandle;
+}
+
+// Finds location configuration based on location name
+function getLocationInfo(value) {
+  if (!value || typeof value !== "string") return null;
+  const lower = value.toLowerCase();
+  return LOCATION_CONFIG.find((loc) => lower.includes(loc.match)) || null;
+}
+
+// Returns the calendar-friendly name for a location
+function getCalendarLocationName(location) {
+  const info = getLocationInfo(location);
+  return info ? info.calendar : (location || "");
+}
+
+// Sanitizes text for calendar entry titles and descriptions
+function sanitizeTextForCalendar(text) {
+  if (typeof text !== "string") return "";
+  return text.replace(/(&amp;|&)/g, " and ").replace(FORBIDDEN_CHARS_REGEX, "");
+}
+
+// Sanitizes text for ICS calendar file format
+function sanitizeTextForICS(text) {
+  if (typeof text !== "string") return "";
+  let result = text.replace(/(?:\r\n|\r|\n)/g, "\\n");
+  result = result.replace(/<br>/g, "\\n");
+  result = result.replace(/(&amp;|&)/g, " and ");
+  return result.replace(FORBIDDEN_CHARS_REGEX, "");
+}
+
+// Adds leading zero to single-digit hours in time strings
+function padTimeComponent(time) {
+  const hours = time.substring(0, time.indexOf(":"));
+  if (hours.length === 1 && !hours.startsWith("0")) {
+    return `0${time}`;
+  }
+  return time;
+}
+
+// Builds a Google Calendar add event URL
+function buildGoogleCalendarUrl(title, dates, location, description) {
+  const params = new URLSearchParams({
+    action: "TEMPLATE",
+    text: title,
+    dates: dates,
+    location: location,
+    details: description,
+    sprop: "name:",
+  });
+  return `https://www.google.com/calendar/render?${params}`;
+}
+
+// Builds an Outlook/Office 365 add event URL
+function buildOutlookUrl(title, startDate, endDate, location, description) {
+  const params = new URLSearchParams({
+    path: "/calendar/action/compose",
+    rru: "addevent",
+    subject: title,
+    startdt: startDate,
+    enddt: endDate,
+    location: location,
+    body: description,
+  });
+  return `https://outlook.office365.com/owa/?${params}`;
+}
+
+// Generates ICS calendar file content
+function buildIcsContent(session, calendarStartDate, calendarEndDate, location) {
+  const dtstamp = new Date().toISOString().replace(/-|:|\.\d+/g, "");
+  return [
+    "BEGIN:VCALENDAR",
+    "VERSION:2.0",
+    `PRODID:${ICS_PRODID}`,
+    "BEGIN:VEVENT",
+    `DTSTAMP:${dtstamp}`,
+    `DTSTART:${calendarStartDate}`,
+    `DTEND:${calendarEndDate}`,
+    `SUMMARY:${EVENT_TITLE_PREFIX}${sanitizeTextForICS(session.title)}`,
+    `LOCATION:${location}`,
+    `DESCRIPTION:${sanitizeTextForICS(session.description)}`,
+    `UID:${session.id}@recap.cfapps.eu12.hana.ondemand.com`,
+    "END:VEVENT",
+    "END:VCALENDAR",
+  ].join("\r\n");
+}
+
+// Creates calendar links object for Google, Outlook, and ICS formats
+function buildCalendarLinks(session, calendarDates, calDescription) {
+  const { calendarStartDate, calendarEndDate, officeStartDate, officeEndDate } = calendarDates;
+  const location = getCalendarLocationName(session.location);
+
+  // Cache sanitized values (used multiple times)
+  const sanitizedTitle = EVENT_TITLE_PREFIX + sanitizeTextForCalendar(session.title);
+  const sanitizedDescription = sanitizeTextForCalendar(calDescription);
+  const dates = `${calendarStartDate}/${calendarEndDate}`;
+
+  return {
+    google: buildGoogleCalendarUrl(sanitizedTitle, dates, location, sanitizedDescription),
+    office365: buildOutlookUrl(sanitizedTitle, officeStartDate, officeEndDate, location, sanitizedDescription),
+    ics: `data:text/calendar;charset=utf8,${encodeURIComponent(buildIcsContent(session, calendarStartDate, calendarEndDate, location))}`,
+  };
+}
+
 const nav = createApp({
   data() {
     return {
-      windowHeight: window.innerHeight,
       windowWidth: window.innerWidth,
+      debouncedResize: null, // Initialize explicitly in data
     };
   },
   mounted() {
+    // Create debounced resize handler once
+    this.debouncedResize = debounce(this.onResize, DEBOUNCE_DELAY);
     this.$nextTick(() => {
-      window.addEventListener("resize", this.onResize);
+      window.addEventListener("resize", this.debouncedResize);
     });
   },
   computed: {
-    showMobileNav: function () {
-      if (this.windowWidth < 780) {
-        return true;
-      } else {
-        return false;
-      }
+    showMobileNav() {
+      return this.windowWidth < MOBILE_BREAKPOINT;
     },
   },
   beforeUnmount() {
-    window.removeEventListener("resize", this.onResize);
+    // Clean up event listener if it exists
+    if (this.debouncedResize) {
+      window.removeEventListener("resize", this.debouncedResize);
+      this.debouncedResize = null;
+    }
   },
   methods: {
+    // Updates window width for responsive behavior
     onResize() {
-      this.windowHeight = window.innerHeight;
       this.windowWidth = window.innerWidth;
     },
   },
@@ -50,8 +308,8 @@ const header = createApp({
       showCalendars: false,
     };
   },
-  mounted() {},
   methods: {
+    // Toggles calendar links visibility in header
     toggleCalendars() {
       this.showCalendars = !this.showCalendars;
       const container = document.getElementById("links-container");
@@ -160,369 +418,159 @@ const main = createApp({
       lastFocussedElementID: "",
       speakers: [],
       filter: "all",
-      activeSpeakers: null,
       lineup: [],
-      proposalLineup: [],
       formattedLineup: [],
       formattedSpeakers: [],
-      expertCornerLineup: {},
+      expertCornerLineup: new Map(), // Use Map for better reactivity and performance
       expertCornerLineupUnsorted: [],
-      speakerLineupJson: [],
       activeSession: null,
       agendaViewMode: "grid", // 'grid' or 'linear'
+      apiError: null, // Track API loading errors
+      isLoading: true, // Track loading state
     };
   },
   async mounted() {
-    try {
-      const response = await fetch('https://recap.cfapps.eu12.hana.ondemand.com/api/speaker/lineup');
-      this.speakerLineupJson = await response.json();
-    } catch (e) {
-      console.error('Failed to fetch speaker lineup:', e);
-      this.speakerLineupJson = [];
-    }
-    this.speakers = this.speakerLineupJson;
+    // Fetch both APIs in parallel
+    const [speakerResult, proposalResult] = await Promise.allSettled([
+      fetch(API_ENDPOINTS.speakerLineup).then(r => r.json()),
+      fetch(API_ENDPOINTS.proposalLineup).then(r => r.json()),
+    ]);
 
-    try {
-      const response = await fetch('https://recap.cfapps.eu12.hana.ondemand.com/api/proposal/lineup');
-      this.lineup = await response.json();
-    } catch (e) {
-      console.error('Failed to fetch proposal lineup:', e);
+    const errors = [];
+
+    if (speakerResult.status === 'fulfilled') {
+      this.speakers = speakerResult.value;
+    } else {
+      console.error('Failed to fetch speaker lineup:', speakerResult.reason);
+      errors.push('Failed to load speaker data');
+      this.speakers = [];
+    }
+
+    if (proposalResult.status === 'fulfilled') {
+      this.lineup = proposalResult.value;
+    } else {
+      console.error('Failed to fetch proposal lineup:', proposalResult.reason);
+      errors.push('Failed to load session data');
       this.lineup = [];
+    }
+
+    // Set error state if any API calls failed
+    if (errors.length > 0) {
+      this.apiError = errors.join('. ');
     }
 
     this.formattedLineup = this.formatLineup();
 
     this.formattedSpeakers = this.formatSpeakers(this.formattedLineup, this.speakers);
     this.groupExpertCornerTopics();
+    
+    this.isLoading = false;
+  },
+  computed: {
+    // Returns sorted break/catering sessions
+    breakSessions() {
+      return this.formattedLineup.filter(
+        (session) => this.isBreakSession(session)
+      ).sort((a, b) =>
+        a.startTime.localeCompare(b.startTime)
+      );
+    },
+    // Returns all non-expert sessions sorted by time
+    allSessionsSorted() {
+      const allSessions = this.lineup.filter(
+        (session) => session.type && !session.type.includes(SESSION_TYPES.EXPERT_CORNER),
+      );
+
+      return allSessions.sort((a, b) => {
+        const timeA = this.timeToGridValue(a.startTime);
+        const timeB = this.timeToGridValue(b.startTime);
+        return timeA - timeB;
+      });
+    },
+    // Returns expert corner lineup as array for template iteration
+    expertCornerLineupArray() {
+      return Array.from(this.expertCornerLineup.entries()).map(([timeSlot, sessions]) => ({
+        timeSlot,
+        sessions
+      }));
+    },
   },
   methods: {
+    // Opens a modal dialog and sets focus
+    openModal(modalRef) {
+      modalRef.ariaHidden = false;
+      modalRef.style.display = "flex";
+      setTimeout(() => modalRef.focus(), 0);
+    },
+    // Closes a modal dialog
+    closeModal(modalRef) {
+      if (document.activeElement && modalRef.contains(document.activeElement)) {
+        document.activeElement.blur();
+      }
+      modalRef.ariaHidden = true;
+      modalRef.style.display = "none";
+    },
+    // Opens speaker information modal
     openSpeakerInfoModal(speakers, id) {
       this.activeSpeakers = speakers;
       this.lastFocussedElementID = id;
-
-      this.$refs.speakerModal.ariaHidden = false;
-      this.$refs.speakerModal.style.display = "flex";
-
-      setTimeout(() => {
-        this.$refs.speakerModal.focus();
-      }, 0);
+      this.openModal(this.$refs.speakerModal);
     },
+    // Closes speaker modal and restores focus
     closeSpeakerInfoModal() {
       this.activeSpeakers = null;
+      this.closeModal(this.$refs.speakerModal);
 
-      // Blur focus before hiding the modal
-      if (document.activeElement && this.$refs.speakerModal.contains(document.activeElement)) {
-        document.activeElement.blur();
+      const lastFocussedElement = document.getElementById(this.lastFocussedElementID);
+      if (lastFocussedElement) {
+        lastFocussedElement.focus();
       }
-
-      this.$refs.speakerModal.ariaHidden = true;
-      this.$refs.speakerModal.style.display = "none";
-
-      document.getElementById(this.lastFocussedElementID).focus();
     },
+    // Handles keyboard focus trap in speaker modal
     focusTrapModal($event) {
-      let focussableElements = [];
-      focussableElements.push(this.$refs.close);
-
-      for (const key in this.$refs) {
-        if (
-          key.startsWith("twitter") ||
-          key.startsWith("github") ||
-          key.startsWith("linkedin") ||
-          key.startsWith("mastodon") ||
-          key.startsWith("bluesky")
-        ) {
-          const element = this.$refs[key];
-          if (Array.isArray(element)) {
-            focussableElements.push(element[0]);
-          } else {
-            focussableElements.push(element);
-          }
-        }
-      }
-
-      const filteredFocussableElements = focussableElements.filter(
-        (el) => el !== undefined,
-      );
-      const activeElementIndex = filteredFocussableElements.indexOf(
-        $event.target,
-      );
-
-      if (activeElementIndex != filteredFocussableElements.length - 1) {
-        if ($event.shiftKey) {
-          if (activeElementIndex === 0) {
-            filteredFocussableElements[
-              filteredFocussableElements.length - 1
-            ].focus();
-          } else {
-            filteredFocussableElements[activeElementIndex - 1].focus();
-          }
-        } else {
-          filteredFocussableElements[activeElementIndex + 1].focus();
-        }
-      } else {
-        if ($event.shiftKey) {
-          filteredFocussableElements[activeElementIndex - 1].focus();
-        } else {
-          filteredFocussableElements[0].focus();
-        }
-      }
+      handleFocusTrap($event, this.$refs.speakerModal);
     },
-    formatTwitterLink(handle) {
-      if (!handle.startsWith("https:")) {
-        return "https://twitter.com/" + handle;
-      }
-      return handle;
-    },
-    formatLinkedInLink(handle) {
-      if (!handle.startsWith("https:")) {
-        return "https://www.linkedin.com/in/" + handle;
-      }
-      return handle;
-    },
-    formatMastodonLink(handle) {
-      if (!handle.startsWith("https:")) {
-        if (handle.includes("@saptodon.org")) {
-          return "https://saptodon.org/" + handle.replace("@saptodon.org", "");
-        }
+    // Formats all social media links for a speaker (returns a new object, does not mutate)
+    formatSpeakerSocialLinks(speaker) {
+      const formatted = { ...speaker };
 
-        return "https://saptodon.org/" + handle;
+      if (formatted.githubUrl) {
+        formatted.githubUrl = formatSocialLink(formatted.githubUrl, 'github');
       }
-    },
-    formatBlueskyLink(handle) {
-      if (!handle.startsWith("https:")) {
-        return "https://bsky.app/profile/" + handle.replace("@", "");
+      if (formatted.twitterHandle) {
+        formatted.twitterHandle = formatSocialLink(formatted.twitterHandle, 'twitter');
       }
-      return handle;
-    },
-    shuffleSpeakersArray(array) {
-      const newArray = [...array];
-      const filteredArray = newArray.filter((el) => el.hasPhoto);
-      const length = filteredArray.length;
-
-      for (let start = 0; start < length; start++) {
-        const randomPosition = Math.floor(
-          (filteredArray.length - start) * Math.random(),
-        );
-        const randomItem = filteredArray.splice(randomPosition, 1);
-        filteredArray.push(...randomItem);
+      if (formatted.linkedInUrl) {
+        formatted.linkedInUrl = formatSocialLink(formatted.linkedInUrl, 'linkedin');
+      }
+      if (formatted.mastodonHandle) {
+        formatted.mastodonHandle = formatSocialLink(formatted.mastodonHandle, 'mastodon');
+      }
+      if (formatted.blueskyHandle) {
+        formatted.blueskyHandle = formatSocialLink(formatted.blueskyHandle, 'bluesky');
       }
 
-      return filteredArray;
+      return formatted;
     },
-    formatAndShuffleSpeakersArray(array) {
-      const formattedArray = this.formatSpeakersArray(array);
-      return this.shuffleSpeakersArray(formattedArray);
-    },
+    // Formats an array of speakers with full names and social links
     formatSpeakersArray(array) {
-      const newArray = [...array];
-      const formattedArray = newArray.map((speaker) => {
-        const fullName = speaker.firstName + " " + speaker.lastName;
-
-        if (speaker.twitterHandle) {
-          speaker.twitterHandle = this.formatTwitterLink(speaker.twitterHandle);
-        }
-
-        if (speaker.linkedInUrl) {
-          speaker.linkedInUrl = this.formatLinkedInLink(speaker.linkedInUrl);
-        }
-
-        if (speaker.mastodonHandle) {
-          speaker.mastodonHandle = this.formatMastodonLink(
-            speaker.mastodonHandle,
-          );
-        }
-
-        if (speaker.blueskyHandle) {
-          speaker.blueskyHandle = this.formatBlueskyLink(speaker.blueskyHandle);
-        }
-
+      return [...array].map((speaker) => {
+        const formattedSpeaker = this.formatSpeakerSocialLinks(speaker);
         return {
-          ...speaker,
-          fullName: fullName,
+          ...formattedSpeaker,
+          fullName: speaker.firstName + " " + speaker.lastName,
           showMore: false,
         };
       });
-
-      return formattedArray;
     },
+    // Updates filter and refreshes lineup display
     onFilterChange($event) {
       this.filter = $event.target.value;
       this.formattedLineup = this.formatLineup();
     },
+    // Formats and sorts sessions based on active filter
     formatLineup() {
-      const tempLineUp = this.lineup.map((session) => {
-        session.speakers.map((speaker) => {
-          if (speaker.twitterHandle) {
-            speaker.twitterHandle = this.formatTwitterLink(
-              speaker.twitterHandle,
-            );
-          }
-
-          if (speaker.linkedInUrl) {
-            speaker.linkedInUrl = this.formatLinkedInLink(speaker.linkedInUrl);
-          }
-
-          if (speaker.mastodonHandle) {
-            speaker.mastodonHandle = this.formatMastodonLink(
-              speaker.mastodonHandle,
-            );
-          }
-
-          if (speaker.blueskyHandle) {
-            speaker.blueskyHandle = this.formatBlueskyLink(
-              speaker.blueskyHandle,
-            );
-          }
-        });
-
-        let start = session.startTime || "";
-        let end = session.endTime || "";
-
-        if (
-          session.location === "canteen" &&
-          session.title.toLowerCase().includes("breakfast")
-        ) {
-          start = "08:00";
-        }
-
-        if (start && end) {
-          let tempStart = start.substring(0, start.indexOf(":"));
-          let tempEnd = end.substring(0, end.indexOf(":"));
-
-          if (tempStart.length == 1 && !tempStart.startsWith("0")) {
-            start = "0" + start;
-          }
-
-          if (tempEnd.length == 1 && !tempEnd.startsWith("0")) {
-            end = "0" + end;
-          }
-        }
-
-        // Default values for sessions without valid times
-        let newStartTime = start ? "2026-07-15T" + start + ":00.000+02:00" : null;
-        let newEndTime = end ? "2026-07-15T" + end + ":00.000+02:00" : null;
-
-        let calendarStartDate = "";
-        let calendarEndDate = "";
-        let officeStartDate = "";
-        let officeEndDate = "";
-
-        // Only generate calendar dates if we have valid times
-        if (newStartTime && newEndTime) {
-          const startDate = new Date(newStartTime);
-          const endDate = new Date(newEndTime);
-
-          // Check if dates are valid before calling toISOString
-          if (!isNaN(startDate.getTime()) && !isNaN(endDate.getTime())) {
-            calendarStartDate = startDate.toISOString().replace(/-|:|\.\d+/g, "");
-            calendarEndDate = endDate.toISOString().replace(/-|:|\.\d+/g, "");
-            officeStartDate = startDate.toISOString();
-            officeEndDate = endDate.toISOString();
-          }
-        }
-
-        const forbiddenCharacters = new RegExp("#", "g");
-        const removeForbiddenCharachters = (text) => {
-          if (typeof text === "string") {
-            let formattedText = text.replace(/(&amp;|&)/g, " and ");
-            return formattedText.replace(forbiddenCharacters, "");
-          }
-          return "";
-        };
-
-        const removeForbiddenCharachtersOutlook = (text) => {
-          if (typeof text === "string") {
-            let formattedText = text.replace(/(?:\r\n|\r|\n)/g, "\\n");
-            formattedText = formattedText.replace(/<br>/g, "\\n");
-            formattedText = formattedText.replace(/(&amp;|&)/g, " and ");
-            return formattedText.replace(forbiddenCharacters, "");
-          }
-          return "";
-        };
-        const sessionLocation = (location) => {
-          if (!location) return "";
-
-          if (location.toLowerCase().includes("audimax")) {
-            return "Audimax";
-          } else if (
-            location.toLowerCase().includes("w1") ||
-            location.toLowerCase().includes("w2")
-          ) {
-            return "Room W1/W2";
-          } else if (location.toLowerCase().includes("w3")) {
-            return "Room W3";
-          } else {
-            return location;
-          }
-        };
-
-        let cal = [
-          "BEGIN:VCALENDAR",
-          "VERSION:2.0",
-          "BEGIN:VEVENT",
-          "DTSTART:" + calendarStartDate,
-          "DTEND:" + calendarEndDate,
-          "SUMMARY:" +
-            "reCAP: " +
-            removeForbiddenCharachtersOutlook(session.title),
-          "LOCATION:" + sessionLocation(session.location),
-          "DESCRIPTION:" +
-            removeForbiddenCharachtersOutlook(session.description),
-          "UID:" + session.id,
-          "END:VEVENT",
-          "END:VCALENDAR",
-        ].join("\n");
-
-        let calDescription = "";
-
-        if (session.description) {
-          let formattedDescription = session.description.replace(/&amp;/g, "&");
-          calDescription = formattedDescription.replace(
-            /(?:\r\n|\r|\n)/g,
-            "<br>",
-          );
-        }
-
-        return {
-          ...session,
-          startTime: newStartTime,
-          endTime: newEndTime,
-          calendars: [
-            {
-              google: encodeURI(
-                [
-                  "https://www.google.com/calendar/render",
-                  "?action=TEMPLATE",
-                  "&text=" +
-                    "reCAP: " +
-                    removeForbiddenCharachters(session.title),
-                  "&dates=" + calendarStartDate,
-                  "/" + calendarEndDate,
-                  "&location=" + sessionLocation(session.location),
-                  "&details=" + removeForbiddenCharachters(calDescription),
-                  "&sprop=&sprop=name:",
-                ].join(""),
-              ),
-              office365: encodeURI(
-                [
-                  "https://outlook.office365.com/owa/",
-                  "?path=/calendar/action/compose",
-                  "&rru=addevent",
-                  "&subject=" +
-                    "reCAP: " +
-                    removeForbiddenCharachters(session.title),
-                  "&startdt=" + officeStartDate,
-                  "&enddt=" + officeEndDate,
-                  "&location=" + sessionLocation(session.location),
-                  "&body=" + removeForbiddenCharachters(calDescription),
-                ].join(""),
-              ),
-              ics: encodeURI("data:text/calendar;charset=utf8," + cal),
-            },
-          ],
-        };
-      });
+      const tempLineUp = this.lineup.map((session) => this.formatSession(session));
 
       const sortedScheduleTemp = tempLineUp.sort(
         (a, b) =>
@@ -530,86 +578,132 @@ const main = createApp({
           luxon.DateTime.fromISO(b.startTime),
       );
 
-      this.expertCornerLineupUnsorted = sortedScheduleTemp.filter((schedule) =>
-        schedule.type.includes("expert"),
+      // Separate expert corner and regular sessions (removed side effect)
+      const expertCornerSessions = sortedScheduleTemp.filter((schedule) =>
+        schedule.type.includes(SESSION_TYPES.EXPERT_CORNER),
       );
 
       const sortedSchedule = sortedScheduleTemp.filter(
-        (schedule) => !schedule.type.includes("expert"),
+        (schedule) => !schedule.type.includes(SESSION_TYPES.EXPERT_CORNER),
       );
 
-      if (this.filter === "all") {
-        return sortedSchedule;
-      } else if (this.filter === "talks") {
-        return sortedSchedule.filter((schedule) =>
-          schedule.type.includes("presentation"),
-        );
-      } else if (this.filter === "workshops") {
-        return sortedSchedule.filter((schedule) =>
-          schedule.type.includes("hands"),
-        );
-      } else if (this.filter === "audimax") {
-        return sortedSchedule.filter(
-          (schedule) => schedule.location.toLowerCase() === "audimax",
-        );
-      } else if (this.filter === "w1") {
-        return sortedSchedule.filter((schedule) =>
-          schedule.location.toLowerCase().includes("w1"),
-        );
-      } else if (this.filter === "w3") {
-        return sortedSchedule.filter((schedule) =>
-          schedule.location.toLowerCase().includes("w3"),
-        );
-      } else if (this.filter === "beginner") {
-        return sortedSchedule.filter(
-          (schedule) => schedule.proficiencyLevel === "beginner",
-        );
-      } else if (this.filter === "intermediate") {
-        return sortedSchedule.filter(
-          (schedule) => schedule.proficiencyLevel === "intermediate",
-        );
-      } else if (this.filter === "advanced") {
-        return sortedSchedule.filter(
-          (schedule) => schedule.proficiencyLevel === "advanced",
-        );
-      } else {
-        return sortedSchedule;
-      }
+      // Update expert corner lineup separately to make side effect explicit
+      this.expertCornerLineupUnsorted = expertCornerSessions;
+
+      const filterHandlers = {
+        all: () => sortedSchedule,
+        talks: () => sortedSchedule.filter((s) => s.type.includes(SESSION_TYPES.PRESENTATION)),
+        workshops: () => sortedSchedule.filter((s) => s.type.includes(SESSION_TYPES.HANDS_ON)),
+        audimax: () => sortedSchedule.filter((s) => s.location.toLowerCase() === "audimax"),
+        w1: () => sortedSchedule.filter((s) => s.location.toLowerCase().includes("w1")),
+        w3: () => sortedSchedule.filter((s) => s.location.toLowerCase().includes("w3")),
+        beginner: () => sortedSchedule.filter((s) => s.proficiencyLevel === "beginner"),
+        intermediate: () => sortedSchedule.filter((s) => s.proficiencyLevel === "intermediate"),
+        advanced: () => sortedSchedule.filter((s) => s.proficiencyLevel === "advanced"),
+      };
+
+      const handler = filterHandlers[this.filter];
+      return handler ? handler() : sortedSchedule;
     },
+    // Formats a single session with speakers, times, and calendar links
+    formatSession(session) {
+      // Create copies of speakers with formatted social links to avoid mutation
+      const formattedSpeakers = session.speakers.map((speaker) =>
+        this.formatSpeakerSocialLinks(speaker)
+      );
+
+      // Handle time normalization
+      let start = session.startTime || "";
+      let end = session.endTime || "";
+
+      if (session.location === CANTEEN_LOCATION && session.title.toLowerCase().includes("breakfast")) {
+        start = BREAKFAST_START_TIME;
+      }
+
+      if (start && end) {
+        start = padTimeComponent(start);
+        end = padTimeComponent(end);
+      }
+
+      // Build ISO timestamps
+      const newStartTime = start ? `${EVENT_DATE}T${start}:00.000${EVENT_TIMEZONE}` : null;
+      const newEndTime = end ? `${EVENT_DATE}T${end}:00.000${EVENT_TIMEZONE}` : null;
+
+      // Generate calendar dates
+      const calendarDates = this.generateCalendarDates(newStartTime, newEndTime);
+
+      // Format description for calendar
+      const calDescription = session.description
+        ? session.description.replace(/&amp;/g, "&").replace(/(?:\r\n|\r|\n)/g, "<br>")
+        : "";
+
+      return {
+        ...session,
+        speakers: formattedSpeakers,
+        startTime: newStartTime,
+        endTime: newEndTime,
+        calendars: buildCalendarLinks(session, calendarDates, calDescription),
+      };
+    },
+    // Generates calendar date strings in various formats
+    generateCalendarDates(startTime, endTime) {
+      const result = {
+        calendarStartDate: "",
+        calendarEndDate: "",
+        officeStartDate: "",
+        officeEndDate: "",
+      };
+
+      if (!startTime || !endTime) return result;
+
+      const startDate = new Date(startTime);
+      const endDate = new Date(endTime);
+
+      if (isNaN(startDate.getTime()) || isNaN(endDate.getTime())) return result;
+
+      result.calendarStartDate = startDate.toISOString().replace(/-|:|\.\d+/g, "");
+      result.calendarEndDate = endDate.toISOString().replace(/-|:|\.\d+/g, "");
+      result.officeStartDate = startDate.toISOString();
+      result.officeEndDate = endDate.toISOString();
+
+      return result;
+    },
+    // Enriches speaker data with proposal locations
     formatSpeakers(talks, speakers) {
       const talkIdToRoomMap = new Map(
         talks.map((talk) => [talk.id, talk.location]),
       );
 
-      speakers.forEach((speaker) => {
-        speaker.proposals.forEach((proposal) => {
+      // Create a deep copy to avoid mutating the original speakers array
+      return speakers.map((speaker) => ({
+        ...speaker,
+        proposals: speaker.proposals.map((proposal) => {
           const location = talkIdToRoomMap.get(proposal.id);
-          if (location) {
-            proposal.location = location;
-          } else {
-            proposal.location = "Audimax";
-          }
-        });
-      });
-
-      return speakers;
+          return {
+            ...proposal,
+            location: location || "Audimax"
+          };
+        })
+      }));
     },
+    // Groups expert corner sessions by time slot
     groupExpertCornerTopics() {
       this.expertCornerLineupUnsorted.forEach((corner) => {
         const timeSlot = corner.startTime;
-        if (!this.expertCornerLineup[timeSlot]) {
-          this.expertCornerLineup[timeSlot] = [];
+        if (!this.expertCornerLineup.has(timeSlot)) {
+          this.expertCornerLineup.set(timeSlot, []);
         }
-        this.expertCornerLineup[timeSlot].push(corner);
+        this.expertCornerLineup.get(timeSlot).push(corner);
       });
     },
+    // Returns sorted sessions for a specific room
     getSessionsByRoom(room) {
       // Get sessions for this specific room (excluding break sessions)
       const roomSessions = this.formattedLineup.filter(
         (session) =>
           session.location === room &&
           session.type &&
-          !session.type.includes("expert") &&
+          !session.type.includes(SESSION_TYPES.EXPERT_CORNER) &&
           !this.isBreakSession(session)
       );
 
@@ -618,174 +712,85 @@ const main = createApp({
         a.startTime.localeCompare(b.startTime),
       );
     },
-    getBreakSessions() {
-      // Get all break/catering sessions
-      return this.formattedLineup.filter(
-        (session) => this.isBreakSession(session)
-      ).sort((a, b) =>
-        a.startTime.localeCompare(b.startTime)
-      );
-    },
-    timeToMinutes(timeStr) {
+    // Converts time string to grid value for CSS positioning
+    timeToGridValue(timeStr) {
       if (!timeStr) return 0;
 
-      // Handle ISO format (e.g., "2026-07-15T09:00:00.000+02:00")
+      // Returns HHMM format (e.g., 930 for 9:30) for CSS grid calculations
+      // The CSS extracts hours/minutes using: round(down, val/100) and mod(val, 100)
+      let timeOnly;
+      
       if (timeStr.includes("T")) {
-        const time = timeStr.substring(timeStr.indexOf("T") + 1);
-        const [hours, minutes] = time.split(":").map(Number);
-        return hours * 100 + minutes;
+        timeOnly = timeStr.substring(timeStr.indexOf("T") + 1);
+      } else {
+        timeOnly = timeStr;
       }
 
-      // Handle simple format (e.g., "9:00")
-      const [hours, minutes] = timeStr.split(":").map(Number);
+      const parts = timeOnly.split(":");
+      if (parts.length < 2) {
+        console.warn(`Invalid time format: ${timeStr}`);
+        return 0;
+      }
+
+      const hours = parseInt(parts[0], 10);
+      const minutes = parseInt(parts[1], 10);
+      
+      if (isNaN(hours) || isNaN(minutes)) {
+        console.warn(`Invalid time values in: ${timeStr}`);
+        return 0;
+      }
+
       return hours * 100 + minutes;
     },
+    // Checks if session is a break or catering session
     isBreakSession(session) {
-      const lowerTitle = session.title.toLowerCase();
-      const lowerType = (session.type || "").toLowerCase();
-
-      return (
-        lowerType.includes("break") ||
-        lowerType.includes("lunch") ||
-        lowerType.includes("catering") ||
-        lowerTitle.includes("break") ||
-        lowerTitle.includes("lunch") ||
-        lowerTitle.includes("coffee") ||
-        session.location === "canteen"
-      );
+      if (session.location === CANTEEN_LOCATION) return true;
+      const type = session.type || "";
+      return BREAK_SESSION_PATTERN.test(type) || BREAK_SESSION_PATTERN.test(session.title);
     },
+    // Checks if session is a pitch session
     isPitchSession(session) {
       const lowerType = (session.type || "").toLowerCase();
-      return lowerType.includes("pitch");
+      return lowerType.includes(SESSION_TYPES.PITCH);
     },
+    // Toggles between grid and linear agenda views
     toggleAgendaView() {
       this.agendaViewMode = this.agendaViewMode === "grid" ? "linear" : "grid";
     },
-    getAllSessionsSorted() {
-      // Get all sessions except expert corner sessions
-      const allSessions = this.lineup.filter(
-        (session) => session.type && !session.type.includes("expert"),
-      );
-
-      // Sort by start time (convert to minutes for proper numerical comparison)
-      return allSessions.sort((a, b) => {
-        const timeA = this.timeToMinutes(a.startTime);
-        const timeB = this.timeToMinutes(b.startTime);
-        return timeA - timeB;
-      });
-    },
+    // Retrieves speakers for a specific session by ID
     getSessionSpeakers(sessionId) {
-      // Find the session and return its speakers array directly
-      const session = this.lineup.find((s) => s.id === sessionId);
+      // Find the session in formattedLineup to get formatted speaker data
+      const session = this.formattedLineup.find((s) => s.id === sessionId);
       return session && session.speakers ? session.speakers : [];
     },
+    // Opens the session details modal
     openSessionDialog(session) {
       this.activeSession = session;
-
-      this.$refs.sessionModal.ariaHidden = false;
-      this.$refs.sessionModal.style.display = "flex";
-
-      setTimeout(() => {
-        this.$refs.sessionModal.focus();
-      }, 0);
+      this.openModal(this.$refs.sessionModal);
     },
+    // Closes the session details modal
     closeSessionDialog() {
       this.activeSession = null;
-
-      // Blur focus before hiding the modal
-      if (document.activeElement && this.$refs.sessionModal.contains(document.activeElement)) {
-        document.activeElement.blur();
-      }
-
-      this.$refs.sessionModal.ariaHidden = true;
-      this.$refs.sessionModal.style.display = "none";
+      this.closeModal(this.$refs.sessionModal);
     },
+    // Handles keyboard focus trap in session modal
     focusTrapSessionModal($event) {
-      let focussableElements = [];
-      focussableElements.push(this.$refs.sessionCloseButton);
-
-      for (const key in this.$refs) {
-        if (
-          key.startsWith("session-twitter") ||
-          key.startsWith("session-github") ||
-          key.startsWith("session-linkedin") ||
-          key.startsWith("session-mastodon") ||
-          key.startsWith("session-bluesky") ||
-          key.startsWith("session-calendar-")
-        ) {
-          const element = this.$refs[key];
-          if (Array.isArray(element)) {
-            focussableElements.push(element[0]);
-          } else {
-            focussableElements.push(element);
-          }
-        }
-      }
-
-      const filteredFocussableElements = focussableElements.filter(
-        (el) => el !== undefined,
-      );
-      const activeElementIndex = filteredFocussableElements.indexOf(
-        $event.target,
-      );
-
-      // Prevent default tab behavior
-      $event.preventDefault();
-
-      if ($event.shiftKey) {
-        // Shift+Tab - go backwards
-        if (activeElementIndex === 0) {
-          // If at first element, go to last
-          filteredFocussableElements[
-            filteredFocussableElements.length - 1
-          ].focus();
-        } else {
-          // Otherwise go to previous
-          filteredFocussableElements[activeElementIndex - 1].focus();
-        }
-      } else {
-        // Tab - go forwards
-        if (activeElementIndex === filteredFocussableElements.length - 1) {
-          // If at last element, go to first
-          filteredFocussableElements[0].focus();
-        } else {
-          // Otherwise go to next
-          filteredFocussableElements[activeElementIndex + 1].focus();
-        }
-      }
+      handleFocusTrap($event, this.$refs.sessionModal);
     },
+    // Capitalizes the first letter of proficiency level
     formatProficiencyLevel(value) {
       if (!value) return "";
       return value.charAt(0).toUpperCase() + value.slice(1);
     },
+    // Returns abbreviated location name for display
     formatLocationTitle(value) {
-      if (!value) return "";
-
-      if (value) {
-        if (value.toLowerCase().includes("audimax")) {
-          return "A";
-        } else if (
-          value.toLowerCase().includes("w1") ||
-          value.toLowerCase().includes("w2")
-        ) {
-          return "W1/2";
-        } else if (value.toLowerCase().includes("w3")) {
-          return "W3";
-        } else if (value.toLowerCase().includes("expert")) {
-          return "EXP";
-        } else if (value.toLowerCase().includes("canteen")) {
-          return "CAN";
-        } else {
-          return value;
-        }
-      }
+      const info = getLocationInfo(value);
+      return info ? info.short : (value || "");
     },
+    // Decodes HTML and formats bio text with line breaks
     decodeBioHtml(value) {
       if (!value) return "";
-      const txt = document.createElement("textarea");
-      txt.innerHTML = value;
-
-      let decoded = txt.value;
+      let decoded = decodeHtmlEntities(value);
 
       // Replace "&amp;" or "&" with " and "
       decoded = decoded.replace(/&amp;|&/g, " and ");
@@ -795,49 +800,36 @@ const main = createApp({
 
       return decoded;
     },
+    // Removes leading zeros from time display
     trimTime(value) {
       if (!value) return "";
-      let time = value.substring(value.indexOf("T") + 1);
-      let timeSplit = time.split(":");
-      let hour = timeSplit[0].startsWith("0")
+      const time = value.substring(value.indexOf("T") + 1);
+      const timeSplit = time.split(":");
+      const hour = timeSplit[0].startsWith("0")
         ? timeSplit[0].replace(/^0+/, "")
         : timeSplit[0];
-      return hour + ":" + timeSplit[1];
+      return `${hour}:${timeSplit[1]}`;
     },
+    // Returns full location name for display
     formatLocation(value) {
-      if (value) {
-        if (value.toLowerCase().includes("audimax")) {
-          return "Audimax";
-        } else if (
-          value.toLowerCase().includes("w1") ||
-          value.toLowerCase().includes("w2")
-        ) {
-          return "W1/W2";
-        } else if (value.toLowerCase().includes("w3")) {
-          return "W3";
-        } else if (value.toLowerCase().includes("expert")) {
-          return "Expert Corner";
-        } else if (value.toLowerCase().includes("canteen")) {
-          return "Canteen";
-        } else {
-          return value;
-        }
-      }
+      const info = getLocationInfo(value);
+      return info ? info.full : (value || "");
     },
+    // Removes 'Expert Corner: ' prefix from session titles
     trimExpertText(value) {
+      if (!value) return "";
       return value.replace(/^Expert Corner: /, "");
     },
+    // Decodes HTML entities in text
     decodeHtml(value) {
-      if (!value) return "";
-      const txt = document.createElement("textarea");
-      txt.innerHTML = value;
-      return txt.value;
+      return decodeHtmlEntities(value);
     },
+    // Converts session type to user-friendly label
     formatSessionType(value) {
       if (!value) return "";
-      if (value.toLowerCase().includes("presentation")) {
+      if (value.toLowerCase().includes(SESSION_TYPES.PRESENTATION)) {
         return "Talk";
-      } else if (value.toLowerCase().includes("hands")) {
+      } else if (value.toLowerCase().includes(SESSION_TYPES.HANDS_ON)) {
         return "Workshop";
       } else {
         return value;
