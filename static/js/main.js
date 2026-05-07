@@ -573,14 +573,28 @@ const main = createApp({
 
       const filterHandlers = {
         all: () => sortedSchedule,
-        talks: () => sortedSchedule.filter((s) => s.type.includes(SESSION_TYPES.PRESENTATION)),
-        workshops: () => sortedSchedule.filter((s) => s.type.includes(SESSION_TYPES.HANDS_ON)),
-        audimax: () => sortedSchedule.filter((s) => s.location.toLowerCase() === "audimax"),
-        w1: () => sortedSchedule.filter((s) => s.location.toLowerCase().includes("w1")),
-        w3: () => sortedSchedule.filter((s) => s.location.toLowerCase().includes("w3")),
-        beginner: () => sortedSchedule.filter((s) => s.proficiencyLevel === "beginner"),
-        intermediate: () => sortedSchedule.filter((s) => s.proficiencyLevel === "intermediate"),
-        advanced: () => sortedSchedule.filter((s) => s.proficiencyLevel === "advanced"),
+        talks: () =>
+          sortedSchedule.filter((s) =>
+            s.type.includes(SESSION_TYPES.PRESENTATION),
+          ),
+        workshops: () =>
+          sortedSchedule.filter((s) => s.type.includes(SESSION_TYPES.HANDS_ON)),
+        experts: () =>
+          sortedSchedule.filter((s) =>
+            s.type.includes(SESSION_TYPES.EXPERT_CORNER),
+          ),
+        audimax: () =>
+          sortedSchedule.filter((s) => s.location.toLowerCase() === "audimax"),
+        w1: () =>
+          sortedSchedule.filter((s) => s.location.toLowerCase().includes("w1")),
+        w3: () =>
+          sortedSchedule.filter((s) => s.location.toLowerCase().includes("w3")),
+        beginner: () =>
+          sortedSchedule.filter((s) => s.proficiencyLevel === "beginner"),
+        intermediate: () =>
+          sortedSchedule.filter((s) => s.proficiencyLevel === "intermediate"),
+        advanced: () =>
+          sortedSchedule.filter((s) => s.proficiencyLevel === "advanced"),
       };
 
       const handler = filterHandlers[this.filter];

@@ -9,7 +9,7 @@
 	--workshops: rgb(0, 0, 255);
 	--beginner: rgba(215, 95, 232);
 	--intermediate: rgba(157, 107, 87);
-	--advanced: rgba(165, 232, 95);
+	--advanced: rgba(17, 232, 95);
 	--agenda-room-size: 3rem;
 }
 
@@ -230,6 +230,12 @@
 	background-color: var(--workshops);
 	color: #fff;
 	outline-color: var(--workshops);
+}
+
+#experts + .agenda-filter__label[for="experts"] {
+	background-color: var(--experts);
+	color: #000;
+	outline-color: var(--experts);
 }
 
 #beginner + .agenda-filter__label[for="beginner"] {
