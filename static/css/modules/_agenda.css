@@ -528,11 +528,19 @@
 	align-items: flex-start;
 }
 
+.agenda-slot-container {
+	padding: 0.25rem;
+}
+
 @media only screen and (min-width: 768px) {
 
 	.agenda-slot-inner-container {
 		gap: 1.4rem;
 		flex-direction: row;
+	}
+
+	.agenda-slot-container {
+		padding: 0;
 	}
 }
 

@@ -99,7 +99,8 @@
 											class="session"
 											:class="{
 													break: isBreakSession(session),
-													pitch: isPitchSession(session)
+													pitch: isPitchSession(session),
+													expert: isExpertSession(session)
 												}"
 											:style="`--start: ${timeToGridValue(session.startTime)}; --end: ${timeToGridValue(session.endTime)};`"
 											@click="openSessionDialog(session)"
@@ -126,7 +127,8 @@
 											class="session"
 											:class="{
 													break: isBreakSession(session),
-													pitch: isPitchSession(session)
+													pitch: isPitchSession(session),
+													expert: isExpertSession(session)
 												}"
 											:style="`--start: ${timeToGridValue(session.startTime)}; --end: ${timeToGridValue(session.endTime)};`"
 											@click="openSessionDialog(session)"
@@ -153,7 +155,36 @@
 											class="session"
 											:class="{
 													break: isBreakSession(session),
-													pitch: isPitchSession(session)
+													pitch: isPitchSession(session),
+													expert: isExpertSession(session)
+												}"
+											:style="`--start: ${timeToGridValue(session.startTime)}; --end: ${timeToGridValue(session.endTime)};`"
+											@click="openSessionDialog(session)"
+											@keydown.enter="openSessionDialog(session)"
+											@keydown.space.prevent="openSessionDialog(session)"
+											tabindex="0"
+											role="button"
+											:aria-label="`View details for ${session.title}`">
+											<h3>
+												<span class="time">{{ trimTime(session.startTime) }} - {{ trimTime(session.endTime) }}</span>
+												<span v-html="decodeBioHtml(session.title)"></span>
+											</h3>
+										</li>
+									</ol>
+								</div>
+
+								<!-- Experts Corner -->
+								<div class="stage" style="--column: 5;">
+									<h2 class="stage-headline">EXP</h2>
+									<ol class="session-list" role="list">
+										<li
+											v-for="session in getSessionsByRoom('room_experts')"
+											:key="session.id"
+											class="session"
+											:class="{
+													break: isBreakSession(session),
+													pitch: isPitchSession(session),
+													expert: isExpertSession(session)
 												}"
 											:style="`--start: ${timeToGridValue(session.startTime)}; --end: ${timeToGridValue(session.endTime)};`"
 											@click="openSessionDialog(session)"
@@ -171,7 +202,7 @@
 								</div>
 
 								<!-- Breaks -->
-								<div class="stage" style="--column: 5;">
+								<div class="stage" style="--column: 6;">
 									<h2 class="stage-headline">CAN</h2>
 									<ol class="session-list" role="list">
 										<li
@@ -474,7 +505,7 @@
 									<div v-for="(speaker, index) in getSessionSpeakers(activeSession.id)" :key="index"
 										 class="agenda-modal-speaker">
 										<figure>
-											<div class="placeholder"></div>
+											<div class="placeholder" v-if="!speaker.hasPhoto"></div>
 											<img
 												 v-if="speaker.hasPhoto"
 												 :src="`https://recap.cfapps.eu12.hana.ondemand.com${speaker.photoUrl}`"
@@ -606,42 +637,6 @@
 			</div>
 		</section>
 
-	<section class="alternate">
-			<div class="wrap">
-				<div class="box">
-					<h2 class="section-heading section-heading--cube-10">
-						<span>Expert Corner Sessions</span>
-					</h2>
-					<ol class="agenda">
-						<li v-for="slot in expertCornerLineupArray" :key="slot.timeSlot" v-cloak class="agenda-slot">
-							<div class="agenda-slot-header">
-								<div>
-									<p class="agenda-slot-details">
-										<span class="agenda-time">
-											{{trimTime(slot.sessions[0].startTime)}} {{trimTime(slot.sessions[0].endTime)}}
-										</span>
-	
-										<span class="agenda-room experts">
-											{{formatLocationTitle(slot.sessions[0].location)}}
-										</span>
-									</p>
-								</div>
-							</div>
-							<div class="agenda-slot-container">
-								<ul class="agenda-slot-experts">
-									<li v-for="event in slot.sessions" :key="event.id">
-										<p>{{trimExpertText(event.title)}}</p>
-									</li>
-								</ul>
-	
-							</div>
-	
-						</li>
-					</ol>
-				</div>
-			</div>
-		</section>
-
 
 	<!-- Speaker Modal -->
 		<div id="speaker-modal" ref="speakerModal" aria-hidden="true" tabindex="-1" aria-modal="true"
@@ -674,7 +669,7 @@
 				<div v-for="(speaker, index) in activeSpeakers" class="agenda-modal-content-container"
 					 :key="index">
 					<figure>
-						<div class="placeholder"></div>
+						<div class="placeholder" v-if="!speaker.hasPhoto"></div>
 						<img
 							 v-if="speaker.hasPhoto"
 							 :src="`https://recap.cfapps.eu12.hana.ondemand.com${speaker.photoUrl}`"

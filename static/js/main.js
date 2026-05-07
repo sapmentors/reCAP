@@ -421,8 +421,6 @@ const main = createApp({
       lineup: [],
       formattedLineup: [],
       formattedSpeakers: [],
-      expertCornerLineup: new Map(), // Use Map for better reactivity and performance
-      expertCornerLineupUnsorted: [],
       activeSession: null,
       agendaViewMode: "grid", // 'grid' or 'linear'
       apiError: null, // Track API loading errors
@@ -462,8 +460,7 @@ const main = createApp({
     this.formattedLineup = this.formatLineup();
 
     this.formattedSpeakers = this.formatSpeakers(this.formattedLineup, this.speakers);
-    this.groupExpertCornerTopics();
-    
+
     this.isLoading = false;
   },
   computed: {
@@ -486,13 +483,6 @@ const main = createApp({
         const timeB = this.timeToGridValue(b.startTime);
         return timeA - timeB;
       });
-    },
-    // Returns expert corner lineup as array for template iteration
-    expertCornerLineupArray() {
-      return Array.from(this.expertCornerLineup.entries()).map(([timeSlot, sessions]) => ({
-        timeSlot,
-        sessions
-      }));
     },
   },
   methods: {
@@ -578,17 +568,8 @@ const main = createApp({
           luxon.DateTime.fromISO(b.startTime),
       );
 
-      // Separate expert corner and regular sessions (removed side effect)
-      const expertCornerSessions = sortedScheduleTemp.filter((schedule) =>
-        schedule.type.includes(SESSION_TYPES.EXPERT_CORNER),
-      );
-
-      const sortedSchedule = sortedScheduleTemp.filter(
-        (schedule) => !schedule.type.includes(SESSION_TYPES.EXPERT_CORNER),
-      );
-
-      // Update expert corner lineup separately to make side effect explicit
-      this.expertCornerLineupUnsorted = expertCornerSessions;
+      // No longer filtering out expert corner sessions - they're part of the main grid now
+      const sortedSchedule = sortedScheduleTemp;
 
       const filterHandlers = {
         all: () => sortedSchedule,
@@ -686,26 +667,27 @@ const main = createApp({
         })
       }));
     },
-    // Groups expert corner sessions by time slot
-    groupExpertCornerTopics() {
-      this.expertCornerLineupUnsorted.forEach((corner) => {
-        const timeSlot = corner.startTime;
-        if (!this.expertCornerLineup.has(timeSlot)) {
-          this.expertCornerLineup.set(timeSlot, []);
-        }
-        this.expertCornerLineup.get(timeSlot).push(corner);
-      });
-    },
-    // Returns sorted sessions for a specific room
+    // Converts time string to grid value for CSS positioning
     getSessionsByRoom(room) {
-      // Get sessions for this specific room (excluding break sessions)
-      const roomSessions = this.formattedLineup.filter(
-        (session) =>
-          session.location === room &&
-          session.type &&
-          !session.type.includes(SESSION_TYPES.EXPERT_CORNER) &&
-          !this.isBreakSession(session)
-      );
+      let roomSessions;
+
+      // Special handling for expert corner - filter by type instead of location
+      if (room === 'room_experts') {
+        roomSessions = this.formattedLineup.filter(
+          (session) =>
+            session.type &&
+            session.type.includes(SESSION_TYPES.EXPERT_CORNER) &&
+            !this.isBreakSession(session)
+        );
+      } else {
+        // Get sessions for this specific room (excluding break sessions)
+        roomSessions = this.formattedLineup.filter(
+          (session) =>
+            session.location === room &&
+            session.type &&
+            !this.isBreakSession(session)
+        );
+      }
 
       // Sort by start time
       return roomSessions.sort((a, b) =>
@@ -752,6 +734,11 @@ const main = createApp({
     isPitchSession(session) {
       const lowerType = (session.type || "").toLowerCase();
       return lowerType.includes(SESSION_TYPES.PITCH);
+    },
+    // Checks if session is an expert corner session
+    isExpertSession(session) {
+      const lowerType = (session.type || "").toLowerCase();
+      return lowerType.includes(SESSION_TYPES.EXPERT_CORNER);
     },
     // Toggles between grid and linear agenda views
     toggleAgendaView() {
@@ -831,6 +818,8 @@ const main = createApp({
         return "Talk";
       } else if (value.toLowerCase().includes(SESSION_TYPES.HANDS_ON)) {
         return "Workshop";
+      } else if (value.toLowerCase().includes(SESSION_TYPES.EXPERT_CORNER)) {
+        return "Expert Corner";
       } else {
         return value;
       } 
