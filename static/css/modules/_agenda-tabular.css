@@ -1,14 +1,14 @@
 
 .timetable {
 	--time-unit-height: 0.5rem;
-	--stages: 5;
+	--stages: 4;
 	--th-width: 3.5rem;
 	--stage-gap: 1rem;
 	--start-time: 8;
 	--end-time: 18;
 	--event-duration: calc(var(--end-time) - var(--start-time) + 1);
 	--rows: auto repeat(calc(var(--event-duration) * 12), minmax(var(--time-unit-height), auto));
-	--columns: var(--th-width) repeat(3, 1fr) 0.5fr 1fr;
+	--columns: var(--th-width) repeat(3, 1fr) 0.5fr;
 	--zebra-color-one: var(--background-color);
 	--zebra-color-two: var(--background-color-alternate);
 
@@ -344,18 +344,45 @@
 	}
 }
 
-.switch-container {
-	gap: 1.5rem;
-	display: flex;
-	align-items: center;
-	margin-block-end: 1rem;
-}
-
-.swipe {
+.swipe-container {
 	display: none;
 }
 
+/* Break sessions styles */
+.break-sessions {
+	gap: 1.4rem;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	margin-block: 2rem 3rem;
+}
+
+.break-session {
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+}
+
+.break-session-time {
+	display: flex;
+	flex-direction: column;
+	gap: 0.25rem;
+	padding: 0.75rem 1rem;
+	background: var(--background-color-alternate);
+	/* background: var(--canteen); */
+}
+
+.break-session-text {
+	font-size: var(--type-0);
+	/* font-size: var(--type-1); */
+	font-weight: 600;
+}
+
 @media screen and (max-width: 700px) {
+	.swipe-container {
+		display: flex;
+	}
+
 	.swipe {
 		display: flex;
 		align-items: center;
@@ -363,6 +390,8 @@
 		color: var(--text-color);
 		font-size: var(--type-0);
 		font-weight: 600;
+		margin-inline: auto;
+		margin-block-end: 2rem;
 
 		span {
 			margin: 0 0.25rem;
@@ -424,5 +453,20 @@
 			opacity: 0.7;
 			transform: scale(1.05);
 		}
+	}
+
+	.break-sessions {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 0.5rem;
+	}
+
+	.break-session-text {
+		font-size: var(--type-0);
+		font-weight: 600;
+	}
+
+	.break-session-time {
+		padding: 0.5rem 0.75rem;
 	}
 }
