@@ -35,9 +35,9 @@ window.NavSectionMobileComponent = {
     </div>
 
     <ul class="mobile-nav-menu" v-if="hamburgerMenuVisible">
-        <!-- <li>
+        <li>
             <a href="program.html" :class="{ active: isActive('program') }" :aria-current="isActive('program')">Agenda</a>
-        </li>-->
+        </li>
         <!-- <li>
             <a href="speakerinfo.html" :class="{ active: isActive('speakerinfo') }" :aria-current="isActive('speakerinfo')">Speakers</a>
         </li>-->

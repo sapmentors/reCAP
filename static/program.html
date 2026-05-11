@@ -382,12 +382,11 @@
 													<button
 															:id="`btn-${speaker.firstName}-${speaker.lastName}-${session.id}`"
 															@click="openSpeakerInfoModal(session.speakers, `btn-${speaker.firstName}-${speaker.lastName}-${session.id}`)">
-														<div class="placeholder"></div>
+														<div class="placeholder" v-if="!speaker.hasPhoto"></div>
 														<img
-															 v-if="speaker.hasPhoto"
+															 v-else
 															 :src="`https://recap.cfapps.eu12.hana.ondemand.com${speaker.photoUrl}`"
-															 :alt="`Portrait of ${speaker.firstName} ${speaker.lastName}`"
-															 @error="$event.target.style.display='none'" />
+															 :alt="`Portrait of ${speaker.firstName} ${speaker.lastName}`" />
 													</button>
 												</template>
 											</div>
@@ -539,10 +538,9 @@
 										<figure>
 											<div class="placeholder" v-if="!speaker.hasPhoto"></div>
 											<img
-												 v-if="speaker.hasPhoto"
+												 v-else
 												 :src="`https://recap.cfapps.eu12.hana.ondemand.com${speaker.photoUrl}`"
-												 :alt="`Portrait of ${speaker.firstName} ${speaker.lastName}`"
-												 @error="$event.target.style.display='none'" />
+												 :alt="`Portrait of ${speaker.firstName} ${speaker.lastName}`" />
 										</figure>
 										<article>
 											<header>
@@ -703,10 +701,9 @@
 					<figure>
 						<div class="placeholder" v-if="!speaker.hasPhoto"></div>
 						<img
-							 v-if="speaker.hasPhoto"
+							 v-else
 							 :src="`https://recap.cfapps.eu12.hana.ondemand.com${speaker.photoUrl}`"
-							 :alt="`Portrait of ${speaker.firstName} ${speaker.lastName}`"
-							 @error="$event.target.style.display='none'" />
+							 :alt="`Portrait of ${speaker.firstName} ${speaker.lastName}`" />
 					</figure>
 					<article>
 						<header>

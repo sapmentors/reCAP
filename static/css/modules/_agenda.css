@@ -469,7 +469,7 @@
 	cursor: pointer;
 	overflow: hidden;
 	background: transparent;
-	transition: all .2s ease-in-out;
+	transition: all .3s cubic-bezier(0.4, 0, 0.2, 1);
 	position: relative;
 }
 
@@ -482,7 +482,7 @@
 }
 
 .agenda-slot-speakers-images button:is(:hover) img {
-	transform: scale(1.02);
+	filter: brightness(1.15) saturate(1.1);
 }
 
 .agenda-slot-speakers-images button:is(:focus) {
@@ -494,10 +494,11 @@
 	width: 8rem;
 	height: 8rem;
 	object-fit: cover;
-	transition: all .2s ease-in-out;
+	transition: filter .25s ease;
 	position: absolute;
 	top: 0;
 	left: 0;
+	z-index: 1;
 }
 
 .agenda-slot-speakers-images .placeholder,
