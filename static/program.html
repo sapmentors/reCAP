@@ -132,9 +132,9 @@
 						<template v-if="agendaViewMode === 'grid'">
 							<div class="timetable--body">
 								<div class="hours" aria-hidden="true">
-									<div v-for="hour in 10" :key="hour">
-										<time :datetime="`${(hour + 7).toString().padStart(2, '0')}:00`">
-											{{ (hour + 7).toString().padStart(2, '0') }}:00
+									<div v-for="hour in 9" :key="hour">
+										<time :datetime="`${(hour + 8).toString().padStart(2, '0')}:00`">
+											{{ (hour + 8).toString().padStart(2, '0') }}:00
 										</time>
 									</div>
 								</div>

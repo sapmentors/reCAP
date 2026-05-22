@@ -4,7 +4,7 @@
 	--stages: 4;
 	--th-width: 3.5rem;
 	--stage-gap: 1rem;
-	--start-time: 8;
+	--start-time: 9;
 	--end-time: 18;
 	--event-duration: calc(var(--end-time) - var(--start-time) + 1);
 	--rows: auto repeat(calc(var(--event-duration) * 12), minmax(var(--time-unit-height), auto));
