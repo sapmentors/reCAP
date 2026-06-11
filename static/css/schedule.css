@@ -1,8 +1,9 @@
 .schedule nav {
 	max-width: 100%;
 	padding: 2rem;
-	background: transparent url(../images/timetable-bg.svg) 101% 102% no-repeat;
-	background-size: 2800px auto;
+	background: transparent url(../images/timetable-bg.svg) 100% 0% no-repeat;
+	background-size: 65%;
+	/* background-color: var(--brand-color-alt); */
 }
 
 .timetable {
@@ -13,11 +14,12 @@
 	border-top-width: 0.75rem;
 	border-collapse: collapse;
 	text-wrap: balance;
+	margin-inline: auto;
 }
 
 .timetable thead th {
 	text-align: left;
-	font-size: 2.5rem;
+	font-size: 2.2rem;
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	font-weight: 900;
@@ -74,6 +76,45 @@
 .timetable .agenda-level {
 	width: max-content;
 	padding-inline: 1rem;
-	border-radius: 10px;
 	font-size: 1.5rem;
+	border-radius: 0;
+	margin-inline: 0;
+}
+
+.timetable .agenda-level {
+	transform: none;
+}
+
+/* Loading state */
+.loading-state,
+.error-state {
+	padding: 3rem;
+	text-align: center;
+	font-size: 1.8rem;
+}
+
+.error-state {
+	color: #d32f2f;
+}
+
+.loading-state {
+	color: var(--text-color);
+}
+
+.active {
+	text-transform: uppercase;
+	font-weight: 800;
+	color: #e60000;
+	
+	&::before {
+		content: "●";
+		color: #e60000;
+		margin-inline: 0 .3rem;
+		animation: blink 1s linear infinite alternate;
+		text-decoration-thickness: 0 !important;
+		display: inline-block;
+		
+		mask: none;
+		background: none;
+	}
 }

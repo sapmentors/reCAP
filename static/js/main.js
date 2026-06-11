@@ -430,52 +430,85 @@ const main = createApp({
   async mounted() {
     // Fetch both APIs in parallel
     const [speakerResult, proposalResult] = await Promise.allSettled([
-      fetch(API_ENDPOINTS.speakerLineup).then(r => r.json()),
-      fetch(API_ENDPOINTS.proposalLineup).then(r => r.json()),
+      fetch(API_ENDPOINTS.speakerLineup).then((r) => r.json()),
+      fetch(API_ENDPOINTS.proposalLineup).then((r) => r.json()),
     ]);
 
     const errors = [];
 
-    if (speakerResult.status === 'fulfilled') {
+    if (speakerResult.status === "fulfilled") {
       this.speakers = speakerResult.value;
     } else {
-      console.error('Failed to fetch speaker lineup:', speakerResult.reason);
-      errors.push('Failed to load speaker data');
+      console.error("Failed to fetch speaker lineup:", speakerResult.reason);
+      errors.push("Failed to load speaker data");
       this.speakers = [];
     }
 
-    if (proposalResult.status === 'fulfilled') {
+    if (proposalResult.status === "fulfilled") {
       this.lineup = proposalResult.value;
     } else {
-      console.error('Failed to fetch proposal lineup:', proposalResult.reason);
-      errors.push('Failed to load session data');
+      console.error("Failed to fetch proposal lineup:", proposalResult.reason);
+      errors.push("Failed to load session data");
       this.lineup = [];
     }
 
     // Set error state if any API calls failed
     if (errors.length > 0) {
-      this.apiError = errors.join('. ');
+      this.apiError = errors.join(". ");
     }
 
     this.formattedLineup = this.formatLineup();
 
-    this.formattedSpeakers = this.formatSpeakers(this.formattedLineup, this.speakers);
+    this.formattedSpeakers = this.formatSpeakers(
+      this.formattedLineup,
+      this.speakers,
+    );
 
     this.isLoading = false;
+
+    // Update live session status
+    this.updateLiveSession();
+
+    // Start interval timer for live session updates
+    let interval;
+    let timeNow = new Date().toISOString();
+
+    const startCounterTime = new Date(
+      `${EVENT_DATE}T02:00:00.000${EVENT_TIMEZONE}`,
+    ).toISOString();
+
+    const endCounterTime = new Date(
+      `${EVENT_DATE}T19:00:00.000${EVENT_TIMEZONE}`,
+    ).toISOString();
+
+    if (timeNow > startCounterTime && timeNow <= endCounterTime) {
+      interval = setInterval(() => {
+        timeNow = new Date().toISOString();
+        if (timeNow > endCounterTime) {
+          clearInterval(interval);
+          return;
+        }
+        this.updateLiveSession();
+      }, 60000);
+    }
+
+    // Register this Vue instance with DebugAgenda if it exists
+    if (window.DebugAgenda) {
+      window.DebugAgenda._appInstance = this;
+    }
   },
   computed: {
     // Returns sorted break/catering sessions
     breakSessions() {
-      return this.formattedLineup.filter(
-        (session) => this.isBreakSession(session)
-      ).sort((a, b) =>
-        a.startTime.localeCompare(b.startTime)
-      );
+      return this.formattedLineup
+        .filter((session) => this.isBreakSession(session))
+        .sort((a, b) => a.startTime.localeCompare(b.startTime));
     },
     // Returns all non-expert sessions sorted by time
     allSessionsSorted() {
       const allSessions = this.lineup.filter(
-        (session) => session.type && !session.type.includes(SESSION_TYPES.EXPERT_CORNER),
+        (session) =>
+          session.type && !session.type.includes(SESSION_TYPES.EXPERT_CORNER),
       );
 
       return allSessions.sort((a, b) => {
@@ -511,7 +544,9 @@ const main = createApp({
       this.activeSpeakers = null;
       this.closeModal(this.$refs.speakerModal);
 
-      const lastFocussedElement = document.getElementById(this.lastFocussedElementID);
+      const lastFocussedElement = document.getElementById(
+        this.lastFocussedElementID,
+      );
       if (lastFocussedElement) {
         lastFocussedElement.focus();
       }
@@ -525,19 +560,31 @@ const main = createApp({
       const formatted = { ...speaker };
 
       if (formatted.githubUrl) {
-        formatted.githubUrl = formatSocialLink(formatted.githubUrl, 'github');
+        formatted.githubUrl = formatSocialLink(formatted.githubUrl, "github");
       }
       if (formatted.twitterHandle) {
-        formatted.twitterHandle = formatSocialLink(formatted.twitterHandle, 'twitter');
+        formatted.twitterHandle = formatSocialLink(
+          formatted.twitterHandle,
+          "twitter",
+        );
       }
       if (formatted.linkedInUrl) {
-        formatted.linkedInUrl = formatSocialLink(formatted.linkedInUrl, 'linkedin');
+        formatted.linkedInUrl = formatSocialLink(
+          formatted.linkedInUrl,
+          "linkedin",
+        );
       }
       if (formatted.mastodonHandle) {
-        formatted.mastodonHandle = formatSocialLink(formatted.mastodonHandle, 'mastodon');
+        formatted.mastodonHandle = formatSocialLink(
+          formatted.mastodonHandle,
+          "mastodon",
+        );
       }
       if (formatted.blueskyHandle) {
-        formatted.blueskyHandle = formatSocialLink(formatted.blueskyHandle, 'bluesky');
+        formatted.blueskyHandle = formatSocialLink(
+          formatted.blueskyHandle,
+          "bluesky",
+        );
       }
 
       return formatted;
@@ -560,7 +607,9 @@ const main = createApp({
     },
     // Formats and sorts sessions based on active filter
     formatLineup() {
-      const tempLineUp = this.lineup.map((session) => this.formatSession(session));
+      const tempLineUp = this.lineup.map((session) =>
+        this.formatSession(session),
+      );
 
       const sortedScheduleTemp = tempLineUp.sort(
         (a, b) =>
@@ -604,14 +653,17 @@ const main = createApp({
     formatSession(session) {
       // Create copies of speakers with formatted social links to avoid mutation
       const formattedSpeakers = session.speakers.map((speaker) =>
-        this.formatSpeakerSocialLinks(speaker)
+        this.formatSpeakerSocialLinks(speaker),
       );
 
       // Handle time normalization
       let start = session.startTime || "";
       let end = session.endTime || "";
 
-      if (session.location === CANTEEN_LOCATION && session.title.toLowerCase().includes("breakfast")) {
+      if (
+        session.location === CANTEEN_LOCATION &&
+        session.title.toLowerCase().includes("breakfast")
+      ) {
         start = BREAKFAST_START_TIME;
       }
 
@@ -621,22 +673,46 @@ const main = createApp({
       }
 
       // Build ISO timestamps
-      const newStartTime = start ? `${EVENT_DATE}T${start}:00.000${EVENT_TIMEZONE}` : null;
-      const newEndTime = end ? `${EVENT_DATE}T${end}:00.000${EVENT_TIMEZONE}` : null;
+      const newStartTime = start
+        ? `${EVENT_DATE}T${start}:00.000${EVENT_TIMEZONE}`
+        : null;
+      const newEndTime = end
+        ? `${EVENT_DATE}T${end}:00.000${EVENT_TIMEZONE}`
+        : null;
 
       // Generate calendar dates
-      const calendarDates = this.generateCalendarDates(newStartTime, newEndTime);
+      const calendarDates = this.generateCalendarDates(
+        newStartTime,
+        newEndTime,
+      );
 
       // Format description for calendar
       const calDescription = session.description
-        ? session.description.replace(/&amp;/g, "&").replace(/(?:\r\n|\r|\n)/g, "<br>")
+        ? session.description
+            .replace(/&amp;/g, "&")
+            .replace(/(?:\r\n|\r|\n)/g, "<br>")
         : "";
+
+      // Calculate initial live status
+      const timeNow = new Date().toISOString();
+      const sessionTimeStart = newStartTime
+        ? new Date(newStartTime).toISOString()
+        : null;
+      const sessionTimeEnd = newEndTime
+        ? new Date(newEndTime).toISOString()
+        : null;
+      const isLive =
+        sessionTimeStart &&
+        sessionTimeEnd &&
+        timeNow >= sessionTimeStart &&
+        timeNow < sessionTimeEnd;
 
       return {
         ...session,
         speakers: formattedSpeakers,
         startTime: newStartTime,
         endTime: newEndTime,
+        isLive: isLive,
         calendars: buildCalendarLinks(session, calendarDates, calDescription),
       };
     },
@@ -656,7 +732,9 @@ const main = createApp({
 
       if (isNaN(startDate.getTime()) || isNaN(endDate.getTime())) return result;
 
-      result.calendarStartDate = startDate.toISOString().replace(/-|:|\.\d+/g, "");
+      result.calendarStartDate = startDate
+        .toISOString()
+        .replace(/-|:|\.\d+/g, "");
       result.calendarEndDate = endDate.toISOString().replace(/-|:|\.\d+/g, "");
       result.officeStartDate = startDate.toISOString();
       result.officeEndDate = endDate.toISOString();
@@ -676,9 +754,9 @@ const main = createApp({
           const location = talkIdToRoomMap.get(proposal.id);
           return {
             ...proposal,
-            location: location || "Audimax"
+            location: location || "Audimax",
           };
-        })
+        }),
       }));
     },
     // Converts time string to grid value for CSS positioning
@@ -686,12 +764,12 @@ const main = createApp({
       let roomSessions;
 
       // Special handling for expert corner - filter by type instead of location
-      if (room === 'room_experts') {
+      if (room === "room_experts") {
         roomSessions = this.formattedLineup.filter(
           (session) =>
             session.type &&
             session.type.includes(SESSION_TYPES.EXPERT_CORNER) &&
-            !this.isBreakSession(session)
+            !this.isBreakSession(session),
         );
       } else {
         // Get sessions for this specific room (excluding break sessions)
@@ -699,7 +777,7 @@ const main = createApp({
           (session) =>
             session.location === room &&
             session.type &&
-            !this.isBreakSession(session)
+            !this.isBreakSession(session),
         );
       }
 
@@ -715,7 +793,7 @@ const main = createApp({
       // Returns HHMM format (e.g., 930 for 9:30) for CSS grid calculations
       // The CSS extracts hours/minutes using: round(down, val/100) and mod(val, 100)
       let timeOnly;
-      
+
       if (timeStr.includes("T")) {
         timeOnly = timeStr.substring(timeStr.indexOf("T") + 1);
       } else {
@@ -730,7 +808,7 @@ const main = createApp({
 
       const hours = parseInt(parts[0], 10);
       const minutes = parseInt(parts[1], 10);
-      
+
       if (isNaN(hours) || isNaN(minutes)) {
         console.warn(`Invalid time values in: ${timeStr}`);
         return 0;
@@ -742,7 +820,10 @@ const main = createApp({
     isBreakSession(session) {
       if (session.location === CANTEEN_LOCATION) return true;
       const type = session.type || "";
-      return BREAK_SESSION_PATTERN.test(type) || BREAK_SESSION_PATTERN.test(session.title);
+      return (
+        BREAK_SESSION_PATTERN.test(type) ||
+        BREAK_SESSION_PATTERN.test(session.title)
+      );
     },
     // Checks if session is a pitch session
     isPitchSession(session) {
@@ -754,9 +835,24 @@ const main = createApp({
       const lowerType = (session.type || "").toLowerCase();
       return lowerType.includes(SESSION_TYPES.EXPERT_CORNER);
     },
+    // Updates the live status for all sessions
+    updateLiveSession() {
+      this.formattedLineup.forEach((session) => {
+        if (!session.startTime || !session.endTime) return;
+
+        const timeNow = new Date().toISOString();
+        const sessionTimeStart = new Date(session.startTime).toISOString();
+        const sessionTimeEnd = new Date(session.endTime).toISOString();
+
+        session.isLive =
+          timeNow >= sessionTimeStart && timeNow < sessionTimeEnd;
+      });
+    },
     // Toggles between grid and linear agenda views
     toggleAgendaView() {
       this.agendaViewMode = this.agendaViewMode === "grid" ? "linear" : "grid";
+      this.filter = "all";
+      this.formattedLineup = this.formatLineup();
     },
     // Retrieves speakers for a specific session by ID
     getSessionSpeakers(sessionId) {
@@ -786,7 +882,7 @@ const main = createApp({
     // Returns abbreviated location name for display
     formatLocationTitle(value) {
       const info = getLocationInfo(value);
-      return info ? info.short : (value || "");
+      return info ? info.short : value || "";
     },
     // Decodes HTML and formats bio text with line breaks
     decodeBioHtml(value) {
@@ -814,7 +910,7 @@ const main = createApp({
     // Returns full location name for display
     formatLocation(value) {
       const info = getLocationInfo(value);
-      return info ? info.full : (value || "");
+      return info ? info.full : value || "";
     },
     // Removes 'Expert Corner: ' prefix from session titles
     trimExpertText(value) {
@@ -836,9 +932,9 @@ const main = createApp({
         return "Expert Corner";
       } else {
         return value;
-      } 
+      }
     },
-  }
+  },
 });
 
 // Register calendar-link component with main app if it exists

@@ -1,8 +1,8 @@
 :root {
 	--all: rgba(136, 56, 236);
-	--audimax: rgba(228, 217, 69);
-	--w1: rgba(0, 155, 226);
-	--w3: rgba(223, 111, 2);
+	--audimax: rgba(255, 113, 35);
+	--w1: rgba(0, 143, 198);
+	--w3: rgba(203, 62, 122);
 	--canteen: rgb(112, 76, 121);
 	--experts: rgb(165, 232, 95);
 	--talks: rgba(53, 242, 212);
@@ -331,6 +331,10 @@
 	}
 }
 
+.agenda-slot.live .agenda-slot-container {
+	animation: pulse-live-linear 2s ease-in-out infinite;
+}
+
 @keyframes glowing-pulse {
 	0% {
 		background-color: #e60000;
@@ -557,6 +561,7 @@
 	margin-block: 0 1rem;
 	max-width: 90%;
 	text-transform: capitalize;
+	text-wrap: pretty;
 }
 
 .agenda-slot-speakers {
@@ -600,9 +605,23 @@
 	margin-inline: 0 .3rem;
 }
 
-.agenda-slot-linkitem[href*="youtu"]::before {
+.agenda-slot-linkitem[href*="forms"]::before {
 	content: "";
 	background: currentColor;
+	mask: url(../../images/icons/feedback-color.svg);
+	mask-size: contain;
+	mask-repeat: no-repeat;
+	display: inline-block;
+	height: 1rem;
+	width: 1rem;
+	vertical-align: middle;
+	line-height: 1;
+	margin-inline: 0 .3rem;
+}
+
+.agenda-slot-linkitem[href*="youtu"]::before {
+	content: "";
+	background: #f00;
 	mask: url(../../images/icons/youtube.svg);
 	display: inline-block;
 	height: 1rem;
@@ -692,6 +711,7 @@
 	gap: 0.75rem;
 	flex-wrap: wrap;
 	display: inline-flex;
+	margin-inline: 0.75rem;
 }
 
 .calendar-list {
