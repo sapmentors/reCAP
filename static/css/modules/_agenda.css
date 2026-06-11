@@ -631,6 +631,34 @@
 	margin-inline: 0 .3rem;
 }
 
+.agenda-slot-linkitem[href*="broadcast"]::before {
+	content: "";
+	background: var(--all);
+	mask: url(../../images/icons/broadcast.svg);
+	mask-size: contain;
+	mask-repeat: no-repeat;
+	display: inline-block;
+	height: 1rem;
+	width: 1rem;
+	vertical-align: middle;
+	line-height: 1;
+	margin-inline: 0 .2rem;
+}
+
+.agenda-slot-linkitem[href*="microsoft"]::before {
+	content: "";
+	background: var(--all);
+	mask: url(../../images/icons/msteams.svg);
+	mask-size: contain;
+	mask-repeat: no-repeat;
+	display: inline-block;
+	height: 1rem;
+	width: 1rem;
+	vertical-align: middle;
+	line-height: 1;
+	margin-inline: 0 .2rem;
+}
+
 .agenda-slot-linkitem[href*="eu1"]::before,
 .agenda-slot-linkitem[href*="slideshare"]::before,
 .agenda-slot-linkitem[href*=".pdf"]::before {

@@ -934,6 +934,23 @@ const main = createApp({
         return value;
       }
     },
+    // Checks if session has livestream capability (Audimax, W1, or W2)
+    hasLivestream(session) {
+      if (!session.location) return false;
+      const location = session.location.toLowerCase();
+      return location.includes('audimax') ||
+             location.includes('w1') ||
+             location.includes('w2');
+    },
+    // Checks if session is currently live
+    isLiveNow(session) {
+      return this.hasLivestream(session) && session.isLive;
+    },
+    // Determines if links section should be shown
+    shouldShowLinks(session) {
+      return (session.presentationLinks && session.presentationLinks.length > 0) ||
+             this.hasLivestream(session);
+    },
   },
 });
 

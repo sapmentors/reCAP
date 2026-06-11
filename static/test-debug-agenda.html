@@ -200,7 +200,8 @@
 											:class="{
 													break: isBreakSession(session),
 													pitch: isPitchSession(session),
-													expert: isExpertSession(session)
+													expert: isExpertSession(session),
+													live: session.isLive
 												}"
 											:style="`--start: ${timeToGridValue(session.startTime)}; --end: ${timeToGridValue(session.endTime)};`"
 											@click="openSessionDialog(session)"
@@ -210,7 +211,14 @@
 											role="button"
 											:aria-label="`View details for ${session.title}`">
 											<h3>
-												<span class="time">{{ trimTime(session.startTime) }} - {{ trimTime(session.endTime) }}</span>
+												<template v-if="session.isLive">
+													<span class="time">LIVE NOW</span>
+												</template>
+												<template v-else>
+													<span class="time">
+														{{ trimTime(session.startTime) }} - {{ trimTime(session.endTime) }}
+													</span>
+												</template>
 												<span v-html="decodeBioHtml(session.title)"></span>
 											</h3>
 										</li>
@@ -354,8 +362,8 @@
 									<div class="agenda-slot-header">
 										<div>
 											<p class="agenda-slot-details">
-												<span class="agenda-time" :class="{live: (session.location.toLowerCase().includes('audimax')) && session.isLive}">
-													<template v-if="(session.location.toLowerCase().includes('audimax')) && session.isLive">LIVE NOW</template>
+												<span class="agenda-time" :class="{live: isLiveNow(session)}">
+													<template v-if="isLiveNow(session)">LIVE NOW</template>
 													<template v-else>{{trimTime(session.startTime)}}<br>{{trimTime(session.endTime)}}</template>
 												</span>
 	
@@ -465,25 +473,23 @@
 											</a>
 										</div>
 	
-										<div class="agenda-links" v-if="session.presentationLinks && session.presentationLinks.length > 0">
+										<div class="agenda-links" v-if="shouldShowLinks(session)">
 											<a
-											   v-if="session.attendeeRatingLink"
-											   :href="session.attendeeRatingLink"
+											   v-if="session.location && session.location.toLowerCase().includes('audimax')"
+											   href="https://broadcast.sap.com/go/reCAP"
 											   rel="noopener noreferrer"
 											   target="_blank"
 											   hreflang="en"
-											   class="agenda-slot-linkitem">
-												Feedback
+											   class="agenda-slot-linkitem">Livestream
 											</a>
 
 											<a
-											   v-if="session.location.toLowerCase().includes('audimax')"
-											   href="https://www.youtube.com/live/CMPudw4scSE"
+											   v-if="(session.location && (session.location.toLowerCase().includes('w1') || session.location.toLowerCase().includes('w2')))"
+											   href="https://teams.microsoft.com/meet/347149883889697?p=ZkR4erzGjpPRtZ6zJh"
 											   rel="noopener noreferrer"
 											   target="_blank"
 											   hreflang="en"
-											   class="agenda-slot-linkitem">
-												Livestream
+											   class="agenda-slot-linkitem">Livestream
 											</a>
 
 											<template v-if="session.presentationLinks && session.presentationLinks.length > 0">
@@ -693,28 +699,25 @@
 							</div>
 
 							<!-- Additional Links -->
-							 <div v-if="!isBreakSession(activeSession) && (activeSession.presentationLinks && activeSession.presentationLinks.length > 0)"
-								  class="agenda-modal-links">
+							 <div v-if="shouldShowLinks(activeSession)" class="agenda-modal-links">
 								<h3 class="agenda-modal-section-heading">LINKS</h3>
 								<div class="agenda-modal-calendars links">
 									<a
-										v-if="activeSession.attendeeRatingLink"
-										:href="activeSession.attendeeRatingLink"
+										v-if="activeSession.location && activeSession.location.toLowerCase().includes('audimax')"
+										href="https://broadcast.sap.com/go/reCAP"
 										rel="noopener noreferrer"
 										target="_blank"
 										hreflang="en"
-										class="agenda-slot-linkitem">
-										Feedback
+										class="agenda-slot-linkitem">Livestream
 									</a>
 
 									<a
-										v-if="activeSession.location.toLowerCase().includes('audimax')"
-										href="https://www.youtube.com/live/CMPudw4scSE"
+										v-if="(activeSession.location && (activeSession.location.toLowerCase().includes('w1') || activeSession.location.toLowerCase().includes('w2')))"
+										href="https://teams.microsoft.com/meet/347149883889697?p=ZkR4erzGjpPRtZ6zJh"
 										rel="noopener noreferrer"
 										target="_blank"
 										hreflang="en"
-										class="agenda-slot-linkitem">
-										Livestream
+										class="agenda-slot-linkitem">Livestream
 									</a>
 
 									<template v-if="activeSession.presentationLinks && activeSession.presentationLinks.length > 0">

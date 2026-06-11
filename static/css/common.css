@@ -542,6 +542,16 @@ a {
 	text-decoration-color: var(--brand-color);
 	text-decoration-thickness: 1px;
 	text-underline-offset: 3px;
+	position: relative;
+
+	&:not(.btn)::after {
+		content: "";
+		position: absolute;
+		inset: -3px;
+		top: 100%;
+
+		transition: all .2s ease-in-out;
+	}
 }
 
 a:is(:hover) {
@@ -550,6 +560,15 @@ a:is(:hover) {
 	text-decoration-color: var(--brand-color-alt);
 	text-decoration-thickness: 1px;
 	text-underline-offset: 3px;
+
+	&:not(.btn)::after {
+		content: "";
+		position: absolute;
+		top: -3px;
+
+		background:var(--brand-color-alt);
+		opacity: .1;
+	}
 }
 
 a:not(.btn):is(:focus, .active, .active:hover) {
@@ -598,6 +617,25 @@ a:is(.active) {
 	outline-offset: -4px;
 }
 
+.btn-lite {
+	border-color: var(--brand-color-contrast);
+	padding: .7rem 1rem;
+	color: var(--brand-color-contrast);
+
+	.head-cta & {
+		color: var(--text-color-contrast);
+		border-color: var(--text-color-contrast);
+	}
+}
+
+.btn-lite:is(:hover, :focus) {
+	background-color: var(--brand-color);
+}
+
+.btn:has( + .btn) {
+	margin-block-end: 1rem;
+}
+
 .btn .icon {
 	width: 1.4rem;
 	height: 1.4rem;
@@ -606,6 +644,7 @@ a:is(.active) {
 	transform: translateY(-1px);
 	color: inherit;
 }
+
 
 /* ------------------------ Main Navigation ---------------------------  */
 
