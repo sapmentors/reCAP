@@ -12,10 +12,10 @@ const EVENT_TIMEZONE = "+02:00";
 const EVENT_TITLE_PREFIX = "reCAP: ";
 const ICS_PRODID = "-//reCAP Conference//recap.cfapps.eu12.hana.ondemand.com//EN";
 
-const API_BASE_URL = "https://recap.cfapps.eu12.hana.ondemand.com/api";
+const API_BASE_URL = "https://recap.cfapps.eu12.hana.ondemand.com";
 const API_ENDPOINTS = {
-  speakerLineup: `${API_BASE_URL}/speaker/lineup`,
-  proposalLineup: `${API_BASE_URL}/proposal/lineup`,
+  speakerLineup: `${API_BASE_URL}/api/speaker/lineup`,
+  proposalLineup: `${API_BASE_URL}/api/proposal/lineup`,
 };
 
 // Cached regex for calendar text sanitization
@@ -335,6 +335,7 @@ const main = createApp({
   },
   data() {
     return {
+      API_BASE_URL: API_BASE_URL,
       team: [
         {
           name: "Margot Wollny",
