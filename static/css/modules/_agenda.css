@@ -511,15 +511,8 @@
 	width: 8rem;
 	height: 8rem;
 	aspect-ratio: 1/1.25;
-	background: transparent url(../../images/committee/placeholder.svg) no-repeat 50% 50%;
-	background-size: 80%;
-}
-
-@media (prefers-color-scheme: dark) {
-	.agenda-slot-speakers-images .placeholder,
-	.agenda-modal .placeholder {
-		filter: invert(.8);
-	}
+	background: url(../../images/committee/placeholder.png) no-repeat 50% 50%;
+	background-size: 100%;
 }
 
 @media only screen and (min-width: 768px) {
