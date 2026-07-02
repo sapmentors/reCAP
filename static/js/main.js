@@ -950,7 +950,8 @@ const main = createApp({
     // Determines if links section should be shown
     shouldShowLinks(session) {
       return (session.presentationLinks && session.presentationLinks.length > 0) ||
-             this.hasLivestream(session);
+             this.hasLivestream(session) ||
+             session.attendeeRatingLink;
     },
   },
 });
