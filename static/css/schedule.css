@@ -118,3 +118,19 @@
 		background: none;
 	}
 }
+
+@media not (prefers-color-scheme: dark) {
+
+	:root {
+		--background-color: var(--white);
+		--white: #1a1a1a;
+		--background-color-alternate: #212121;
+		--dark-brand-color: #f5f5f5;
+		--brand-color-contrast: var(--brand-color-alt);
+		--text-color: #f5f5f5;
+		--text-color-contrast: #fff;
+		--code-connect-color: #688fb7;
+		--logo-color: #f5f5f5;
+		--btn-bg-color: #222728;
+	}
+}
