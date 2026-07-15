@@ -153,10 +153,20 @@
 
 					<div class="head-cta">
 
-						<button class="btn btn-shape" @click="toggleCalendars">Save the Date</button>
+						<a class="btn btn-shape btn-lite"
+						   href="https://photos.google.com/share/AF1QipMxcjKHNUrvrjTQlaMG36iOFlmvLDL3xs7HiOE_IoGHzj9f_TgXQt5A0-M7O5r72w?key=R0hWUmpMVmlMYWFUYUpiOGJ2SjVWNndRLWlrcHh3"
+						   hreflang="en" target="_blank">
+							Look at the conference pictures
+						</a>
+						
+						<!-- <a class="btn btn-shape btn-lite" href="https://www.youtube.com/watch?v=CMPudw4scSE" hreflang="en" target="_blank">
+							Re-watch the livestream
+						</a> -->
 
-						<div class="links-container links-container--hidden" id="links-container">
-							<!-- Google Calendar Link -->
+
+						<!-- <button class="btn btn-shape" @click="toggleCalendars">Save the Date</button> -->
+
+						<!-- <div class="links-container links-container--hidden" id="links-container">
 							<a href="https://calendar.google.com/calendar/render?action=TEMPLATE&dates=20260715%2F20260716&details=Join%20the%20awesome%20developer%20conference%20all%20around%20the%20SAP%20Cloud%20Application%20Programming%20Model%20%28CAP%29.%20The%20time%20of%20the%20year%20where%20our%20vivid%20communities%2C%20customers%2C%20and%20partners%20meet%20the%20CAP%20Product%20Team%20and%20exchange%20best%20practices%2C%20technical%20concepts%2C%20current%20projects%2C%20ideas%20for%20the%20future%2C%20and%20way%20more%E2%80%A6%0A%20%0AFind%20more%20information%20here%3A%20https%3A%2F%2Frecap-conf.dev%2F%0A%28Links%20to%20live%20streams%20and%20recordings%20will%20be%20available%20there%29%0A%20%0AImportant%20dates%3A%0A-%20Call%20for%20content%3A%20until%2013th%20of%20March%0A-%20Early%20Bird%20ticket%20application%3A%20until%2024th%20of%20March%0A-%20Registration%20for%20onsite%20attendance%3A%20opens%2010th%20of%20April%0A%20%0AGet%20in%20contact%20with%20us%20in%20case%20of%20further%20questions%3A%20recap.conf%40gmail.com%0A%20%0AYour%20re%3E%E2%89%A1CAP%20orga%20team&location=SAP%20SE%20%28ROT03%29%2C%20SAP-Allee%2027%2C%2068789%20Sankt%20Leon-Rot%2C%20Germany&text=re%3E%E2%89%A1CAP%202026"
 							   target="_blank">
 								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 256 256">
@@ -176,7 +186,6 @@
 								</svg>Google
 							</a>
 
-							<!-- Outlook/iCal Link -->
 							<a href="data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0D%0AVERSION:2.0%0D%0APRODID:-//reCAP 2026//EN%0D%0ACALSCALE:GREGORIAN%0D%0ABEGIN:VEVENT%0D%0ADTSTART:20260715%0D%0ADTEND:20260716%0D%0ASUMMARY:re>≡CAP 2026%0D%0ADESCRIPTION:Join the awesome developer conference all around the SAP Cloud Application Programming Model (CAP). The time of the year where our vivid communities%2C customers%2C and partners meet the CAP Product Team and exchange best practices%2C technical concepts%2C current projects%2C ideas for the future%2C and way more…%5Cn%5CnFind more information here: https://recap-conf.dev/%5Cn(Links to live streams and recordings will be available there)%5Cn%5CnImportant dates:%5Cn- Call for content: until 13th of March%5Cn- Early Bird ticket application: until 24th of March%5Cn- Registration for onsite attendance: opens 10th of April%5Cn%5CnGet in contact with us in case of further questions: recap.conf@gmail.com%5Cn%5CnYour re>≡CAP orga team%0D%0ALOCATION:SAP SE (ROT03)%2C SAP-Allee 27%2C 68789 Sankt Leon-Rot%2C Germany%0D%0AEND:VEVENT%0D%0AEND:VCALENDAR"
 							   download="reCAP_2026.ics">
 								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32">
@@ -189,7 +198,6 @@
 								</svg>Outlook
 							</a>
 
-							<!-- Office 365 Link -->
 							<a href="https://outlook.office.com/calendar/0/deeplink/compose?path=/calendar/action/compose&rru=addevent&startdt=2026-07-15&enddt=2026-07-16&subject=re>≡CAP+2026&body=Join+the+awesome+developer+conference+all+around+the+SAP+Cloud+Application+Programming+Model+(CAP).+The+time+of+the+year+where+our+vivid+communities,+customers,+and+partners+meet+the+CAP+Product+Team+and+exchange+best+practices,+technical+concepts,+current+projects,+ideas+for+the+future,+and+way+more…%3Cbr%3E%3Cbr%3EFind+more+information+here:+https://recap-conf.dev/%3Cbr%3E(Links+to+live+streams+and+recordings+will+be+available+there)%3Cbr%3E%3Cbr%3EImportant+dates:%3Cbr%3E-+Call+for+content:+until+13th+of+March%3Cbr%3E-+Early+Bird+ticket+application:+until+24th+of+March%3Cbr%3E-+Registration+for+onsite+attendance:+opens+10th+of+April%3Cbr%3E%3Cbr%3EGet+in+contact+with+us+in+case+of+further+questions:+recap.conf@gmail.com%3Cbr%3E%3Cbr%3EYour+re>≡CAP+orga+team&location=SAP+SE+(ROT03),+SAP-Allee+27,+68789+Sankt+Leon-Rot,+Germany"
 							   target="_blank">
 								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -198,7 +206,7 @@
 										  d="M4 18V6l10.5-4L20 4v16l-5.5 2zm0 0l10 .5V6L8.5 7.5v8z" color="#eb3c00" />
 								</svg>Office 365
 							</a>
-						</div>
+						</div> -->
 
 					</div>
 
