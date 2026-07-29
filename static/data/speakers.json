@@ -1,0 +1,1668 @@
+[
+  {
+    "firstName": "Maximilian",
+    "lastName": "Hartig",
+    "proposals": [
+      {
+        "id": "id-1770179834724-64",
+        "title": "Beyond Vibe Coding: Engineering Deterministic CAP Applications with SDD",
+        "type": "presentation_short",
+        "description": "Move beyond vibe coding into Spec-Driven Development: an approach where a structured specification becomes the single source of truth, guiding your entire SAP CAP application — from domain model to implementation.\n\nThis session demonstrates a live \"0-to-1\" workflow, transforming a raw business requirement into an SAP CAP application using the open-source Spec Kit in Visual Studio Code.\n\nKey Takeaways\n- Authoring a constitution.md that encodes your team's architectural standards, naming conventions, and CAP-specific constraints — turning implicit knowledge into explicit rules that constrain the AI's decisions.\n- Orchestrating the end-to-end CAP lifecycle with Spec Kit — from /plan (domain model, service design, annotations) to /implement (handlers, tests, deployment artifacts).\n- Integrating MCP Servers to give the model live access to your project context and documentation.",
+        "prerequisites": "",
+        "location": "audimax",
+        "startTime": "16:00",
+        "endTime": "16:20",
+        "presentationLinks": [
+          {
+            "linkType": "Recording",
+            "url": "https://www.youtube.com/watch?v=E6F7FFMO3Js"
+          }
+        ],
+        "proficiencyLevel": "beginner",
+        "attendeeRatingLink": "https://docs.google.com/forms/d/e/1FAIpQLScVjxmIUykKC4RAgeUQzYsnNGM_5OcMgC7859xpKZfPH_0qXQ/viewform?usp=dialog"
+      }
+    ],
+    "company": "Aequitas AG ",
+    "bio": "SAP BTP Developer, Integration Architect and Watersports Enthusiast",
+    "linkedInUrl": "maximilianhartig",
+    "hasPhoto": true,
+    "photoUrl": "images/speakers/maximilian_hartig.jpg"
+  },
+  {
+    "firstName": "Dries",
+    "lastName": "Van Vaerenbergh",
+    "proposals": [
+      {
+        "id": "id-1772437070285-494",
+        "title": "CAP Plugins: Latest and Greatest",
+        "type": "presentation_long",
+        "description": "CAP plugins dramatically simplify integration with SAP BTP services, turning cross-cutting concerns into drop-in capabilities - and the ecosystem keeps growing. This session demystifies the plugin model, why it scales effortlessly across projects, and how it can cut integration effort by an order of magnitude. We’ll shine a spotlight on what’s new and noteworthy, showcasing the enhanced attachments plugin, the renovated change tracking plugin, a new notifications plugin for Java, the brand-new SAP Build Process Automation (SBPA) plugin and many more, while also giving a glimpse into what’s happening in the community and at partners. Whether you’re new to CAP plugins or looking to level up your existing setup, you’ll leave with practical guidance on when and how to apply them to get the most out of your CAP projects.",
+        "prerequisites": "",
+        "location": "audimax",
+        "startTime": "14:00",
+        "endTime": "14:40",
+        "presentationLinks": [
+          {
+            "linkType": "Recording",
+            "url": "https://www.youtube.com/watch?v=XDQ2FHrQtPc&amp;pp=0gcJCZsLAYcqIYzv"
+          }
+        ],
+        "proficiencyLevel": "beginner",
+        "attendeeRatingLink": "https://docs.google.com/forms/d/e/1FAIpQLSdWyG22yGpJaV8fylpmyU0OK0WiBoTqy-1Eg1Hs5p1hexJsPw/viewform?usp=dialog"
+      }
+    ],
+    "company": "Expertum",
+    "bio": "SAP Developer consultant working at Expertum.",
+    "hasPhoto": true,
+    "photoUrl": "images/speakers/dries_van_vaerenbergh.jpg"
+  },
+  {
+    "firstName": "Patrice",
+    "lastName": "Bender",
+    "proposals": [
+      {
+        "id": "id-1769538007085-430",
+        "title": "Expressions and Abstractions - Two Developer Superpowers in CAP",
+        "type": "presentation_long",
+        "description": "Today we need to be more efficient and concise than ever, stop writing code we don't need to, and avoid tasks that slow down our development loops, letting the framework do the heavy lifting for us. In this session we'll demonstrate two different affordances that enable that. First, we'll show the power of expressions, what they are, how and where they can be used, and why you should know about them. Then we'll show how mocking abstracts us from the tedium and ceremony, allowing us to iterate fast on data, auth, messaging and remote services during development.\n",
+        "prerequisites": "",
+        "location": "audimax",
+        "startTime": "12:00",
+        "endTime": "12:40",
+        "presentationLinks": [
+          {
+            "linkType": "Recording",
+            "url": "https://www.youtube.com/watch?v=51Uuj2dGEtE"
+          },
+          {
+            "linkType": "Resources",
+            "url": "https://qmacro.org/blog/posts/2026/07/15/recap-2026-talk-resources/"
+          }
+        ],
+        "proficiencyLevel": "advanced",
+        "attendeeRatingLink": "https://docs.google.com/forms/d/e/1FAIpQLSc88GKiyicSBTOmM8Hgl5wPoVC8Tvc9WbiaHfa3sg9itPRiFg/viewform?usp=dialog"
+      },
+      {
+        "id": "id-1748863083102-704",
+        "title": "Security",
+        "type": "expert_corner",
+        "description": "Meet our experts and ask your questions around Security, Authorization, and related topics!",
+        "prerequisites": "",
+        "location": "experts_2",
+        "startTime": "14:00",
+        "endTime": "15:00",
+        "presentationLinks": []
+      }
+    ],
+    "company": "SAP SE - CAP Team",
+    "bio": "As a member of the cds-compiler team at SAP, I help to build the backbone of CAP 🧢. Besides my duty in the cds-compiler team, I'm particularly excited about our work on the open source database services.",
+    "linkedInUrl": "https://www.linkedin.com/in/patrice-bender-64a816118/",
+    "githubUrl": "https://github.com/patricebender",
+    "hasPhoto": true,
+    "photoUrl": "images/speakers/patrice_bender.jpg"
+  },
+  {
+    "firstName": "Wouter",
+    "lastName": "Lemaire",
+    "proposals": [
+      {
+        "id": "id-1770048870958-433",
+        "title": "Building Code-Based AI Agents with CAP and UI5: From Concept to Production",
+        "type": "presentation_long",
+        "description": "AI agents are transforming how we interact with enterprise applications, but how do you actually build one? In this session, we'll go beyond the hype and dive into the code.\n\nUsing the Smart Monitoring Agent (demonstrated at SAP TechEd) as our real-world example, you'll learn how to create intelligent, code-based AI agents that combine SAP AI Core with CAP and UI5. We'll cover the complete journey from development to deployment.\nWhat you'll take away:\n- How AI-powered development tools like Claude Code and MCP servers for CAP/UI5 can accelerate your agent development\n- A live demo of the Smart Monitoring Agent in action\n- The technical architecture and code patterns for integrating SAP AI Core into your CAP applications\n- Practical insights on building conversational AI agents that actually work in enterprise scenarios\n\nWhether you're exploring AI capabilities for your own projects or looking to understand what's possible with SAP's AI stack, this session will give you the foundation to start building.",
+        "prerequisites": "",
+        "location": "room_w1",
+        "startTime": "10:00",
+        "endTime": "10:40",
+        "presentationLinks": [
+          {
+            "linkType": "Recording",
+            "url": "https://www.youtube.com/watch?v=EIT4XRrACLQ"
+          }
+        ],
+        "proficiencyLevel": "intermediate",
+        "attendeeRatingLink": "https://docs.google.com/forms/d/e/1FAIpQLSdaCDUxI9axhsoo6kk52OfdVyPF-dw2qZon7iEWsGoDLfwM-A/viewform?usp=dialog"
+      }
+    ],
+    "company": "Independent Consultant",
+    "bio": "Wouter Lemaire is an independent SAP solution architect, developer &amp; consultant. From ABAP WebDynpro to UI5 and from BTP to AI, he's always been an early adopter of SAP innovation.\n\nToday he works with CAP, UI5, ABAP, and AI, building agents with SAP AI Core and Joule, and connecting SAP systems to platforms like Claude and Microsoft Copilot via MCP servers and OData APIs.\n\nWouter is an active SAP Community member, regular speaker at UI5con, reCAP and SAP TechEd and co-organizer of SAP Inside Track Belgium.",
+    "linkedInUrl": "https://www.linkedin.com/in/wouterlemaire/",
+    "githubUrl": "https://github.com/lemaiwo",
+    "hasPhoto": true,
+    "photoUrl": "images/speakers/wouter_lemaire.jpg"
+  },
+  {
+    "firstName": "Johannes",
+    "lastName": "Vogt",
+    "proposals": [
+      {
+        "id": "id-1772790849789-308",
+        "title": "Building a CAP Application with Latest Best Practices &amp; AI",
+        "type": "presentation_long",
+        "description": "How do you go from idea to production-ready CAP app without losing momentum? In this ReCAP Deep Dive, we walk through a practical, end-to-end development approach that combines proven CAP architecture patterns with AI-assisted workflows and lets your application grow as you go.\n\nStarting from domain modeling, we shape robust data models, design use-case-driven CAP services and build a runnable application enriched with realistic test data. CAP propagates the concept of late-cut micro services. Instead of eagerly cutting our application into many micro services we start with a monolithic application and develop into multiple dedicated modules with clear boundaries. Leveraging outbox and task queues we show how asynchronous processing patterns can help interaction between different modules.\n",
+        "prerequisites": "",
+        "location": "room_w1",
+        "startTime": "13:10",
+        "endTime": "13:50",
+        "presentationLinks": [
+          {
+            "linkType": "Recording",
+            "url": "https://www.youtube.com/watch?v=lFZN0YA5dG0&amp;pp=0gcJCZsLAYcqIYzv"
+          }
+        ],
+        "proficiencyLevel": "beginner",
+        "attendeeRatingLink": "https://docs.google.com/forms/d/e/1FAIpQLSfcJjCK4DbuDvy7UYmowN0IbznjNqmA6qjNbWWKepXhUW7xjw/viewform?usp=dialog"
+      },
+      {
+        "id": "id-1772639889674-810",
+        "title": "Everything new - Try out the latest and greatest CAP features",
+        "type": "hands_on_120",
+        "description": "Try out new CAP features yourself!\n - Declarative Constraints\n - Status Transition Flows\n - using the cds repl\n - app specific MCP servers\n - Draft validations\n - Extensibility using constraints, flow and custom code\n - and more\n",
+        "prerequisites": "",
+        "location": "room_w3",
+        "startTime": "14:15",
+        "endTime": "16:15",
+        "presentationLinks": [],
+        "attendeeRatingLink": "https://docs.google.com/forms/d/e/1FAIpQLSd4YXcUMVQnlm_wqhh8UB_edTZg-5Tol5wi9UJTWS3t34lUbA/viewform?usp=dialog"
+      }
+    ],
+    "company": "SAP SE - CAP Team",
+    "bio": "Passionate about simplifying development - for myself and others. With previously working on core BTP services, I also bring a DevOps perspective.",
+    "githubUrl": "https://github.com/Akatuoro",
+    "hasPhoto": true,
+    "photoUrl": "images/speakers/johannes_vogt.jpg"
+  },
+  {
+    "firstName": "Mike",
+    "lastName": "Zaschka",
+    "proposals": [
+      {
+        "id": "id-1772401722428-182",
+        "title": "Optimizing CAP Performance with Data Replication &amp; Caching – Part II",
+        "type": "presentation_short",
+        "description": "Last year, I introduced cds-caching as a powerful tool for boosting performance at the CAP application layer. This year, we zoom out, taking a broader look at the full landscape of data caching, replication, and federation strategies available in the CAP ecosystem.\nThere already is a rich set of options available: CAP's official xtravels example, cap-js-community/common's service replication into SQLite, Redis integration via RedisClient and cds-caching, and the upcoming cds-data-federation plugin, to name just a few.\nBut with choice comes complexity: when should you cache? When does replication make more sense? And where does federation fit in?\nIn this talk, I'll walk through a curated selection of solutions, highlight their trade-offs, and share practical guidance on which approach fits which scenario. You will leave with a clearer sense of which tool to reach for, and when.",
+        "prerequisites": "",
+        "location": "audimax",
+        "startTime": "11:00",
+        "endTime": "11:20",
+        "presentationLinks": [
+          {
+            "linkType": "Recording",
+            "url": "https://www.youtube.com/watch?v=pUlnHE8iDNk"
+          }
+        ],
+        "proficiencyLevel": "intermediate",
+        "attendeeRatingLink": "https://docs.google.com/forms/d/e/1FAIpQLScIhevIn8X9AItz49NzNMUp19JFsk-5SeSREXwHMYChUtTPiw/viewform?usp=dialog"
+      }
+    ],
+    "company": "Independent SAP Solution Architect, Developer and Consultant",
+    "bio": "With over a decade of experience in the SAP ecosystem, I’ve worked across roles in Solution Architecture, Development, and Consulting, with a strong focus on modern SAP technologies such as SAP BTP, UI5, the SAP Cloud Application Programming Model (CAP), RAP, and native SAP HANA. Since 2019, I’ve been working extensively with CAP—building a wide range of applications and services, and developing custom plugins and extensions to meet specific project needs.\n\nOutside of work, I’m a proud husband and father of three wonderful kids.",
+    "linkedInUrl": "mike-zaschka-7395949",
+    "githubUrl": "https://github.com/mikezaschka",
+    "hasPhoto": true,
+    "photoUrl": "images/speakers/mike_zaschka.jpg"
+  },
+  {
+    "firstName": "Oliver",
+    "lastName": "Klemenz",
+    "proposals": [
+      {
+        "id": "id-1770825607622-288",
+        "title": "Update from the cap-js-community - Experience the latest additions to CAP",
+        "type": "presentation_short",
+        "description": "The CAP Node.js ecosystem continues to evolve rapidly within the cap-js-community. This session provides a focused technical update on the latest enhancements, with particular emphasis on the WebSocket modules and the newly introduced common utilities module.\n\nWe will deep-dive into the recent advancements in real-time communication support, including the introduction of Event-Driven Side Effects. \nIn addition, we will present the new common module, which consolidates frequently used helpers, abstractions, and cross-cutting utilities into a standardized, reusable package.",
+        "prerequisites": "",
+        "location": "room_w1",
+        "startTime": "15:00",
+        "endTime": "15:20",
+        "presentationLinks": [
+          {
+            "linkType": "Recording",
+            "url": "https://www.youtube.com/watch?v=BkyW8e4a_xU"
+          }
+        ],
+        "proficiencyLevel": "beginner",
+        "attendeeRatingLink": "https://docs.google.com/forms/d/e/1FAIpQLSdlKg33s8nB8fB6XrtPyIHWqATpUYsv5oj0v8TEC6XiFqbtWA/viewform?usp=dialog"
+      },
+      {
+        "id": "id-1748879296119-917",
+        "title": "CAP Community - Open Source",
+        "type": "expert_corner",
+        "description": "Meet our CAP Community &amp; Open Source experts and ask your questions!",
+        "prerequisites": "",
+        "location": "experts_2",
+        "startTime": "15:30",
+        "endTime": "16:30",
+        "presentationLinks": []
+      }
+    ],
+    "company": "SAP SE",
+    "bio": "Developer and Architect. Contributor to cap-js-community.",
+    "githubUrl": "https://github.com/cap-js-community",
+    "hasPhoto": true,
+    "photoUrl": "images/speakers/oliver_klemenz.jpg"
+  },
+  {
+    "firstName": "Richard",
+    "lastName": "Lindner",
+    "proposals": [
+      {
+        "id": "id-1748879296119-917",
+        "title": "CAP Community - Open Source",
+        "type": "expert_corner",
+        "description": "Meet our CAP Community &amp; Open Source experts and ask your questions!",
+        "prerequisites": "",
+        "location": "experts_2",
+        "startTime": "15:30",
+        "endTime": "16:30",
+        "presentationLinks": []
+      }
+    ],
+    "company": "SAP SE",
+    "bio": "Mtx-tool creator\n",
+    "linkedInUrl": "https://www.linkedin.com/in/richard-lindner-08413717/",
+    "githubUrl": "https://github.com/rlindner81",
+    "hasPhoto": true,
+    "photoUrl": "images/speakers/richard_lindner.jpg"
+  },
+  {
+    "firstName": "Matthis",
+    "lastName": "Vansteenhuyse",
+    "proposals": [
+      {
+        "id": "id-1772437070285-494",
+        "title": "CAP Plugins: Latest and Greatest",
+        "type": "presentation_long",
+        "description": "CAP plugins dramatically simplify integration with SAP BTP services, turning cross-cutting concerns into drop-in capabilities - and the ecosystem keeps growing. This session demystifies the plugin model, why it scales effortlessly across projects, and how it can cut integration effort by an order of magnitude. We’ll shine a spotlight on what’s new and noteworthy, showcasing the enhanced attachments plugin, the renovated change tracking plugin, a new notifications plugin for Java, the brand-new SAP Build Process Automation (SBPA) plugin and many more, while also giving a glimpse into what’s happening in the community and at partners. Whether you’re new to CAP plugins or looking to level up your existing setup, you’ll leave with practical guidance on when and how to apply them to get the most out of your CAP projects.",
+        "prerequisites": "",
+        "location": "audimax",
+        "startTime": "14:00",
+        "endTime": "14:40",
+        "presentationLinks": [
+          {
+            "linkType": "Recording",
+            "url": "https://www.youtube.com/watch?v=XDQ2FHrQtPc&amp;pp=0gcJCZsLAYcqIYzv"
+          }
+        ],
+        "proficiencyLevel": "beginner",
+        "attendeeRatingLink": "https://docs.google.com/forms/d/e/1FAIpQLSdWyG22yGpJaV8fylpmyU0OK0WiBoTqy-1Eg1Hs5p1hexJsPw/viewform?usp=dialog"
+      }
+    ],
+    "company": "Expertum",
+    "hasPhoto": false,
+    "photoUrl": "images/speakers/matthis_vansteenhuyse.jpg"
+  },
+  {
+    "firstName": "Max",
+    "lastName": "Eckert",
+    "proposals": [
+      {
+        "id": "id-1772437070285-494",
+        "title": "CAP Plugins: Latest and Greatest",
+        "type": "presentation_long",
+        "description": "CAP plugins dramatically simplify integration with SAP BTP services, turning cross-cutting concerns into drop-in capabilities - and the ecosystem keeps growing. This session demystifies the plugin model, why it scales effortlessly across projects, and how it can cut integration effort by an order of magnitude. We’ll shine a spotlight on what’s new and noteworthy, showcasing the enhanced attachments plugin, the renovated change tracking plugin, a new notifications plugin for Java, the brand-new SAP Build Process Automation (SBPA) plugin and many more, while also giving a glimpse into what’s happening in the community and at partners. Whether you’re new to CAP plugins or looking to level up your existing setup, you’ll leave with practical guidance on when and how to apply them to get the most out of your CAP projects.",
+        "prerequisites": "",
+        "location": "audimax",
+        "startTime": "14:00",
+        "endTime": "14:40",
+        "presentationLinks": [
+          {
+            "linkType": "Recording",
+            "url": "https://www.youtube.com/watch?v=XDQ2FHrQtPc&amp;pp=0gcJCZsLAYcqIYzv"
+          }
+        ],
+        "proficiencyLevel": "beginner",
+        "attendeeRatingLink": "https://docs.google.com/forms/d/e/1FAIpQLSdWyG22yGpJaV8fylpmyU0OK0WiBoTqy-1Eg1Hs5p1hexJsPw/viewform?usp=dialog"
+      },
+      {
+        "id": "id-1772438048706-925",
+        "title": "Building AI-enabled Applications with CAP",
+        "type": "presentation_long",
+        "description": "AI is reshaping enterprise development, and CAP is evolving to meet it head-on. Discover how CAP services can be seamlessly exposed as endpoints consumable by AI agents, enabling smooth and standards-aligned integration into modern AI workflows. Learn how the CAP AI plugin unlocks powerful built-in capabilities such as RPT-1, making it easier than ever to bring AI-driven functionality into your applications. Beyond that, we’ll explore how additional features like embeddings extend CAP’s reach even further into the AI landscape. We’ll close with a deep dive into an approach for building intelligent, code-driven agents that weave all of these capabilities together with CAP’s robust, battle-tested enterprise features - giving you a solid foundation for building the next generation of AI-powered business applications.",
+        "prerequisites": "",
+        "location": "room_w1",
+        "startTime": "11:00",
+        "endTime": "11:40",
+        "presentationLinks": [
+          {
+            "linkType": "Recording",
+            "url": "https://www.youtube.com/watch?v=Pf6qaC56cl0"
+          }
+        ],
+        "proficiencyLevel": "intermediate",
+        "attendeeRatingLink": "https://docs.google.com/forms/d/e/1FAIpQLSellmJdzm4j1bkR4eUtK0x5Owz7KdYKqLmNF-7zBQcizC24kw/viewform?usp=dialog"
+      },
+      {
+        "id": "id-1748880507355-343",
+        "title": "Plugins",
+        "type": "expert_corner",
+        "description": "Meet our CAP Plugins experts and ask your questions + see the latest demos...",
+        "prerequisites": "",
+        "location": "experts_1",
+        "startTime": "14:50",
+        "endTime": "15:50",
+        "presentationLinks": []
+      },
+      {
+        "id": "id-1777994036683-972",
+        "title": "AI - Use AI in your CAP App",
+        "type": "expert_corner",
+        "description": "...",
+        "prerequisites": "",
+        "location": "experts_1",
+        "startTime": "16:40",
+        "endTime": "17:40",
+        "presentationLinks": []
+      },
+      {
+        "id": "id-1777993994196-966",
+        "title": "AI: Build your App with CAP &amp; AI + Use AI in your CAP App",
+        "type": "expert_corner",
+        "description": "This topic corner is all about AI &amp; CAP!\n1) Learn how to build your CAP app with AI support\n2) Learn how to use AI in your CAP app",
+        "prerequisites": "",
+        "location": "experts_2",
+        "startTime": "16:40",
+        "endTime": "17:40",
+        "presentationLinks": []
+      }
+    ],
+    "company": "SAP SE - CAP Team",
+    "bio": "I’m a Development Manager at SAP working on the Cloud Application Programming Model (CAP). My goal is to make developers’ lives easier by providing CAP plugins that integrate with SAP BTP services out of the box, and by offering AI capabilities that can be used without being an AI expert. I focus on pragmatic, technical solutions that scale well in real-world enterprise development.",
+    "linkedInUrl": "https://www.linkedin.com/in/maximilian-eckert-575686a4/",
+    "hasPhoto": true,
+    "photoUrl": "images/speakers/max_eckert.jpg"
+  },
+  {
+    "firstName": "DJ",
+    "lastName": "Adams",
+    "proposals": [
+      {
+        "id": "id-1769538007085-430",
+        "title": "Expressions and Abstractions - Two Developer Superpowers in CAP",
+        "type": "presentation_long",
+        "description": "Today we need to be more efficient and concise than ever, stop writing code we don't need to, and avoid tasks that slow down our development loops, letting the framework do the heavy lifting for us. In this session we'll demonstrate two different affordances that enable that. First, we'll show the power of expressions, what they are, how and where they can be used, and why you should know about them. Then we'll show how mocking abstracts us from the tedium and ceremony, allowing us to iterate fast on data, auth, messaging and remote services during development.\n",
+        "prerequisites": "",
+        "location": "audimax",
+        "startTime": "12:00",
+        "endTime": "12:40",
+        "presentationLinks": [
+          {
+            "linkType": "Recording",
+            "url": "https://www.youtube.com/watch?v=51Uuj2dGEtE"
+          },
+          {
+            "linkType": "Resources",
+            "url": "https://qmacro.org/blog/posts/2026/07/15/recap-2026-talk-resources/"
+          }
+        ],
+        "proficiencyLevel": "advanced",
+        "attendeeRatingLink": "https://docs.google.com/forms/d/e/1FAIpQLSc88GKiyicSBTOmM8Hgl5wPoVC8Tvc9WbiaHfa3sg9itPRiFg/viewform?usp=dialog"
+      }
+    ],
+    "company": "SAP SE",
+    "bio": "Developer Advocate at SAP. O’Reilly and SAP Press author. SAP community pioneer and SAP Developer Network co-creator. SAP Mentor Alumnus. Learner. Runner. “Bulldog of logic”. Opinions my own, and there are many of them.",
+    "blueskyHandle": "@qmacro.org",
+    "mastodonHandle": "@qmacro@hachyderm.io",
+    "linkedInUrl": "https://www.linkedin.com/in/djadams/",
+    "githubUrl": "https://github.com/qmacro",
+    "hasPhoto": true,
+    "photoUrl": "images/speakers/dj_adams.jpg"
+  },
+  {
+    "firstName": "Simon",
+    "lastName": "Engel",
+    "proposals": [
+      {
+        "id": "id-1772438048706-925",
+        "title": "Building AI-enabled Applications with CAP",
+        "type": "presentation_long",
+        "description": "AI is reshaping enterprise development, and CAP is evolving to meet it head-on. Discover how CAP services can be seamlessly exposed as endpoints consumable by AI agents, enabling smooth and standards-aligned integration into modern AI workflows. Learn how the CAP AI plugin unlocks powerful built-in capabilities such as RPT-1, making it easier than ever to bring AI-driven functionality into your applications. Beyond that, we’ll explore how additional features like embeddings extend CAP’s reach even further into the AI landscape. We’ll close with a deep dive into an approach for building intelligent, code-driven agents that weave all of these capabilities together with CAP’s robust, battle-tested enterprise features - giving you a solid foundation for building the next generation of AI-powered business applications.",
+        "prerequisites": "",
+        "location": "room_w1",
+        "startTime": "11:00",
+        "endTime": "11:40",
+        "presentationLinks": [
+          {
+            "linkType": "Recording",
+            "url": "https://www.youtube.com/watch?v=Pf6qaC56cl0"
+          }
+        ],
+        "proficiencyLevel": "intermediate",
+        "attendeeRatingLink": "https://docs.google.com/forms/d/e/1FAIpQLSellmJdzm4j1bkR4eUtK0x5Owz7KdYKqLmNF-7zBQcizC24kw/viewform?usp=dialog"
+      },
+      {
+        "id": "id-1748880507355-343",
+        "title": "Plugins",
+        "type": "expert_corner",
+        "description": "Meet our CAP Plugins experts and ask your questions + see the latest demos...",
+        "prerequisites": "",
+        "location": "experts_1",
+        "startTime": "14:50",
+        "endTime": "15:50",
+        "presentationLinks": []
+      },
+      {
+        "id": "id-1777994036683-972",
+        "title": "AI - Use AI in your CAP App",
+        "type": "expert_corner",
+        "description": "...",
+        "prerequisites": "",
+        "location": "experts_1",
+        "startTime": "16:40",
+        "endTime": "17:40",
+        "presentationLinks": []
+      },
+      {
+        "id": "id-1777993994196-966",
+        "title": "AI: Build your App with CAP &amp; AI + Use AI in your CAP App",
+        "type": "expert_corner",
+        "description": "This topic corner is all about AI &amp; CAP!\n1) Learn how to build your CAP app with AI support\n2) Learn how to use AI in your CAP app",
+        "prerequisites": "",
+        "location": "experts_2",
+        "startTime": "16:40",
+        "endTime": "17:40",
+        "presentationLinks": []
+      }
+    ],
+    "company": "SAP SE - CAP Team",
+    "bio": "Developer at CAP with a focus on AI-enabling CAP Applications as well as building plugins that integrate with external Services.",
+    "linkedInUrl": "simon-engel-766a2b21a/",
+    "githubUrl": "https://github.com/SirSimon04",
+    "hasPhoto": true,
+    "photoUrl": "images/speakers/simon_engel.jpg"
+  },
+  {
+    "firstName": "Stefan",
+    "lastName": "Rudi",
+    "proposals": [
+      {
+        "id": "id-1772438314151-685",
+        "title": "AI-assisted development of CAP Apps",
+        "type": "presentation_short",
+        "description": "In this session we'll look at how the CAP MCP development server gives AI coding assistants direct access to CAP documentation, enabling them to generate code that actually follows CAP conventions and APIs. Combined with a growing library of CAP-specific skills and prompts, this significantly improves the quality of AI-assisted CAP development in tools like Claude Code or GitHub Copilot. We'll show practical examples of what works well today and where the boundaries still are.",
+        "prerequisites": "",
+        "location": "audimax",
+        "startTime": "11:30",
+        "endTime": "11:50",
+        "presentationLinks": [
+          {
+            "linkType": "Recording",
+            "url": "https://www.youtube.com/watch?v=FQON2eNn0OY"
+          }
+        ],
+        "proficiencyLevel": "intermediate",
+        "attendeeRatingLink": "https://docs.google.com/forms/d/e/1FAIpQLSci3FZDg7NtD3ChkkoFzm7X7NzEuz3OJ7oDmSoUYuS8PveLuA/viewform?usp=dialog"
+      },
+      {
+        "id": "id-1773421483522-263",
+        "title": "CAP-level Data Federation - Hands-On",
+        "type": "hands_on",
+        "description": "In this Hands-On you apply the mechanism of CAP level data federation to build a CAP application that integrates\ndata from another CAP application and from BDC Data Procducts.\n\nYou can find the session description in https://github.com/SAP-samples/recap2026-cap-level-data-federation.\n\nPrerequisites - please prepare before the session. To follow the exercises, you need the following things to be installed on your computer:\n* Node.js and cds-dk - see https://cap.cloud.sap/docs/get-started/#node-js-and-cds-dk\n* git -  see https://cap.cloud.sap/docs/get-started/#git-and-github) (gh and github are not needed)\n* Cloud Foundry CLI  - seehttps://help.sap.com/docs/btp/sap-business-technology-platform/download-and-install-cloud-foundry-command-line-interface\n* (recommended) Visual Studio Code - see https://cap.cloud.sap/docs/get-started/#visual-studio-code\n\n",
+        "prerequisites": "",
+        "location": "room_w3",
+        "startTime": "16:20",
+        "endTime": "17:50",
+        "presentationLinks": [
+          {
+            "linkType": "Exercise description",
+            "url": "https://github.com/SAP-samples/recap2026-cap-level-data-federation"
+          }
+        ],
+        "attendeeRatingLink": "https://docs.google.com/forms/d/e/1FAIpQLSdFJ4HwfVZm_x7OBgiBSwMvTduPy6u2zQYEplw2Kj8nmYvAnA/viewform?usp=dialog"
+      }
+    ],
+    "company": "SAP SE - CAP Team",
+    "bio": "Developer at CAP with a focus on AI-enabling CAP Applications as well as building plugins that integrate with external Services.",
+    "linkedInUrl": "stefan-rudi-abb71020b",
+    "githubUrl": "https://github.com/stefanrudi",
+    "hasPhoto": true,
+    "photoUrl": "images/speakers/stefan_rudi.jpg"
+  },
+  {
+    "firstName": "Ram Prasad",
+    "lastName": "GS",
+    "proposals": [
+      {
+        "id": "id-1772448933550-318",
+        "title": "Plug, Connect, Play: CAP Integration Made Effortless",
+        "type": "presentation_short",
+        "description": "SAP CAP gives you an incredible foundation to build cloud-native applications - but when it comes to managing connections to external systems, you're largely on your own. Every project ends up with its own ad-hoc approach: hardcoded URLs, scattered credentials, no standard way to define or govern integrations. There has to be a better way.\n\nIn this session, we showcase cap-connect - a production-ready, open-source CAP plugin developed by Aarini Consulting that brings first-class connection management to any SAP CAP application, without writing a single line of integration boilerplate.\nWe'll walk through the architecture of cap-connect: how it is structured as a self-contained CAP plugin that transparently plugs into any CAP application at startup, exposes a fully declarative ConnectorService via CDS, and provides a built-in admin portal - all activated by a single npm install.\nThe session focuses on what was built, why it was designed that way, and the architectural decisions that make it reusable, non-intrusive, and extensible - so that any CAP application can adopt it without modification.\n \nWe'll also share how cap-connect became the connect layer for Prodsphere, Aarini's own CAP-based product - how it cleanly separated the integration concerns from the business logic, and why that separation made the product significantly simpler to maintain and extend.",
+        "prerequisites": "",
+        "location": "audimax",
+        "startTime": "15:00",
+        "endTime": "15:20",
+        "presentationLinks": [
+          {
+            "linkType": "Recording",
+            "url": "https://www.youtube.com/watch?v=U0U7ixe8Cpg"
+          }
+        ],
+        "proficiencyLevel": "beginner",
+        "attendeeRatingLink": "https://docs.google.com/forms/d/e/1FAIpQLSc7Y_K55_K1INCIyNL23T8VPYLIpJcd0qgHOPS0YiIbvmv0Hw/viewform?usp=dialog"
+      },
+      {
+        "id": "id-1772789852978-720",
+        "title": "Building AI-Ready CAP Services",
+        "type": "hands_on_120",
+        "description": "In just two hands-on hours, you'll develop a SAP CAP application and transform it into a service that AI agents can reliably interact with. Together, we'll cover how to design CDS functions and actions as agent-consumable operations, and structure your CAP services for clean, predictable integration with LLM-based tools.\n\nDuring the second half, we'll demonstrate how an AI agent can discover and call real CAP service endpoints, including a live walkthrough of an agent interacting with business data. Along the way, we'll share practical patterns for designing agent-friendly services, handling authentication, and ensuring robust API interactions.\n\nYou’ll leave with a well-structured CAP service, ready for agent integration, plus actionable patterns to take back to your own projects.",
+        "prerequisites": "",
+        "location": "room_w3",
+        "startTime": "11:35",
+        "endTime": "13:35",
+        "presentationLinks": [],
+        "attendeeRatingLink": "https://docs.google.com/forms/d/e/1FAIpQLSchhhadHleeRmxDC1xm0LR-XOnzOaTjoENtIM2JGyARFDyPzQ/viewform?usp=dialog"
+      }
+    ],
+    "company": "Aarini Consulting B.V.",
+    "bio": "Former Product Owner in the CAP team, now working as a Technical Solution Architect at Aarini Consulting B.V. Netherlands, building scalable CAP-based solutions for enterprises.",
+    "linkedInUrl": "ramprasadgs",
+    "hasPhoto": true,
+    "photoUrl": "images/speakers/ram_prasad_gs.jpg"
+  },
+  {
+    "firstName": "Arun",
+    "lastName": "Krishnamoorthy",
+    "proposals": [
+      {
+        "id": "id-1772789852978-720",
+        "title": "Building AI-Ready CAP Services",
+        "type": "hands_on_120",
+        "description": "In just two hands-on hours, you'll develop a SAP CAP application and transform it into a service that AI agents can reliably interact with. Together, we'll cover how to design CDS functions and actions as agent-consumable operations, and structure your CAP services for clean, predictable integration with LLM-based tools.\n\nDuring the second half, we'll demonstrate how an AI agent can discover and call real CAP service endpoints, including a live walkthrough of an agent interacting with business data. Along the way, we'll share practical patterns for designing agent-friendly services, handling authentication, and ensuring robust API interactions.\n\nYou’ll leave with a well-structured CAP service, ready for agent integration, plus actionable patterns to take back to your own projects.",
+        "prerequisites": "",
+        "location": "room_w3",
+        "startTime": "11:35",
+        "endTime": "13:35",
+        "presentationLinks": [],
+        "attendeeRatingLink": "https://docs.google.com/forms/d/e/1FAIpQLSchhhadHleeRmxDC1xm0LR-XOnzOaTjoENtIM2JGyARFDyPzQ/viewform?usp=dialog"
+      }
+    ],
+    "company": "Aarini Consulting B.V.",
+    "bio": "Solution Architect at Aarini Consulting (Netherlands), leading the Applications Delivery Team in building cloud-native SAP BTP applications with CAP, UI5/Fiori, and AI integration for clients across Europe.",
+    "hasPhoto": true,
+    "photoUrl": "images/speakers/arun_krishnamoorthy.jpg"
+  },
+  {
+    "firstName": "Christian",
+    "lastName": "Georgi",
+    "proposals": [
+      {
+        "id": "id-1772628917765-9",
+        "title": "CAP Tools – What's New and Hot",
+        "type": "presentation_long",
+        "description": "Learn about the latest hotness in CAP tools like\n- `cds repl` with queries\n- Debugging apps on Kyma\n- CDS Project outline in VS Code\n- CAP in browser\n- ...",
+        "prerequisites": "",
+        "location": "audimax",
+        "startTime": "10:00",
+        "endTime": "10:40",
+        "presentationLinks": [
+          {
+            "linkType": "Recording",
+            "url": "https://www.youtube.com/watch?v=B3qQJ6b3tcg&amp;pp=0gcJCZsLAYcqIYzv"
+          }
+        ],
+        "proficiencyLevel": "beginner",
+        "attendeeRatingLink": "https://docs.google.com/forms/d/e/1FAIpQLSejtAmO7MLQYmQNf20IeLktQAuFqVpytaGQuq_Qu0Wvv2q79g/viewform?usp=dialog"
+      },
+      {
+        "id": "id-1748879704249-374",
+        "title": "CDS Development Kit",
+        "type": "expert_corner",
+        "description": "Meet our experts and ask your questions around tooling, testing, cds.add, vite/React.js, and the overall CAP Development Model!",
+        "prerequisites": "",
+        "location": "experts_2",
+        "startTime": "12:00",
+        "endTime": "13:00",
+        "presentationLinks": []
+      }
+    ],
+    "company": "SAP SE - CAP Team",
+    "bio": "Working in the CAP team as an engineering manager for CAP tools.",
+    "githubUrl": "https://github.com/chgeo",
+    "hasPhoto": true,
+    "photoUrl": "images/speakers/christian_georgi.jpg"
+  },
+  {
+    "firstName": "Daniel",
+    "lastName": "Schlachter",
+    "proposals": [
+      {
+        "id": "id-1772639889674-810",
+        "title": "Everything new - Try out the latest and greatest CAP features",
+        "type": "hands_on_120",
+        "description": "Try out new CAP features yourself!\n - Declarative Constraints\n - Status Transition Flows\n - using the cds repl\n - app specific MCP servers\n - Draft validations\n - Extensibility using constraints, flow and custom code\n - and more\n",
+        "prerequisites": "",
+        "location": "room_w3",
+        "startTime": "14:15",
+        "endTime": "16:15",
+        "presentationLinks": [],
+        "attendeeRatingLink": "https://docs.google.com/forms/d/e/1FAIpQLSd4YXcUMVQnlm_wqhh8UB_edTZg-5Tol5wi9UJTWS3t34lUbA/viewform?usp=dialog"
+      },
+      {
+        "id": "id-1772438314151-685",
+        "title": "AI-assisted development of CAP Apps",
+        "type": "presentation_short",
+        "description": "In this session we'll look at how the CAP MCP development server gives AI coding assistants direct access to CAP documentation, enabling them to generate code that actually follows CAP conventions and APIs. Combined with a growing library of CAP-specific skills and prompts, this significantly improves the quality of AI-assisted CAP development in tools like Claude Code or GitHub Copilot. We'll show practical examples of what works well today and where the boundaries still are.",
+        "prerequisites": "",
+        "location": "audimax",
+        "startTime": "11:30",
+        "endTime": "11:50",
+        "presentationLinks": [
+          {
+            "linkType": "Recording",
+            "url": "https://www.youtube.com/watch?v=FQON2eNn0OY"
+          }
+        ],
+        "proficiencyLevel": "intermediate",
+        "attendeeRatingLink": "https://docs.google.com/forms/d/e/1FAIpQLSci3FZDg7NtD3ChkkoFzm7X7NzEuz3OJ7oDmSoUYuS8PveLuA/viewform?usp=dialog"
+      },
+      {
+        "id": "id-1748906709946-923",
+        "title": "CAPire Trivia - Quiz",
+        "type": "full_day",
+        "description": "Play the CAPire Trivia Quiz, win a prize and learn how the app was built with CAP &amp; AI.",
+        "prerequisites": "",
+        "location": "experts_3",
+        "startTime": "10:00",
+        "endTime": "17:00",
+        "presentationLinks": []
+      },
+      {
+        "id": "id-1777994036683-972",
+        "title": "AI - Use AI in your CAP App",
+        "type": "expert_corner",
+        "description": "...",
+        "prerequisites": "",
+        "location": "experts_1",
+        "startTime": "16:40",
+        "endTime": "17:40",
+        "presentationLinks": []
+      },
+      {
+        "id": "id-1777993994196-966",
+        "title": "AI: Build your App with CAP &amp; AI + Use AI in your CAP App",
+        "type": "expert_corner",
+        "description": "This topic corner is all about AI &amp; CAP!\n1) Learn how to build your CAP app with AI support\n2) Learn how to use AI in your CAP app",
+        "prerequisites": "",
+        "location": "experts_2",
+        "startTime": "16:40",
+        "endTime": "17:40",
+        "presentationLinks": []
+      }
+    ],
+    "company": "SAP SE - CAP Team",
+    "bio": "🧢 CAP Enablement Team 🧢",
+    "linkedInUrl": "daniel-schlachter",
+    "hasPhoto": true,
+    "photoUrl": "images/speakers/daniel_schlachter.jpg"
+  },
+  {
+    "firstName": "Matthias",
+    "lastName": "Braun",
+    "proposals": [
+      {
+        "id": "id-1772789460072-329",
+        "title": "AI-Assisted Security Hardening of CAP Applications",
+        "type": "presentation_short",
+        "description": "Achieving and maintaining a high standard of application security remains a significant challenge, despite the comprehensive support provided by the CAP framework. \nDoes the configured authorization model truly meet all business requirements, or are there hidden gaps that attackers could exploit at runtime? \nAnd even if robust application security has been established, how can you prevent new vulnerabilities from emerging as the application evolves?\nAI-powered tools can help bridge the gap between \"high security standards are a must\" and \"practically difficult to achieve.\" \nThey dramatically reduce the effort required for security analysis and testing and can fuel overall security hardening of your application.\nIn this session, we will use a small CAP project to demonstrate practical approaches for leveraging AI to identify authorization gaps, generate comprehensive security tests, and detect potential attack vectors—helping you build and maintain secure CAP applications with confidence.\n",
+        "prerequisites": "",
+        "location": "room_w1",
+        "startTime": "15:30",
+        "endTime": "15:50",
+        "presentationLinks": [
+          {
+            "linkType": "Recording",
+            "url": "https://www.youtube.com/watch?v=uqjjxnAFgeA"
+          }
+        ],
+        "proficiencyLevel": "intermediate",
+        "attendeeRatingLink": "https://docs.google.com/forms/d/e/1FAIpQLSflSgVFly0ptbv99szlRiOuDLSJfRF-2SxzYQ7U1tNk-98qXQ/viewform?usp=dialog"
+      },
+      {
+        "id": "id-1748863083102-704",
+        "title": "Security",
+        "type": "expert_corner",
+        "description": "Meet our experts and ask your questions around Security, Authorization, and related topics!",
+        "prerequisites": "",
+        "location": "experts_2",
+        "startTime": "14:00",
+        "endTime": "15:00",
+        "presentationLinks": []
+      }
+    ],
+    "company": "SAP SE - CAP Team",
+    "bio": "I'm a Security Expert for SAP Cloud Application Programming Model (CAP) with a passion for building secure-by-default application architectures. I enjoy designing patterns and frameworks that make it easy for developers to build applications with a strong security foundation from the start.\n\nLately, I've been spending a lot of time experimenting with AI tools to explore how they can help improve application security, automate security reviews, and support developers in building more secure software.",
+    "hasPhoto": true,
+    "photoUrl": "images/speakers/matthias_braun.jpg"
+  },
+  {
+    "firstName": "Lukas",
+    "lastName": "Theis",
+    "proposals": [
+      {
+        "id": "id-1772790849789-308",
+        "title": "Building a CAP Application with Latest Best Practices &amp; AI",
+        "type": "presentation_long",
+        "description": "How do you go from idea to production-ready CAP app without losing momentum? In this ReCAP Deep Dive, we walk through a practical, end-to-end development approach that combines proven CAP architecture patterns with AI-assisted workflows and lets your application grow as you go.\n\nStarting from domain modeling, we shape robust data models, design use-case-driven CAP services and build a runnable application enriched with realistic test data. CAP propagates the concept of late-cut micro services. Instead of eagerly cutting our application into many micro services we start with a monolithic application and develop into multiple dedicated modules with clear boundaries. Leveraging outbox and task queues we show how asynchronous processing patterns can help interaction between different modules.\n",
+        "prerequisites": "",
+        "location": "room_w1",
+        "startTime": "13:10",
+        "endTime": "13:50",
+        "presentationLinks": [
+          {
+            "linkType": "Recording",
+            "url": "https://www.youtube.com/watch?v=lFZN0YA5dG0&amp;pp=0gcJCZsLAYcqIYzv"
+          }
+        ],
+        "proficiencyLevel": "beginner",
+        "attendeeRatingLink": "https://docs.google.com/forms/d/e/1FAIpQLSfcJjCK4DbuDvy7UYmowN0IbznjNqmA6qjNbWWKepXhUW7xjw/viewform?usp=dialog"
+      }
+    ],
+    "company": "SAP SE",
+    "bio": "Lead Architect of SAP Ariba Buying, which is build using the latest and greatest of CAP",
+    "hasPhoto": true,
+    "photoUrl": "images/speakers/lukas_theis.jpg"
+  },
+  {
+    "firstName": "Joshua",
+    "lastName": "Mitchell",
+    "proposals": [
+      {
+        "id": "id-1773191238204-621",
+        "title": "Implementing runtime plugins in CAP Java",
+        "type": "presentation_short",
+        "description": "Live programming a basic soft delete plugin for CAP Java using annotations, the intelliJ debugger and expression evaluator.",
+        "prerequisites": "",
+        "location": "audimax",
+        "startTime": "17:30",
+        "endTime": "17:50",
+        "presentationLinks": [
+          {
+            "linkType": "Recording",
+            "url": "https://www.youtube.com/watch?v=uhN6UXiPp7w"
+          }
+        ],
+        "proficiencyLevel": "intermediate",
+        "attendeeRatingLink": "https://docs.google.com/forms/d/e/1FAIpQLSfL_ZzYiWVY0dz7fzBDLIfzEjngCXhw2jFtMXeRBGgXIFwzTw/viewform?usp=dialog"
+      }
+    ],
+    "company": "Rev-Trac",
+    "bio": "Full stack software engineer at Rev-Trac.",
+    "hasPhoto": true,
+    "photoUrl": "images/speakers/joshua_mitchell.jpg"
+  },
+  {
+    "firstName": "Nicholas",
+    "lastName": "Arefta",
+    "proposals": [
+      {
+        "id": "id-1773204672046-398",
+        "title": "From Click-Ops to Code-Ops (Terraform)",
+        "type": "presentation_short",
+        "description": "If you’ve ever deployed a multitenant app on SAP BTP, you know the Click-Ops struggle.\nYou jump between a dozen screens and browser tabs. You forget one tiny entitlement, and boom the whole deployment fails. You delete a service, then wait... and wait... just to see that it has errored out. It’s slow, it’s manual, and it’s prone to human error.\n \nBut what if your infrastructure was as version-controlled as your code?\nToday, I’m going to show you how to replace all your clicks navigating the BTP Cockpit with some simple commands. Using Terraform, we’ll provision a Provider subaccount, deploy a multi-tenant application and onboard a Subscriber completely hands-free.",
+        "prerequisites": "",
+        "location": "audimax",
+        "startTime": "16:30",
+        "endTime": "16:50",
+        "presentationLinks": [
+          {
+            "linkType": "Recording",
+            "url": "https://www.youtube.com/watch?v=u8U4r3zTmTk"
+          }
+        ],
+        "proficiencyLevel": "intermediate",
+        "attendeeRatingLink": "https://docs.google.com/forms/d/e/1FAIpQLSconIqJ2e6JE_ujeeSWb0fEodvNyQHpnI4GvkGUNUW6muZCUw/viewform?usp=dialog"
+      }
+    ],
+    "company": "Rev-Trac",
+    "bio": "I am a CAP Developer at Rev-Trac, where I am currently focused on building a multi-tenant change management application on SAP BTP. My day-to-day involves navigating the complexities of the cloud and staying ahead of an ever-changing technical landscape.\n\nWhen I’m not deep in the BTP ecosystem, I’m usually focused on staying active and can frequently be found on the tennis court. I’ve found that debugging a cloud application is often much easier than debugging my serve.",
+    "linkedInUrl": "nicholas-arefta",
+    "hasPhoto": true,
+    "photoUrl": "images/speakers/nicholas_arefta.jpg"
+  },
+  {
+    "firstName": "Lars",
+    "lastName": "Plessing",
+    "proposals": [
+      {
+        "id": "id-1773249220155-484",
+        "title": "Event Queues Scheduling",
+        "type": "presentation_long",
+        "description": "Transactional Event Queues allow you to schedule events and background tasks for asynchronous, exactly-once processing with ultimate resilience.",
+        "prerequisites": "",
+        "location": "room_w1",
+        "startTime": "16:00",
+        "endTime": "16:40",
+        "presentationLinks": [
+          {
+            "linkType": "Recording",
+            "url": "https://www.youtube.com/watch?v=54reW0ZdxLI"
+          }
+        ],
+        "proficiencyLevel": "advanced",
+        "attendeeRatingLink": "https://docs.google.com/forms/d/e/1FAIpQLSeUTgpwjRhsC1EjjMPx2YPVP7OwqzgM9J1hoiaaUJiyBTXlTw/viewform?usp=dialog"
+      }
+    ],
+    "company": "SAP SE - CAP Team",
+    "bio": "I am a Software Engineer on the SAP CAP Node.js Runtime team, I contribute to the development of the framework that enables developers to build modern enterprise applications. My focus is on designing and implementing runtime capabilities that improve performance, extensibility, and the overall developer experience within the SAP Cloud Application Programming Model (CAP).",
+    "hasPhoto": true,
+    "photoUrl": "images/speakers/lars_plessing.jpg"
+  },
+  {
+    "firstName": "Jürgen",
+    "lastName": "Adolf",
+    "proposals": [
+      {
+        "id": "id-1773327003374-195",
+        "title": "TOP 10 OWASP: Best Practices for Secure SAP BTP Development (CAP &amp; Node.js)",
+        "type": "hands_on",
+        "description": "IMPORTANT: Please do the required prerequisites for the workshop upfront: https://github.com/SAP-samples/btp-secure-development/tree/main/exercises/ex0\n--------------------------\n\nIn an era of persistent cyber threats, secure software development is non-negotiable. This hands-on workshop equips developers with practical expertise to identify and remediate OWASP Top 10 vulnerabilities in SAP BTP applications built with Cloud Application Programming Model (CAP) and Node.js.\n\nThrough immersive exercises, participants experience vulnerabilities from both attacker and defender perspectives, then implement proven mitigation techniques using SAP BTP's built-in security services. Each module follows a structured methodology: \n- Identify and analyze vulnerable code snippets to understand core security flaws.\n- Understand the real-world impact by seeing how these vulnerabilities are exploited.\n- Remediate risks by leveraging SAP BTP’s built-in security services and secure CAP development practices.\n- Validate the effectiveness of your security patches.\n\nJoin us to master secure, cloud-native development and walk away with actionable takeaways to confidently protect your SAP BTP solutions!\n\nPrerequisites: Node.js and GitHub experience; environment setup required before workshop : https://github.com/SAP-samples/btp-secure-development/tree/main/exercises/ex0",
+        "prerequisites": "",
+        "location": "room_w3",
+        "startTime": "10:00",
+        "endTime": "11:30",
+        "presentationLinks": [],
+        "attendeeRatingLink": "https://docs.google.com/forms/d/e/1FAIpQLSeGf2h_6kg9DazQi6kvnJ-9wiW0AyqiM20TPFjfUbAdkQhAQg/viewform?usp=dialog"
+      }
+    ],
+    "company": "SAP SE",
+    "bio": "Driving security &amp; compliance innovation on SAP BTP.\nProduct Manager at SAP, enabling secure and compliant cloud solutions. A highly skilled security professional with deep expertise in SAP security products and platform technology, focused on turning complex security and compliance requirements into practical value for customers.\nExperienced in communicating the benefits and real-world impact of SAP security capabilities to diverse audiences and customers. Certified ScrumMaster with a strong background in agile and project management methodologies.\nBeyond technology, a passionate and experienced track &amp; field coach, dedicated to supporting and motivating young athletes to reach their full potential — on and off the field.",
+    "linkedInUrl": "https://www.linkedin.com/in/juergenadolf/",
+    "hasPhoto": true,
+    "photoUrl": "images/speakers/j_rgen_adolf.jpg"
+  },
+  {
+    "firstName": "Markus",
+    "lastName": "Riedinger",
+    "proposals": [
+      {
+        "id": "id-1772438048706-925",
+        "title": "Building AI-enabled Applications with CAP",
+        "type": "presentation_long",
+        "description": "AI is reshaping enterprise development, and CAP is evolving to meet it head-on. Discover how CAP services can be seamlessly exposed as endpoints consumable by AI agents, enabling smooth and standards-aligned integration into modern AI workflows. Learn how the CAP AI plugin unlocks powerful built-in capabilities such as RPT-1, making it easier than ever to bring AI-driven functionality into your applications. Beyond that, we’ll explore how additional features like embeddings extend CAP’s reach even further into the AI landscape. We’ll close with a deep dive into an approach for building intelligent, code-driven agents that weave all of these capabilities together with CAP’s robust, battle-tested enterprise features - giving you a solid foundation for building the next generation of AI-powered business applications.",
+        "prerequisites": "",
+        "location": "room_w1",
+        "startTime": "11:00",
+        "endTime": "11:40",
+        "presentationLinks": [
+          {
+            "linkType": "Recording",
+            "url": "https://www.youtube.com/watch?v=Pf6qaC56cl0"
+          }
+        ],
+        "proficiencyLevel": "intermediate",
+        "attendeeRatingLink": "https://docs.google.com/forms/d/e/1FAIpQLSellmJdzm4j1bkR4eUtK0x5Owz7KdYKqLmNF-7zBQcizC24kw/viewform?usp=dialog"
+      }
+    ],
+    "company": "SAP SE",
+    "bio": "I am a Compass Engineer and Architect at SAP, specializing in cloud infrastructure and next-generation agentic systems. After years of architecting SAP Cloud Identity and SAP Cloud Infrastructure, I am now leading advancements in SEM Fleet and SAP CPIT. I focus on building cutting-edge agentic CAP applications, establishing the engineering workflows, skill sets, and toolbelts required for agentic AI long before these technologies hit the mainstream SAP product catalog.",
+    "hasPhoto": true,
+    "photoUrl": "images/speakers/markus_riedinger.jpg"
+  },
+  {
+    "firstName": "Sebastian",
+    "lastName": "Van Syckel",
+    "proposals": [
+      {
+        "id": "id-1773249220155-484",
+        "title": "Event Queues Scheduling",
+        "type": "presentation_long",
+        "description": "Transactional Event Queues allow you to schedule events and background tasks for asynchronous, exactly-once processing with ultimate resilience.",
+        "prerequisites": "",
+        "location": "room_w1",
+        "startTime": "16:00",
+        "endTime": "16:40",
+        "presentationLinks": [
+          {
+            "linkType": "Recording",
+            "url": "https://www.youtube.com/watch?v=54reW0ZdxLI"
+          }
+        ],
+        "proficiencyLevel": "advanced",
+        "attendeeRatingLink": "https://docs.google.com/forms/d/e/1FAIpQLSeUTgpwjRhsC1EjjMPx2YPVP7OwqzgM9J1hoiaaUJiyBTXlTw/viewform?usp=dialog"
+      }
+    ],
+    "company": "SAP SE - CAP Team",
+    "bio": "Development Manager @ CAP. Joined SAP in 2015, with stints in IoT and C/4HANA, jumping back and forth between platform and product views. Previously a researcher at the University of Mannheim, focusing on application adaptation in distributed systems.",
+    "hasPhoto": true,
+    "photoUrl": "images/speakers/sebastian_van_syckel.jpg"
+  },
+  {
+    "firstName": "Dietrich",
+    "lastName": "Mostowoj",
+    "proposals": [
+      {
+        "id": "id-1773249220155-484",
+        "title": "Event Queues Scheduling",
+        "type": "presentation_long",
+        "description": "Transactional Event Queues allow you to schedule events and background tasks for asynchronous, exactly-once processing with ultimate resilience.",
+        "prerequisites": "",
+        "location": "room_w1",
+        "startTime": "16:00",
+        "endTime": "16:40",
+        "presentationLinks": [
+          {
+            "linkType": "Recording",
+            "url": "https://www.youtube.com/watch?v=54reW0ZdxLI"
+          }
+        ],
+        "proficiencyLevel": "advanced",
+        "attendeeRatingLink": "https://docs.google.com/forms/d/e/1FAIpQLSeUTgpwjRhsC1EjjMPx2YPVP7OwqzgM9J1hoiaaUJiyBTXlTw/viewform?usp=dialog"
+      }
+    ],
+    "company": "SAP SE - CAP Team",
+    "bio": "I am a software engineer on the SAP CAP Java Runtime team, where I focus on building the core runtime features that power reliable, event-driven applications. My work centers on messaging integration for the SAP Cloud Application Programming Model (CAP), enabling seamless communication between distributed services.\n\nI am also responsible for resilience features such as the Outbox and Inbox patterns and event queue-based task scheduling. I enjoy designing runtime capabilities that help developers build scalable, resilient enterprise applications without having to worry about the underlying complexity.",
+    "hasPhoto": true,
+    "photoUrl": "images/speakers/dietrich_mostowoj.jpg"
+  },
+  {
+    "firstName": "Thomas",
+    "lastName": "Bonk",
+    "proposals": [
+      {
+        "id": "id-1773249220155-484",
+        "title": "Event Queues Scheduling",
+        "type": "presentation_long",
+        "description": "Transactional Event Queues allow you to schedule events and background tasks for asynchronous, exactly-once processing with ultimate resilience.",
+        "prerequisites": "",
+        "location": "room_w1",
+        "startTime": "16:00",
+        "endTime": "16:40",
+        "presentationLinks": [
+          {
+            "linkType": "Recording",
+            "url": "https://www.youtube.com/watch?v=54reW0ZdxLI"
+          }
+        ],
+        "proficiencyLevel": "advanced",
+        "attendeeRatingLink": "https://docs.google.com/forms/d/e/1FAIpQLSeUTgpwjRhsC1EjjMPx2YPVP7OwqzgM9J1hoiaaUJiyBTXlTw/viewform?usp=dialog"
+      }
+    ],
+    "company": "SAP SE - CAP Team",
+    "bio": "I’m a software developer and technology enthusiast with a strong interest in building reliable systems and exploring modern development tools. My work revolves around creating practical solutions, improving workflows, and continuously refining how software is designed and maintained.\n\nI enjoy working with clean architectures, automation, and developer tooling — always aiming to reduce complexity where possible. Curiosity plays a central role in what I do: I like to experiment, question existing approaches, and understand how things work under the hood.\n\nProfessionally, I work at SAP SE as a Development Expert, where I focus on designing and implementing robust software solutions in an enterprise environment. My role involves tackling complex technical challenges, contributing to scalable systems, and continuously improving development processes. Working in this context has strengthened my appreciation for maintainability, performance, and long-term software quality.\n\nOutside of work, I spend a good portion of my time on hands-on and creative hobbies. I’m passionate about RC aircraft, where I enjoy both the technical and practical aspects of building and flying models. I also play electric bass, which provides a great balance to my analytical work, and I brew my own beer — a hobby that combines experimentation, patience, and a bit of craftsmanship.\n\nBeyond coding, I’m an active participant in the Fediverse, where I share thoughts, ideas, and occasional insights into technology",
+    "mastodonHandle": "bonk@troet.cafe",
+    "linkedInUrl": "https://www.linkedin.com/in/thbonk/",
+    "githubUrl": "https://codeberg.org/thbonk",
+    "hasPhoto": true,
+    "photoUrl": "images/speakers/thomas_bonk.jpg"
+  },
+  {
+    "firstName": "Vitaly",
+    "lastName": "Kozyura",
+    "proposals": [
+      {
+        "id": "id-1748862914438-577",
+        "title": "Multi Tenancy + Extensibility",
+        "type": "expert_corner",
+        "description": "Meet our experts and ask your questions around Multi Tenancy, Extensibility (incl. Oyster), and related topics!",
+        "prerequisites": "",
+        "location": "experts_1",
+        "startTime": "11:00",
+        "endTime": "12:00",
+        "presentationLinks": []
+      },
+      {
+        "id": "id-1773232313183-722",
+        "title": "Declarative Programming Patterns in CAP - Less Code, More Power",
+        "type": "presentation_long",
+        "description": "This session explores the advantages of embracing declarative programming in CAP (Cloud Application Programming Model). We’ll delve into how this approach can significantly minimize the need for traditional code, ensuring consistent validations between the backend and the OData annotations required by the UI. By adopting declarative mechanisms such as calculated elements, annotation based constraints (@assert, @assert.range, @assert.format, …), and field control (readonly, mandatory), you can streamline the development process and enhance maintainability.\n\nWe’ll also cover status transition flows, which provide a declarative way to define and enforce valid state transitions in your business objects, reducing the need for custom validation logic while ensuring data integrity throughout your application’s lifecycle.\n\nBy the end of the session, attendees will understand how declarative programming in CAP can solve common pain points and how to implement these practices in a test-driven way. Join us to discover practical benefits and methods for adopting declarative programming in CAP.",
+        "prerequisites": "",
+        "location": "room_w1",
+        "startTime": "14:00",
+        "endTime": "14:40",
+        "presentationLinks": [
+          {
+            "linkType": "Recording",
+            "url": "https://www.youtube.com/watch?v=fY_zMS0Il2E"
+          }
+        ],
+        "proficiencyLevel": "intermediate",
+        "attendeeRatingLink": "https://docs.google.com/forms/d/e/1FAIpQLSc-KP5icPFedLybTxERssEvn_4KNmHXqKLA6P1Gegk2a84EpA/viewform?usp=dialog"
+      }
+    ],
+    "company": "SAP SE - CAP Team",
+    "bio": "I am a Senior Developer at SAP, where I have been working for over 18 years. I have a research background in applying formal methods to the verification of distributed systems. My professional interests include system reliability and performance, as well as developing frameworks that enable system extensibility.",
+    "hasPhoto": true,
+    "photoUrl": "images/speakers/vitaly_kozyura.jpg"
+  },
+  {
+    "firstName": "Eckart",
+    "lastName": "Liemke",
+    "proposals": [
+      {
+        "id": "id-1748862914438-577",
+        "title": "Multi Tenancy + Extensibility",
+        "type": "expert_corner",
+        "description": "Meet our experts and ask your questions around Multi Tenancy, Extensibility (incl. Oyster), and related topics!",
+        "prerequisites": "",
+        "location": "experts_1",
+        "startTime": "11:00",
+        "endTime": "12:00",
+        "presentationLinks": []
+      }
+    ],
+    "company": "SAP SE - CAP Team",
+    "bio": "CAP Tools Team\nMulti Tenancy and Extensibility (MTX)",
+    "hasPhoto": false,
+    "photoUrl": "images/speakers/eckart_liemke.jpg"
+  },
+  {
+    "firstName": "Daniel",
+    "lastName": "Hutzel",
+    "proposals": [
+      {
+        "id": "id-1748879296119-917",
+        "title": "CAP Community - Open Source",
+        "type": "expert_corner",
+        "description": "Meet our CAP Community &amp; Open Source experts and ask your questions!",
+        "prerequisites": "",
+        "location": "experts_2",
+        "startTime": "15:30",
+        "endTime": "16:30",
+        "presentationLinks": []
+      },
+      {
+        "id": "id-1778144194325-4",
+        "title": "Keynote",
+        "type": "keynote",
+        "description": "Join the keynote by the founder and Chief Architect of CAP - Daniel Hutzel (and maybe additional team members). ",
+        "prerequisites": "",
+        "location": "audimax",
+        "startTime": "9:10",
+        "endTime": "9:50",
+        "presentationLinks": [
+          {
+            "linkType": "Recording",
+            "url": "https://www.youtube.com/watch?v=mRs3oQPOcgM"
+          }
+        ],
+        "proficiencyLevel": "intermediate",
+        "attendeeRatingLink": "https://forms.gle/fXPagC3v3y2LaSiJA"
+      },
+      {
+        "id": "id-1777993994196-966",
+        "title": "AI: Build your App with CAP &amp; AI + Use AI in your CAP App",
+        "type": "expert_corner",
+        "description": "This topic corner is all about AI &amp; CAP!\n1) Learn how to build your CAP app with AI support\n2) Learn how to use AI in your CAP app",
+        "prerequisites": "",
+        "location": "experts_2",
+        "startTime": "16:40",
+        "endTime": "17:40",
+        "presentationLinks": []
+      },
+      {
+        "id": "id-1777994036683-972",
+        "title": "AI - Use AI in your CAP App",
+        "type": "expert_corner",
+        "description": "...",
+        "prerequisites": "",
+        "location": "experts_1",
+        "startTime": "16:40",
+        "endTime": "17:40",
+        "presentationLinks": []
+      }
+    ],
+    "company": "SAP SE - CAP Team",
+    "bio": "I'm tired of filling in the same information again and again each year... ",
+    "hasPhoto": true,
+    "photoUrl": "images/speakers/daniel_hutzel.jpg"
+  },
+  {
+    "firstName": "Peter",
+    "lastName": "W. Szabo",
+    "proposals": [
+      {
+        "id": "id-1772438048706-925",
+        "title": "Building AI-enabled Applications with CAP",
+        "type": "presentation_long",
+        "description": "AI is reshaping enterprise development, and CAP is evolving to meet it head-on. Discover how CAP services can be seamlessly exposed as endpoints consumable by AI agents, enabling smooth and standards-aligned integration into modern AI workflows. Learn how the CAP AI plugin unlocks powerful built-in capabilities such as RPT-1, making it easier than ever to bring AI-driven functionality into your applications. Beyond that, we’ll explore how additional features like embeddings extend CAP’s reach even further into the AI landscape. We’ll close with a deep dive into an approach for building intelligent, code-driven agents that weave all of these capabilities together with CAP’s robust, battle-tested enterprise features - giving you a solid foundation for building the next generation of AI-powered business applications.",
+        "prerequisites": "",
+        "location": "room_w1",
+        "startTime": "11:00",
+        "endTime": "11:40",
+        "presentationLinks": [
+          {
+            "linkType": "Recording",
+            "url": "https://www.youtube.com/watch?v=Pf6qaC56cl0"
+          }
+        ],
+        "proficiencyLevel": "intermediate",
+        "attendeeRatingLink": "https://docs.google.com/forms/d/e/1FAIpQLSellmJdzm4j1bkR4eUtK0x5Owz7KdYKqLmNF-7zBQcizC24kw/viewform?usp=dialog"
+      }
+    ],
+    "company": "SAP SE",
+    "bio": "Hands-on AI &amp; product leader with 21 years across UX, engineering, and machine learning. Still coding daily. Over the last 2 years, I’ve built production agentic AI (LangChain → LangGraph/LangSmith), delivering autonomous agents, swarms, and orchestrators with reliable tool use, observability, and tight iteration loops that drive measurable business impact. As founder of Tengr.ai, I led a generative image AI product from research roadmap to iterative releases, including HPC experimentation plus privacy-by-design and safety systems. I scaled AceTech Development from 0 to 40+ people in under two years and completed a successful exit. I’m also the author of User Experience Mapping and a long-time TEDx curator, bringing sharp storytelling and stakeholder alignment to every build.",
+    "linkedInUrl": "https://www.linkedin.com/in/wszabopeter/",
+    "hasPhoto": true,
+    "photoUrl": "images/speakers/peter_w._szabo.jpg"
+  },
+  {
+    "firstName": "Armin",
+    "lastName": "Hatting",
+    "proposals": [
+      {
+        "id": "id-1773301621196-738",
+        "title": "Automated Testing with HANA Cloud",
+        "type": "presentation_short",
+        "description": "Testing is an important part of developing reliable and maintenance-friendly software. Automated testing in environments that closely resemble production conditions is particularly helpful in identifying problems at an early stage.\n\nIn this presentation, we will examine how automated testing can be implemented in CAP applications with HANA Cloud. We will look at practical approaches to integrating database-supported testing, setting up realistic test environments, and ensuring the functionality of HANA Cloud native logic.",
+        "prerequisites": "",
+        "location": "room_w1",
+        "startTime": "17:00",
+        "endTime": "17:20",
+        "presentationLinks": [
+          {
+            "linkType": "Recording",
+            "url": "https://www.youtube.com/watch?v=7ypZydfAG1c"
+          }
+        ],
+        "proficiencyLevel": "intermediate",
+        "attendeeRatingLink": "https://docs.google.com/forms/d/e/1FAIpQLSdKhxWq5V2WCbxEfMxp8mMN1BsvyxpyFh0XPVFUNhaZJRbCtQ/viewform?usp=dialog"
+      }
+    ],
+    "company": "cbs Corporate Business Solutions Unternehmensberatung GmbH",
+    "bio": "Cloud Developer and Architect",
+    "linkedInUrl": "armin-hatting",
+    "hasPhoto": true,
+    "photoUrl": "images/speakers/armin_hatting.jpg"
+  },
+  {
+    "firstName": "Nick",
+    "lastName": "Josipovic",
+    "proposals": [
+      {
+        "id": "id-1773305178526-135",
+        "title": "Custom Business Logic with Predefined Extension Points - using CDS-Oyster",
+        "type": "presentation_short",
+        "description": "Together with Subscription Billing and Cloud Foundation, we built an extensive Extension Box using CAP and the CDS-Oyster Code Sandbox. This includes managing the lifecycle of an extension, discovering extension points and convenient developer tooling. This session provides an overview of how this joint effort enables secure code extensions in a complex cloud environment",
+        "prerequisites": "",
+        "location": "audimax",
+        "startTime": "17:00",
+        "endTime": "17:20",
+        "presentationLinks": [
+          {
+            "linkType": "Recording",
+            "url": "https://www.youtube.com/watch?v=eqmgy6GqBMM"
+          }
+        ],
+        "proficiencyLevel": "intermediate",
+        "attendeeRatingLink": "https://docs.google.com/forms/d/e/1FAIpQLSfW41cHTU_e8m6FcyrtrUPuaSH0v9GdRRFwZQTYo7NjzlQINA/viewform?usp=dialog"
+      },
+      {
+        "id": "id-1772639889674-810",
+        "title": "Everything new - Try out the latest and greatest CAP features",
+        "type": "hands_on_120",
+        "description": "Try out new CAP features yourself!\n - Declarative Constraints\n - Status Transition Flows\n - using the cds repl\n - app specific MCP servers\n - Draft validations\n - Extensibility using constraints, flow and custom code\n - and more\n",
+        "prerequisites": "",
+        "location": "room_w3",
+        "startTime": "14:15",
+        "endTime": "16:15",
+        "presentationLinks": [],
+        "attendeeRatingLink": "https://docs.google.com/forms/d/e/1FAIpQLSd4YXcUMVQnlm_wqhh8UB_edTZg-5Tol5wi9UJTWS3t34lUbA/viewform?usp=dialog"
+      },
+      {
+        "id": "id-1748862914438-577",
+        "title": "Multi Tenancy + Extensibility",
+        "type": "expert_corner",
+        "description": "Meet our experts and ask your questions around Multi Tenancy, Extensibility (incl. Oyster), and related topics!",
+        "prerequisites": "",
+        "location": "experts_1",
+        "startTime": "11:00",
+        "endTime": "12:00",
+        "presentationLinks": []
+      }
+    ],
+    "company": "SAP SE - CAP Team",
+    "bio": "I've probably been longer with SAP than some attendees are old, so let's not talk too much about this.\nThe last years, my main topics have been model driven software development and extensibility, so CAP is my natural home. I'll also be talking about our last project, the CDS-Oyster code extensibility sandbox.\nIf you see me at reCAP, I'm happy to talk all things CDS, data modeling and extensibility with you, don't hesitate to approach me (just don't do it while I'm in the middle of my session at 5pm)!",
+    "hasPhoto": true,
+    "photoUrl": "images/speakers/nick_josipovic.jpg"
+  },
+  {
+    "firstName": "Matthias",
+    "lastName": "Schur",
+    "proposals": [
+      {
+        "id": "id-1777994036683-972",
+        "title": "AI - Use AI in your CAP App",
+        "type": "expert_corner",
+        "description": "...",
+        "prerequisites": "",
+        "location": "experts_1",
+        "startTime": "16:40",
+        "endTime": "17:40",
+        "presentationLinks": []
+      },
+      {
+        "id": "id-1777993994196-966",
+        "title": "AI: Build your App with CAP &amp; AI + Use AI in your CAP App",
+        "type": "expert_corner",
+        "description": "This topic corner is all about AI &amp; CAP!\n1) Learn how to build your CAP app with AI support\n2) Learn how to use AI in your CAP app",
+        "prerequisites": "",
+        "location": "experts_2",
+        "startTime": "16:40",
+        "endTime": "17:40",
+        "presentationLinks": []
+      }
+    ],
+    "company": "SAP SE - CAP Team",
+    "bio": "Member of the CAP Java team working on the CDS4j query runtime and having fun with vector embeddings and search.",
+    "hasPhoto": true,
+    "photoUrl": "images/speakers/matthias_schur.jpg"
+  },
+  {
+    "firstName": "Simon",
+    "lastName": "Oswald",
+    "proposals": [
+      {
+        "id": "id-1773421483522-263",
+        "title": "CAP-level Data Federation - Hands-On",
+        "type": "hands_on",
+        "description": "In this Hands-On you apply the mechanism of CAP level data federation to build a CAP application that integrates\ndata from another CAP application and from BDC Data Procducts.\n\nYou can find the session description in https://github.com/SAP-samples/recap2026-cap-level-data-federation.\n\nPrerequisites - please prepare before the session. To follow the exercises, you need the following things to be installed on your computer:\n* Node.js and cds-dk - see https://cap.cloud.sap/docs/get-started/#node-js-and-cds-dk\n* git -  see https://cap.cloud.sap/docs/get-started/#git-and-github) (gh and github are not needed)\n* Cloud Foundry CLI  - seehttps://help.sap.com/docs/btp/sap-business-technology-platform/download-and-install-cloud-foundry-command-line-interface\n* (recommended) Visual Studio Code - see https://cap.cloud.sap/docs/get-started/#visual-studio-code\n\n",
+        "prerequisites": "",
+        "location": "room_w3",
+        "startTime": "16:20",
+        "endTime": "17:50",
+        "presentationLinks": [
+          {
+            "linkType": "Exercise description",
+            "url": "https://github.com/SAP-samples/recap2026-cap-level-data-federation"
+          }
+        ],
+        "attendeeRatingLink": "https://docs.google.com/forms/d/e/1FAIpQLSdFJ4HwfVZm_x7OBgiBSwMvTduPy6u2zQYEplw2Kj8nmYvAnA/viewform?usp=dialog"
+      }
+    ],
+    "company": "SAP SE - CAP Team",
+    "hasPhoto": true,
+    "photoUrl": "images/speakers/simon_oswald.jpg"
+  },
+  {
+    "firstName": "Steffen",
+    "lastName": "Weinstock",
+    "proposals": [
+      {
+        "id": "id-1773421483522-263",
+        "title": "CAP-level Data Federation - Hands-On",
+        "type": "hands_on",
+        "description": "In this Hands-On you apply the mechanism of CAP level data federation to build a CAP application that integrates\ndata from another CAP application and from BDC Data Procducts.\n\nYou can find the session description in https://github.com/SAP-samples/recap2026-cap-level-data-federation.\n\nPrerequisites - please prepare before the session. To follow the exercises, you need the following things to be installed on your computer:\n* Node.js and cds-dk - see https://cap.cloud.sap/docs/get-started/#node-js-and-cds-dk\n* git -  see https://cap.cloud.sap/docs/get-started/#git-and-github) (gh and github are not needed)\n* Cloud Foundry CLI  - seehttps://help.sap.com/docs/btp/sap-business-technology-platform/download-and-install-cloud-foundry-command-line-interface\n* (recommended) Visual Studio Code - see https://cap.cloud.sap/docs/get-started/#visual-studio-code\n\n",
+        "prerequisites": "",
+        "location": "room_w3",
+        "startTime": "16:20",
+        "endTime": "17:50",
+        "presentationLinks": [
+          {
+            "linkType": "Exercise description",
+            "url": "https://github.com/SAP-samples/recap2026-cap-level-data-federation"
+          }
+        ],
+        "attendeeRatingLink": "https://docs.google.com/forms/d/e/1FAIpQLSdFJ4HwfVZm_x7OBgiBSwMvTduPy6u2zQYEplw2Kj8nmYvAnA/viewform?usp=dialog"
+      },
+      {
+        "id": "id-1772639889674-810",
+        "title": "Everything new - Try out the latest and greatest CAP features",
+        "type": "hands_on_120",
+        "description": "Try out new CAP features yourself!\n - Declarative Constraints\n - Status Transition Flows\n - using the cds repl\n - app specific MCP servers\n - Draft validations\n - Extensibility using constraints, flow and custom code\n - and more\n",
+        "prerequisites": "",
+        "location": "room_w3",
+        "startTime": "14:15",
+        "endTime": "16:15",
+        "presentationLinks": [],
+        "attendeeRatingLink": "https://docs.google.com/forms/d/e/1FAIpQLSd4YXcUMVQnlm_wqhh8UB_edTZg-5Tol5wi9UJTWS3t34lUbA/viewform?usp=dialog"
+      }
+    ],
+    "company": "SAP SE - CAP Team",
+    "bio": "Development Architect for CAP CDS Compiler",
+    "hasPhoto": true,
+    "photoUrl": "images/speakers/steffen_weinstock.jpg"
+  },
+  {
+    "firstName": "Robin",
+    "lastName": "de Silva Jayasinghe",
+    "proposals": [
+      {
+        "id": "id-1772790849789-308",
+        "title": "Building a CAP Application with Latest Best Practices &amp; AI",
+        "type": "presentation_long",
+        "description": "How do you go from idea to production-ready CAP app without losing momentum? In this ReCAP Deep Dive, we walk through a practical, end-to-end development approach that combines proven CAP architecture patterns with AI-assisted workflows and lets your application grow as you go.\n\nStarting from domain modeling, we shape robust data models, design use-case-driven CAP services and build a runnable application enriched with realistic test data. CAP propagates the concept of late-cut micro services. Instead of eagerly cutting our application into many micro services we start with a monolithic application and develop into multiple dedicated modules with clear boundaries. Leveraging outbox and task queues we show how asynchronous processing patterns can help interaction between different modules.\n",
+        "prerequisites": "",
+        "location": "room_w1",
+        "startTime": "13:10",
+        "endTime": "13:50",
+        "presentationLinks": [
+          {
+            "linkType": "Recording",
+            "url": "https://www.youtube.com/watch?v=lFZN0YA5dG0&amp;pp=0gcJCZsLAYcqIYzv"
+          }
+        ],
+        "proficiencyLevel": "beginner",
+        "attendeeRatingLink": "https://docs.google.com/forms/d/e/1FAIpQLSfcJjCK4DbuDvy7UYmowN0IbznjNqmA6qjNbWWKepXhUW7xjw/viewform?usp=dialog"
+      },
+      {
+        "id": "id-1773232313183-722",
+        "title": "Declarative Programming Patterns in CAP - Less Code, More Power",
+        "type": "presentation_long",
+        "description": "This session explores the advantages of embracing declarative programming in CAP (Cloud Application Programming Model). We’ll delve into how this approach can significantly minimize the need for traditional code, ensuring consistent validations between the backend and the OData annotations required by the UI. By adopting declarative mechanisms such as calculated elements, annotation based constraints (@assert, @assert.range, @assert.format, …), and field control (readonly, mandatory), you can streamline the development process and enhance maintainability.\n\nWe’ll also cover status transition flows, which provide a declarative way to define and enforce valid state transitions in your business objects, reducing the need for custom validation logic while ensuring data integrity throughout your application’s lifecycle.\n\nBy the end of the session, attendees will understand how declarative programming in CAP can solve common pain points and how to implement these practices in a test-driven way. Join us to discover practical benefits and methods for adopting declarative programming in CAP.",
+        "prerequisites": "",
+        "location": "room_w1",
+        "startTime": "14:00",
+        "endTime": "14:40",
+        "presentationLinks": [
+          {
+            "linkType": "Recording",
+            "url": "https://www.youtube.com/watch?v=fY_zMS0Il2E"
+          }
+        ],
+        "proficiencyLevel": "intermediate",
+        "attendeeRatingLink": "https://docs.google.com/forms/d/e/1FAIpQLSc-KP5icPFedLybTxERssEvn_4KNmHXqKLA6P1Gegk2a84EpA/viewform?usp=dialog"
+      }
+    ],
+    "company": "SAP SE - CAP Team",
+    "bio": "Member of the CAP Java team @ SAP SE. Developing libraries and frameworks in Java since 2005.",
+    "mastodonHandle": "@rjayasinghe@chaos.social",
+    "githubUrl": "github.com/rjayasinghe",
+    "hasPhoto": true,
+    "photoUrl": "images/speakers/robin_de_silva_jayasinghe.jpg"
+  },
+  {
+    "firstName": "Abdelkader",
+    "lastName": "Abdelaziz",
+    "proposals": [
+      {
+        "id": "id-1773327003374-195",
+        "title": "TOP 10 OWASP: Best Practices for Secure SAP BTP Development (CAP &amp; Node.js)",
+        "type": "hands_on",
+        "description": "IMPORTANT: Please do the required prerequisites for the workshop upfront: https://github.com/SAP-samples/btp-secure-development/tree/main/exercises/ex0\n--------------------------\n\nIn an era of persistent cyber threats, secure software development is non-negotiable. This hands-on workshop equips developers with practical expertise to identify and remediate OWASP Top 10 vulnerabilities in SAP BTP applications built with Cloud Application Programming Model (CAP) and Node.js.\n\nThrough immersive exercises, participants experience vulnerabilities from both attacker and defender perspectives, then implement proven mitigation techniques using SAP BTP's built-in security services. Each module follows a structured methodology: \n- Identify and analyze vulnerable code snippets to understand core security flaws.\n- Understand the real-world impact by seeing how these vulnerabilities are exploited.\n- Remediate risks by leveraging SAP BTP’s built-in security services and secure CAP development practices.\n- Validate the effectiveness of your security patches.\n\nJoin us to master secure, cloud-native development and walk away with actionable takeaways to confidently protect your SAP BTP solutions!\n\nPrerequisites: Node.js and GitHub experience; environment setup required before workshop : https://github.com/SAP-samples/btp-secure-development/tree/main/exercises/ex0",
+        "prerequisites": "",
+        "location": "room_w3",
+        "startTime": "10:00",
+        "endTime": "11:30",
+        "presentationLinks": [],
+        "attendeeRatingLink": "https://docs.google.com/forms/d/e/1FAIpQLSeGf2h_6kg9DazQi6kvnJ-9wiW0AyqiM20TPFjfUbAdkQhAQg/viewform?usp=dialog"
+      }
+    ],
+    "company": "SAP SE",
+    "bio": "I am a Senior Product Specialist for SAP Business Technology Platform with over 15 years of software engineering experience in product development and solution architecture at SAP. I focus on designing and delivering innovative, secure end‑to‑end SAP BTP scenarios that help customers become integrated intelligent enterprises aligned with SAP’s strategy. I enjoy sharing practical best practices around SAP BTP with the broader community, and in my free time I like playing football and table tennis.\n\n",
+    "linkedInUrl": "https://www.linkedin.com/in/abdelkader-abdelaziz-953aba66/",
+    "githubUrl": "https://github.com/AbdelkaderDe",
+    "hasPhoto": true,
+    "photoUrl": "images/speakers/abdelkader_abdelaziz.jpg"
+  },
+  {
+    "firstName": "Moudhaffer",
+    "lastName": "Azizi",
+    "proposals": [
+      {
+        "id": "id-1773341936433-860",
+        "title": "Production GenAI in CAP: Beyond the Demo",
+        "type": "presentation_short",
+        "description": "Building a GenAI demo takes an afternoon. Shipping it as a secure, multitenant SaaS on SAP BTP is a different beast entirely.\nIn this session, we unpack the architecture of a production-ready CAP application that uses RAG to retrieve, document, and score custom ABAP against Clean Core standards. We’ll show you exactly how we scaled a single \"Hello World\" prompt into a resilient orchestration of 14 distinct AI operations.\nSkip the hype. Join us for the architectural blueprints and battle-tested code to master:\n* Multi-Model Routing: Orchestrating 14 specialized AI tasks without relying on a single \"god model.\"\n* Native RAG: Turning HANA Cloud into a Vector DB for hybrid search without leaving the SAP stack.\n* Tenant Isolation: Hardening SaaS security to guarantee strict data separation across AI Core deployments.\n* Real-Time UX: Killing timeout bottlenecks by engineering LLM token streaming natively in CAP.\n* Day-2 Ops: Mastering the unglamorous essentials—exact token counting, cost attribution, and bulletproof retry logic.\nWalk away with the architectural shortcuts and code-level insights you need to build GenAI for the real world. ",
+        "prerequisites": "",
+        "location": "audimax",
+        "startTime": "15:30",
+        "endTime": "15:50",
+        "presentationLinks": [
+          {
+            "linkType": "Recording",
+            "url": "https://www.youtube.com/watch?v=eFifbqiYQh0"
+          }
+        ],
+        "proficiencyLevel": "intermediate",
+        "attendeeRatingLink": "https://docs.google.com/forms/d/e/1FAIpQLSeNNVyfoB12MT_zYg2EUh9RY8XLK0wgylrlvAORhm58VtwU6Q/viewform?usp=dialog"
+      }
+    ],
+    "company": "syntax",
+    "bio": "I am a Senior SAP BTP Tech Lead at Syntax. Architect behind CodeGenie, a certified SAP BTP product using multi-model GenAI orchestration, RAG with HANA Cloud vector search, and CAP Node.js to automate custom ABAP documentation and Clean Core scoring.\nWith 8 years of experience spanning SAP consulting and engineering, I am currently focused on bridging the gap between enterprise architecture and real-world GenAI delivery.",
+    "hasPhoto": true,
+    "photoUrl": "images/speakers/moudhaffer_azizi.jpg"
+  },
+  {
+    "firstName": "Nico",
+    "lastName": "Schoenteich",
+    "proposals": [
+      {
+        "id": "id-1773390296181-753",
+        "title": "Did you know about infix filters and projection functions?",
+        "type": "presentation_short",
+        "description": "In this talk I would like to give you an overview about infix filters and projection functions (Node.js), and how we applied both concepts in a recent project to reduce the amount of custom service logic. We will cover the use cases, the lessons learned, as well as the limitations we hit. The talk will mostly consist of live coding with concrete examples:\n\nconst happySpeakers = await SELECT.from(\"Speakers\").where(\"exists proposals[selected = true]\")\n\nconst speakersAndProposals = await SELECT.from(\"Speakers\", s =&gt; {\n\ts`.*`, s.proposals('*')\n})\n\n",
+        "prerequisites": "",
+        "location": "room_w1",
+        "startTime": "17:30",
+        "endTime": "17:50",
+        "presentationLinks": [
+          {
+            "linkType": "GitHub Repo",
+            "url": "https://github.com/nicoschoenteich/recap-2026-infix-filter-projection-functions"
+          },
+          {
+            "linkType": "Recording",
+            "url": "https://www.youtube.com/watch?v=z6jyo82-Tgs"
+          }
+        ],
+        "proficiencyLevel": "intermediate",
+        "attendeeRatingLink": "https://docs.google.com/forms/d/e/1FAIpQLSeQB4uYxPvnnh7MRByEPPblZX4B7K09TyQzb5TIxIui2KaZ8g/viewform?usp=dialog"
+      }
+    ],
+    "company": "SAP",
+    "bio": "Nico focuses on web development technologies and is interested in all things SAP Business Technology Platform. Before joining the Developer Advocates, he studied Psychology and therefore likes to focus on the user as well as the developer experience.",
+    "linkedInUrl": "https://www.linkedin.com/in/nico-schoenteich/",
+    "githubUrl": "https://github.com/nicoschoenteich",
+    "hasPhoto": true,
+    "photoUrl": "images/speakers/nico_schoenteich.jpg"
+  },
+  {
+    "firstName": "Konrad",
+    "lastName": "Koschel",
+    "proposals": [
+      {
+        "id": "id-1773305178526-135",
+        "title": "Custom Business Logic with Predefined Extension Points - using CDS-Oyster",
+        "type": "presentation_short",
+        "description": "Together with Subscription Billing and Cloud Foundation, we built an extensive Extension Box using CAP and the CDS-Oyster Code Sandbox. This includes managing the lifecycle of an extension, discovering extension points and convenient developer tooling. This session provides an overview of how this joint effort enables secure code extensions in a complex cloud environment",
+        "prerequisites": "",
+        "location": "audimax",
+        "startTime": "17:00",
+        "endTime": "17:20",
+        "presentationLinks": [
+          {
+            "linkType": "Recording",
+            "url": "https://www.youtube.com/watch?v=eqmgy6GqBMM"
+          }
+        ],
+        "proficiencyLevel": "intermediate",
+        "attendeeRatingLink": "https://docs.google.com/forms/d/e/1FAIpQLSfW41cHTU_e8m6FcyrtrUPuaSH0v9GdRRFwZQTYo7NjzlQINA/viewform?usp=dialog"
+      }
+    ],
+    "company": "SAP SE – Cloud ERP Foundation",
+    "bio": "I am a passionate software developer with a faible for Rust and Extensibility.\n\nFor the last years I've been working on Oyster, the core sandboxing component of CAP's Business Logic Extensibility. Therefore, I am also happy to continue shaping the future Extensibility ecosystem at CAP and SAP overall.",
+    "linkedInUrl": "konrad-koschel-57b209199",
+    "hasPhoto": true,
+    "photoUrl": "images/speakers/konrad_koschel.jpg"
+  },
+  {
+    "firstName": "Abdulbasıt",
+    "lastName": "Gülşen",
+    "proposals": [
+      {
+        "id": "id-1770179834724-64",
+        "title": "Beyond Vibe Coding: Engineering Deterministic CAP Applications with SDD",
+        "type": "presentation_short",
+        "description": "Move beyond vibe coding into Spec-Driven Development: an approach where a structured specification becomes the single source of truth, guiding your entire SAP CAP application — from domain model to implementation.\n\nThis session demonstrates a live \"0-to-1\" workflow, transforming a raw business requirement into an SAP CAP application using the open-source Spec Kit in Visual Studio Code.\n\nKey Takeaways\n- Authoring a constitution.md that encodes your team's architectural standards, naming conventions, and CAP-specific constraints — turning implicit knowledge into explicit rules that constrain the AI's decisions.\n- Orchestrating the end-to-end CAP lifecycle with Spec Kit — from /plan (domain model, service design, annotations) to /implement (handlers, tests, deployment artifacts).\n- Integrating MCP Servers to give the model live access to your project context and documentation.",
+        "prerequisites": "",
+        "location": "audimax",
+        "startTime": "16:00",
+        "endTime": "16:20",
+        "presentationLinks": [
+          {
+            "linkType": "Recording",
+            "url": "https://www.youtube.com/watch?v=E6F7FFMO3Js"
+          }
+        ],
+        "proficiencyLevel": "beginner",
+        "attendeeRatingLink": "https://docs.google.com/forms/d/e/1FAIpQLScVjxmIUykKC4RAgeUQzYsnNGM_5OcMgC7859xpKZfPH_0qXQ/viewform?usp=dialog"
+      }
+    ],
+    "company": "AG Consulting",
+    "bio": "A Solution / Technical Architect with broad experience across the SAP ecosystem since 2000, working / worked with technologies including ABAP, Web Dynpro Java/ABAP, Fiori, BPM, CAP, and various developer tools on SAP BTP. SAP Mentor since 2012, passionate about designing solutions that work and sharing knowledge with the community.",
+    "blueskyHandle": "@abdulbasit.gulsen.net",
+    "linkedInUrl": "abdulbasitg",
+    "otherSocialMedia": "",
+    "hasPhoto": true,
+    "photoUrl": "images/speakers/abdulbas_t_g_l_en.jpg"
+  },
+  {
+    "firstName": "Bilal",
+    "lastName": "El-Massoudi",
+    "proposals": [
+      {
+        "id": "id-1772448933550-318",
+        "title": "Plug, Connect, Play: CAP Integration Made Effortless",
+        "type": "presentation_short",
+        "description": "SAP CAP gives you an incredible foundation to build cloud-native applications - but when it comes to managing connections to external systems, you're largely on your own. Every project ends up with its own ad-hoc approach: hardcoded URLs, scattered credentials, no standard way to define or govern integrations. There has to be a better way.\n\nIn this session, we showcase cap-connect - a production-ready, open-source CAP plugin developed by Aarini Consulting that brings first-class connection management to any SAP CAP application, without writing a single line of integration boilerplate.\nWe'll walk through the architecture of cap-connect: how it is structured as a self-contained CAP plugin that transparently plugs into any CAP application at startup, exposes a fully declarative ConnectorService via CDS, and provides a built-in admin portal - all activated by a single npm install.\nThe session focuses on what was built, why it was designed that way, and the architectural decisions that make it reusable, non-intrusive, and extensible - so that any CAP application can adopt it without modification.\n \nWe'll also share how cap-connect became the connect layer for Prodsphere, Aarini's own CAP-based product - how it cleanly separated the integration concerns from the business logic, and why that separation made the product significantly simpler to maintain and extend.",
+        "prerequisites": "",
+        "location": "audimax",
+        "startTime": "15:00",
+        "endTime": "15:20",
+        "presentationLinks": [
+          {
+            "linkType": "Recording",
+            "url": "https://www.youtube.com/watch?v=U0U7ixe8Cpg"
+          }
+        ],
+        "proficiencyLevel": "beginner",
+        "attendeeRatingLink": "https://docs.google.com/forms/d/e/1FAIpQLSc7Y_K55_K1INCIyNL23T8VPYLIpJcd0qgHOPS0YiIbvmv0Hw/viewform?usp=dialog"
+      }
+    ],
+    "company": "Aarini Consulting B.V.",
+    "bio": "I graduated as a Software Engineer last year. During my graduation internship at Aarini, I discovered an interest in SAP and started my journey as a software developer in the SAP ecosystem.\n\nI am interested in cloud development, SAP, AI, and building useful tools for developers and businesses. I enjoy working on backend systems, integrations, and platforms that make complex processes easier to manage.\n\nAt the moment, I am especially focused on SAP CAP, SAP BTP, and cloud-native development. I like learning by building, solving practical problems, and exchanging ideas with others in the tech community.",
+    "linkedInUrl": "bilal-el-massoudi-591425a8/",
+    "hasPhoto": true,
+    "photoUrl": "images/speakers/bilal_el-massoudi.jpg"
+  },
+  {
+    "firstName": "Adrian",
+    "lastName": "Görler",
+    "proposals": [
+      {
+        "id": "id-1773232313183-722",
+        "title": "Declarative Programming Patterns in CAP - Less Code, More Power",
+        "type": "presentation_long",
+        "description": "This session explores the advantages of embracing declarative programming in CAP (Cloud Application Programming Model). We’ll delve into how this approach can significantly minimize the need for traditional code, ensuring consistent validations between the backend and the OData annotations required by the UI. By adopting declarative mechanisms such as calculated elements, annotation based constraints (@assert, @assert.range, @assert.format, …), and field control (readonly, mandatory), you can streamline the development process and enhance maintainability.\n\nWe’ll also cover status transition flows, which provide a declarative way to define and enforce valid state transitions in your business objects, reducing the need for custom validation logic while ensuring data integrity throughout your application’s lifecycle.\n\nBy the end of the session, attendees will understand how declarative programming in CAP can solve common pain points and how to implement these practices in a test-driven way. Join us to discover practical benefits and methods for adopting declarative programming in CAP.",
+        "prerequisites": "",
+        "location": "room_w1",
+        "startTime": "14:00",
+        "endTime": "14:40",
+        "presentationLinks": [
+          {
+            "linkType": "Recording",
+            "url": "https://www.youtube.com/watch?v=fY_zMS0Il2E"
+          }
+        ],
+        "proficiencyLevel": "intermediate",
+        "attendeeRatingLink": "https://docs.google.com/forms/d/e/1FAIpQLSc-KP5icPFedLybTxERssEvn_4KNmHXqKLA6P1Gegk2a84EpA/viewform?usp=dialog"
+      }
+    ],
+    "company": "SAP SE - CAP Team",
+    "bio": "Adrian is working as Software Architect in the CAP Java team. His main focus areas are the persistence layer, protocol adapters and the CDS modeling language.",
+    "linkedInUrl": "https://de.linkedin.com/in/adrian-g%C3%B6rler-b3418a1a",
+    "hasPhoto": true,
+    "photoUrl": "images/speakers/adrian_g_rler.jpg"
+  },
+  {
+    "firstName": "Chanakya",
+    "lastName": "Guttikonda",
+    "proposals": [
+      {
+        "id": "id-1748880654150-881",
+        "title": "CAP &amp; AI: Unifying Vector Search, Knowledge Graphs, &amp; RAG in a CAP Service",
+        "type": "expert_corner",
+        "description": "Showcase a complete architecture that brings together SAP HANA Cloud vector search, RDF-based knowledge graphs, and a Retrieval-Augmented Generation (RAG) pipeline powered by the SAP Cloud SDK for AI. All components are orchestrated through a single CAP Node.js service, extended with Fiori Elements for UX and the @cap-js/telemetry plugin for deep observability.",
+        "prerequisites": "",
+        "location": "experts_1",
+        "startTime": "13:00",
+        "endTime": "14:00",
+        "presentationLinks": []
+      }
+    ],
+    "company": "Henkel",
+    "bio": "Solutions Architect at Henkel",
+    "hasPhoto": true,
+    "photoUrl": "images/speakers/chanakya_guttikonda.jpg"
+  },
+  {
+    "firstName": "Lisa Julia",
+    "lastName": "Nebel",
+    "proposals": [
+      {
+        "id": "id-1772437070285-494",
+        "title": "CAP Plugins: Latest and Greatest",
+        "type": "presentation_long",
+        "description": "CAP plugins dramatically simplify integration with SAP BTP services, turning cross-cutting concerns into drop-in capabilities - and the ecosystem keeps growing. This session demystifies the plugin model, why it scales effortlessly across projects, and how it can cut integration effort by an order of magnitude. We’ll shine a spotlight on what’s new and noteworthy, showcasing the enhanced attachments plugin, the renovated change tracking plugin, a new notifications plugin for Java, the brand-new SAP Build Process Automation (SBPA) plugin and many more, while also giving a glimpse into what’s happening in the community and at partners. Whether you’re new to CAP plugins or looking to level up your existing setup, you’ll leave with practical guidance on when and how to apply them to get the most out of your CAP projects.",
+        "prerequisites": "",
+        "location": "audimax",
+        "startTime": "14:00",
+        "endTime": "14:40",
+        "presentationLinks": [
+          {
+            "linkType": "Recording",
+            "url": "https://www.youtube.com/watch?v=XDQ2FHrQtPc&amp;pp=0gcJCZsLAYcqIYzv"
+          }
+        ],
+        "proficiencyLevel": "beginner",
+        "attendeeRatingLink": "https://docs.google.com/forms/d/e/1FAIpQLSdWyG22yGpJaV8fylpmyU0OK0WiBoTqy-1Eg1Hs5p1hexJsPw/viewform?usp=dialog"
+      }
+    ],
+    "company": "SAP SE - CAP Team",
+    "bio": "I am a Senior Software Developer on the SAP CAP Team in Munich, currently developing CAP Plugins with a focus on integrating CAP with SAP AI Core. In the future, I will be part of the agentic orchestration team.",
+    "linkedInUrl": "https://www.linkedin.com/in/lisa-nebel/",
+    "githubUrl": "https://github.com/lisajulia",
+    "hasPhoto": true,
+    "photoUrl": "images/speakers/lisa_julia_nebel.jpg"
+  },
+  {
+    "firstName": "Venkata Satya",
+    "lastName": "Vudatha",
+    "proposals": [
+      {
+        "id": "id-1748880654150-881",
+        "title": "CAP &amp; AI: Unifying Vector Search, Knowledge Graphs, &amp; RAG in a CAP Service",
+        "type": "expert_corner",
+        "description": "Showcase a complete architecture that brings together SAP HANA Cloud vector search, RDF-based knowledge graphs, and a Retrieval-Augmented Generation (RAG) pipeline powered by the SAP Cloud SDK for AI. All components are orchestrated through a single CAP Node.js service, extended with Fiori Elements for UX and the @cap-js/telemetry plugin for deep observability.",
+        "prerequisites": "",
+        "location": "experts_1",
+        "startTime": "13:00",
+        "endTime": "14:00",
+        "presentationLinks": []
+      }
+    ],
+    "company": "Henkel",
+    "bio": "Technical Architect at Henkel",
+    "hasPhoto": true,
+    "photoUrl": "images/speakers/venkata_satya_vudatha.jpg"
+  },
+  {
+    "firstName": "Ole",
+    "lastName": "Lilienthal",
+    "proposals": [
+      {
+        "id": "id-1783442908632-515",
+        "title": "Intro",
+        "type": "other",
+        "description": "Welcome to re&gt;≡CAP 2026!",
+        "prerequisites": "",
+        "location": "audimax",
+        "startTime": "9:00",
+        "endTime": "9:10",
+        "presentationLinks": [
+          {
+            "linkType": "Recording",
+            "url": "https://www.youtube.com/watch?v=qzsbXd9VUwY"
+          }
+        ],
+        "proficiencyLevel": "beginner",
+        "attendeeRatingLink": ""
+      }
+    ],
+    "company": "SAP SE - CAP Team",
+    "bio": "Heading the CAP unit",
+    "linkedInUrl": "ole-lilienthal",
+    "hasPhoto": true,
+    "photoUrl": "images/speakers/ole_lilienthal.jpg"
+  }
+]

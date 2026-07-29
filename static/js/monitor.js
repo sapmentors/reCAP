@@ -3,10 +3,9 @@
 // ========================
 // Constants
 // ========================
-const API_BASE_URL = "https://recap.cfapps.eu12.hana.ondemand.com/api";
-const API_ENDPOINTS = {
-  speakerLineup: `${API_BASE_URL}/speaker/lineup`,
-  proposalLineup: `${API_BASE_URL}/proposal/lineup`,
+const DATA_PATHS = {
+  speakerLineup: "../data/speakers.json",
+  proposalLineup: "../data/sessions.json",
 };
 
 const EVENT_DATE = "2026-07-15";
@@ -121,14 +120,14 @@ function createLineupApp(mountElementId, roomFilterFn) {
     },
     methods: {
       /**
-       * Fetches proposal lineup from API and initializes data
+       * Loads proposal lineup from local JSON file and initializes data
        */
       async fetchLineup() {
         try {
           this.isLoading = true;
           this.error = null;
 
-          const response = await fetch(API_ENDPOINTS.proposalLineup);
+          const response = await fetch(DATA_PATHS.proposalLineup);
           if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
           }
@@ -138,7 +137,7 @@ function createLineupApp(mountElementId, roomFilterFn) {
           this.formattedLineup = this.formatLineup();
 
         } catch (error) {
-          console.error('Failed to fetch proposal lineup:', error);
+          console.error('Failed to load session data:', error);
           this.error = error.message;
           this.lineup = [];
           this.formattedLineup = [];

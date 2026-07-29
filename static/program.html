@@ -507,7 +507,7 @@
                               <div class="placeholder" v-if="!speaker.hasPhoto"></div>
                               <img
                                 v-else
-                                :src="`${API_BASE_URL}${speaker.photoUrl}`"
+                                :src="speaker.photoUrl"
                                 :alt="`Portrait of ${speaker.firstName} ${speaker.lastName}`"
                               />
                             </button>
@@ -770,7 +770,7 @@
                         <div class="placeholder" v-if="!speaker.hasPhoto"></div>
                         <img
                           v-else
-                          :src="`${API_BASE_URL}${speaker.photoUrl}`"
+                          :src="speaker.photoUrl"
                           :alt="`Portrait of ${speaker.firstName} ${speaker.lastName}`"
                         />
                       </figure>
@@ -995,7 +995,7 @@
               <div class="placeholder" v-if="!speaker.hasPhoto"></div>
               <img
                 v-else
-                :src="`${API_BASE_URL}${speaker.photoUrl}`"
+                :src="speaker.photoUrl"
                 :alt="`Portrait of ${speaker.firstName} ${speaker.lastName}`"
               />
             </figure>

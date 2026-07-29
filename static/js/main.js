@@ -12,10 +12,10 @@ const EVENT_TIMEZONE = "+02:00";
 const EVENT_TITLE_PREFIX = "reCAP: ";
 const ICS_PRODID = "-//reCAP Conference//recap.cfapps.eu12.hana.ondemand.com//EN";
 
-const API_BASE_URL = "https://recap.cfapps.eu12.hana.ondemand.com";
-const API_ENDPOINTS = {
-  speakerLineup: `${API_BASE_URL}/api/speaker/lineup`,
-  proposalLineup: `${API_BASE_URL}/api/proposal/lineup`,
+// Local data paths (replacing removed API)
+const DATA_PATHS = {
+  speakerLineup: "data/speakers.json",
+  proposalLineup: "data/sessions.json",
 };
 
 // Cached regex for calendar text sanitization
@@ -335,7 +335,6 @@ const main = createApp({
   },
   data() {
     return {
-      API_BASE_URL: API_BASE_URL,
       team: [
         {
           name: "Margot Wollny",
@@ -429,10 +428,10 @@ const main = createApp({
     };
   },
   async mounted() {
-    // Fetch both APIs in parallel
+    // Load both JSON files in parallel
     const [speakerResult, proposalResult] = await Promise.allSettled([
-      fetch(API_ENDPOINTS.speakerLineup).then((r) => r.json()),
-      fetch(API_ENDPOINTS.proposalLineup).then((r) => r.json()),
+      fetch(DATA_PATHS.speakerLineup).then((r) => r.json()),
+      fetch(DATA_PATHS.proposalLineup).then((r) => r.json()),
     ]);
 
     const errors = [];
@@ -440,7 +439,7 @@ const main = createApp({
     if (speakerResult.status === "fulfilled") {
       this.speakers = speakerResult.value;
     } else {
-      console.error("Failed to fetch speaker lineup:", speakerResult.reason);
+      console.error("Failed to load speaker data:", speakerResult.reason);
       errors.push("Failed to load speaker data");
       this.speakers = [];
     }
@@ -448,12 +447,12 @@ const main = createApp({
     if (proposalResult.status === "fulfilled") {
       this.lineup = proposalResult.value;
     } else {
-      console.error("Failed to fetch proposal lineup:", proposalResult.reason);
+      console.error("Failed to load session data:", proposalResult.reason);
       errors.push("Failed to load session data");
       this.lineup = [];
     }
 
-    // Set error state if any API calls failed
+    // Set error state if any data loading failed
     if (errors.length > 0) {
       this.apiError = errors.join(". ");
     }
