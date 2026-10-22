@@ -884,18 +884,29 @@ const main = createApp({
       const info = getLocationInfo(value);
       return info ? info.short : value || "";
     },
-    // Decodes HTML and formats bio text with line breaks
+    // Formats bio/description text into paragraphs array for safe rendering
+    formatBioText(value) {
+      if (!value) return [];
+      let processed = value.replace(/<br\s*\/?>/gi, '\n');
+
+      processed = decodeHtmlEntities(processed);
+
+      const paragraphs = processed
+        .split(/\\n|\/n|\n/) // Split by various newline formats
+        .map(p => p.trim()) // Trim whitespace
+        .filter(p => p.length > 0); // Remove empty lines
+
+      return paragraphs;
+    },
+    // Backwards compatibility wrapper
     decodeBioHtml(value) {
+      return this.formatBioText(value);
+    },
+    // Sanitizes text content (for company names and other text fields)
+    sanitizeText(value) {
       if (!value) return "";
-      let decoded = decodeHtmlEntities(value);
-
-      // Replace "&amp;" or "&" with " and "
-      decoded = decoded.replace(/&amp;|&/g, " and ");
-
-      // Replace \n or /n with <br> for HTML rendering
-      decoded = decoded.replace(/\\n|\/n|\n/g, "<br>");
-
-      return decoded;
+      let processed = decodeHtmlEntities(value);
+      return processed;
     },
     // Removes leading zeros from time display
     trimTime(value) {

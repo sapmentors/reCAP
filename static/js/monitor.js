@@ -71,6 +71,17 @@ function decodeHtmlEntities(html) {
   return txt.value;
 }
 
+/**
+ * Sanitizes text content (for company names and other text fields)
+ * Decodes HTML entities and returns plain text
+ * Vue's {{ }} text interpolation will handle HTML escaping for XSS protection
+ */
+function sanitizeText(value) {
+  if (!value) return "";
+  // Decode HTML entities and return - Vue {{ }} handles escaping
+  return decodeHtmlEntities(value);
+}
+
 // ========================
 // Vue App Factory
 // ========================
@@ -281,6 +292,16 @@ function createLineupApp(mountElementId, roomFilterFn) {
        * Decodes HTML entities in text
        */
       decodeHtml(value) {
+        return decodeHtmlEntities(value);
+      },
+
+      /**
+       * Sanitizes text content (for company names and other text fields)
+       * Decodes HTML entities and returns plain text
+       * Vue's {{ }} text interpolation will handle HTML escaping for XSS protection
+       */
+      sanitizeText(value) {
+        if (!value) return "";
         return decodeHtmlEntities(value);
       }
     }
